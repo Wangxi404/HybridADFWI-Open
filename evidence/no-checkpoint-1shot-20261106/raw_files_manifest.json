@@ -1,0 +1,121 @@
+{
+  "run_directory": "/home/xiwang/HybridADFWI/runs/no-checkpoint-1shot-20261106",
+  "files": {
+    "REPORT.md": {
+      "sha256": "809e7a312de6a10c705caa8f09693844dac3f104bef6b4f3ddcb48746aa82409",
+      "bytes": 1339
+    },
+    "autograd-0.json": {
+      "sha256": "50ab7963ef3426aeee085ce63c9f074845b845c2ea60004c477535d09a89d075",
+      "bytes": 3082
+    },
+    "autograd-0.log": {
+      "sha256": "f4fc797e54472611e0c235fca5c8b66295ef037db23524bcbf09ecb9f2b26ab4",
+      "bytes": 82
+    },
+    "autograd-0.npz": {
+      "sha256": "06370706d1c6c5c83f07b9d1ac00d7792ad93563df7cf21a5ee4511a4cb3c366",
+      "bytes": 2375442
+    },
+    "autograd-0.resources.json": {
+      "sha256": "b6c27db8a4d8182cfb07ef9ea5b7468155ce66e1a0591f80fa27a405914c10ab",
+      "bytes": 66383
+    },
+    "autograd-1.json": {
+      "sha256": "59cf84cf1dec4d86f92ea879567e7e6e94606d1c880d37625b434fb23a1a410c",
+      "bytes": 3085
+    },
+    "autograd-1.log": {
+      "sha256": "eae27824b588107220714fe57fa9d91d6f901d51f30c7c2ec237df582bcb6d18",
+      "bytes": 82
+    },
+    "autograd-1.npz": {
+      "sha256": "010b174f86f5bfed483420c13092c311686dadcf2e792fa46ea771d1ed45c6ce",
+      "bytes": 2375442
+    },
+    "autograd-1.resources.json": {
+      "sha256": "b4bae65280ae75436173f2d1149c7cc2fd8acd92fba0f998fe7e7381ed94eb19",
+      "bytes": 65133
+    },
+    "autograd-2.json": {
+      "sha256": "95347c1a330e8b61c3251935769bfd23ce7e0474f2886d9f5e1fab7a187b1c6a",
+      "bytes": 3076
+    },
+    "autograd-2.log": {
+      "sha256": "61a4e7e9b7b18cd1e564a5fbc73476f2ab95f0708a924074295a885119d54af6",
+      "bytes": 82
+    },
+    "autograd-2.npz": {
+      "sha256": "c62c8c1ac931385b77363357f5cf07c3a044d2f491fac6522ede1fdd40d3a21f",
+      "bytes": 2375442
+    },
+    "autograd-2.resources.json": {
+      "sha256": "6a2c16c72f227d9ec234396e6aa93ce0d58ff3ca3be7000d535e8c82c31e2090",
+      "bytes": 67181
+    },
+    "hybrid-0.json": {
+      "sha256": "2005a0b91d4cc2579d3163f08d194db2dd15164a37156842ac5290b3a3887daf",
+      "bytes": 3627
+    },
+    "hybrid-0.log": {
+      "sha256": "2fb6104849f0bb3c5b7cfc568258fe5ffb070c3f5369ae0b4b46aee35cdaed65",
+      "bytes": 79
+    },
+    "hybrid-0.npz": {
+      "sha256": "1aab1fafb50d5f5b751f202f047062970343a57f5e4ae80b7ff1057bf96e1b0e",
+      "bytes": 2375442
+    },
+    "hybrid-0.resources.json": {
+      "sha256": "af71e6d065e6327174dfa249cc7aa6131f4e439376448fe171e044374b8c122e",
+      "bytes": 32330
+    },
+    "hybrid-1.json": {
+      "sha256": "dc47a54350c34016b8104672abab482597901cade3e110f9a835592310a3ffba",
+      "bytes": 3628
+    },
+    "hybrid-1.log": {
+      "sha256": "85c9f2d2e7d57201d0fede8641e17f11f89e5d8b33f0f61b5855d98a6782f434",
+      "bytes": 79
+    },
+    "hybrid-1.npz": {
+      "sha256": "20f8c471455893dea3165730ca2ed12b34df2ed5a10a117cb0f46293edf19469",
+      "bytes": 2375442
+    },
+    "hybrid-1.resources.json": {
+      "sha256": "9aa80de710f7a7a99fa883502239ec371cd21b760835ce9b7ac601938d1238fc",
+      "bytes": 30538
+    },
+    "hybrid-2.json": {
+      "sha256": "ae44b2e1a95bfd385f5da4175a2e7e9b0767961057d54ead79be4f282d46055a",
+      "bytes": 3626
+    },
+    "hybrid-2.log": {
+      "sha256": "f30330b89e8bf1afbc7266fed12c9ed602d51768b03efe0908dffcb98617a4dc",
+      "bytes": 79
+    },
+    "hybrid-2.npz": {
+      "sha256": "60115cb4ca1b63d2eaa322512327ab23d5914996cd4177866e3212185937e7b8",
+      "bytes": 2375442
+    },
+    "hybrid-2.resources.json": {
+      "sha256": "24d23c079355dcc1dd2a2ac2c07dc8185e559a7d0cf9b799f1d2b388a9d23620",
+      "bytes": 31366
+    },
+    "observations.npz": {
+      "sha256": "3b632878feb31afd390b83c4652c231d3c62ddd08919d8261ed341935f257f40",
+      "bytes": 2000508
+    },
+    "prepare.resources.json": {
+      "sha256": "c762d6f50dcf7c6cbe26f474fd79541b643e1f394980b336c445ffaf61fa65fc",
+      "bytes": 17674
+    },
+    "protocol.json": {
+      "sha256": "0aaab215bacdbc83a41962ee6a2c807c9fa4799633116acacb6eba798718933c",
+      "bytes": 838
+    },
+    "summary.json": {
+      "sha256": "4de900e0f62094c5c283b135e3b62c9d1a11b8723c1e6df95337bdbca87848a6",
+      "bytes": 5456
+    }
+  }
+}

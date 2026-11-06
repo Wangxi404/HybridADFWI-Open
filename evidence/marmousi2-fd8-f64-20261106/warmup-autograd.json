@@ -1,0 +1,157 @@
+{
+  "status": "ok",
+  "method": "autograd",
+  "created_utc": "2026-11-06T12:40:12.218728+00:00",
+  "protocol": {
+    "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+    "observations": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/observations.npz",
+    "preset": "paper",
+    "device": "cuda",
+    "nt": 2500,
+    "dt": 0.003,
+    "f0": 5.0,
+    "shots": 9,
+    "receivers": 100,
+    "depth_m": 540.0,
+    "nabc": 20,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 3,
+    "segments": 50,
+    "threads": 1,
+    "objective": "l2",
+    "tolerance": 1e-08,
+    "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "forward + data objective/VJP + reverse including checkpoint replay; no optimizer"
+  },
+  "protocol_path": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/protocol.json",
+  "protocol_sha256": "2fbd293b1aab7e4f52c40985e4d97ae7fba70cecf2013c05c05cbea6e609a26a",
+  "script_sha256": "0eaa846341a82f34de5ea03f69439191414a9acc4ed30ff8953767ce3d807ac1",
+  "benchmark_sha256": "6992e47700dbab729aa4f12beb52eca3ba3a1268136abfcfa1b3707308b700de",
+  "adjoint_sha256": "699c8a2343a04d16560bc8f9b85b58038e4a1a2a9e7856584783881bea94a1be",
+  "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+  "pytorch": "2.6.0+cu118",
+  "hostname": "hpnewpc3",
+  "platform": "Linux-6.8.0-40-generic-x86_64-with-glibc2.35",
+  "device_name": "NVIDIA RTX A5000",
+  "old_warmup": {
+    "nt": 16,
+    "segments": 16,
+    "evaluations": 1,
+    "observations": "zeros",
+    "scale": 1.0,
+    "result": {
+      "timing": {
+        "forward_s": 2.4409471107646823,
+        "objective_and_source_s": 0.005025940947234631,
+        "backward_s": 4.971873107366264,
+        "total_s": 7.417846159078181
+      },
+      "loss": 2.2104201175572765e-28,
+      "kernel_l2": {
+        "vp": 6.323648090078811e-32,
+        "vs": 1.909523758735227e-32,
+        "rho": 5.316826791749503e-32
+      },
+      "data_vjp_l2": 1.7521495201756537e-16,
+      "finite_checks": "passed; receiver data, loss, data VJP and all requested kernels"
+    }
+  },
+  "representative": {
+    "nt": 50,
+    "segments": 1,
+    "evaluations": 3,
+    "observations": "actual full-experiment observed-data prefix",
+    "scale": "unchanged full-experiment scale"
+  },
+  "scope": "forward + objective/data VJP + reverse/static VJP; setup, synchronization before calls, cleanup and finite checks excluded",
+  "caution": "Short-chunk first-use sensitivity audit, not a full-run speed or memory benchmark. Interpret gaps alongside full-run variation; do not subtract them as known JIT costs.",
+  "measurements": [
+    {
+      "timing": {
+        "forward_s": 0.20322240982204676,
+        "objective_and_source_s": 0.00010585039854049683,
+        "backward_s": 3.213492091745138,
+        "total_s": 3.4168203519657254
+      },
+      "loss": 8.099236912654592e-07,
+      "kernel_l2": {
+        "vp": 4.224448009683956e-09,
+        "vs": 1.5476330087400231e-09,
+        "rho": 2.2278390425741533e-09
+      },
+      "data_vjp_l2": 400.7206955879605,
+      "finite_checks": "passed; receiver data, loss, data VJP and all requested kernels",
+      "trial": 0
+    },
+    {
+      "timing": {
+        "forward_s": 0.20997335948050022,
+        "objective_and_source_s": 0.00012144632637500763,
+        "backward_s": 6.024959255941212,
+        "total_s": 6.235054061748087
+      },
+      "loss": 8.099236912654592e-07,
+      "kernel_l2": {
+        "vp": 4.224448009683956e-09,
+        "vs": 1.5476330087400231e-09,
+        "rho": 2.2278390425741533e-09
+      },
+      "data_vjp_l2": 400.7206955879605,
+      "finite_checks": "passed; receiver data, loss, data VJP and all requested kernels",
+      "trial": 1
+    },
+    {
+      "timing": {
+        "forward_s": 0.20700822863727808,
+        "objective_and_source_s": 0.00010971631854772568,
+        "backward_s": 3.1117106778547168,
+        "total_s": 3.3188286228105426
+      },
+      "loss": 8.099236912654592e-07,
+      "kernel_l2": {
+        "vp": 4.224448009683956e-09,
+        "vs": 1.5476330087400231e-09,
+        "rho": 2.2278390425741533e-09
+      },
+      "data_vjp_l2": 400.7206955879605,
+      "finite_checks": "passed; receiver data, loss, data VJP and all requested kernels",
+      "trial": 2
+    }
+  ],
+  "observations_sha256": "c0656d2614232825342154968a5fbb8f2d7f6dde28facd090fb3babd0ce10b1b",
+  "comparison": {
+    "forward_s": {
+      "first": 0.20322240982204676,
+      "mean_last_two": 0.20849079405888915,
+      "first_minus_steady": -0.005268384236842394,
+      "first_over_steady": 0.9747308543735782
+    },
+    "objective_and_source_s": {
+      "first": 0.00010585039854049683,
+      "mean_last_two": 0.00011558132246136665,
+      "first_minus_steady": -9.730923920869827e-06,
+      "first_over_steady": 0.9158088546346023
+    },
+    "backward_s": {
+      "first": 3.213492091745138,
+      "mean_last_two": 4.5683349668979645,
+      "first_minus_steady": -1.3548428751528263,
+      "first_over_steady": 0.7034274226890143
+    },
+    "total_s": {
+      "first": 3.4168203519657254,
+      "mean_last_two": 4.776941342279315,
+      "first_minus_steady": -1.3601209903135896,
+      "first_over_steady": 0.7152736672155559
+    }
+  },
+  "elapsed_wall_s": 23.26630807854235
+}

@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "config": {
+    "model": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI/data/prepared/marmousi2_smoke.npz",
+    "observations": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI/runs/local-composite-20261106/observations.npz",
+    "preset": "smoke",
+    "device": "cpu",
+    "nt": 192,
+    "dt": 0.004,
+    "f0": 5.0,
+    "shots": 1,
+    "receivers": 25,
+    "depth_m": 540.0,
+    "nabc": 10,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 1,
+    "segments": 14,
+    "threads": 1,
+    "objective": "l2_time_difference",
+    "tolerance": 1e-08,
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "forward + data objective/VJP + reverse including checkpoint replay; no optimizer"
+  },
+  "comparison": [
+    {
+      "repeat": 0,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 5.06121580408019e-16,
+          "relative_linf": 3.9496552430703338e-16,
+          "cosine": 1.0000000000000002,
+          "autograd_l2": 0.0005564674752710009,
+          "hybrid_l2": 0.0005564674752710009,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 5.974965825390631e-16,
+          "relative_linf": 6.245215285870189e-16,
+          "cosine": 1.0,
+          "autograd_l2": 0.0001796692960428859,
+          "hybrid_l2": 0.00017966929604288598,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 7.447974566924809e-16,
+          "relative_linf": 4.3287261020387454e-16,
+          "cosine": 1.0,
+          "autograd_l2": 0.0001352142160582509,
+          "hybrid_l2": 0.00013521421605825084,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "autograd": {
+      "total_s": [
+        1.939514458
+      ],
+      "mean_total_s": 1.939514458,
+      "sample_std_s": null,
+      "peak_rss_bytes": [
+        475758592
+      ],
+      "peak_cuda_allocated_bytes": [
+        null
+      ]
+    },
+    "hybrid": {
+      "total_s": [
+        1.3775432079999999
+      ],
+      "mean_total_s": 1.3775432079999999,
+      "sample_std_s": null,
+      "peak_rss_bytes": [
+        399589376
+      ],
+      "peak_cuda_allocated_bytes": [
+        null
+      ]
+    }
+  },
+  "autograd_over_hybrid_time_ratio": 1.4079518135884128,
+  "caveat": "Small runs establish correctness only; timings include checkpoint replay and host contention."
+}

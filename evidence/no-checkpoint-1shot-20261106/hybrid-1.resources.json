@@ -1,0 +1,1103 @@
+{
+  "command": [
+    "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+    "/home/xiwang/HybridADFWI/scripts/benchmark.py",
+    "worker",
+    "--config",
+    "/home/xiwang/HybridADFWI/runs/no-checkpoint-1shot-20261106/protocol.json",
+    "--method",
+    "hybrid",
+    "--result",
+    "/home/xiwang/HybridADFWI/runs/no-checkpoint-1shot-20261106/hybrid-1.json"
+  ],
+  "device": "cuda",
+  "status": "complete",
+  "returncode": 0,
+  "contaminated": false,
+  "snapshots": [
+    {
+      "utc": "2026-11-06T13:11:23.236500+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24179.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 53115449344,
+      "load_average": [
+        21.80419921875,
+        22.71923828125,
+        28.8095703125
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "before",
+      "seconds_since_gate_start": 0.0312632629647851
+    },
+    {
+      "utc": "2026-11-06T13:11:26.286176+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24179.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 53057359872,
+      "load_average": [
+        21.80419921875,
+        22.71923828125,
+        28.8095703125
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "before",
+      "seconds_since_gate_start": 3.0809432798996568
+    },
+    {
+      "utc": "2026-11-06T13:11:29.331319+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24179.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 53079465984,
+      "load_average": [
+        21.73974609375,
+        22.6904296875,
+        28.767578125
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "before",
+      "seconds_since_gate_start": 6.126086339354515
+    },
+    {
+      "utc": "2026-11-06T13:11:29.418977+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24179.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 53077127168,
+      "load_average": [
+        21.73974609375,
+        22.6904296875,
+        28.767578125
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "during",
+      "seconds_since_gate_start": 6.213744320906699,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:32.499949+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24176.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52644945920,
+      "load_average": [
+        21.7607421875,
+        22.6787109375,
+        28.73095703125
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "during",
+      "seconds_since_gate_start": 9.294713493436575,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:35.579447+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 23893.0,
+        "utilization_percent": 15.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "280"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52365815808,
+      "load_average": [
+        21.7607421875,
+        22.6787109375,
+        28.73095703125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 12.374217370525002,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:38.660566+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 18.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52456275968,
+      "load_average": [
+        21.7802734375,
+        22.6669921875,
+        28.6943359375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 15.455332811921835,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:41.756236+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 17.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52486062080,
+      "load_average": [
+        21.7802734375,
+        22.6669921875,
+        28.6943359375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 18.55100451875478,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:44.840955+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 18.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52461039616,
+      "load_average": [
+        21.79833984375,
+        22.65576171875,
+        28.658203125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 21.635719831101596,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:47.922972+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 17.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52452548608,
+      "load_average": [
+        21.734375,
+        22.6279296875,
+        28.61669921875
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 24.717736234888434,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:51.003371+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 18.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52464250880,
+      "load_average": [
+        21.734375,
+        22.6279296875,
+        28.61669921875
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 27.79813589900732,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:54.087383+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 16.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52426584064,
+      "load_average": [
+        21.755859375,
+        22.6171875,
+        28.5810546875
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 30.8821475552395,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:11:57.168493+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 16.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52455268352,
+      "load_average": [
+        21.755859375,
+        22.6171875,
+        28.5810546875
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 33.963257344439626,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:00.257578+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 11.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52385554432,
+      "load_average": [
+        21.77587890625,
+        22.60693359375,
+        28.54541015625
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 37.052351272664964,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:03.337026+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52417118208,
+      "load_average": [
+        21.71337890625,
+        22.580078125,
+        28.5048828125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 40.13179036602378,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:06.414454+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52436574208,
+      "load_average": [
+        21.71337890625,
+        22.580078125,
+        28.5048828125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 43.20921731740236,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:09.501961+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 11.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52398948352,
+      "load_average": [
+        21.73681640625,
+        22.5703125,
+        28.4697265625
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 46.296726553700864,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:12.588585+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52384641024,
+      "load_average": [
+        21.75830078125,
+        22.560546875,
+        28.4345703125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 49.38335776980966,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:15.669002+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 11.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52454068224,
+      "load_average": [
+        21.75830078125,
+        22.560546875,
+        28.4345703125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 52.46376998256892,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:18.753960+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52419117056,
+      "load_average": [
+        21.77783203125,
+        22.55078125,
+        28.39990234375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 55.54872647393495,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:21.839462+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52428091392,
+      "load_average": [
+        21.77783203125,
+        22.55078125,
+        28.39990234375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 58.63423065561801,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:24.925970+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52353712128,
+      "load_average": [
+        21.71533203125,
+        22.52490234375,
+        28.35986328125
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 61.720736822113395,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:28.007751+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52326584320,
+      "load_average": [
+        21.73828125,
+        22.51611328125,
+        28.32568359375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 64.80251811537892,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:31.091961+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 11.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52422238208,
+      "load_average": [
+        21.73828125,
+        22.51611328125,
+        28.32568359375
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 67.88672670628875,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:34.171573+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52404133888,
+      "load_average": [
+        21.75927734375,
+        22.50732421875,
+        28.29150390625
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 70.96634270530194,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:37.258860+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 21533.0,
+        "utilization_percent": 12.0
+      },
+      "compute_processes": [
+        {
+          "pid": 2354944,
+          "executable": "/home/xiwang/anaconda3/envs/pytorch26/bin/python",
+          "used_memory_mib": "2640"
+        }
+      ],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52402962432,
+      "load_average": [
+        21.77880859375,
+        22.49853515625,
+        28.25732421875
+      ],
+      "blockers": [
+        "compute_process_present",
+        "gpu_utilization"
+      ],
+      "eligible": false,
+      "phase": "during",
+      "seconds_since_gate_start": 74.05362695921212,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    },
+    {
+      "utc": "2026-11-06T13:12:39.121278+00:00",
+      "gpu": {
+        "index": 0,
+        "uuid": "GPU-cd5ff13d-f4f9-7818-a9a8-35a65bb82abc",
+        "name": "NVIDIA RTX A5000",
+        "total_mib": 24564.0,
+        "free_mib": 24179.0,
+        "utilization_percent": 0.0
+      },
+      "compute_processes": [],
+      "ignored_known_desktop_processes": [
+        {
+          "pid": 213186,
+          "executable": "/snap/snapd-desktop-integration/391/usr/bin/snapd-desktop-integration",
+          "used_memory_mib": "11"
+        }
+      ],
+      "host_available_ram_bytes": 52994048000,
+      "load_average": [
+        21.77880859375,
+        22.49853515625,
+        28.25732421875
+      ],
+      "blockers": [],
+      "eligible": true,
+      "phase": "after",
+      "seconds_since_gate_start": 75.91604642663151,
+      "allowed_worker_pids": [
+        2354944
+      ],
+      "external_compute_processes": []
+    }
+  ],
+  "sample_interval_s": 3.0,
+  "monitor_scope": "entire child lifetime including setup, warmup and result writes",
+  "limitation": "Sampled process audit cannot rule out sub-interval competing workloads; lock is cooperative.",
+  "parent_pid": 2354330,
+  "cpu_load_before": [
+    21.80419921875,
+    22.71923828125,
+    28.8095703125
+  ],
+  "worker_pid": 2354944,
+  "cpu_load_after": [
+    21.77880859375,
+    22.49853515625,
+    28.25732421875
+  ],
+  "elapsed_including_resource_checks_s": 75.91607352811843
+}

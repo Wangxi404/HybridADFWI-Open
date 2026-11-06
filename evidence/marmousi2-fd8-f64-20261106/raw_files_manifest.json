@@ -1,0 +1,121 @@
+{
+  "run_directory": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106",
+  "files": {
+    "REPORT.md": {
+      "sha256": "d966461793326a9aaec0c230631ec209d8e1f6efbc37dfc50e256252c171ea37",
+      "bytes": 1227
+    },
+    "autograd-0.json": {
+      "sha256": "f555528c96cf405560e822834347812f6d6e04f127a3a2612d42449fba3109e1",
+      "bytes": 2866
+    },
+    "autograd-0.log": {
+      "sha256": "d6e5363792ba66c24cd2ca3791186604e561cd4c5ee010665ce125d01813cdcf",
+      "bytes": 80
+    },
+    "autograd-0.npz": {
+      "sha256": "69db237eb84b5bb651798426b62b1331e9b1dac1f2b09ccf789fb1497963354c",
+      "bytes": 18375442
+    },
+    "autograd-0.resources.json": {
+      "sha256": "e63c5b004cec5846be73fd2f4ace4e10d84455716d70f303b2f886a52e6ae507",
+      "bytes": 57122
+    },
+    "autograd-1.json": {
+      "sha256": "b50d92799ed4dd34f0a0b4261956cb93921447b7c4eac50413ba0af08be41c99",
+      "bytes": 2865
+    },
+    "autograd-1.log": {
+      "sha256": "1371b723a8e2c732928d9994e3ea10416f01c1612a04aa96b226d1463276fba9",
+      "bytes": 79
+    },
+    "autograd-1.npz": {
+      "sha256": "7df9f9df8ecc68a028ad4053f84bda556bcc73f1cc139a8c2f999c784ac8166c",
+      "bytes": 18375442
+    },
+    "autograd-1.resources.json": {
+      "sha256": "12d230a01d047455f635bc275f1d095c9c8a9f5e4822da423ca2e8929c9aac9f",
+      "bytes": 60604
+    },
+    "autograd-2.json": {
+      "sha256": "3f6c5592fa763dc88362c175515131a23538bf4a5fe2abf8604cf17476734e03",
+      "bytes": 2868
+    },
+    "autograd-2.log": {
+      "sha256": "aaefcf277ab924d5e7371b07496199b718950df9dd9acd8b2609954dcb141db1",
+      "bytes": 80
+    },
+    "autograd-2.npz": {
+      "sha256": "0c6dba3c3f41ea4e212bd34e00368331db59b58e50f7928052d293a4da82e47d",
+      "bytes": 18375442
+    },
+    "autograd-2.resources.json": {
+      "sha256": "a47db57b77bd3ad26cad3688a7178f365a456f3d26678d01f7ab5f849c8cb2f8",
+      "bytes": 74143
+    },
+    "hybrid-0.json": {
+      "sha256": "414826043a4803360bc057a73c755a8e293f697ba27ec38ef3879e265a30dc68",
+      "bytes": 3216
+    },
+    "hybrid-0.log": {
+      "sha256": "d5b8316484cd949ee14c969b3bd8c8fc11867a08a4383ee64d22a0b03fffb4d4",
+      "bytes": 78
+    },
+    "hybrid-0.npz": {
+      "sha256": "d1180a8dab48a9488f22698a001f1cd8c5f51b8d6ad723d05d430b8a4bcac199",
+      "bytes": 18375442
+    },
+    "hybrid-0.resources.json": {
+      "sha256": "3357e5584b41e3f36cefa965b615f5860def73da7ea055b1e6999fdc5bac77f5",
+      "bytes": 31644
+    },
+    "hybrid-1.json": {
+      "sha256": "57ab8ac3829b54fed7106024afbde07cc452f0d468f62f07af67f5b4746f09ce",
+      "bytes": 3214
+    },
+    "hybrid-1.log": {
+      "sha256": "2cf8fb4da1ee0bcab0cd40681f6c8abdd8b3c2ccb2549e29e25d25d4d75a04cb",
+      "bytes": 78
+    },
+    "hybrid-1.npz": {
+      "sha256": "8261bd3189dbc0b345a35379219b13befb82f1e59d7337bcc78aee5903d44485",
+      "bytes": 18375442
+    },
+    "hybrid-1.resources.json": {
+      "sha256": "c6863b29d12a83be2066b9b136a2a224d2b26e6f8390ba2949f54a86ee09e2db",
+      "bytes": 24706
+    },
+    "hybrid-2.json": {
+      "sha256": "63eced2931da864ce4a934584d67abfa2b68ab84a12c98abca6f6a85207a2528",
+      "bytes": 3212
+    },
+    "hybrid-2.log": {
+      "sha256": "79affddfd403f3451e25842fc6a93473c6ef045ac3ce9eeec811fb5b35441203",
+      "bytes": 76
+    },
+    "hybrid-2.npz": {
+      "sha256": "754bc576ac501c5d7b288207306d876fcef70e276128da0cb92c15e476e0386e",
+      "bytes": 18375442
+    },
+    "hybrid-2.resources.json": {
+      "sha256": "bb1b25d97d29c120c6660a4503952b3ca64aec364b66c523cea4dc34491726ce",
+      "bytes": 27952
+    },
+    "observations.npz": {
+      "sha256": "c0656d2614232825342154968a5fbb8f2d7f6dde28facd090fb3babd0ce10b1b",
+      "bytes": 18000508
+    },
+    "prepare.resources.json": {
+      "sha256": "17487cd6d92d4c603d995fe42410f45130d7813b422bd722017c4d1c42622ac3",
+      "bytes": 11819
+    },
+    "protocol.json": {
+      "sha256": "2fbd293b1aab7e4f52c40985e4d97ae7fba70cecf2013c05c05cbea6e609a26a",
+      "bytes": 787
+    },
+    "summary.json": {
+      "sha256": "d31ce33c2f371bb99dd64e944c75742a9e0abd7415f1140a6216e8ab1fe608b3",
+      "bytes": 5336
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "passed": true,
+  "config": {
+    "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+    "observations": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/observations.npz",
+    "preset": "paper",
+    "device": "cuda",
+    "nt": 2500,
+    "dt": 0.003,
+    "f0": 5.0,
+    "shots": 9,
+    "receivers": 100,
+    "depth_m": 540.0,
+    "nabc": 20,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 3,
+    "segments": 50,
+    "threads": 1,
+    "objective": "l2",
+    "tolerance": 1e-08,
+    "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "forward + data objective/VJP + reverse including checkpoint replay; no optimizer"
+  },
+  "comparison": [
+    {
+      "repeat": 0,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 5.010583571558811e-12,
+          "relative_linf": 4.866477333592482e-12,
+          "cosine": 1.0000000000000002,
+          "autograd_l2": 0.02015154402772101,
+          "hybrid_l2": 0.02015154402780874,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 3.5763302750372564e-12,
+          "relative_linf": 3.749423300353129e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.047723947472137714,
+          "hybrid_l2": 0.04772394747226016,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 3.56890413169114e-12,
+          "relative_linf": 3.9463435236479595e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.012126000075968351,
+          "hybrid_l2": 0.012126000075998202,
+          "passed": true
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 5.009280767346307e-12,
+          "relative_linf": 4.866477333592482e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.020151544027721027,
+          "hybrid_l2": 0.02015154402780874,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 3.57633033706905e-12,
+          "relative_linf": 3.749423300353129e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.047723947472137714,
+          "hybrid_l2": 0.04772394747226016,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 3.5684682766935746e-12,
+          "relative_linf": 3.94625144628908e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.012126000075968358,
+          "hybrid_l2": 0.012126000075998202,
+          "passed": true
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 5.009239874011207e-12,
+          "relative_linf": 4.866477333592482e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.020151544027721027,
+          "hybrid_l2": 0.02015154402780874,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 3.5763394793282845e-12,
+          "relative_linf": 3.749423300353129e-12,
+          "cosine": 1.0,
+          "autograd_l2": 0.04772394747213771,
+          "hybrid_l2": 0.04772394747226016,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 3.5684401675753486e-12,
+          "relative_linf": 3.946481639686245e-12,
+          "cosine": 0.9999999999999998,
+          "autograd_l2": 0.012126000075968358,
+          "hybrid_l2": 0.012126000075998204,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "autograd": {
+      "total_s": [
+        128.10025683883578,
+        136.9622632386163,
+        168.80767764523625
+      ],
+      "mean_total_s": 144.6233992408961,
+      "sample_std_s": 21.40778551862412,
+      "peak_rss_bytes": [
+        1078063104,
+        1078558720,
+        1096114176
+      ],
+      "peak_cuda_allocated_bytes": [
+        2268460544,
+        2268460544,
+        2268460544
+      ]
+    },
+    "hybrid": {
+      "total_s": [
+        63.596951531246305,
+        45.801239172928035,
+        52.6335448268801
+      ],
+      "mean_total_s": 54.01057851035148,
+      "sample_std_s": 8.977416716910353,
+      "peak_rss_bytes": [
+        879738880,
+        879091712,
+        880091136
+      ],
+      "peak_cuda_allocated_bytes": [
+        2035084288,
+        2035084288,
+        2035084288
+      ]
+    }
+  },
+  "resource_audit": [
+    {
+      "worker": "prepare",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-0",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-0",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-1",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-1",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-2",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-2",
+      "status": "complete",
+      "contaminated": false
+    }
+  ],
+  "autograd_over_hybrid_time_ratio": 2.6776865427052976,
+  "caveat": "Small runs establish correctness only; timings include checkpoint replay and host contention."
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Marmousi-II",
+  "preset": "smoke",
+  "upstream_example": "https://github.com/liufeng2317/ADFWI/blob/bv1.1/examples/elastic/Iso-elastic-Marmousi2-shotTop-recTop/01_forward.ipynb",
+  "sources": {
+    "vp_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/vp_marmousi-ii.segy.gz",
+      "sha256": "2c7a0c4170c95a15620c2146573711c61a4cef8dc27338ef6c211a81ffa68920",
+      "bytes": 1766045
+    },
+    "vs_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/vs_marmousi-ii.segy.gz",
+      "sha256": "c88bec68fc4bd7c6e624737a20ecd3241c90e10512103e28e61b344fb5baed7d",
+      "bytes": 1768606
+    },
+    "density_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/density_marmousi-ii.segy.gz",
+      "sha256": "9832e20ce1f79470fa8c100e79d66566cf8c1c162baa4289f37e7ee0b96f1e67",
+      "bytes": 1732687
+    }
+  },
+  "source_array_axes": "x,z",
+  "prepared_array_axes": "z,x",
+  "source_shapes_xz": {
+    "vp": [
+      13601,
+      2801
+    ],
+    "vs": [
+      13601,
+      2801
+    ],
+    "rho": [
+      13601,
+      2801
+    ]
+  },
+  "source_extent_m": {
+    "x": [
+      0,
+      17000
+    ],
+    "z": [
+      0,
+      3500
+    ]
+  },
+  "grid": {
+    "nx": 101,
+    "nz": 39,
+    "dx": 90.0,
+    "dz": 90.0,
+    "ox": 5000.0,
+    "oz": 0.0
+  },
+  "x_extent_m": [
+    5000.0,
+    14000.0
+  ],
+  "z_extent_m": [
+    0.0,
+    3420.0
+  ],
+  "dtype": "float64",
+  "units": {
+    "vp": "m/s",
+    "vs": "m/s",
+    "rho": "kg/m^3"
+  },
+  "source_to_SI_multiplier": 1000.0,
+  "resampling": "bilinear on exact nominal grid; no extrapolation",
+  "density_mode": "constant2450",
+  "initial_smoothing_sigma_m": 150.0,
+  "smoothing": "Gaussian normalized within solid; true water cells restored for all fields",
+  "water_cells": 606,
+  "note": "ADFWI notebook samples linspace across nx*dx; here coordinates use (nx-1)*dx to match solver grid spacing exactly.",
+  "prepared_sha256": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c"
+}

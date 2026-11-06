@@ -1,0 +1,53 @@
+{
+  "status": "cuda_oom",
+  "method": "autograd",
+  "config": {
+    "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+    "observations": "/home/xiwang/HybridADFWI/runs/no-checkpoint-capacity-9shot-20261106/observations.npz",
+    "preset": "paper",
+    "device": "cuda",
+    "nt": 2500,
+    "dt": 0.003,
+    "f0": 5.0,
+    "shots": 9,
+    "receivers": 100,
+    "depth_m": 540.0,
+    "nabc": 20,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 1,
+    "segments": 1,
+    "threads": 1,
+    "objective": "l2",
+    "tolerance": 1e-08,
+    "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "original forward + objective/data VJP + reverse/static model VJP; no checkpoint and no replay",
+    "checkpointing": false,
+    "reference_protocol": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/protocol.json",
+    "reference_protocol_sha256": "2fbd293b1aab7e4f52c40985e4d97ae7fba70cecf2013c05c05cbea6e609a26a",
+    "observation_source_sha256": "c0656d2614232825342154968a5fbb8f2d7f6dde28facd090fb3babd0ce10b1b"
+  },
+  "error": "The following operation failed in the TorchScript interpreter.\nTraceback of TorchScript (most recent call last):\nRuntimeError: The following operation failed in the TorchScript interpreter.\nTraceback of TorchScript (most recent call last):\n  File \"/home/xiwang/HybridADFWI/vendor/ADFWI/ADFWI/propagator/elastic_kernels.py\", line 668, in <forward op>\n        # Compute stress components\n        dxbm_vx = Dxbm(vx, fdc, ii, jj)\n        dxbm_vz = Dxbm(vz, fdc, ii, jj)\n                  ~~~~ <--- HERE\n        dzbm_vx = Dzbm(vx, fdc, ii, jj)\n        dzbm_vz = Dzbm(vz, fdc, ii, jj)\n  File \"/home/xiwang/HybridADFWI/vendor/ADFWI/ADFWI/propagator/elastic_kernels.py\", line 128, in Dxbm_8\n    return  fdc[0] * (a[:, ii, :][:, :, jj] - a[:, ii, :][:, :, jj - 1]) + \\\n            fdc[1] * (a[:, ii, :][:, :, jj + 1] - a[:, ii, :][:, :, jj - 2]) + \\\n            fdc[2] * (a[:, ii, :][:, :, jj + 2] - a[:, ii, :][:, :, jj - 3]) + \\\n            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE\n            fdc[3] * (a[:, ii, :][:, :, jj + 3] - a[:, ii, :][:, :, jj - 4])\nRuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.67 GiB of which 25.81 MiB is free. Process 213186 has 11.02 MiB memory in use. Including non-PyTorch memory, this process has 23.58 GiB memory in use. Of the allocated memory 23.35 GiB is allocated by PyTorch, and 1.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n\n",
+  "progress": {
+    "stage": "measurement",
+    "phase": "forward",
+    "baseline_allocated_bytes": 25038848,
+    "baseline_reserved_bytes": 27262976,
+    "baseline_rss_bytes": 1008848896,
+    "sampled_peak_rss_bytes": 2286800896
+  },
+  "attempt_elapsed_s": 35.40889840107411,
+  "evaluation_elapsed_to_failure_s": 24.533663331530988,
+  "peak_allocated_bytes": 25072466432,
+  "peak_reserved_bytes": 25073549312,
+  "script_sha256": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1",
+  "model_sha256": "f68effb1e917ef6356d50b403b2993b1c2155362c1ab669ac4fa3a5c4a83982d",
+  "note": "Failed attempt time is not a completed gradient runtime; no kernel comparison is available."
+}

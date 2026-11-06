@@ -1,0 +1,97 @@
+{
+  "status": "ok",
+  "method": "hybrid",
+  "timing": {
+    "forward_s": 20.73447122145444,
+    "objective_and_source_s": 0.000627388246357441,
+    "backward_s": 41.29870240576565,
+    "total_s": 62.03380101546645,
+    "adapter_details": {
+      "checkpointing": false,
+      "checkpoint_segments": 0,
+      "checkpoint_state_tensors": 0,
+      "saved_history_steps": 2500,
+      "saved_history_fields_per_step": 5,
+      "instrumented_native_source_sha256": "7346475dccdb5857d11b695fd5ec5e0e8965d5d682c4e4b3266b979f8c6e39b1",
+      "temporal_autograd": false,
+      "replay_seconds": 0.0,
+      "adjoint_seconds": 41.294765343889594,
+      "static_material_vjp_seconds": 0.0028643375262618065,
+      "peak_history_steps": 2500,
+      "static_material_autograd": true
+    }
+  },
+  "loss": 0.3673212651218709,
+  "cpu_memory": {
+    "baseline_rss_bytes": 869154816,
+    "sampled_peak_rss_bytes": 869154816,
+    "sampled_peak_increment_bytes": 0,
+    "sample_interval_s": 0.005
+  },
+  "cuda_memory": {
+    "baseline_allocated_bytes": 8004608,
+    "baseline_reserved_bytes": 29360128,
+    "peak_allocated_bytes": 2494166016,
+    "peak_reserved_bytes": 2520776704,
+    "peak_allocated_increment_bytes": 2486161408
+  },
+  "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+  "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+  "pytorch": "2.6.0+cu118",
+  "numpy": "2.0.1",
+  "platform": "Linux-6.8.0-40-generic-x86_64-with-glibc2.35",
+  "hostname": "hpnewpc3",
+  "cpu_load": [
+    21.77880859375,
+    22.49853515625,
+    28.25732421875
+  ],
+  "affinity": [
+    30
+  ],
+  "device_name": "NVIDIA RTX A5000",
+  "config": {
+    "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+    "observations": "/home/xiwang/HybridADFWI/runs/no-checkpoint-1shot-20261106/observations.npz",
+    "preset": "paper",
+    "device": "cuda",
+    "nt": 2500,
+    "dt": 0.003,
+    "f0": 5.0,
+    "shots": 1,
+    "receivers": 100,
+    "depth_m": 540.0,
+    "nabc": 20,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 3,
+    "segments": 1,
+    "checkpointing": false,
+    "threads": 1,
+    "objective": "l2",
+    "tolerance": 1e-08,
+    "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "forward + data objective/VJP + reverse; includes replay only when checkpointing is enabled; no optimizer"
+  },
+  "script_sha256": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1",
+  "model_sha256": "f68effb1e917ef6356d50b403b2993b1c2155362c1ab669ac4fa3a5c4a83982d",
+  "upstream_manifest_sha256": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866",
+  "observations_sha256": "3b632878feb31afd390b83c4652c231d3c62ddd08919d8261ed341935f257f40",
+  "precision": "float64 models, fields, receiver data and kernels; native FD constants computed in float32",
+  "padding": "identical dtype-preserving replicate-padding adapter in both arms; vendor source unchanged",
+  "checkpointing": false,
+  "warmup_evaluations": 3,
+  "implementation_sha256": {
+    "src/hybridadfwi/adjoint.py": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17"
+  },
+  "scope": "forward + objective/data VJP + backward/static model VJP; setup, warmup and result storage excluded"
+}

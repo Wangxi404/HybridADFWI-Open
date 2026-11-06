@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "config": {
+    "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+    "observations": "/home/xiwang/HybridADFWI/runs/no-checkpoint-1shot-20261106/observations.npz",
+    "preset": "paper",
+    "device": "cuda",
+    "nt": 2500,
+    "dt": 0.003,
+    "f0": 5.0,
+    "shots": 1,
+    "receivers": 100,
+    "depth_m": 540.0,
+    "nabc": 20,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "repeats": 3,
+    "segments": 1,
+    "checkpointing": false,
+    "threads": 1,
+    "objective": "l2",
+    "tolerance": 1e-08,
+    "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+    "order": "alternating AB/BA across repetitions; fresh process per arm",
+    "timing_scope": "forward + data objective/VJP + reverse; includes replay only when checkpointing is enabled; no optimizer"
+  },
+  "comparison": [
+    {
+      "repeat": 0,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 9.055427478872749e-13,
+          "relative_linf": 1.2624944585493062e-12,
+          "cosine": 1.0,
+          "autograd_l2": 7.924227690740157e-05,
+          "hybrid_l2": 7.924227690739152e-05,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 5.815926723510885e-14,
+          "relative_linf": 5.3723771788127814e-14,
+          "cosine": 0.9999999999999998,
+          "autograd_l2": 0.00034396590299883115,
+          "hybrid_l2": 0.00034396590299882914,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 2.690561509886061e-13,
+          "relative_linf": 2.0703719269103094e-13,
+          "cosine": 1.0,
+          "autograd_l2": 6.349117921660884e-05,
+          "hybrid_l2": 6.349117921660765e-05,
+          "passed": true
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 9.058002883071854e-13,
+          "relative_linf": 1.2624944585493062e-12,
+          "cosine": 1.0,
+          "autograd_l2": 7.924227690740155e-05,
+          "hybrid_l2": 7.924227690739148e-05,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 5.814254633837486e-14,
+          "relative_linf": 5.37046035527204e-14,
+          "cosine": 0.9999999999999998,
+          "autograd_l2": 0.00034396590299883115,
+          "hybrid_l2": 0.00034396590299882914,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 2.6901635102333264e-13,
+          "relative_linf": 2.0703719269103094e-13,
+          "cosine": 1.0,
+          "autograd_l2": 6.349117921660883e-05,
+          "hybrid_l2": 6.349117921660764e-05,
+          "passed": true
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "forward_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 9.056943605387166e-13,
+          "relative_linf": 1.2624944585493062e-12,
+          "cosine": 1.0,
+          "autograd_l2": 7.924227690740155e-05,
+          "hybrid_l2": 7.924227690739149e-05,
+          "passed": true
+        },
+        "vs": {
+          "relative_l2": 5.816023133198606e-14,
+          "relative_linf": 5.3723771788127814e-14,
+          "cosine": 0.9999999999999998,
+          "autograd_l2": 0.00034396590299883115,
+          "hybrid_l2": 0.00034396590299882914,
+          "passed": true
+        },
+        "rho": {
+          "relative_l2": 2.690459523995949e-13,
+          "relative_linf": 2.0715327746405647e-13,
+          "cosine": 1.0,
+          "autograd_l2": 6.349117921660883e-05,
+          "hybrid_l2": 6.349117921660764e-05,
+          "passed": true
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "autograd": {
+      "total_s": [
+        149.23287452105433,
+        147.93924277089536,
+        149.82103107962757
+      ],
+      "mean_total_s": 148.99771612385908,
+      "sample_std_s": 0.962681885956563,
+      "peak_rss_bytes": [
+        2909835264,
+        2922422272,
+        2917834752
+      ],
+      "peak_cuda_allocated_bytes": [
+        4477095424,
+        4477095424,
+        4477095424
+      ]
+    },
+    "hybrid": {
+      "total_s": [
+        63.22025582846254,
+        62.03380101546645,
+        62.67540036328137
+      ],
+      "mean_total_s": 62.64315240240345,
+      "sample_std_s": 0.5938844197787849,
+      "peak_rss_bytes": [
+        869466112,
+        869154816,
+        869715968
+      ],
+      "peak_cuda_allocated_bytes": [
+        2494166016,
+        2494166016,
+        2494166016
+      ]
+    }
+  },
+  "resource_audit": [
+    {
+      "worker": "prepare",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-0",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-0",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-1",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-1",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "autograd-2",
+      "status": "complete",
+      "contaminated": false
+    },
+    {
+      "worker": "hybrid-2",
+      "status": "complete",
+      "contaminated": false
+    }
+  ],
+  "autograd_over_hybrid_time_ratio": 2.3785156143920756,
+  "caveat": "Small runs establish correctness only; timings include any enabled checkpoint replay and host contention."
+}

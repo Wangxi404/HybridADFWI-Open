@@ -1,0 +1,3 @@
+[submodule "vendor/ADFWI"]
+	path = vendor/ADFWI
+	url = https://github.com/liufeng2317/ADFWI.git

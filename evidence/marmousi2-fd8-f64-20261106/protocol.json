@@ -1,0 +1,29 @@
+{
+  "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+  "observations": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/observations.npz",
+  "preset": "paper",
+  "device": "cuda",
+  "nt": 2500,
+  "dt": 0.003,
+  "f0": 5.0,
+  "shots": 9,
+  "receivers": 100,
+  "depth_m": 540.0,
+  "nabc": 20,
+  "free_surface": true,
+  "fd_order": 8,
+  "dtype": "float64",
+  "parameters": [
+    "vp",
+    "vs",
+    "rho"
+  ],
+  "repeats": 3,
+  "segments": 50,
+  "threads": 1,
+  "objective": "l2",
+  "tolerance": 1e-08,
+  "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+  "order": "alternating AB/BA across repetitions; fresh process per arm",
+  "timing_scope": "forward + data objective/VJP + reverse including checkpoint replay; no optimizer"
+}

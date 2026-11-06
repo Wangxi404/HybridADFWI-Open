@@ -1,0 +1,17 @@
+{
+  "hostname": "hpnewpc3",
+  "cpu_logical": 32,
+  "cpu_physical": 24,
+  "cpu_load_at_collection": [
+    39.8935546875,
+    39.525390625,
+    39.69384765625
+  ],
+  "python": "3.9.21",
+  "torch": "2.6.0+cu118",
+  "torch_cuda_runtime": "11.8",
+  "numpy": "2.0.1",
+  "scipy": "1.13.1",
+  "psutil": "7.0.0",
+  "gpu_driver": "NVIDIA RTX A5000, 535.183.01, 24564 MiB"
+}

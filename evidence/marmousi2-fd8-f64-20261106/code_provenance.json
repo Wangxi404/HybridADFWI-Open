@@ -1,0 +1,12 @@
+{
+  "measured_code_commit": "9b939ba2fab0383fb9adbd3e58f7b95b61210866",
+  "files": {
+    "scripts/benchmark.py": "6992e47700dbab729aa4f12beb52eca3ba3a1268136abfcfa1b3707308b700de",
+    "src/hybridadfwi/adjoint.py": "699c8a2343a04d16560bc8f9b85b58038e4a1a2a9e7856584783881bea94a1be",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17",
+    "scripts/run_when_idle.py": "78cfebc3ef172b617599ee6ec30ee0cf50294ab62765733a07204341fc12c133",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "note": "Supplementary warmup diagnostic is a separate file added after the measured run."
+}

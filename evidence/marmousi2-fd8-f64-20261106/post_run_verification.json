@@ -1,0 +1,50 @@
+{
+  "collection": "post-run; no runtime files were changed during the run",
+  "utc": "2026-11-06T12:43:21.160019+00:00",
+  "source_sha256": {
+    "scripts/benchmark.py": "6992e47700dbab729aa4f12beb52eca3ba3a1268136abfcfa1b3707308b700de",
+    "src/hybridadfwi/adjoint.py": "699c8a2343a04d16560bc8f9b85b58038e4a1a2a9e7856584783881bea94a1be",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17",
+    "scripts/run_when_idle.py": "78cfebc3ef172b617599ee6ec30ee0cf50294ab62765733a07204341fc12c133",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "trace_verification": [
+    {
+      "repeat": 0,
+      "files": {
+        "autograd-0.npz": "69db237eb84b5bb651798426b62b1331e9b1dac1f2b09ccf789fb1497963354c",
+        "hybrid-0.npz": "d1180a8dab48a9488f22698a001f1cd8c5f51b8d6ad723d05d430b8a4bcac199"
+      },
+      "trace_sha256": {
+        "autograd": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473",
+        "hybrid": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473"
+      },
+      "equal": true
+    },
+    {
+      "repeat": 1,
+      "files": {
+        "autograd-1.npz": "7df9f9df8ecc68a028ad4053f84bda556bcc73f1cc139a8c2f999c784ac8166c",
+        "hybrid-1.npz": "8261bd3189dbc0b345a35379219b13befb82f1e59d7337bcc78aee5903d44485"
+      },
+      "trace_sha256": {
+        "autograd": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473",
+        "hybrid": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473"
+      },
+      "equal": true
+    },
+    {
+      "repeat": 2,
+      "files": {
+        "autograd-2.npz": "0c6dba3c3f41ea4e212bd34e00368331db59b58e50f7928052d293a4da82e47d",
+        "hybrid-2.npz": "754bc576ac501c5d7b288207306d876fcef70e276128da0cb92c15e476e0386e"
+      },
+      "trace_sha256": {
+        "autograd": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473",
+        "hybrid": "f89931b682ecb0a3fceff5dc9f4a6b4a2ddc66e7ad539530cf3b4070e9735473"
+      },
+      "equal": true
+    }
+  ]
+}

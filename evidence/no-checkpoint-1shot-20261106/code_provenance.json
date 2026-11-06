@@ -1,0 +1,13 @@
+{
+  "measured_code_commit": "35ba90a34f8efaaf096fbf2a471001f1acc38b79",
+  "source_sha256": {
+    "scripts/benchmark.py": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1",
+    "scripts/check_no_checkpoint_capacity.py": "98732f19b1b4b81608a979fa6670c4e0cc91dca18148d4019bd64778e0b034b6",
+    "src/hybridadfwi/adjoint.py": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17",
+    "scripts/run_when_idle.py": "78cfebc3ef172b617599ee6ec30ee0cf50294ab62765733a07204341fc12c133",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "note": "Package hashes additionally appear in each successful worker JSON; OOM has no completed gradient."
+}

@@ -1,0 +1,49 @@
+{
+  "run_directory": "/home/xiwang/HybridADFWI/runs/no-checkpoint-capacity-9shot-20261106",
+  "files": {
+    "REPORT.md": {
+      "sha256": "5fb489e032236c38fb327def65d4889217c5a1cb626c1bf86a693403ba85a170",
+      "bytes": 566
+    },
+    "autograd-0.json": {
+      "sha256": "9fa5135512d221c3da40e6f74aef91ec7f2005502ba3d7f6efed73a80fce0ade",
+      "bytes": 3678
+    },
+    "autograd-0.log": {
+      "sha256": "a7f4a8b44ca383718cc3d992efbae29b2b5836eb31203606d7a9bc34172fc486",
+      "bytes": 142
+    },
+    "autograd-0.resources.json": {
+      "sha256": "9f53f26a736b14b227fb37ae92ace16d709ea58bc60b267bb8ff58fc19438171",
+      "bytes": 19078
+    },
+    "capacity_summary.json": {
+      "sha256": "6fa61f9cca2ce769951c74cbd0b82d9efe7454996724d99314e6c6e15426f8dd",
+      "bytes": 1903
+    },
+    "hybrid-0.json": {
+      "sha256": "afbafac0bb5bd3beb62bc76341f36d761f379290fbce7e741c44e3a820ce93ad",
+      "bytes": 3933
+    },
+    "hybrid-0.log": {
+      "sha256": "cb04a88dfdce4d03a0e25a3d8de02d08956b8a5fdbc9fd8a5609fa0a3161a7ea",
+      "bytes": 78
+    },
+    "hybrid-0.npz": {
+      "sha256": "9dcb950650e80e3978f612a12391046516f848cc490b4d59eb6f2a89f9b51999",
+      "bytes": 18375442
+    },
+    "hybrid-0.resources.json": {
+      "sha256": "5c877705051477105a030df8a9044ad84e25c1f0525c6c01c1246a8af106b29a",
+      "bytes": 31799
+    },
+    "observations.npz": {
+      "sha256": "c0656d2614232825342154968a5fbb8f2d7f6dde28facd090fb3babd0ce10b1b",
+      "bytes": 18000508
+    },
+    "protocol.json": {
+      "sha256": "c07fd3d04a8280e9ade4b0ae11eaac872b96de1ec7424356fe8751011a9c1097",
+      "bytes": 1132
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collection": "post-run verification; runtime code unchanged during measurements",
+  "utc": "2026-11-06T13:15:59.909329+00:00",
+  "source_sha256": {
+    "scripts/benchmark.py": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1",
+    "scripts/check_no_checkpoint_capacity.py": "98732f19b1b4b81608a979fa6670c4e0cc91dca18148d4019bd64778e0b034b6",
+    "src/hybridadfwi/adjoint.py": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17",
+    "scripts/run_when_idle.py": "78cfebc3ef172b617599ee6ec30ee0cf50294ab62765733a07204341fc12c133",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "reference": "previous nine-shot AD with 50 checkpoint segments; not a paired no-checkpoint AD result",
+  "forward_bitwise_equal_to_checkpointed_AD_reference": true,
+  "kernel_relative_l2_to_checkpointed_AD_reference": {
+    "vp": 5.009054244258459e-12,
+    "vs": 3.5763206499602095e-12,
+    "rho": 3.568333050960407e-12
+  },
+  "full_raw_file_sha256": {
+    "runs/marmousi2-fd8-f64-20261106/autograd-0.npz": "69db237eb84b5bb651798426b62b1331e9b1dac1f2b09ccf789fb1497963354c",
+    "runs/no-checkpoint-capacity-9shot-20261106/hybrid-0.npz": "9dcb950650e80e3978f612a12391046516f848cc490b4d59eb6f2a89f9b51999"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "collection": "post-run; runtime source unchanged during measurement",
+  "utc": "2026-11-06T13:21:42.336319+00:00",
+  "source_sha256": {
+    "scripts/benchmark.py": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1",
+    "scripts/check_no_checkpoint_capacity.py": "98732f19b1b4b81608a979fa6670c4e0cc91dca18148d4019bd64778e0b034b6",
+    "src/hybridadfwi/adjoint.py": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "src/hybridadfwi/resources.py": "ddae5e5d7fdf438b12d241f445b1a040fef086ef4cf9c0cfbf1183841a390b17",
+    "scripts/run_when_idle.py": "78cfebc3ef172b617599ee6ec30ee0cf50294ab62765733a07204341fc12c133",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "trace_verification": [
+    {
+      "repeat": 0,
+      "raw_file_sha256": {
+        "autograd-0.npz": "06370706d1c6c5c83f07b9d1ac00d7792ad93563df7cf21a5ee4511a4cb3c366",
+        "hybrid-0.npz": "1aab1fafb50d5f5b751f202f047062970343a57f5e4ae80b7ff1057bf96e1b0e"
+      },
+      "trace_sha256": {
+        "autograd": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd",
+        "hybrid": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd"
+      },
+      "equal": true
+    },
+    {
+      "repeat": 1,
+      "raw_file_sha256": {
+        "autograd-1.npz": "010b174f86f5bfed483420c13092c311686dadcf2e792fa46ea771d1ed45c6ce",
+        "hybrid-1.npz": "20f8c471455893dea3165730ca2ed12b34df2ed5a10a117cb0f46293edf19469"
+      },
+      "trace_sha256": {
+        "autograd": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd",
+        "hybrid": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd"
+      },
+      "equal": true
+    },
+    {
+      "repeat": 2,
+      "raw_file_sha256": {
+        "autograd-2.npz": "c62c8c1ac931385b77363357f5cf07c3a044d2f491fac6522ede1fdd40d3a21f",
+        "hybrid-2.npz": "60115cb4ca1b63d2eaa322512327ab23d5914996cd4177866e3212185937e7b8"
+      },
+      "trace_sha256": {
+        "autograd": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd",
+        "hybrid": "f2ca4995136c6c4326d524d129e1f29b38f81010441100f3af18d3df1c7d1efd"
+      },
+      "equal": true
+    }
+  ]
+}

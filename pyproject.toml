@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hybridadfwi"
+version = "0.1.0"
+description = "Non-invasive discrete-adjoint extension and controlled ADFWI benchmarks"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy", "torch>=2.1", "psutil", "matplotlib", "obspy", "tqdm", "h5py", "segyio", "ipython"]
+
+[project.urls]
+Repository = "https://github.com/Wangxi404/HybridADFWI-Open"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
