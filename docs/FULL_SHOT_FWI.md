@@ -78,9 +78,13 @@ The first accepted nine-shot update has been independently audited from the
 actual arrays: mean J decreases from 0.01735436 to 0.00897500 (48.28%), with
 one accepted update and a maximum physical change of 60 m/s. The projected
 coordinate step and actual-step Armijo condition both pass. At that new
-model, the existing B2 and B9 pressure archives for shots 0/1 are bitwise
-identical; this comparison does not yet cover the other seven shots.
+model, all nine stored pressure traces from H batches (2+2+2+2+1) and the
+loss-only B9 forward are bitwise identical. Stored per-shot GPU losses differ
+by at most 1.73e−18. This single-point consistency check does not establish
+why the earlier FD errors are nonmonotone.
 See [the scoped first-update audit](../evidence/multishot_fwi_independent_review/hybrid_v3_first_accepted_audit.json).
+The separate [all-nine forward audit](../evidence/multishot_fwi_independent_review/hybrid_v3_q1_all9_forward_audit.json)
+retains the expanded scope without rewriting the earlier two-shot receipt.
 
 The shared-host supervisor uses one quiet logical CPU and low priority. It
 starts only with an eligible GPU, reserves 2 GiB, and terminates **its own

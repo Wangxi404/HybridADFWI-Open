@@ -1,0 +1,312 @@
+{
+  "passed": true,
+  "scope": "Actual archived q1 forward pressure: all nine shots, Hybrid batches 2+2+2+2+1 versus loss-only batch9. Read-only NumPy; no solver, GPU or optimizer execution by reviewer.",
+  "run": "runs/fwi-20261108-fullshot-v3",
+  "protocol_sha256": "2238d8cbcca0a3eb6f3f7dbc4f96161e8a324e829d66947bf901a2128299bbd9",
+  "operator_signature": "38f6d98400a8e731b7f22000fd1b0c455830a81f8bf9f5d0608672ee6eeed415",
+  "source_hashes": {
+    "scripts/run_multishot_fwi.py": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+    "scripts/marmousi_fwi.py": "00a77c0689d415b96d7e7b6b78b5b04c888b1a3ab52cab589256a75dcdca1014",
+    "scripts/gradient_detail.py": "4253d88ae81cb0ce0a3c1c035c6fb33b3d014b05287fc686c0e99bc54d84397f",
+    "scripts/fwi_supervisor.py": "bd941122d1fd0a9b32c8a86c7a0e4ec1be3423c0d889c494bcf9f9091f75c0e4",
+    "scripts/fwi_pipeline.py": "0db60f43e0125a3b4ddd35fbab4c34ebb008592319ebb690fb52887e6596a0ce",
+    "scripts/fwi_ledger_check.py": "8a8bad44a3a2def9960f887620e4150e7de6c77eef4af41e0fbffbd47f059c6a",
+    "src/hybridadfwi/fwi.py": "09ee735580a4feb4d96fc62748c75a469738a408e28215628edba5c2cbcc3d85",
+    "src/hybridadfwi/adjoint.py": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556",
+    "src/hybridadfwi/experiment.py": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695",
+    "upstream.lock.json": "d8b04f8ff09507066858e54572e6cc34f6dc6221f3d471f1b5e3f058ce2a6866"
+  },
+  "current_and_executed_source_hashes_verified": true,
+  "protocol_signature_recomputed": true,
+  "stage0_objective_id_recomputed": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+  "observations_sha256": "b45e0b02fa5c6a18cb9c6bf602a41b93781eb85ab7362018c2504d95d015b7e2",
+  "geometry_sha256": "c4f498607ae5a5b21cc22ae793da9b38cae76564bfec6c1a039714e027d602fd",
+  "map_archive_sha256": "b4ff1b72b09a2c1e8e45c604b7a5a8f5326139a86926aa50ec0417a21a1b855e",
+  "P_sha256": "ba1f21d0205f15b3edf9787e46f2b41c4e0f136ac29467fea78768de5ca7e8de",
+  "q1_sha256": "2e0fb0246a77c7ab2763d48a4accd10ac42ad8ff7b026f8da937738590382dd5",
+  "physical_fields_sha256": {
+    "vp": "0ae8be54451940f470518149132827a75ddf4e8d53eeec0d0bea73b81aaa7436",
+    "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+    "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+  },
+  "actual_q1_Vp_matches_static_P_map_uint64": true,
+  "fixed_Vs_rho_match_training_array_bytes": true,
+  "training_has_true_vp": false,
+  "first_accepted_commit_sha256": "198fbf82c7f196db68eaaf65f39b4b2183b2d11ec3d62bc73e5ccd664d170bdf",
+  "first_accepted_iteration_id": "stage0_accepted0000_attempt0001_7bd5d84a57",
+  "same_q_same_material_same_objective_same_window_and_scale_verified": true,
+  "cache_records": [
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_loss/shots_0-1-2-3-4-5-6-7-8.json",
+      "metadata_sha256": "ede4d25bb2ce3b08258eeaca03429c8b5225c6770c12dc7e73b927382b26c78a",
+      "data_sha256": "383ef82ee3743b7beb95566fd3555a1b26a207cc22baabfaa132d5ef17063b87",
+      "shot_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "method": "loss",
+      "imported_execution": false
+    },
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_hybrid/shots_0-1.json",
+      "metadata_sha256": "1b605f54ee7d3210232480e330695ee5e73050618b92a1a3b6c9df0b3a3abc4e",
+      "data_sha256": "d25aef43573c30d26414b0e2c299b7074f6e52720805f84504efc55d0bcce7fc",
+      "shot_ids": [
+        0,
+        1
+      ],
+      "method": "hybrid",
+      "imported_execution": false
+    },
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_hybrid/shots_2-3.json",
+      "metadata_sha256": "dcf0fcc462a0c07767179b1b4738aade6e766df8d894ede00ac8704a592389a6",
+      "data_sha256": "51a1306b2cbc5e500160dde0742bd5aaa715691d8d967502e554992e224698f4",
+      "shot_ids": [
+        2,
+        3
+      ],
+      "method": "hybrid",
+      "imported_execution": false
+    },
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_hybrid/shots_4-5.json",
+      "metadata_sha256": "12f6fd49acf64a7271f9154193f0c2fa0585171c0b09959f578ac26588eaf159",
+      "data_sha256": "2ac2e4ad5e42c9a42754d1da57e9c680d025a65b4acde42d2ddbc849e094d553",
+      "shot_ids": [
+        4,
+        5
+      ],
+      "method": "hybrid",
+      "imported_execution": false
+    },
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_hybrid/shots_6-7.json",
+      "metadata_sha256": "e93519047147344d56b453609651b37fd7b066dd052ba85c4c25b11bc0642e31",
+      "data_sha256": "d01fa8f87672779dd6bbe141914192dddb61d382414a4fe4552f81f4ff5f8495",
+      "shot_ids": [
+        6,
+        7
+      ],
+      "method": "hybrid",
+      "imported_execution": false
+    },
+    {
+      "metadata": "evaluations/96d313c173ef43da_2e0fb0246a77c7ab2763_hybrid/shots_8.json",
+      "metadata_sha256": "b4b20577c865088ad12decc9fad8ee202d004b101973fb0bc3c1e5d907c9f275",
+      "data_sha256": "b760f007829762f5ce5a7de987a0eddfcea791848e7fd141d9948366b14723cd",
+      "shot_ids": [
+        8
+      ],
+      "method": "hybrid",
+      "imported_execution": false
+    }
+  ],
+  "all_nine_pressure_comparisons": [
+    {
+      "shot_id": 0,
+      "hybrid_batch_ids": [
+        0,
+        1
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "952a209db2061bb90d31aa4accaec8bbc2fae563dd77d021542352efbfbf178d",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.006455662283160661,
+      "loss_only_per_shot_GPU_loss": 0.006455662283160661,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 1,
+      "hybrid_batch_ids": [
+        0,
+        1
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "7b6d689d96743c6d146777ff06ae1cb34fbf76dd5f2748e8a54c9d6822d8d203",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.007749325780544141,
+      "loss_only_per_shot_GPU_loss": 0.007749325780544141,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 2,
+      "hybrid_batch_ids": [
+        2,
+        3
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "1658e0b6b0e5387277b764906b4eddaedeeae02ec8df84fdd56eac17b9dbd771",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.00842523621708111,
+      "loss_only_per_shot_GPU_loss": 0.00842523621708111,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 3,
+      "hybrid_batch_ids": [
+        2,
+        3
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "326b2a0a21acb5d47d9c0d42aadb272ee97f41b19658502c9542641699900809",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.009030917728570469,
+      "loss_only_per_shot_GPU_loss": 0.00903091772857047,
+      "GPU_loss_absolute_difference": 1.734723475976807e-18
+    },
+    {
+      "shot_id": 4,
+      "hybrid_batch_ids": [
+        4,
+        5
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "9a5445a4d42f061261351f1fa7d7979cf3dc8ad64fde332c7125905d45c2babd",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.009744744867764029,
+      "loss_only_per_shot_GPU_loss": 0.009744744867764029,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 5,
+      "hybrid_batch_ids": [
+        4,
+        5
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "09480803e997984a26d88610c508c0bcc840751ac9166211ae9ddf2a2172e927",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.007433176157427915,
+      "loss_only_per_shot_GPU_loss": 0.007433176157427914,
+      "GPU_loss_absolute_difference": 8.673617379884035e-19
+    },
+    {
+      "shot_id": 6,
+      "hybrid_batch_ids": [
+        6,
+        7
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "bbf4f9b0b973df6d536c52fb7de7c5fda0b6a791520e8e82c88945d649d66661",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.009691947038843325,
+      "loss_only_per_shot_GPU_loss": 0.009691947038843325,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 7,
+      "hybrid_batch_ids": [
+        6,
+        7
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "edc8896af6841f8e18ce07ef13d23d0a4ff24a41e417a7bd230a25a109825367",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.012145913038832432,
+      "loss_only_per_shot_GPU_loss": 0.012145913038832432,
+      "GPU_loss_absolute_difference": 0.0
+    },
+    {
+      "shot_id": 8,
+      "hybrid_batch_ids": [
+        8
+      ],
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "pressure_sha256": "7a4396208d356164b3458c6483831ba900b6f8ddfd67b001e1d2bf66d9f0096a",
+      "actual_uint64_equal": true,
+      "different_bitpatterns": 0,
+      "relative_l2": 0.0,
+      "absolute_linf": 0.0,
+      "hybrid_per_shot_GPU_loss": 0.010098111008285171,
+      "loss_only_per_shot_GPU_loss": 0.010098111008285171,
+      "GPU_loss_absolute_difference": 0.0
+    }
+  ],
+  "maximum_GPU_loss_absolute_difference": 1.734723475976807e-18,
+  "all_nine_GPU_losses_bitwise_equal_claimed": false,
+  "GPU_wavefield_or_cotensor_dtype_claimed": false,
+  "initial_point_FD_nonmonotonicity_explained": false,
+  "general_all_models_forward_equivalence_claimed": false,
+  "full_inversion_completion_or_geological_recovery_claimed": false,
+  "limitation": "This finite saved q1 comparison certifies these pressure arrays and their provenance only. It does not establish an FD error mechanism, all future models, unarchived runtime tensor dtypes, convergence or recovery.",
+  "output_directory": "<TEMP>/hybrid-q1-all9-independent-h9n6hur3",
+  "independent_reader_source_sha256": "423d69ea52c84f115470e3130c8728a05ea9066255b966683f6f2d9d9b31744c",
+  "original_private_report_sha256": "98e547df13fcde8337c4127460e2ff5cb3a5e9a9f7b1583bd5bddc5946a69a37",
+  "sanitization": {
+    "scope": "Only the temporary output-directory prefix is replaced; all numerical measurements and numerical-source hashes are preserved. No model or pressure arrays are included.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_v3_q1_all9_forward_audit.json"
+  },
+  "portable_public_reproducer": {
+    "path": "audit_hybrid_q1_all9_forward.py",
+    "sha256": "423d69ea52c84f115470e3130c8728a05ea9066255b966683f6f2d9d9b31744c",
+    "scope": "This exact NumPy-only reader was executed on all nine existing q1 Hybrid/loss pressure arrays. No solver, GPU or optimizer call, and no model or pressure transfer."
+  }
+}
