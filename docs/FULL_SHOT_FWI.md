@@ -25,7 +25,7 @@ update the accepted model.
 
 | Item | Declared protocol |
 | --- | --- |
-| Solver | Unchanged ADFWI P–SV step kernels; spatial FD order 8; float64 |
+| Solver | Unchanged ADFWI P–SV step kernels; FD order 8; float64 wavefields/materials/data; native float32-generated FD constants promoted for use |
 | Model | Marmousi-II ROI, original x = 8–10.5 km; depth = 0–3.4625 km |
 | Grid | 555 × 401 points, 6.25 m spacing |
 | Unknown | Vp, starting from the previously declared sigma = 60 m blur |
@@ -51,7 +51,8 @@ The run preserves per-batch model fingerprints, shot IDs, objective IDs,
 normalization and complete-candidate proofs. Accepted model checkpoints,
 actual mapped updates and the full-shot ledger support independent replay.
 Resume rejects changed source/configuration/training/observation fingerprints.
-Interrupted partial batches may be reused only at their exact verified point.
+Completed batch contributions from an interrupted iteration may be reused
+only at their exact verified point. An unfinished batch is recomputed.
 
 CPU qualification covers actual small wave solves, batch/serial reductions,
 AD/Hybrid agreement and full-objective directional checks. Separate tiny
@@ -63,14 +64,23 @@ The initial diagnostic used maximum physical perturbations of 0.10 and
 0.05 m/s. Their actual relative errors were 1.1924e−5 and 1.3943e−6, against
 the unchanged 1e−5 tolerance. That original run is retained as a failed
 qualification with zero accepted updates. The refined diagnostic uses 0.05
-and 0.025 m/s and requires **both** to pass. Two points alone do not establish
-a convergence order. This changes diagnostic step sizes only.
+and 0.025 m/s, with actual errors 1.3943e−6 and 8.4135e−6; **both** pass the
+same tolerance. The smaller-step error increases, so this is not a claim of
+monotone asymptotic convergence. This changes diagnostic step sizes only.
 
 `scripts/import_fwi_diagnostic_cache.py` can reuse verified initial-point
 results for this diagnostic-only refinement. It checks identical numerical
 sources, fields, geometry, observations and objective, preserves the producer
 metadata/signature and records a separate compatibility proof. It never
 rewrites the original failure or relabels old arrays as new computations.
+
+The first accepted nine-shot update has been independently audited from the
+actual arrays: mean J decreases from 0.01735436 to 0.00897500 (48.28%), with
+one accepted update and a maximum physical change of 60 m/s. The projected
+coordinate step and actual-step Armijo condition both pass. At that new
+model, the existing B2 and B9 pressure archives for shots 0/1 are bitwise
+identical; this comparison does not yet cover the other seven shots.
+See [the scoped first-update audit](../evidence/multishot_fwi_independent_review/hybrid_v3_first_accepted_audit.json).
 
 The shared-host supervisor uses one quiet logical CPU and low priority. It
 starts only with an eligible GPU, reserves 2 GiB, and terminates **its own

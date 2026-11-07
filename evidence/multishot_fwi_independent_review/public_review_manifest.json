@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4122,
-      "sha256": "3c7ed378e71e6d332bb4f309114a95d45ed184b5d148f7221c8e1cfebd3cd732",
+      "bytes": 4681,
+      "sha256": "69cca07ad2d9cda678f3970161f622d0cd9391e26b1294e54957492406fd68c4",
       "original_private_file_sha256": null
     },
     {
@@ -120,9 +120,21 @@
       "bytes": 5613,
       "sha256": "2e837865ce7a4a28a9aa7de810698c98fcff0e281694ea5df451bd5eb9cbf824",
       "original_private_file_sha256": "9e9187de27094cf03cb457a1417d350be5e264b1f0c42367ab702699419fecb9"
+    },
+    {
+      "path": "audit_hybrid_first_accepted.py",
+      "bytes": 9174,
+      "sha256": "c0c2c4e5b95d0bd723ab6f328e8cf6443bff8958b8f0e3b063393120bde17590",
+      "original_private_file_sha256": "c0c2c4e5b95d0bd723ab6f328e8cf6443bff8958b8f0e3b063393120bde17590"
+    },
+    {
+      "path": "hybrid_v3_first_accepted_audit.json",
+      "bytes": 3402,
+      "sha256": "49830c953d7e11b4039c6b339e4bc23591c3f749b15a4e8418a90fa40f2a5d06",
+      "original_private_file_sha256": "f5fadc94a60452a34e08cc3aa698e20a15ac7f9b2b8c198e42041d8d014ac229"
     }
   ],
-  "original_private_archive_manifest_sha256": "c1aa9f4ae19ddb128b6ccf148839e5ce36a3f45c5b5866cae77f0247d9be7d6e",
+  "original_private_archive_manifest_sha256": "ccb6c0a664f922eed2ff5e8754667806a220522ce6db04e9cdfc037fa1a9e399",
   "original_numeric_values_and_solver_source_hashes_preserved": true,
   "private_originals_ignored_by_git": true,
   "root_owned_plotter_QA_excluded": [

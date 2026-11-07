@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "scope": "Immutable first accepted nine-shot update and exactly two same-q1 archived forward pressure comparisons. No solver, optimizer, Torch or CUDA context run by reviewer.",
+  "numeric_controller_sha256": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+  "commit_sha256": "198fbf82c7f196db68eaaf65f39b4b2183b2d11ec3d62bc73e5ccd664d170bdf",
+  "commit_iteration_id": "stage0_accepted0000_attempt0001_7bd5d84a57",
+  "accepted_updates_in_this_iteration": 1,
+  "all_gradient_and_candidate_shots_complete_before_update": true,
+  "same_anchor_and_same_candidate_model_sha256_verified": true,
+  "actual_q1_matches_projected_capped_direction_uint64": true,
+  "actual_Vp0_Vp1_match_static_P_map_uint64": true,
+  "fixed_cells_Vp_unchanged_uint64": true,
+  "actual_q_delta_dot_mean_gradient": -0.014935626535879074,
+  "Armijo_rhs_independently_recomputed": 0.017352866342207254,
+  "loss_before": 0.017354359904860842,
+  "loss_after_independent_nine_shot_mean": 0.008975003791167694,
+  "relative_loss_decrease": 0.4828386733725711,
+  "actual_maximum_delta_Vp_m_s": 59.99999999994543,
+  "physical_bounds_passed": true,
+  "q1_sha256": "2e0fb0246a77c7ab2763d48a4accd10ac42ad8ff7b026f8da937738590382dd5",
+  "Vp1_sha256": "0ae8be54451940f470518149132827a75ddf4e8d53eeec0d0bea73b81aaa7436",
+  "actual_update_archive_sha256": "4059adf72708faa1f851dcacc814c6bea57447e8df1cbef17bb6d206df55353d",
+  "refined_fd_completed_before_update": true,
+  "FD_formal_convergence_claimed": false,
+  "q1_hybrid_B2_vs_loss_B9_pressure_comparisons": [
+    {
+      "shot_id": 0,
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "actual_uint64_equal": true,
+      "pressure_sha256": "952a209db2061bb90d31aa4accaec8bbc2fae563dd77d021542352efbfbf178d",
+      "absolute_linf": 0,
+      "per_shot_GPU_loss_equal": true
+    },
+    {
+      "shot_id": 1,
+      "shape": [
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "actual_uint64_equal": true,
+      "pressure_sha256": "7b6d689d96743c6d146777ff06ae1cb34fbf76dd5f2748e8a54c9d6822d8d203",
+      "absolute_linf": 0,
+      "per_shot_GPU_loss_equal": true
+    }
+  ],
+  "hybrid_B2_cache_sha256": "d25aef43573c30d26414b0e2c299b7074f6e52720805f84504efc55d0bcce7fc",
+  "loss_B9_cache_sha256": "383ef82ee3743b7beb95566fd3555a1b26a207cc22baabfaa132d5ef17063b87",
+  "GPU_wavefield_or_cotensor_dtype_runtime_claimed": false,
+  "all_nine_same_point_forward_equality_claimed": false,
+  "full_inversion_completion_or_recovery_claimed": false,
+  "output_directory": "<TEMP>/hybrid-first-accepted-independent-y6gb39_k",
+  "independent_reader_source_sha256": "c0c2c4e5b95d0bd723ab6f328e8cf6443bff8958b8f0e3b063393120bde17590",
+  "original_private_report_sha256": "f5fadc94a60452a34e08cc3aa698e20a15ac7f9b2b8c198e42041d8d014ac229",
+  "sanitization": {
+    "scope": "Only temporary path prefix replaced; all actual numeric measurements and source hashes retained.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_v3_first_accepted_audit.json"
+  },
+  "portable_public_reproducer": {
+    "path": "audit_hybrid_first_accepted.py",
+    "sha256": "c0c2c4e5b95d0bd723ab6f328e8cf6443bff8958b8f0e3b063393120bde17590",
+    "scope": "This exact NumPy-only reader was executed on existing immutable arrays; no solver/GPU/optimizer and no model or pressure transfer."
+  }
+}
