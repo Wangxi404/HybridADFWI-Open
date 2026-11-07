@@ -1,0 +1,31 @@
+{
+  "scope": "Descriptive distribution of actual objective-coordinate derivatives; no recovered model or imaging-quality score",
+  "cases": {
+    "previous_blurred_vs": {
+      "coordinate_l2": 7.451117445142812e-05,
+      "coordinate_linf": 2.192646135985155e-06,
+      "max_absolute_coordinate_xz_m": [
+        9568.75,
+        456.25
+      ],
+      "squared_energy_fraction_below_depth": {
+        "1000": 0.1452842917298196,
+        "2000": 0.007990113161769065,
+        "3000": 0.00020896871415085629
+      }
+    },
+    "fresh_true_vs": {
+      "coordinate_l2": 0.00010166883623419623,
+      "coordinate_linf": 3.0456282267213182e-06,
+      "max_absolute_coordinate_xz_m": [
+        9562.5,
+        456.25
+      ],
+      "squared_energy_fraction_below_depth": {
+        "1000": 0.11857454633158193,
+        "2000": 0.004529118587456874,
+        "3000": 3.455993766987956e-05
+      }
+    }
+  }
+}

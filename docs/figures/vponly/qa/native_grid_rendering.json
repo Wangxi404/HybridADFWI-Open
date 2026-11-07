@@ -1,0 +1,16 @@
+{
+  "shape_zx": [
+    555,
+    401
+  ],
+  "cell_edge_extent_km": [
+    7.996875,
+    10.503125,
+    3.4656249999999997,
+    -0.003125
+  ],
+  "x_center_max_error_km": 1.7763568394002505e-15,
+  "z_center_max_error_km": 6.661338147750939e-16,
+  "orientation": "row0 at top; native x/z increasing; axes depth down",
+  "rendering": "imshow interpolation=none; image.composite_image=False; PDF first, tight bbox; no model/gradient interpolation or smoothing"
+}

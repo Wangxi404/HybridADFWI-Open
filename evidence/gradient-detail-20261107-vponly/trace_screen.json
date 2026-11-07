@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "all_finite": true,
+  "initial": [
+    {
+      "time_start_s": 0,
+      "time_end_s": 1,
+      "max_abs": 0.7185150859587023,
+      "rms": 0.027346148004521825
+    },
+    {
+      "time_start_s": 1,
+      "time_end_s": 2,
+      "max_abs": 0.04810703639439515,
+      "rms": 0.003662039309192383
+    },
+    {
+      "time_start_s": 2,
+      "time_end_s": 3,
+      "max_abs": 0.0024668011153780494,
+      "rms": 0.0006761085968842929
+    },
+    {
+      "time_start_s": 3,
+      "time_end_s": 3.500501,
+      "max_abs": 0.0018201454106345808,
+      "rms": 0.00040086174682117627
+    }
+  ],
+  "truth": [
+    {
+      "time_start_s": 0,
+      "time_end_s": 1,
+      "max_abs": 0.7185150859587023,
+      "rms": 0.027336767053109393
+    },
+    {
+      "time_start_s": 1,
+      "time_end_s": 2,
+      "max_abs": 0.0481455730791919,
+      "rms": 0.004066803784224366
+    },
+    {
+      "time_start_s": 2,
+      "time_end_s": 3,
+      "max_abs": 0.006341650271014214,
+      "rms": 0.0011470208837016322
+    },
+    {
+      "time_start_s": 3,
+      "time_end_s": 3.500501,
+      "max_abs": 0.0018180673924606786,
+      "rms": 0.0004425004081562758
+    }
+  ],
+  "initial_late_max_over_first_second_max": 0.0025332041681574327,
+  "heuristic_upper_bound": 0.1,
+  "scope": "Screens recurrence of the prior large late-time amplification only; not independent validation of interface/PML accuracy",
+  "initial_pressure_sha256_float64_c_bytes": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e"
+}

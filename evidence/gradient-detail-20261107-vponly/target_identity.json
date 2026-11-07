@@ -1,0 +1,22 @@
+{
+  "reference": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-reflection-candidate-20261107/observations.npz",
+  "new": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-20261107-vponly/observations.npz",
+  "checks": {
+    "pressure_1": {
+      "uint64_equal": true,
+      "old_array_bytes_sha256": "b680b5cc10d96a581ee93289890332c10c75147700d1dbd8f05f0a4078754a79",
+      "new_array_bytes_sha256": "b680b5cc10d96a581ee93289890332c10c75147700d1dbd8f05f0a4078754a79"
+    },
+    "window_1": {
+      "uint64_equal": true,
+      "old_array_bytes_sha256": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf",
+      "new_array_bytes_sha256": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf"
+    },
+    "scale_1": {
+      "uint64_equal": true,
+      "old_array_bytes_sha256": "870d644faf0d7ee595af8565c8136e11d1b2945f02c7df37f5223c491db1b60c",
+      "new_array_bytes_sha256": "870d644faf0d7ee595af8565c8136e11d1b2945f02c7df37f5223c491db1b60c"
+    }
+  },
+  "scope": "Same physical truth target, window and normalization; only initial Vs/rho designation and trainable coordinates change"
+}

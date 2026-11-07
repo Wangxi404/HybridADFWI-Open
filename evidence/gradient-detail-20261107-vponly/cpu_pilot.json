@@ -1,0 +1,10 @@
+{
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q tests/test_vponly_detail.py",
+  "result": "1 passed",
+  "elapsed_s": 7.54,
+  "warnings": "14 upstream dependency Pyparsing deprecation warnings",
+  "scope": "Small synthetic complete P-SV AD/Hybrid Vp gradient; fixed true Vs/rho; exact P chain and reused-coordinate directional finite difference; no Marmousi input",
+  "asserted_physical_ad_hybrid_relative_l2_below": 1e-08,
+  "asserted_directional_fd_relative_error_below": 1e-05,
+  "test_sha256": "a74a84bb54ade16b2f2c98397e39889aca99d68affe7b6b44a7b46d1804468f8"
+}

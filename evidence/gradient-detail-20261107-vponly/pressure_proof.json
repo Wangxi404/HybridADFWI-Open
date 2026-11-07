@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-11-07T08:23:49.667235+00:00",
+  "scope": "Model-free synthetic pressure and cotangent evidence; NOT full pressure data",
+  "sampling": {
+    "operation": "Exact node selection; no interpolation, averaging, or rescaling",
+    "time_stride": 8,
+    "receiver_stride": 16,
+    "original_shape": [
+      1,
+      7001,
+      161
+    ],
+    "sample_shape": [
+      1,
+      876,
+      11
+    ],
+    "full_objective_element_count": 1127161,
+    "warning": "Recomputing mean on the sample is a DIFFERENT objective; use full count for cotangent checks"
+  },
+  "dt_s": 0.0005,
+  "shot_id": 1,
+  "fixed_observed_rms": 0.0009734336304707893,
+  "full_objective_loss": 0.5618460904012317,
+  "cotangent_formula": "(p-p_observed)*fixed_window**2/(fixed_observed_RMS**2*full_objective_element_count)",
+  "full_cotangent_formula_relative_l2": 1.7966741299362793e-16,
+  "full_pressure_ad_hybrid_uint64_equal": true,
+  "full_ad_pressure_bytes_sha256": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e",
+  "full_array_byte_hashes": {
+    "predicted_pressure": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "sha256_c_contiguous_bytes": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e"
+    },
+    "observed_pressure": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "sha256_c_contiguous_bytes": "b680b5cc10d96a581ee93289890332c10c75147700d1dbd8f05f0a4078754a79"
+    },
+    "window": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "sha256_c_contiguous_bytes": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf"
+    },
+    "adjoint_source_pressure": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "dtype": "float64",
+      "sha256_c_contiguous_bytes": "8df2bf2c09a2578132e287c22e8eda42edbf3f0fbce1eee8cfc70f9ed7b09e9f"
+    }
+  },
+  "source_files": {
+    "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-20261107-vponly/hybrid-shot1.npz": {
+      "sha256": "60368126601c40595b63c9c59803eb9a55ee6530b35d506e1f7ea4de7104ea10",
+      "bytes": 18696029
+    },
+    "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-20261107-vponly/autograd-shot1.npz": {
+      "sha256": "56248ae0ebee0d8b980959001a4007a38abcafb8fa5c4b10a72c4b8159080663",
+      "bytes": 13608081
+    },
+    "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-20261107-vponly/observations.npz": {
+      "sha256": "057895c642ce09fa2375be25ed983a30cdf5f118d138df8ccd57ac14e3c08f65",
+      "bytes": 8370636
+    }
+  },
+  "full_pressure_archive": {
+    "path_at_run_host": "/home/xiwang/HybridADFWI-Open/.cache/detail-pressure-proof-20261107-vponly/pressure_data_full.npz",
+    "sha256": "5878b2d7eaef5857c60865ad27601d2ed10aefd41e6f07315e91e52eefb17e92",
+    "bytes": 21601580,
+    "downloaded_in_this_small_proof": false,
+    "contents": "Only four full pressure/window/cotangent arrays plus scale and full count; no model arrays"
+  },
+  "sample_file": {
+    "name": "pressure_data_sampled.npz",
+    "sha256": "78983ef1daae2a35b1fd240cf7ded1a00b5b24afc087a3f6738a00ab91ac6374",
+    "bytes": 197742
+  },
+  "packaging_code_sha256": "1153c2abb0ec103eef0fc8394c3aed21abb89ff88c4398399dcea135f0cbdfcb"
+}

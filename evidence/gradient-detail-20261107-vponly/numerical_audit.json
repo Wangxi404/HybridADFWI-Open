@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-11-07T08:23:48.105666+00:00",
+  "original_summary_passed": true,
+  "tolerance": 1e-08,
+  "actual_initial_field_hashes_match": true,
+  "parameters": [
+    "vp"
+  ],
+  "private_worker_source_hashes": {
+    "autograd": "56248ae0ebee0d8b980959001a4007a38abcafb8fa5c4b10a72c4b8159080663",
+    "hybrid": "60368126601c40595b63c9c59803eb9a55ee6530b35d506e1f7ea4de7104ea10"
+  },
+  "array_identity": {
+    "gradient_autograd_vp": {
+      "sha256_c_bytes": "db680a4fb30908a072f80e47dad3a649fbb8ce7375424432fd1f3a67d571f449",
+      "shape": [
+        555,
+        401
+      ],
+      "dtype": "float64",
+      "numeric_transform": "none; direct single-shot worker array, signed zeros preserved"
+    },
+    "gradient_autograd_coordinate_vp": {
+      "sha256_c_bytes": "fd157e354e439260bf5926db63fed1aaa42cef4b6384a49329a901838ba15516",
+      "shape": [
+        555,
+        401
+      ],
+      "dtype": "float64",
+      "numeric_transform": "none; direct single-shot worker array, signed zeros preserved"
+    },
+    "gradient_hybrid_vp": {
+      "sha256_c_bytes": "722ac246aefb867fa44df0d4cfec60eacb561ace81bf44e0ed349c639b5776e7",
+      "shape": [
+        555,
+        401
+      ],
+      "dtype": "float64",
+      "numeric_transform": "none; direct single-shot worker array, signed zeros preserved"
+    },
+    "gradient_hybrid_coordinate_vp": {
+      "sha256_c_bytes": "bc46ac5db91184fe224c7e0ba0130573fbfe0c29e7e176bf72040255e7cb974a",
+      "shape": [
+        555,
+        401
+      ],
+      "dtype": "float64",
+      "numeric_transform": "none; direct single-shot worker array, signed zeros preserved"
+    }
+  },
+  "pressure_uint64_equal": true,
+  "pressure_sha256_float64_c_bytes": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e",
+  "autograd_coordinate_equals_P_times_physical_uint64": true,
+  "autograd_coordinate_equals_P_times_physical_numeric": true,
+  "hybrid_coordinate_equals_P_times_physical_uint64": true,
+  "hybrid_coordinate_equals_P_times_physical_numeric": true,
+  "agreements": {
+    "physical": {
+      "relative_l2": 2.7587253416062067e-11,
+      "absolute_l2": 7.0229529224460444e-15,
+      "absolute_linf": 3.267269412162204e-15,
+      "regions": {
+        "fixed_water": {
+          "cells": 29273,
+          "reference_l2": 0.00023265787696306924,
+          "absolute_l2": 4.633830474381493e-15,
+          "relative_to_region_l2": 1.9916929247648213e-11
+        },
+        "fixed_solid": {
+          "cells": 42867,
+          "reference_l2": 1.6208855991485506e-05,
+          "absolute_l2": 5.277260922958402e-15,
+          "relative_to_region_l2": 3.2557886415491267e-10
+        },
+        "transition": {
+          "cells": 18045,
+          "reference_l2": 1.1406862306449241e-05,
+          "absolute_l2": 2.7465640174218015e-20,
+          "relative_to_region_l2": 2.407817280190138e-15
+        },
+        "core": {
+          "cells": 132370,
+          "reference_l2": 0.0001014128612534781,
+          "absolute_l2": 1.8934561829835782e-19,
+          "relative_to_region_l2": 1.867076975819612e-15
+        }
+      }
+    },
+    "coordinate": {
+      "relative_l2": 1.8695434492756196e-15,
+      "absolute_l2": 1.9007430677711744e-19,
+      "absolute_linf": 1.207021949837378e-20,
+      "regions": {
+        "fixed_water": {
+          "cells": 29273,
+          "reference_l2": 0.0,
+          "absolute_l2": 0.0,
+          "relative_to_region_l2": null
+        },
+        "fixed_solid": {
+          "cells": 42867,
+          "reference_l2": 0.0,
+          "absolute_l2": 0.0,
+          "relative_to_region_l2": null
+        },
+        "transition": {
+          "cells": 18045,
+          "reference_l2": 7.2099815255388944e-06,
+          "absolute_l2": 1.6627655517671315e-20,
+          "relative_to_region_l2": 2.3061994623389158e-15
+        },
+        "core": {
+          "cells": 132370,
+          "reference_l2": 0.0001014128612534781,
+          "absolute_l2": 1.8934561829835782e-19,
+          "relative_to_region_l2": 1.867076975819612e-15
+        }
+      }
+    }
+  },
+  "canonical_raw_sha256": "ce971f5a592edcbc29481cf1d3a23eb650ee3fef47d0006084e9362963c0ea4d",
+  "regional_water_definition": {
+    "rule": "actual prepared vs_true==0, including z=450m row",
+    "cells": 29273,
+    "vs_true_sha256_c_bytes": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+    "source_field_matches_executed_model_manifest": true,
+    "water_mask_distributed_in_raw": false
+  }
+}

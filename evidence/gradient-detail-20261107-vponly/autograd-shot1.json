@@ -1,0 +1,118 @@
+{
+  "status": "ok",
+  "method": "autograd",
+  "shot_id": 1,
+  "loss": 0.5618460904012315,
+  "kernel_l2": {
+    "vp": 0.0002545723858960568
+  },
+  "created_utc": "2026-11-07T08:20:43.884618+00:00",
+  "timing": {
+    "forward_s": 35.67567980103195,
+    "objective_and_source_s": 0.003159092739224434,
+    "backward_s": 509.5531672872603,
+    "total_s": 545.2320061810315
+  },
+  "cuda_peak_allocated_bytes": 6199778304,
+  "cuda_peak_reserved_bytes": 7077888000,
+  "rss_before_bytes": 776441856,
+  "config": {
+    "name": "Marmousi-II fresh Vp-only true-Vs true-density reflection-pressure experiment 20261107-vponly",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m_20261107_vponly.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 96,
+    "free_surface": false,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_reference": "known_seafloor_primary",
+    "known_water_depth_m": 450.0,
+    "mute_velocity_m_s": 1500.0,
+    "seafloor_mute_after_s": 0.25,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "known_seafloor_primary_muted_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Fresh independent forward/residual/VJP/adjoint experiment. Exact old sigma60m Vp initial; Vs and designated truth density are fixed at true arrays. Complete native elastic P-SV propagation. Same horizontal ROI, known-water reflection window, Pmap and fixed PML as the prior illustrative case. No inherited gradients and no comparison of performance to old benchmark.",
+    "parent_prepared_model": "data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "parameter_mode": "vp_only_true_vs_true_rho",
+    "reference_observations": "runs/gradient-detail-reflection-candidate-20261107/observations.npz",
+    "worker_cpu_affinity": [
+      1
+    ],
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-20261107-vponly/observations.npz"
+  },
+  "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+  "pytorch": "2.6.0+cu118",
+  "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+  "model_sha256": "de96ec2257cf995b5ad48956e3129d37f56dcdb70b42955c1d09c44610a4646c",
+  "observations_sha256": "057895c642ce09fa2375be25ed983a30cdf5f118d138df8ccd57ac14e3c08f65",
+  "script_sha256": "4253d88ae81cb0ce0a3c1c035c6fb33b3d014b05287fc686c0e99bc54d84397f",
+  "gradient_processing": "none; raw derivative of explicit fixed-window pressure objective",
+  "parameterization": "m(theta)=m_initial+P*(theta-m_initial), diagonal P=0 in known water and fixed lateral/bottom buffer, raised-cosine transition; fixed buffer values come only from initial model. True observations use original true MII without this map. AD differentiates P map; Hybrid applies its exact P^T VJP. Full physical and constrained-coordinate derivatives saved separately.",
+  "pml_profile": {
+    "reference_vmax_m_s": 4700.0,
+    "bcx_sha256": "09b9e6854e3f81d3d62161442e694fb62be46af1712e405edf5bf1f0bd48b50b",
+    "bcz_sha256": "4f15a94958ae6fb0461e0e1626c2587f1148c3f5640e6aee99fba0cef95e5060",
+    "fixed_for_truth_initial_and_model_derivatives": true
+  },
+  "window": {
+    "formula": "offset raised-cosine * time raised-cosine * end raised-cosine, all ramps clamped [0,1]; time starts at t0+sqrt(offset^2+(2*known_water_depth-z_s-z_r)^2)/water_velocity+seafloor_delay for known_seafloor_primary, or t0+abs(offset)/water_velocity+direct_delay for water_direct",
+    "reference": "known_seafloor_primary",
+    "scope": "Fixed arrival-data exclusion only; later data may still be sensitive to shallow model parameters",
+    "sha256": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf",
+    "positive_fraction": 0.5777612958574685,
+    "scale_windowed_observed_rms": 0.0009734336304707893,
+    "parameters_are_fixed_before_derivative": true
+  },
+  "data_objective": "0.5*mean((fixed_window*(pressure-p_observed)/fixed_windowed_observation_RMS)^2)",
+  "performance_scope": "Cold functional detail experiment; not a warmed repeated benchmark; timing not comparable to old benchmark",
+  "vponly_wrapper_sha256": "7c34e1bc8c7e9b710b85db41f444c6fadf2ad3c1ffc73d125785273075e01d4c",
+  "physical_forward_field_evaluations": [
+    {
+      "all_initial_field_hashes_match": true,
+      "sha256_float64_c_bytes": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "requires_grad": {
+        "vp": true,
+        "vs": false,
+        "rho": false
+      }
+    }
+  ],
+  "fixed_vs_rho_policy": "Physical realized fields equal source true Vs/rho; requires_grad=False; complete elastic P-SV propagation"
+}

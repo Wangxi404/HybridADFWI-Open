@@ -1,0 +1,96 @@
+{
+  "native_solver_runs": 0,
+  "GPU_tasks": 0,
+  "model_arrays_included": false,
+  "case": "gradient-detail-20261107-vponly",
+  "full_N": 1127161,
+  "full_shape": [
+    1,
+    7001,
+    161
+  ],
+  "pressure_AD_H_actual_uint64_equal": true,
+  "pressure_AD_sha256": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e",
+  "pressure_H_sha256": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e",
+  "target_old_new_uint64_equal": true,
+  "window_old_new_uint64_equal": true,
+  "scale_old_new_uint64_equal": true,
+  "full_observed_RMS_recomputed": 0.0009734336304707895,
+  "fixed_observed_RMS_saved": 0.0009734336304707893,
+  "objective_new_recomputed": 0.5618460904012317,
+  "objective_old_joint_recomputed_with_same_target_weights": 0.3727100131527948,
+  "objective_new_reported": {
+    "autograd": 0.5618460904012315,
+    "hybrid": 0.5618460904012315
+  },
+  "objective_increase": 0.1891360772484369,
+  "objective_ratio_new_over_old": 1.5074617546454256,
+  "algebraic_loss_difference": {
+    "cross_term": 0.0948966501505276,
+    "half_squared_prediction_change_term": 0.09423942709790899,
+    "sum": 0.1891360772484366,
+    "direct_difference": 0.1891360772484369,
+    "identity_absolute_error": 3.0531133177191805e-16,
+    "scope": "Exact finite-data algebra only; not a physical Vp/Vs error or wave-mode decomposition."
+  },
+  "full_pressure_cotangent_closed_form_relative_l2": 1.7669792124909976e-16,
+  "full_source_array_sha256": {
+    "predicted_pressure": "604d379a3f3e3cda995084305e00f9c028dc1db4c32f03bcff161ad944d6173e",
+    "observed_pressure": "b680b5cc10d96a581ee93289890332c10c75147700d1dbd8f05f0a4078754a79",
+    "window": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf",
+    "adjoint_source_pressure": "8df2bf2c09a2578132e287c22e8eda42edbf3f0fbce1eee8cfc70f9ed7b09e9f"
+  },
+  "actual_field_evidence": {
+    "autograd": {
+      "Vp_private_array_equals_initial_bits": true,
+      "Vp_private_array_equals_true_bits": false,
+      "all_post_model_forward_runtime_field_hashes_match_prepared_initial": true,
+      "Vs_initial_equals_true_bits": true,
+      "rho_initial_equals_true_bits": true,
+      "Vs_rho_runtime_field_hashes_equal_true": true,
+      "active_flags_correct": true,
+      "schema_note": "Worker archives only active Vp evaluation array. Fixed Vs/rho are authenticated by the monitored post-model.forward runtime hashes and independently hashed true/prepared arrays; no nonexistent private Vs/rho evaluation arrays are assumed."
+    },
+    "hybrid": {
+      "Vp_private_array_equals_initial_bits": true,
+      "Vp_private_array_equals_true_bits": false,
+      "all_post_model_forward_runtime_field_hashes_match_prepared_initial": true,
+      "Vs_initial_equals_true_bits": true,
+      "rho_initial_equals_true_bits": true,
+      "Vs_rho_runtime_field_hashes_equal_true": true,
+      "active_flags_correct": true,
+      "schema_note": "Worker archives only active Vp evaluation array. Fixed Vs/rho are authenticated by the monitored post-model.forward runtime hashes and independently hashed true/prepared arrays; no nonexistent private Vs/rho evaluation arrays are assumed."
+    }
+  },
+  "raw_worker_gradient_array_sha256": {
+    "autograd": {
+      "vp": "db680a4fb30908a072f80e47dad3a649fbb8ce7375424432fd1f3a67d571f449",
+      "coordinate_vp": "fd157e354e439260bf5926db63fed1aaa42cef4b6384a49329a901838ba15516"
+    },
+    "hybrid": {
+      "vp": "722ac246aefb867fa44df0d4cfec60eacb561ace81bf44e0ed349c639b5776e7",
+      "coordinate_vp": "bc46ac5db91184fe224c7e0ba0130573fbfe0c29e7e176bf72040255e7cb974a"
+    }
+  },
+  "fresh_predicted_pressure_differs_old_joint": true,
+  "new_no_grad_control_vs_H_pressure_actual_uint64_equal": true,
+  "passed": true,
+  "local_canonical_arrays_actual_private_worker_byte_identity": {
+    "autograd": {
+      "gradient_autograd_vp": true,
+      "gradient_autograd_coordinate_vp": true
+    },
+    "hybrid": {
+      "gradient_hybrid_vp": true,
+      "gradient_hybrid_coordinate_vp": true
+    }
+  },
+  "full_source_proof_array_hashes_match_independent_read": {
+    "predicted_pressure": true,
+    "observed_pressure": true,
+    "window": true,
+    "adjoint_source_pressure": true
+  },
+  "status": "Independent full-pressure/source receipt passed; new loss increase and unchanged target normalization are confirmed. This file supplements the separate local dense-gradient audit.",
+  "not_a_mechanism_claim": "The finite-data cross-term identity does not isolate physical wave modes or uniquely establish a Vp/Vs model-error compensation mechanism."
+}

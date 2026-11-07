@@ -1,0 +1,82 @@
+{
+  "native_solver_runs": 0,
+  "GPU_tasks": 0,
+  "model_arrays_included": false,
+  "source_model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "new_model_sha256": "d6f0865976567a8733a3200fb158c4a25a7df9498c25977c71840b8ca415b2ba",
+  "config_sha256": "a4856f98ea9d31d5ada4dbc054b3f896816bfde51597bcdde802eb525277c013",
+  "wrapper_sha256": "7c34e1bc8c7e9b710b85db41f444c6fadf2ad3c1ffc73d125785273075e01d4c",
+  "underlying_numerical_implementation_sha256": "4253d88ae81cb0ce0a3c1c035c6fb33b3d014b05287fc686c0e99bc54d84397f",
+  "only_vp_active": true,
+  "arrays": {
+    "vp_true": {
+      "expected_source_array_byte_identical": true,
+      "array_sha256": "fae8de68319e8adcead5849a1e248a41e46f64efee2fc3344bc0c1766a6a8f06"
+    },
+    "vs_true": {
+      "expected_source_array_byte_identical": true,
+      "array_sha256": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc"
+    },
+    "rho_true": {
+      "expected_source_array_byte_identical": true,
+      "array_sha256": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+    },
+    "vp_initial": {
+      "expected_source_array_byte_identical": true,
+      "array_sha256": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2"
+    },
+    "vs_initial": {
+      "expected_true_array_byte_identical": true,
+      "array_sha256": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc"
+    },
+    "rho_initial": {
+      "expected_true_array_byte_identical": true,
+      "array_sha256": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+    }
+  },
+  "material": {
+    "initial": {
+      "shape": [
+        555,
+        401
+      ],
+      "all_finite": true,
+      "rho_min": 2450.0,
+      "mu_solid_min_Pa": 225526292.36820126,
+      "K3D_min_Pa": 3645123761.03128,
+      "K3D_solid_min_Pa": 3645123761.03128,
+      "kappa2D_solid_min_Pa": 5859165616.241999,
+      "lambda_min_Pa": -6783056406.944381,
+      "negative_lambda_cells": 1328,
+      "solid_min_vp_vs": 1.2560039157343517,
+      "water_samples": 29273,
+      "water_Vp1500_exact": true,
+      "water_Vs0_exact": true,
+      "water_density2450_exact": true,
+      "positive_3D_energy": true
+    },
+    "true": {
+      "shape": [
+        555,
+        401
+      ],
+      "all_finite": true,
+      "rho_min": 2450.0,
+      "mu_solid_min_Pa": 225526292.36820126,
+      "K3D_min_Pa": 3611724849.4250665,
+      "K3D_solid_min_Pa": 3611724849.4250665,
+      "kappa2D_solid_min_Pa": 4245589726.4731784,
+      "lambda_min_Pa": 2343995095.3288417,
+      "negative_lambda_cells": 0,
+      "solid_min_vp_vs": 1.577613054476597,
+      "water_samples": 29273,
+      "water_Vp1500_exact": true,
+      "water_Vs0_exact": true,
+      "water_density2450_exact": true,
+      "positive_3D_energy": true
+    }
+  },
+  "fixed_mu_initial_target_byte_identical": true,
+  "passed": true,
+  "scope": "Prepared-input and source-design audit only. Actual per-forward realized coefficient/field invariants and fresh gradients will be checked after the new runs; no old evidence or source changed."
+}

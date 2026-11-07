@@ -1,0 +1,21 @@
+{
+  "keys": [
+    "gradient_autograd_vp",
+    "gradient_autograd_coordinate_vp",
+    "gradient_hybrid_vp",
+    "gradient_hybrid_coordinate_vp",
+    "x_m",
+    "z_m",
+    "receiver_x_m",
+    "receiver_z_m",
+    "active_mask",
+    "source_x_m",
+    "source_z_m",
+    "selected_shot_ids"
+  ],
+  "source": "Fresh single-shot worker outputs; direct arrays; no aliases, no averaging",
+  "physical_gradient": "gradient_{autograd|hybrid}_vp",
+  "actual_coordinate_gradient": "gradient_{autograd|hybrid}_coordinate_vp",
+  "parameter_map": "m_vp=vp_initial+active_mask*(theta_vp-vp_initial); Vs/rho are fixed true physical fields",
+  "excluded": "evaluation_model arrays, initial/true model arrays, source SEG-Y and previews"
+}

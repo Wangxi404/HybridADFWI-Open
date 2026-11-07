@@ -1,0 +1,33 @@
+{
+  "question": "Does fixing the known true Vs and density isolate more interpretable Vp sensitivity in the existing P-SV examples?",
+  "hypothesis_not_result": "Removing Vs mismatch may clarify Vp gradients; no improvement or thin-bed recovery is assumed before the new runs.",
+  "intervention": {
+    "vp_initial": "unchanged previously prepared Gaussian Vp",
+    "vs_initial": "exact true Vs",
+    "density": "known constant2450kg/m3 in both truth and initial",
+    "active_parameters": [
+      "vp"
+    ],
+    "target": "all true fields with the existing constant-density convention"
+  },
+  "numerics": {
+    "route": "new native forward, new residual, data-only AD VJP, new adjoint; no old-gradient selection",
+    "gate": "existing declared relative tolerances retained; any failure stays in its own namespace",
+    "physical_materials": "finite positive rho, positive solid mu and bulk; known acoustic water separately; negative lambda disclosed if present",
+    "resources": "hpnewpc3-via-vps: native MPI2 max, GPU idle only, nice10 and BLAS/Torch1; no other jobs stopped"
+  },
+  "archetype": "image plate plus quantitative verification",
+  "backend": "Python matplotlib, inherited task choice",
+  "panel_roles": {
+    "true_vp": "target reference",
+    "initial_vp": "actual blurred inversion start",
+    "fixed_vs": "known structural prior, not an inverted result",
+    "old_joint_gvp": "previous multiparameter starting-model control",
+    "new_vponly_gvp": "fresh derivative with known Vs",
+    "delta_vp": "input correction, explicitly not a gradient"
+  },
+  "comparison": "Old/new Vp gradients in their original coordinates; same raw-display rule; no amplitude score where objectives or scales differ; AD/H share scales.",
+  "integrity": "No gradient smoothing, gain, sharpening, added true texture or unreported data selection. Full gradients retained; any display saturation and data-proof sampling disclosed.",
+  "scope": "A controlled known-Vs single-gradient experiment, not a full inversion or blind multiparameter reconstruction.",
+  "exports": "PNG300dpi and editable PDF/SVG; report-sized, final glyph>=5pt; alignment1.5pt, final-PDF collision checks and every-panel inspection."
+}

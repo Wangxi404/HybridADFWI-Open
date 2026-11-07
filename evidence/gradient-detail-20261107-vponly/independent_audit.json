@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-11-07T08:28:52.341743+00:00",
+  "native_solver_runs": 0,
+  "GPU_tasks": 0,
+  "model_arrays_included": false,
+  "passed": true,
+  "tolerance": 1e-08,
+  "all_requested_physical_Vp_gradient_passed": true,
+  "coordinate_Vp_gradient_passed": true,
+  "physical_Vp_relative_l2": 2.758725341605534e-11,
+  "coordinate_Vp_relative_l2": 1.869543449275621e-15,
+  "raw_kernels_sha256": "ce971f5a592edcbc29481cf1d3a23eb650ee3fef47d0006084e9362963c0ea4d",
+  "summary_sha256": "d8f9139c4d214140f78dfd3703e34e15016b684dfb36d99d86bb915c75a54528",
+  "numerical_audit_sha256": "a26e8aadcdf0c6e1a774fbddad601d80c37e96ab4fad1e6f900c5ffedb41431f",
+  "correction_receipt_sha256": "c5d75b373ad073782ac8d7adfcd8f0aa5f04a8579a211d9253be4015c555a6c9",
+  "source_array_byte_hash_checks": {
+    "gradient_autograd_vp": true,
+    "gradient_autograd_coordinate_vp": true,
+    "gradient_hybrid_vp": true,
+    "gradient_hybrid_coordinate_vp": true
+  },
+  "AD_H_P_transpose_chain_uint64_exact": {
+    "autograd": true,
+    "hybrid": true
+  },
+  "actual_runtime_field_records_match_initial_and_fixed_true_Vs_rho": {
+    "autograd": true,
+    "hybrid": true
+  },
+  "expected_actual_field_array_hashes": {
+    "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+    "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+    "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+  },
+  "actual_target_window_scale_same_as_prior_case_sample_uint64": {
+    "observed_pressure": true,
+    "window": true,
+    "fixed_observed_rms": true,
+    "time_indices": true,
+    "receiver_indices": true
+  },
+  "sample_data_VJP": {
+    "full_N": 1127161,
+    "sample_N": 9636,
+    "fixed_FULL_observed_RMS": 0.0009734336304707893,
+    "relative_l2": 1.8030768848987096e-16,
+    "window_geometry_max_absolute_error": 1.1102230246251565e-16,
+    "full_objective_not_reconstructed_from_sample": true
+  },
+  "fresh_Vp_arrays_not_equal_to_old_joint_case_Vp_columns": true,
+  "quantity_diagnostics": {
+    "coordinate_gradient_squared_norm_fraction_depth_ge1000m": 0.11857454633158193,
+    "coordinate_gradient_squared_norm_fraction_depth_ge2000m": 0.004529118587456874,
+    "water_cells": 29273,
+    "fixed_water_coordinate_gradient_exact_zero": true
+  },
+  "density_truth_convention": "Designated controlled truth rho=2450kg/m3 everywhere, not original SEG-Y density texture.",
+  "scope": "Fresh dense Vp-only derivative for actual mixed initial model (Vp sigma60, true fixed Vs/rho), full elastic P-SV propagation, this ROI/shot/objective/Pmap. Only Vp is differentiated; this is not an acoustic solver or a validation of Vs/rho derivatives.",
+  "limitations": [
+    "Trace screen is finite-record only, not general stability or continuum accuracy.",
+    "Full-J and full-pressure bit identity are supplied in model-free source proof and will be independently recomputed from saved full arrays if read-only source access is used; this local receipt validates all gradient entries and the sampled closed-form cot.",
+    "A larger loss after fixing true Vs is retained as observed behavior; no mechanism of error compensation is inferred."
+  ],
+  "source_proof_pressure_uint64_equal": true,
+  "loss_AD_H_equal": true,
+  "reported_loss_new": 0.5618460904012315,
+  "reported_loss_old_joint": 0.3727100131527949
+}

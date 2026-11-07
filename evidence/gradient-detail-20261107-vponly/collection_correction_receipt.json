@@ -1,0 +1,10 @@
+{
+  "scope": "Metadata-only regional classification correction; no solver, gradient, raw ZIP, summary, worker row or executed source changed",
+  "before_numerical_audit_sha256": "cf512a2a58cddf7034fff28e7ab826905ec4704ca87e98dd55a1fd4466ae5d28",
+  "after_numerical_audit_sha256": "a26e8aadcdf0c6e1a774fbddad601d80c37e96ab4fad1e6f900c5ffedb41431f",
+  "before_rule": "z<450m: omitted the acoustic interface row at z=450m",
+  "after_rule": "actual stored vs_true==0, including z=450m row",
+  "correct_water_cells": 29273,
+  "old_metadata_archived_locally_ignored": true,
+  "raw_sha256_unchanged": "ce971f5a592edcbc29481cf1d3a23eb650ee3fef47d0006084e9362963c0ea4d"
+}

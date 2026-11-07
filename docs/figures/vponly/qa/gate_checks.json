@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "raw_sha256": "ce971f5a592edcbc29481cf1d3a23eb650ee3fef47d0006084e9362963c0ea4d",
+  "plotter_sha256": "7e2f823869953a9d1cd9ff410fb2eec7f33fa67623b2f4812ad66fcb08d8b297",
+  "strict_summary_passed": true,
+  "native_grid_passed": true,
+  "fonts_min_pt": 7,
+  "alignment_fail": 0,
+  "alignment_warn": 0,
+  "collision_fail": 0,
+  "collision_warn": 0,
+  "panels_visually_checked": 12,
+  "source_warns_reviewed": 3
+}

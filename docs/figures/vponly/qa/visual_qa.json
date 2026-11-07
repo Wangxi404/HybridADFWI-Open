@@ -1,0 +1,213 @@
+{
+  "passed": true,
+  "inspection": "Final PNG and independently rendered final PDF inspected for every panel and complete plate",
+  "panels": [
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "a",
+      "unique_role": "True Vp input reference",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "b",
+      "unique_role": "Actual sigma60 Vp start",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "c",
+      "unique_role": "True fixed Vs known prior, not recovered",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "d",
+      "unique_role": "Old actual coordinate derivative, same target/window/scale",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "e",
+      "unique_role": "Fresh Vp coordinate derivative, common old/new P99",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "models_and_vp_gradient",
+      "panel": "f",
+      "unique_role": "True minus initial input correction, explicitly not a gradient",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "a",
+      "unique_role": "Full physical AD derivative",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "b",
+      "unique_role": "Full physical Hybrid derivative; common AD scale",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "c",
+      "unique_role": "Physical difference with absolute Linf labelled",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "d",
+      "unique_role": "Actual AD parameter-coordinate derivative",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "e",
+      "unique_role": "Actual Hybrid parameter-coordinate derivative; common AD scale",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    },
+    {
+      "figure": "ad_hybrid_vp_gradients",
+      "panel": "f",
+      "unique_role": "Coordinate difference with absolute Linf labelled",
+      "summary": "Unprocessed deterministic field/derivative or exact arithmetic difference",
+      "uncertainty": "None; single fixed synthetic objective, no stochastic aggregate",
+      "labels_units": true,
+      "native_grid_and_orientation": true,
+      "axes_ticks_clear": true,
+      "colourbar_clear": true,
+      "alignment_pass": true,
+      "collision_pass": true,
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Old/new spatial forms remain broadly similar; no thin-layer recovery or deep-gradient improvement claim",
+    "Known true Vs is a strong controlled prior; density designated truth is constant2450",
+    "Only a single gradient, not recovered Vp or full inversion",
+    "Difference panels have their own maximum-absolute scales, explicitly labelled",
+    "Automatic text collision checks did not detect an earlier PDF image clipping problem; final actual PDF renders were required and are now complete"
+  ],
+  "source_warning_disposition": {
+    "PNG_no_TIFF": "Task explicitly requests PNG/PDF/SVG report exports",
+    "DPI300_not600": "Task explicitly requests report-sized 300dpi PNG; editable vector outputs supplied",
+    "report_width_not89_or183mm": "Report comparison plate, not a journal final-layout submission"
+  },
+  "rasterization_fix": "Earlier image export occluded axes labels in actual PDF despite automatic PASS. Final uses direct uniform-grid AxesImage, disabled image compositing, PDF-first export and tight renderer layout; final 12 panels show complete labels/ticks/colourbar text.",
+  "exported_files": {
+    "models_and_vp_gradient.png": {
+      "bytes": 800587,
+      "sha256": "15721c60d3786f6d359f66a2111ac12f3ffaf7c2e665ca28c38fc288ec60c548"
+    },
+    "models_and_vp_gradient.pdf": {
+      "bytes": 325200,
+      "sha256": "66a4f2adf7811c05ba4911211ac9d5061c02977e6521df60b23b196aa40cd4a0"
+    },
+    "models_and_vp_gradient.svg": {
+      "bytes": 566137,
+      "sha256": "43ab7bc09d03eededa6ed4f93d9793978c3ac1510f3204e2f9aa8de70d62559b"
+    },
+    "ad_hybrid_vp_gradients.png": {
+      "bytes": 848653,
+      "sha256": "a09f1e45909695ebf7f2ca43e5c8b403129ed39d45dfcedf9f7e3af20cca2b22"
+    },
+    "ad_hybrid_vp_gradients.pdf": {
+      "bytes": 444424,
+      "sha256": "4e513a63539f431c9f435d495bf0369f6c8be34b6eddcff6de29d711e8571de6"
+    },
+    "ad_hybrid_vp_gradients.svg": {
+      "bytes": 934898,
+      "sha256": "c5a928ada81706b50ea25ecc35d0b69a8a3c05b5cc4dab5618e58fe177636e42"
+    }
+  }
+}

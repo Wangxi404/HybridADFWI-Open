@@ -1,5 +1,17 @@
 # Experiment evidence
 
+## Known-Vs Vp-only control, 2026-11-07
+
+`gradient-detail-20261107-vponly` contains a fresh native AD/Hybrid pair with
+only Vp blurred and trainable. True Vs and the designated constant-density
+truth are fixed in the actual propagation. Both full-physical Vp and actual
+coordinate gradients pass the original 10⁻⁸ gate. Independent field, pressure,
+source and complete-gradient checks are included. `vponly_independent_review`
+contains the pre-run array/material audit. See [VP_ONLY.md](../docs/VP_ONLY.md)
+for the unchanged-target proof, higher initial loss, qualitative negative
+result and single-run memory outcome. Numerical correctness does not imply
+a finer geological image.
+
 ## Gradient-detail experiments, 2026-11-07
 
 These are separate functional experiments, not replacements for the archived

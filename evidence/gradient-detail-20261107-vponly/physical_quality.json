@@ -1,0 +1,6 @@
+{
+  "trace_screen_passed": true,
+  "original_full_gradient_gate_passed": true,
+  "scope": "Controlled known-true-Vs/density single-objective gradient; visual geological interpretability pending review, not inversion or globally validated physical accuracy",
+  "independent_continuum_or_interface_accuracy_validated": false
+}

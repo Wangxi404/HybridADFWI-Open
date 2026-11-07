@@ -1,0 +1,3 @@
+FORWARD_START autograd 1
+FORWARD_DONE autograd 1 35.67567980103195
+{"method": "autograd", "shot": 1, "loss": 0.5618460904012315, "timing": {"forward_s": 35.67567980103195, "objective_and_source_s": 0.003159092739224434, "backward_s": 509.5531672872603, "total_s": 545.2320061810315}, "kernel_l2": {"vp": 0.0002545723858960568}}
