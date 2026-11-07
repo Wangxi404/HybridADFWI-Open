@@ -42,3 +42,7 @@ Marmousi-II is provided by the Allied Geophysical Laboratories, University of Ho
 ## Installed dependencies
 
 Python dependencies are installed separately using [pyproject.toml](pyproject.toml) and retain their own licenses. ADFWI's full optional example/deep-learning dependency set is outside this repository's supported benchmark path.
+
+## Plot alignment tool
+
+The unmodified plotting alignment tool from [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) is distributed under Apache License 2.0. See [source revision and attribution](scripts/figure_qa/README.md) and [full license](scripts/figure_qa/LICENSE.Apache-2.0). Project and solver licensing is unchanged.
