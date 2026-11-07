@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "generator": "scripts/visualize.py",
+  "figures": {
+    "models": {
+      "data": "data/prepared/marmousi2_paper.npz",
+      "fields": {
+        "vp": {
+          "true": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 1500.0,
+            "max": 4699.999809265137,
+            "l2": 354086.8197172138,
+            "finite": true
+          },
+          "initial": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 1500.0,
+            "max": 4351.191073724727,
+            "l2": 351129.1376174047,
+            "finite": true
+          },
+          "display_units": "km/s",
+          "display_scale": [
+            1.5,
+            4.699999809265137
+          ],
+          "clipped_fraction": 0.0
+        },
+        "vs": {
+          "true": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 0.0,
+            "max": 2751.999855041504,
+            "l2": 175273.51987142005,
+            "finite": true
+          },
+          "initial": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 0.0,
+            "max": 2476.365198157714,
+            "l2": 171608.41953947788,
+            "finite": true
+          },
+          "display_units": "km/s",
+          "display_scale": [
+            0.0,
+            2.751999855041504
+          ],
+          "clipped_fraction": 0.0
+        },
+        "rho": {
+          "true": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 2450.0,
+            "max": 2450.0,
+            "l2": 306004.9019215215,
+            "finite": true
+          },
+          "initial": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": 2450.0,
+            "max": 2450.0,
+            "l2": 306004.9019215215,
+            "finite": true
+          },
+          "display_units": "g/cm\u00b3",
+          "display_scale": [
+            2.35,
+            2.5500000000000003
+          ],
+          "clipped_fraction": 0.0
+        }
+      },
+      "note": "rho is the actual constant benchmark control, not a recovered density map"
+    },
+    "gradients": {
+      "archive": "evidence/marmousi2-fd8-f64-20261106",
+      "repeat": 0,
+      "arrays": {
+        "vp": {
+          "native": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.007478749015216616,
+            "max": 0.013776260235159607,
+            "l2": 0.020151544027721006,
+            "finite": true
+          },
+          "hybrid": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.007478749015241283,
+            "max": 0.01377626023522665,
+            "l2": 0.020151544027808735,
+            "finite": true
+          },
+          "relative_l2": 5.0105835715588114e-12,
+          "shared_native_hybrid_display": {
+            "absolute_percentile": 99.5,
+            "limit": 0.00015526476760619455,
+            "clipped_fraction": [
+              0.005,
+              0.005
+            ],
+            "transform": "display saturation only; no array modification",
+            "color_normalization": "symmetric log, base 10, linear core = display limit * 0.001"
+          },
+          "difference_display": {
+            "formula": "(hybrid-native)/max(abs(native))",
+            "limit": 4.866477333592482e-12,
+            "clipped_fraction": 0.0
+          },
+          "units": "derivative of fixed-RMS dimensionless objective per SI parameter unit"
+        },
+        "vs": {
+          "native": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.015974370918580904,
+            "max": 0.025236474823133247,
+            "l2": 0.04772394747213771,
+            "finite": true
+          },
+          "hybrid": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.015974370918637994,
+            "max": 0.02523647482322787,
+            "l2": 0.04772394747226016,
+            "finite": true
+          },
+          "relative_l2": 3.5763302750372592e-12,
+          "shared_native_hybrid_display": {
+            "absolute_percentile": 99.5,
+            "limit": 0.00039550184069250913,
+            "clipped_fraction": [
+              0.005,
+              0.005
+            ],
+            "transform": "display saturation only; no array modification",
+            "color_normalization": "symmetric log, base 10, linear core = display limit * 0.001"
+          },
+          "difference_display": {
+            "formula": "(hybrid-native)/max(abs(native))",
+            "limit": 3.749423300353129e-12,
+            "clipped_fraction": 0.0
+          },
+          "units": "derivative of fixed-RMS dimensionless objective per SI parameter unit"
+        },
+        "rho": {
+          "native": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.00470996208334158,
+            "max": 0.0034548643968202617,
+            "l2": 0.012126000075968351,
+            "finite": true
+          },
+          "hybrid": {
+            "shape": [
+              78,
+              200
+            ],
+            "min": -0.004709962083356517,
+            "max": 0.0034548643968257678,
+            "l2": 0.012126000075998202,
+            "finite": true
+          },
+          "relative_l2": 3.5689041316911397e-12,
+          "shared_native_hybrid_display": {
+            "absolute_percentile": 99.5,
+            "limit": 0.00017020299267955316,
+            "clipped_fraction": [
+              0.005,
+              0.005
+            ],
+            "transform": "display saturation only; no array modification",
+            "color_normalization": "symmetric log, base 10, linear core = display limit * 0.001"
+          },
+          "difference_display": {
+            "formula": "(hybrid-native)/max(abs(native))",
+            "limit": 3.9463435236479595e-12,
+            "clipped_fraction": 0.0
+          },
+          "units": "derivative of fixed-RMS dimensionless objective per SI parameter unit"
+        }
+      },
+      "display_smoothing": "none",
+      "evaluation_model": "prepared smoothed initial model",
+      "target_data": "native forward observation from true model"
+    },
+    "performance": {
+      "sources": [
+        "evidence/marmousi2-fd8-f64-20261106/summary.json",
+        "evidence/no-checkpoint-1shot-20261106/summary.json"
+      ],
+      "source_data": "docs/figures/benchmark_points.csv",
+      "n": 3,
+      "replicate": "paired fresh-process runs",
+      "summary": "mean \u00b1 sample SD (ddof=1)",
+      "memory_definition": "CUDA peak allocated; not reserved or device total",
+      "caveat": "checkpointed archive had CPU contention; separate shot counts prohibit cross-protocol speed claims"
+    },
+    "agreement": {
+      "sources": [
+        "evidence/marmousi2-fd8-f64-20261106/summary.json",
+        "evidence/no-checkpoint-1shot-20261106/summary.json"
+      ],
+      "metric": "norm(hybrid-native)/norm(native), unmodified arrays",
+      "all_repeats": true,
+      "all_parameters": [
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "source_data": "docs/figures/benchmark_points.csv",
+      "tolerance": 1e-08
+    },
+    "wavefields": {
+      "capture": {
+        "capture_version": 1,
+        "config": {
+          "device": "cpu",
+          "nt": 640,
+          "dt": 0.004,
+          "f0": 5.0,
+          "shots": 1,
+          "receivers": 25,
+          "depth_m": 540.0,
+          "nabc": 10,
+          "free_surface": true,
+          "fd_order": 8,
+          "dtype": "float64",
+          "parameters": [
+            "vp",
+            "vs",
+            "rho"
+          ],
+          "checkpointing": false,
+          "segments": 1,
+          "threads": 1,
+          "objective": "l2"
+        },
+        "model": "data/prepared/marmousi2_smoke.npz",
+        "model_sha256": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c",
+        "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+        "instrumented_native_source_sha256": "7346475dccdb5857d11b695fd5ec5e0e8965d5d682c4e4b3266b979f8c6e39b1",
+        "native_receiver_bitwise_equal": true,
+        "observed_rms": 4.639096356774814e-08,
+        "objective": 0.1828757795915786,
+        "sample_definition": "v_z before velocity update at native loop index i; t=i*dt",
+        "field_crop": "remove top 4 ghost rows and left/right 10-cell PML; retain physical 39x101 grid",
+        "source_definition": "torch.autograd.grad(0.5*mean(((pred-obs)/observed_RMS)**2), pred)",
+        "velocity_location": "native staggered-grid component; no collocation interpolation",
+        "source_amplitude": "pinned native Ricker moment-source convention; no absolute calibration",
+        "runtime": {
+          "python": "3.9.25",
+          "torch": "2.7.0",
+          "numpy": "2.0.2"
+        }
+      },
+      "times_s": [
+        0.384,
+        0.64,
+        0.96,
+        1.28,
+        1.792,
+        2.3040000000000003
+      ],
+      "frame_display": {
+        "absolute_percentile": 99.5,
+        "limit": 1.3964410593382332e-07,
+        "clipped_fraction": [
+          0.004061944656004062,
+          0.013962934755013963,
+          0.007616146230007616,
+          0.004315816197004316,
+          0.0002538715410002539,
+          0.0
+        ],
+        "transform": "display saturation only; no array modification"
+      },
+      "global_peak_over_all_80_frames": 1.025011935749142e-06,
+      "normalization": "all fields divided by same global absolute peak",
+      "origin": "five-field history instrumentation of pinned native FD8 loop; receiver traces validated bitwise against native",
+      "geometry": {
+        "source_x_km": 9.5,
+        "receiver_x_km": [
+          5.45,
+          5.81,
+          6.08,
+          6.44,
+          6.8,
+          7.16,
+          7.52,
+          7.79,
+          8.15,
+          8.51,
+          8.78,
+          9.14,
+          9.5,
+          9.86,
+          10.22,
+          10.49,
+          10.85,
+          11.21,
+          11.48,
+          11.84,
+          12.2,
+          12.56,
+          12.92,
+          13.19,
+          13.55
+        ],
+        "depth_m": 540
+      }
+    },
+    "wavefield_animation": {
+      "frames": 80,
+      "native_index_stride": 8,
+      "frame_dt_s": 0.032,
+      "playback_fps": 15,
+      "display": {
+        "absolute_percentile": 99.5,
+        "limit": 1.3964410593382332e-07,
+        "clipped_fraction": [
+          0.004061944656004062,
+          0.013962934755013963,
+          0.007616146230007616,
+          0.004315816197004316,
+          0.0002538715410002539,
+          0.0
+        ],
+        "transform": "display saturation only; no array modification"
+      },
+      "note": "same fixed scale as static wavefield plate; not real-time playback",
+      "clipped_fraction_all_frames": 0.0035256410256410257
+    },
+    "data_adjoint_source": {
+      "capture": {
+        "capture_version": 1,
+        "config": {
+          "device": "cpu",
+          "nt": 640,
+          "dt": 0.004,
+          "f0": 5.0,
+          "shots": 1,
+          "receivers": 25,
+          "depth_m": 540.0,
+          "nabc": 10,
+          "free_surface": true,
+          "fd_order": 8,
+          "dtype": "float64",
+          "parameters": [
+            "vp",
+            "vs",
+            "rho"
+          ],
+          "checkpointing": false,
+          "segments": 1,
+          "threads": 1,
+          "objective": "l2"
+        },
+        "model": "data/prepared/marmousi2_smoke.npz",
+        "model_sha256": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c",
+        "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+        "instrumented_native_source_sha256": "7346475dccdb5857d11b695fd5ec5e0e8965d5d682c4e4b3266b979f8c6e39b1",
+        "native_receiver_bitwise_equal": true,
+        "observed_rms": 4.639096356774814e-08,
+        "objective": 0.1828757795915786,
+        "sample_definition": "v_z before velocity update at native loop index i; t=i*dt",
+        "field_crop": "remove top 4 ghost rows and left/right 10-cell PML; retain physical 39x101 grid",
+        "source_definition": "torch.autograd.grad(0.5*mean(((pred-obs)/observed_RMS)**2), pred)",
+        "velocity_location": "native staggered-grid component; no collocation interpolation",
+        "source_amplitude": "pinned native Ricker moment-source convention; no absolute calibration",
+        "runtime": {
+          "python": "3.9.25",
+          "torch": "2.7.0",
+          "numpy": "2.0.2"
+        }
+      },
+      "shared_observation_prediction": {
+        "absolute_percentile": 99.5,
+        "limit": 3.3884608425294616,
+        "clipped_fraction": [
+          0.0068125,
+          0.0031875
+        ],
+        "transform": "display saturation only; no array modification"
+      },
+      "residual_display": {
+        "absolute_percentile": 99.5,
+        "limit": 2.9011946774383555,
+        "clipped_fraction": [
+          0.005
+        ],
+        "transform": "display saturation only; no array modification"
+      },
+      "source_display": {
+        "absolute_percentile": 99.5,
+        "limit": 3908.6204164544993,
+        "clipped_fraction": [
+          0.005
+        ],
+        "transform": "display saturation only; no array modification"
+      },
+      "raw_fields": {
+        "observed": {
+          "shape": [
+            1,
+            640,
+            25
+          ],
+          "min": -8.21798513312549e-07,
+          "max": 1.0512197244570422e-06,
+          "l2": 5.8680443089590045e-06,
+          "finite": true
+        },
+        "predicted": {
+          "shape": [
+            1,
+            640,
+            25
+          ],
+          "min": -6.021339096481365e-07,
+          "max": 8.383284462150275e-07,
+          "l2": 4.0864035823701145e-06,
+          "finite": true
+        },
+        "residual": {
+          "shape": [
+            1,
+            640,
+            25
+          ],
+          "min": -3.423097672214616e-07,
+          "max": 4.3545247650288556e-07,
+          "l2": 3.5488404741802942e-06,
+          "finite": true
+        },
+        "adjoint_source": {
+          "shape": [
+            1,
+            640,
+            25
+          ],
+          "min": -9941.05604351049,
+          "max": 12646.02382905426,
+          "l2": 103062.27114016387,
+          "finite": true
+        }
+      },
+      "source_identity_max_absolute_error": 1.8189894035458565e-12
+    }
+  },
+  "attribution": "Marmousi-II: Allied Geophysical Laboratories, University of Houston; Gary S. Martin, Robert Wiley and Kurt J. Marfurt",
+  "raw_model_distribution": "excluded; figures are research outputs; see docs/DATA_PROVENANCE.md",
+  "backend": {
+    "python": "3.9.25",
+    "numpy": "2.0.2",
+    "matplotlib": "3.9.4"
+  },
+  "rendering": {
+    "interpolation": "nearest",
+    "gradient_smoothing": "none",
+    "gradient_errors": "computed on raw arrays before display saturation"
+  },
+  "export": {
+    "png_dpi": 300,
+    "pdf_fonttype": 42,
+    "svg_fonttype": "none",
+    "minimum_main_font_pt": 7,
+    "scope": "repository/report figures, not resized journal submission masters"
+  },
+  "prepared_model_sha256": {
+    "paper": "f68effb1e917ef6356d50b403b2993b1c2155362c1ab669ac4fa3a5c4a83982d",
+    "smoke": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c"
+  },
+  "preparation": {
+    "density_mode": "constant2450",
+    "dtype": "float64",
+    "grid": {
+      "dx": 45.0,
+      "dz": 45.0,
+      "nx": 200,
+      "nz": 78,
+      "ox": 5000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 150.0,
+    "name": "Marmousi-II",
+    "note": "ADFWI notebook samples linspace across nx*dx; here coordinates use (nx-1)*dx to match solver grid spacing exactly.",
+    "prepared_array_axes": "z,x",
+    "preset": "paper",
+    "resampling": "bilinear on exact nominal grid; no extrapolation",
+    "smoothing": "Gaussian normalized within solid; true water cells restored for all fields",
+    "source_array_axes": "x,z",
+    "source_extent_m": {
+      "x": [
+        0,
+        17000
+      ],
+      "z": [
+        0,
+        3500
+      ]
+    },
+    "source_shapes_xz": {
+      "rho": [
+        13601,
+        2801
+      ],
+      "vp": [
+        13601,
+        2801
+      ],
+      "vs": [
+        13601,
+        2801
+      ]
+    },
+    "source_to_SI_multiplier": 1000.0,
+    "sources": {
+      "density_marmousi-ii.segy.gz": {
+        "bytes": 1732687,
+        "sha256": "9832e20ce1f79470fa8c100e79d66566cf8c1c162baa4289f37e7ee0b96f1e67",
+        "url": "https://www.agl.uh.edu/downloads/density_marmousi-ii.segy.gz"
+      },
+      "vp_marmousi-ii.segy.gz": {
+        "bytes": 1766045,
+        "sha256": "2c7a0c4170c95a15620c2146573711c61a4cef8dc27338ef6c211a81ffa68920",
+        "url": "https://www.agl.uh.edu/downloads/vp_marmousi-ii.segy.gz"
+      },
+      "vs_marmousi-ii.segy.gz": {
+        "bytes": 1768606,
+        "sha256": "c88bec68fc4bd7c6e624737a20ecd3241c90e10512103e28e61b344fb5baed7d",
+        "url": "https://www.agl.uh.edu/downloads/vs_marmousi-ii.segy.gz"
+      }
+    },
+    "units": {
+      "rho": "kg/m^3",
+      "vp": "m/s",
+      "vs": "m/s"
+    },
+    "upstream_example": "https://github.com/liufeng2317/ADFWI/blob/bv1.1/examples/elastic/Iso-elastic-Marmousi2-shotTop-recTop/01_forward.ipynb",
+    "water_cells": 2200,
+    "x_extent_m": [
+      5000.0,
+      13955.0
+    ],
+    "z_extent_m": [
+      0.0,
+      3465.0
+    ]
+  },
+  "capture_sha256": "ee9b844d521d9f9696f2f68dbf523d14227802d896691d4e3b57523589c6eb14",
+  "generator_sha256": "85911de071b53e56fb3853e502337ad79fa591f86764407fb413fee8a288a692"
+}

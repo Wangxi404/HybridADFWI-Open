@@ -1,0 +1,10 @@
+{
+  "pdf": "docs/figures/data_adjoint_source.pdf",
+  "auditable": true,
+  "minimum_required_pt": 5.0,
+  "minimum_found_pt": 7.0,
+  "text_run_count": 79,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}

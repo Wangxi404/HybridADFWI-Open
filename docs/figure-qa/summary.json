@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "figures": {
+    "models": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "50a7f3f57bf575c6dbab4926822c0de4eafdabb4847ff5213f774ba620a94b2e",
+      "final_png_sha256": "4bc993059f0ee53dc9bcfdf771a638c8666b66aec32ef4a34fd63c5f753b1791"
+    },
+    "wavefields": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "42d8516b1f538494092a5c6a13bb838d78b0f9d0d3e3f9ae91546dce19bbc731",
+      "final_png_sha256": "ad1fcd96c8889c13f1ca1bfa9a013476afca73e8c2b29725fd5d51cc55494785"
+    },
+    "data_adjoint_source": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "c204c93989d5dd936d99a162f6f953a17fc09a1bd00606f6c45f40b4e2e95abd",
+      "final_png_sha256": "cd179acfd16009e0962a959619ec324842344ec58775cc792eccced2cf18f4bb"
+    },
+    "gradients": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "397454f1dbfcb54f3cc7313e04fda7a8ae0b6a1a5d751790d4d032d0f71c2424",
+      "final_png_sha256": "ec44f61aa35608d3c64766c810b2d729600b583aad6a54e27bd899a3fc46b4f8"
+    },
+    "agreement": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "1203562057ce7b6295f38d0833f53aaaef755a33f379084f8caafc75f393454f",
+      "final_png_sha256": "0d2e9c1bc0d86f0048951941bb41450dab6e830c9c1cec8363e11d2b5cf7784e"
+    },
+    "performance": {
+      "alignment": "PASS",
+      "collision": "PASS",
+      "minimum_pdf_glyph_pt": 7.0,
+      "final_pdf_sha256": "b21d698e6405a37b1916dec2069ebf95d205847ae6f4985b0cfe266302e3afa5",
+      "final_png_sha256": "163b2bf1f3ca492bf5d88fa1d31c9cfbfbb163e8a5ced81fc7b6be539331a667"
+    }
+  },
+  "native_cpu_capture_bitwise_equal": true,
+  "test_suite": {
+    "command": "python -m pytest -q",
+    "passed": 21,
+    "warnings": 17,
+    "elapsed_s": 5.89
+  },
+  "render_review": "all final PNG plates inspected panel by panel; final gradient caption and spacing reinspected",
+  "source_warnings_reviewed": [
+    "PNG preview instead of TIFF is intentional for repository/report delivery",
+    "300 dpi meets preview requirement; no claim of 600 dpi submission raster",
+    "page dimensions target code-gallery/report readability rather than 89/183 mm journal widths"
+  ]
+}
