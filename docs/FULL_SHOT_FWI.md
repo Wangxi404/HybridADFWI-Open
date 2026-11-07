@@ -59,6 +59,19 @@ control-flow tests inject interruption and invalid provenance into the actual
 optimizer/ledger machinery; these do not substitute for seismic derivative
 checks. See [independent review evidence](../evidence/multishot_fwi_independent_review/).
 
+The initial diagnostic used maximum physical perturbations of 0.10 and
+0.05 m/s. Their actual relative errors were 1.1924e−5 and 1.3943e−6, against
+the unchanged 1e−5 tolerance. That original run is retained as a failed
+qualification with zero accepted updates. The refined diagnostic uses 0.05
+and 0.025 m/s and requires **both** to pass. Two points alone do not establish
+a convergence order. This changes diagnostic step sizes only.
+
+`scripts/import_fwi_diagnostic_cache.py` can reuse verified initial-point
+results for this diagnostic-only refinement. It checks identical numerical
+sources, fields, geometry, observations and objective, preserves the producer
+metadata/signature and records a separate compatibility proof. It never
+rewrites the original failure or relabels old arrays as new computations.
+
 The shared-host supervisor uses one quiet logical CPU and low priority. It
 starts only with an eligible GPU, reserves 2 GiB, and terminates **its own
 worker only** if foreign compute appears. Graphics-only tasks are permitted.
@@ -68,10 +81,10 @@ qualification or epoch cap must never be labelled as convergence.
 ## Run and inspect
 
 ```bash
-python scripts/marmousi_fwi.py prepare-inputs --config configs/fwi_20261108_vponly.json
-python scripts/marmousi_fwi.py observations --config configs/fwi_20261108_vponly.json \
+python scripts/marmousi_fwi.py prepare-inputs --config configs/fwi_20261108_vponly_fdrefined.json
+python scripts/marmousi_fwi.py observations --config configs/fwi_20261108_vponly_fdrefined.json \
   --output OBSERVATIONS_NPZ
-python scripts/run_multishot_fwi.py --config configs/fwi_20261108_vponly.json \
+python scripts/run_multishot_fwi.py --config configs/fwi_20261108_vponly_fdrefined.json \
   --observations OBSERVATIONS_NPZ --output RUN_DIRECTORY
 ```
 

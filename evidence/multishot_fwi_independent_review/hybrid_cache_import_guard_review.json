@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "scope": "Independent metadata/lineage and atomic-hardlink isolation tests using a tiny synthetic artifact factory only. No wave result is generated; no solver/GPU runs.",
+  "helper_sha256": "645f170d49f1dd52bddc457b4e52e937d56b34405211449ab69a49f5ee1f0406",
+  "numeric_controller_sha256": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+  "original_failure_and_all_producer_bytes_unchanged": true,
+  "later_consumer_atomic_JSON_and_NPZ_replacements_leave_producer_bytes_unchanged": true,
+  "imported_blocks": 4,
+  "only_fine_pair_plus_initial_gradient_selected": true,
+  "all_imports_explicitly_not_new_solver_execution": true,
+  "actual_consumer_Engine_batch_cache_hits_without_solver": [
+    {
+      "shot_ids": [
+        0,
+        1
+      ],
+      "method": "hybrid",
+      "actual_consumer_cache_hit": true
+    },
+    {
+      "shot_ids": [
+        2
+      ],
+      "method": "hybrid",
+      "actual_consumer_cache_hit": true
+    },
+    {
+      "shot_ids": [
+        0,
+        1,
+        2
+      ],
+      "method": "loss",
+      "actual_consumer_cache_hit": true
+    },
+    {
+      "shot_ids": [
+        0,
+        1,
+        2
+      ],
+      "method": "loss",
+      "actual_consumer_cache_hit": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "target",
+      "rejected": true,
+      "message": "Target observations changed"
+    },
+    {
+      "case": "geometry",
+      "rejected": true,
+      "message": "Only initial_direction_check.scales may change"
+    },
+    {
+      "case": "source",
+      "rejected": true,
+      "message": "Numerical/controller source hashes differ"
+    },
+    {
+      "case": "state-model",
+      "rejected": true,
+      "message": "Producer accepted-anchor model is not the actual initial fields"
+    },
+    {
+      "case": "P",
+      "rejected": true,
+      "message": "Producer parameter map changed"
+    },
+    {
+      "case": "duplicate-shot",
+      "rejected": true,
+      "message": "Producer evaluation was not a complete exactly-once shot reduction"
+    },
+    {
+      "case": "missing-fine-complete",
+      "rejected": true,
+      "message": "Completed fine finite-difference pair cache incomplete"
+    },
+    {
+      "case": "data-bytes",
+      "rejected": true,
+      "message": "Producer cache data checksum mismatch"
+    },
+    {
+      "case": "tolerance",
+      "rejected": true,
+      "message": "Only initial_direction_check.scales may change"
+    },
+    {
+      "case": "accepted-before",
+      "rejected": true,
+      "message": "Only an initial run with no accepted update can be imported"
+    },
+    {
+      "case": "producer-running",
+      "rejected": true,
+      "message": "Producer must have stopped with its failure retained"
+    },
+    {
+      "case": "gate-was-passed",
+      "rejected": true,
+      "message": "Original completed failed diagnostic must remain present"
+    },
+    {
+      "case": "no-refinement-improvement",
+      "rejected": true,
+      "message": "No clear improvement from diagnostic step refinement"
+    }
+  ],
+  "directory": "<TEMP>/hybrid-import-independent-5x94c7u9",
+  "original_private_report_sha256": "033d49548551d8a83f09d0cd8d5d395928f2b3fdffff22ca0a9ac837ec1f87cb",
+  "sanitization": {
+    "scope": "Only private path identifiers redacted; all original numbers, source hashes, outcomes and limitations retained.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_cache_import_guard_review.json"
+  },
+  "portable_public_reproducer": {
+    "path": "audit_diagnostic_cache_import.py",
+    "sha256": "3946eb0e962ebc4584e87f7fe5e8bf4964ca392dfa4f39b1d6a51b5fc7df2760"
+  }
+}

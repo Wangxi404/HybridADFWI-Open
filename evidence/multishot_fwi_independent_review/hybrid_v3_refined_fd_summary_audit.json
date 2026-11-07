@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "scope": "Independent scalar quotient, all-nine loss reduction and same-point/provenance audit only, at the initial model. The pressure payload and FFT/window objective were not independently recomputed here. No solver/GPU run.",
+  "numeric_controller_sha256": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+  "diagnostic_sha256": "c4fb07e18bf9330f832aeb9ec406ff5ce241957d5648ba31044ba72ed6840253",
+  "protocol_sha256": "2238d8cbcca0a3eb6f3f7dbc4f96161e8a324e829d66947bf901a2128299bbd9",
+  "source_gradient_sum_container_sha256": "a7db9d1243602bd4cf886964bd92ccb39e42527de531ad233580942b64023c8f",
+  "global_mean_q_gradient_sha256": "d20a66acb1ef7420f957acba2de7a03de6dab558ae21e6a5a0192ff2a1ee51bc",
+  "consumer_signature": "38f6d98400a8e731b7f22000fd1b0c455830a81f8bf9f5d0608672ee6eeed415",
+  "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+  "shot_normalizer": 9,
+  "relative_tolerance_unchanged": 1e-05,
+  "checks": [
+    {
+      "maximum_physical_perturbation_m_s": 0.05,
+      "epsilon_q": 0.0027057082834958724,
+      "independent_gradient_dot_direction": 0.00460003597671518,
+      "scalar_FD_from_all_shot_loss_summaries": 0.004600042390530091,
+      "independent_relative_error": 1.3942947405598398e-06,
+      "passes_original_relative_gate": true,
+      "recorded_gradient_dot_direction": 0.0046000359767151625,
+      "relative_RHS_arithmetic_difference": 3.771108497319946e-15,
+      "actual_loss_difference": 2.4892745600978844e-05,
+      "points": [
+        {
+          "sign": "minus",
+          "q_sha256": "4f596665a96b4f39bf8df7216d52421d7db3500ce3d1ea8e974c5b8e655d0a3d",
+          "model_sha256": "c0965ece9695b7608413cc7a5f25f6f2e1039ed5a36e828a4b65eb664b742702",
+          "metadata_sha256": "be5c58a4a86ff42a9486716b25f21a02fa8ed94622a24b4b69575d1e9e2b6936",
+          "receiver_payload_sha256_reported": "91c304b83dd0979de6da8af0bb6390acc4e26f57952feddc10867472479ef7c7",
+          "all_nine_mean_loss_recomputed": 0.017341918530859927,
+          "execution": "imported_original_fine_pair"
+        },
+        {
+          "sign": "plus",
+          "q_sha256": "42529b4b66909a70b7db4fb1ae4d4af04f9139e2db8d9e98ca5115e4e3614540",
+          "model_sha256": "a06b779d76586fdcba57512804853adcef38c7ab9eacf99b81fa9af682d3b13f",
+          "metadata_sha256": "02dc3421d520b1312bc6d0b71c09a491cb6a408d68f754f45e9fdc32cbdbc538",
+          "receiver_payload_sha256_reported": "27d12bfa4faa604143488e6f211078f122abc20be629c5a606cbb87549f4c9b4",
+          "all_nine_mean_loss_recomputed": 0.017366811276460906,
+          "execution": "imported_original_fine_pair"
+        }
+      ]
+    },
+    {
+      "maximum_physical_perturbation_m_s": 0.025,
+      "epsilon_q": 0.0013528541417479362,
+      "independent_gradient_dot_direction": 0.00460003597671518,
+      "scalar_FD_from_all_shot_loss_summaries": 0.004600074679257896,
+      "independent_relative_error": 8.413459653232024e-06,
+      "passes_original_relative_gate": true,
+      "recorded_gradient_dot_direction": 0.0046000359767151625,
+      "relative_RHS_arithmetic_difference": 3.771108497319946e-15,
+      "actual_loss_difference": 1.2446460164367706e-05,
+      "points": [
+        {
+          "sign": "minus",
+          "q_sha256": "abaf10cce18a7fcc70bfdeb6de7435b44928b19579a280846527f6ad6dfa79ac",
+          "model_sha256": "71f79d422c745864f10092b3f8897d5837852e23d31750de34328a79ec9803bb",
+          "metadata_sha256": "88d4c154b64985aac33101d6c584d2dfd671737cb8d0ab21d9d1efa941ff7781",
+          "receiver_payload_sha256_reported": "21ec5590abab923d432c750511e200c5d68e3097273978b4992ec34b7a85ec1a",
+          "all_nine_mean_loss_recomputed": 0.017348138522982,
+          "execution": "new_full_nine_shot_forward_report"
+        },
+        {
+          "sign": "plus",
+          "q_sha256": "e8185ce8e4d246ffa56a9804c9ec560848c9c285beb5353c9c53dbd4ea4ca5e6",
+          "model_sha256": "d8acba2d68c75bdd73c7c9a1353d515876f5df33969656ef82fb5bcf05287b44",
+          "metadata_sha256": "0a95f7ce187177a2a6855d0c7df3723c60afa01b5e8e0b24d99a760c9d1e6304",
+          "receiver_payload_sha256_reported": "73a3bee2e291aa11d8acadbe0852c524ad35fcf1a3978bd3611592c5d6d45066",
+          "all_nine_mean_loss_recomputed": 0.017360584983146368,
+          "execution": "new_full_nine_shot_forward_report"
+        }
+      ]
+    }
+  ],
+  "refined_errors_monotone_decreasing": false,
+  "formal_second_order_convergence_claimed": false,
+  "original_v2_failed_gate_preserved_by_import_proof": true,
+  "interpretation": "Both refined finite-h quotients meet the original tolerance, but the smaller-h error increases; no monotone asymptotic convergence or absence of a stable offset is established.",
+  "accepted_step_or_later_iterations_certified": false,
+  "output_directory": "<TEMP>/hybrid-fd-summary-independent-w1n8wcqm",
+  "independent_reader_source_sha256": "5a37cd7701ead7c6a7be168f54fb91d62eac9bd9e3e4c298ecb97c79e8f74202",
+  "original_private_report_sha256": "9e9187de27094cf03cb457a1417d350be5e264b1f0c42367ab702699419fecb9",
+  "sanitization": {
+    "scope": "Only temporary output prefix replaced; original numeric values and source hashes preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_v3_refined_fd_summary_audit.json"
+  },
+  "portable_public_reproducer": {
+    "path": "audit_hybrid_fd_summaries.py",
+    "sha256": "5a37cd7701ead7c6a7be168f54fb91d62eac9bd9e3e4c298ecb97c79e8f74202",
+    "scope": "Reads original gradient NPZ and nine-shot loss/point summaries only, no waveform payload or solver."
+  }
+}

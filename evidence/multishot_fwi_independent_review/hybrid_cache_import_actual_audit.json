@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "scope": "Actual v2-to-v3 import lineage and cached initial-gradient identity only. Refined full-model FD and accepted update remain separate qualifications.",
+  "helper_sha256": "645f170d49f1dd52bddc457b4e52e937d56b34405211449ab69a49f5ee1f0406",
+  "numeric_controller_sha256": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+  "manifest_sha256": "d19d5592a910d9224944b25c88d6438ccf9fbed00a9dbcf462a30e79017bbdc8",
+  "import_receipt_sha256": "551046b7e48288a880830038e8d2ba82cb7b2d45fe864634dfd28fbf9625990d",
+  "compatibility_proof_sha256": "b2029c991571603fe5e4f572648645a55f4632c76d7ef88f529f453da79e04ac",
+  "producer_control_and_metadata_files_unchanged": 15,
+  "original_completed_failed_gate_retained": true,
+  "old_coarse_error": 1.1924437007289711e-05,
+  "old_fine_error": 1.394294744330943e-06,
+  "observed_two_h_order_not_formal": 3.0963136789820487,
+  "only_changed_configuration": "FD scales [1,.5] -> [.5,.25]",
+  "unchanged_relative_tolerance": 1e-05,
+  "imports": [
+    {
+      "shot_ids": [
+        0,
+        1
+      ],
+      "method": "hybrid",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "old_metadata_sha256": "3629f6ba4cfd1f50bce753c19112801ac675afbf4e631d17e175c821f41581f1",
+      "consumer_metadata_sha256": "2247610f1696ae8257116455c53ad316b6487cbe375a4bbc48864265e96fc9e7",
+      "data_sha256": "0b38065ecd6af716e37cf0bbd862e5d7d5142245d4c63c8de6962c577fd509c5",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        2,
+        3
+      ],
+      "method": "hybrid",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "old_metadata_sha256": "6975cec7c0180d2def26f87c54791719a6b4fe00167638a207b9c2dc470faf21",
+      "consumer_metadata_sha256": "38549bbdfa4a654ee48b646619376ec96af8572055411d80889b3bc45902c0f5",
+      "data_sha256": "c5eaaffdbb80dab287fdb98a9f77c3bfe05d487e200e12dfc69af3bd87e8e182",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        4,
+        5
+      ],
+      "method": "hybrid",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "old_metadata_sha256": "0741bec6bf0839702aced9f9dfdae3e4b066c957b72754a1a4cac826f275acd5",
+      "consumer_metadata_sha256": "564f1b13b25265d39be480901f07e77a16dbd67f5070d542e9730392cab9de77",
+      "data_sha256": "e2d00c10c281638d72398209a405c0bdcd74da6b44953d2c1b526c88ab9bf0ee",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        6,
+        7
+      ],
+      "method": "hybrid",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "old_metadata_sha256": "8738960b63d3ee238903c90590fa97006d87a9767bdea6bf9eea583df5082c39",
+      "consumer_metadata_sha256": "5db490d1405fd296208b697085623f883f61855e9a70dd1dbe7829d878bd2869",
+      "data_sha256": "e57cd74eda495e9c5c1a2df9852efae07ab2796d60281ae14dd0b987ad94d2ba",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        8
+      ],
+      "method": "hybrid",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "old_metadata_sha256": "6f72f931aa904ea08225772e60032c7d26b6405b7803bb50ef91c3850c86fc52",
+      "consumer_metadata_sha256": "f8b0f978cdf163306614747ed7af96c37b374c03f8ccce83d6cd7853231da3f0",
+      "data_sha256": "536231e45d33617903782551ae2ca4f5f4688ae3f0b881fb09111f14b234a46e",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "method": "loss",
+      "q_sha256": "4f596665a96b4f39bf8df7216d52421d7db3500ce3d1ea8e974c5b8e655d0a3d",
+      "old_metadata_sha256": "81b97631ee6a6c8efc69a1c6b0bd10af911a5b8e4fecd7b3cf02f451559d919f",
+      "consumer_metadata_sha256": "be5c58a4a86ff42a9486716b25f21a02fa8ed94622a24b4b69575d1e9e2b6936",
+      "data_sha256": "91c304b83dd0979de6da8af0bb6390acc4e26f57952feddc10867472479ef7c7",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    },
+    {
+      "shot_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "method": "loss",
+      "q_sha256": "42529b4b66909a70b7db4fb1ae4d4af04f9139e2db8d9e98ca5115e4e3614540",
+      "old_metadata_sha256": "68c58f2e87719beacb87112ca3f94da519898f7bf7b94db569e0b8bbb0b14e14",
+      "consumer_metadata_sha256": "02dc3421d520b1312bc6d0b71c09a491cb6a408d68f754f45e9fdc32cbdbc538",
+      "data_sha256": "27d12bfa4faa604143488e6f211078f122abc20be629c5a606cbb87549f4c9b4",
+      "producer_original_copy_exact": true,
+      "explicitly_not_new_solver_execution": true
+    }
+  ],
+  "consumer_initial_three_gradient_sums_uint64_equal": {
+    "gradient_physical_sum": "46b0574ac0874986152c220a09faf2bcf0f0ded0cb8b72baabd9d4bc709892b1",
+    "gradient_coordinate_sum": "7a137700f796e88975723121c4b1ce29e6ec3b84d2094e22ed51f87b4d098a1c",
+    "gradient_q_sum": "abab78757233862a77a7c84c785e8d34ff21e0423c287fb4373e4e2fb1318e57"
+  },
+  "observed_imported_cache_hits": 7,
+  "actual_consumer_solver_execution_claimed_for_imports": false,
+  "pressure_payload_decoded": false,
+  "accepted_updates_at_snapshot": 0,
+  "original_private_report_sha256": "9e1bcf958ae10c07f8b68a1992b7a7b8db2ecf6b2ba454b9fce418f0ff9a5623",
+  "sanitization": {
+    "scope": "Only private path identifiers redacted; all original numbers, source hashes, outcomes and limitations retained.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_cache_import_actual_audit.json"
+  },
+  "portable_public_reproducer": {
+    "path": "audit_transition_bindings.py",
+    "sha256": "aafbbd96cd72fd1f513567afc5eaba1d5d701aec3e4628e78ed01c5f2744bc26"
+  }
+}
