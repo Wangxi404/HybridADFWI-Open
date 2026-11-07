@@ -1,0 +1,248 @@
+{
+  "status": "PASS: compatible existing offline visualization environments identified; pytorch26 renderer incompatibility reproduced",
+  "scope": "Read-only package inventory/import diagnostics and tiny CPU canvas/export tests only. No solver, GPU, parameter, source or production package changes; explicit diagnostic files and Matplotlib caches confined to isolated remote <TEMP> directories.",
+  "production_rendering_env": {
+    "executable": "env:pytorch26/bin/python",
+    "actual_python": "3.9.21",
+    "actual_numpy": "2.0.1",
+    "matplotlib": "3.7.5",
+    "conflicting_metadata": {
+      "conda_numpy": "2.0.1",
+      "conda_numpy_base": "2.0.1",
+      "dist_info_numpy": "1.26.3"
+    },
+    "independently_reproduced_empty_Agg_failure": true,
+    "independently_reproduced_PDF_path_failure": true,
+    "natural_dual_ndarray_types": {
+      "numpy._core._multiarray_umath": {
+        "file": "env:pytorch26/site-packages/numpy/_core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+        "ndarray_identity_matches_public_numpy": true,
+        "has_ndarray_attribute": true
+      },
+      "numpy.core._multiarray_umath": {
+        "file": "env:pytorch26/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+        "ndarray_identity_matches_public_numpy": false,
+        "has_ndarray_attribute": true
+      }
+    },
+    "interpretation": "Fresh Matplotlib import loads both NumPy _core and legacy core binary modules. Their exported ndarray classes are different; only _core matches the public NumPy ndarray. Empty background rendering fails before any scientific model/data is read. This demonstrates a mixed binary/type environment problem; exact package installation history was not reconstructed.",
+    "numeric_validity_scope": "This rendering diagnosis neither invalidates nor substitutes for the separately verified forward/AD/native numerical gates. Do not repair a running numerical environment."
+  },
+  "existing_renderers": {
+    "recommended": {
+      "executable": "env:obspy39/bin/python",
+      "python": "3.9.23",
+      "numpy": "1.26.4",
+      "matplotlib": "3.9.4",
+      "empty_Agg": true,
+      "PDF": true,
+      "PNG": true,
+      "SVG": true,
+      "actual_plotter_import_and_help_exit_code": 0
+    },
+    "backup": {
+      "executable": "env:base/bin/python",
+      "python": "3.12.4",
+      "numpy": "1.26.4",
+      "matplotlib": "3.8.4",
+      "empty_Agg": true,
+      "PDF": true,
+      "PNG": true,
+      "SVG": true
+    }
+  },
+  "recommended_command_prefix": [
+    "env",
+    "OMP_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "MPLBACKEND=Agg",
+    "MPLCONFIGDIR=<TEMP>/psv-viz-cache",
+    "nice",
+    "-n",
+    "10",
+    "env:obspy39/bin/python",
+    "-B",
+    "DiffSPECFEM/scripts/plot_multishot_fwi.py"
+  ],
+  "command_suffix": "Use the same --format/--run/--prepared/--truth-posthoc/--output arguments and hash-bound --training-input override if rendering relocated Hybrid outputs.",
+  "alternatives": "No new venv or pip operation is needed. If a future dedicated visualization environment is desired, create it cleanly rather than cloning this mixed pytorch26 environment or inheriting its site-packages; the already tested NumPy 1.26.4 + Matplotlib 3.9.4 pair is an observed working reference.",
+  "raw_remote_diagnostics": {
+    "compatibility_directory": "<TEMP>/psv-mpl-compat-muqexj_o",
+    "compatibility_json": "<TEMP>/psv-mpl-compat-muqexj_o/compatibility.json",
+    "confirmation_directory": "<TEMP>/psv-mpl-confirm-l7p4i9d9",
+    "confirmation_json": "<TEMP>/psv-mpl-confirm-l7p4i9d9/confirmation.json"
+  },
+  "smoke_results": [
+    {
+      "env": "pytorch26",
+      "returncode": 0,
+      "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+      "executable": "env:pytorch26/bin/python",
+      "numpy": {
+        "version": "2.0.1",
+        "file": "env:pytorch26/site-packages/numpy/__init__.py",
+        "ndarray_class": "<class 'numpy.ndarray'>",
+        "array_type": "<class 'numpy.ndarray'>",
+        "numpy.core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:pytorch26/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so"
+        },
+        "numpy._core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:pytorch26/site-packages/numpy/_core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so"
+        }
+      },
+      "matplotlib": {
+        "version": "3.7.5",
+        "file": "env:pytorch26/site-packages/matplotlib/__init__.py",
+        "backend": "agg"
+      },
+      "tests": {
+        "empty_Agg_patch": {
+          "passed": false,
+          "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 19, in <module>\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_agg.py\", line 400, in draw\n    self.figure.draw(self.renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 95, in draw_wrapper\n    result = draw(artist, renderer, *args, **kwargs)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/figure.py\", line 3174, in draw\n    self.patch.draw(renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 591, in draw\n    self._draw_paths_with_artist_properties(\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 576, in _draw_paths_with_artist_properties\n    renderer.draw_path(gc, *draw_path_args)\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_agg.py\", line 146, in draw_path\n    self._renderer.draw_path(gc, path, transform, rgbFace)\nValueError: object __array__ method not producing an array\n"
+        },
+        "image_PDF_PNG_SVG": {
+          "passed": false,
+          "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 27, in <module>\n  File \"env:pytorch26/site-packages/matplotlib/figure.py\", line 3378, in savefig\n    self.canvas.print_figure(fname, **kwargs)\n  File \"env:pytorch26/site-packages/matplotlib/backend_bases.py\", line 2366, in print_figure\n    result = print_method(\n  File \"env:pytorch26/site-packages/matplotlib/backend_bases.py\", line 2232, in <lambda>\n    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_pdf.py\", line 2820, in print_pdf\n    self.figure.draw(renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 95, in draw_wrapper\n    result = draw(artist, renderer, *args, **kwargs)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/figure.py\", line 3174, in draw\n    self.patch.draw(renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 591, in draw\n    self._draw_paths_with_artist_properties(\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 576, in _draw_paths_with_artist_properties\n    renderer.draw_path(gc, *draw_path_args)\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_pdf.py\", line 2047, in draw_path\n    self.file.writePath(\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_pdf.py\", line 1917, in writePath\n    cmds = self.pathOperations(path, transform, clip, simplify=simplify,\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_pdf.py\", line 1903, in pathOperations\n    return [Verbatim(_path.convert_to_string(\nValueError: object __array__ method not producing an array\n"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "env": "obspy39",
+      "returncode": 0,
+      "python": "3.9.23 (main, Jun  5 2025, 13:40:20) \n[GCC 11.2.0]",
+      "executable": "env:obspy39/bin/python",
+      "numpy": {
+        "version": "1.26.4",
+        "file": "env:obspy39/site-packages/numpy/__init__.py",
+        "ndarray_class": "<class 'numpy.ndarray'>",
+        "array_type": "<class 'numpy.ndarray'>",
+        "numpy.core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:obspy39/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so"
+        },
+        "numpy._core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:obspy39/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so"
+        }
+      },
+      "matplotlib": {
+        "version": "3.9.4",
+        "file": "env:obspy39/site-packages/matplotlib/__init__.py",
+        "backend": "Agg"
+      },
+      "tests": {
+        "empty_Agg_patch": {
+          "passed": true
+        },
+        "image_PDF_PNG_SVG": {
+          "passed": true,
+          "outputs": {
+            "pdf": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/obspy39/compat.pdf",
+              "bytes": 6912
+            },
+            "png": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/obspy39/compat.png",
+              "bytes": 3970
+            },
+            "svg": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/obspy39/compat.svg",
+              "bytes": 9124
+            }
+          }
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "env": "base",
+      "returncode": 0,
+      "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]",
+      "executable": "env:base/bin/python",
+      "numpy": {
+        "version": "1.26.4",
+        "file": "env:base/site-packages/numpy/__init__.py",
+        "ndarray_class": "<class 'numpy.ndarray'>",
+        "array_type": "<class 'numpy.ndarray'>",
+        "numpy.core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:base/site-packages/numpy/core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so"
+        },
+        "numpy._core._multiarray_umath": {
+          "version": "3.1",
+          "file": "env:base/site-packages/numpy/core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so"
+        }
+      },
+      "matplotlib": {
+        "version": "3.8.4",
+        "file": "env:base/site-packages/matplotlib/__init__.py",
+        "backend": "agg"
+      },
+      "tests": {
+        "empty_Agg_patch": {
+          "passed": true
+        },
+        "image_PDF_PNG_SVG": {
+          "passed": true,
+          "outputs": {
+            "pdf": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/base/compat.pdf",
+              "bytes": 6912
+            },
+            "png": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/base/compat.png",
+              "bytes": 3970
+            },
+            "svg": {
+              "path": "<TEMP>/psv-mpl-compat-muqexj_o/base/compat.svg",
+              "bytes": 9124
+            }
+          }
+        }
+      },
+      "stderr": ""
+    }
+  ],
+  "fresh_failure_confirmation": {
+    "numpy": "2.0.1",
+    "matplotlib": "3.7.5",
+    "fresh_empty_Agg_passed": false,
+    "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_agg.py\", line 400, in draw\n    self.figure.draw(self.renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 95, in draw_wrapper\n    result = draw(artist, renderer, *args, **kwargs)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/figure.py\", line 3174, in draw\n    self.patch.draw(renderer)\n  File \"env:pytorch26/site-packages/matplotlib/artist.py\", line 72, in draw_wrapper\n    return draw(artist, renderer)\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 591, in draw\n    self._draw_paths_with_artist_properties(\n  File \"env:pytorch26/site-packages/matplotlib/patches.py\", line 576, in _draw_paths_with_artist_properties\n    renderer.draw_path(gc, *draw_path_args)\n  File \"env:pytorch26/site-packages/matplotlib/backends/backend_agg.py\", line 146, in draw_path\n    self._renderer.draw_path(gc, path, transform, rgbFace)\nValueError: object __array__ method not producing an array\n",
+    "loaded_multiarray_modules": {
+      "numpy._core._multiarray_umath": {
+        "file": "env:pytorch26/site-packages/numpy/_core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+        "ndarray_identity_matches_public_numpy": true,
+        "has_ndarray_attribute": true
+      },
+      "numpy.core._multiarray_umath": {
+        "file": "env:pytorch26/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+        "ndarray_identity_matches_public_numpy": false,
+        "has_ndarray_attribute": true
+      }
+    }
+  },
+  "actual_plotter_cli_confirmation": {
+    "returncode": 0,
+    "stdout": "usage: plot_multishot_fwi.py [-h] --run RUN --truth-posthoc TRUTH_POSTHOC\n                             --output OUTPUT [--percentile PERCENTILE]\n                             [--format {hybrid,native}] [--prepared PREPARED]\n                             [--training-input TRAINING_INPUT]\n\nPlot actual accepted full-shot iterates; true Vp is post-hoc evidence only.\nThis offline reader never calls the optimizer or a wave solver. It exports\nphysical models, raw globally accumulated derivatives, search directions and\nactual accepted changes as distinct quantities. No gradient filtering/gain.\nSPDX-License-Identifier: MIT\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --run RUN\n  --truth-posthoc TRUTH_POSTHOC\n  --output OUTPUT\n  --percentile PERCENTILE\n  --format {hybrid,native}\n  --prepared PREPARED   Native prepared experiment directory\n  --training-input TRAINING_INPUT\n                        Relocated Hybrid training container; its executed hash\n                        must match\n",
+    "stderr": ""
+  },
+  "limits": [
+    "Tiny backend smoke tests establish import/export compatibility only; they are not scientific figure/source/visual QA.",
+    "No mock scientific plates were rendered. Actual native unit and later production figures require their own source/hash, glyph, alignment, collision and visual checks.",
+    "No package installation history or repair was attempted, and no conda/pip operation was run."
+  ],
+  "original_private_report_sha256": "be187e10c34f5e984eeeb6ab440656cf00792ef4a140389a239216a5f6bad03a",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/remote_plotting_environment_audit.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "all_independent_gradient_checks_passed": true,
+  "scope": "First completed nine-independent-shot initial gradient only. Current production FD/Armijo/inversion completion are not certified. No pressure/window payload, Torch, GPU or solver was used by this reader.",
+  "numeric_driver_sha256": "2a064bcfe29eb34bb1178e6d282437a6290827d9e12de9a6c9ab2b26b85ce0ef",
+  "protocol_sha256": "16e78df96cfc822dd56f86953248b425216311c3c0bd1690106bbadb33497545",
+  "source_checks": {
+    "scripts/run_multishot_fwi.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "scripts/marmousi_fwi.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "scripts/gradient_detail.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "scripts/fwi_supervisor.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "scripts/fwi_pipeline.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "scripts/fwi_ledger_check.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "src/hybridadfwi/fwi.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "src/hybridadfwi/adjoint.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "src/hybridadfwi/experiment.py": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    },
+    "upstream.lock.json": {
+      "current_matches": true,
+      "executed_snapshot_matches": true
+    }
+  },
+  "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+  "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+  "all_shot_anchor_model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+  "training_input_sha256": "44b93283fe33a09f43c86c69c6be514ad9b9d80b84d137565575d1452942647b",
+  "training_prior_array_hashes": {
+    "vp_initial": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+    "vs_fixed": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+    "rho_fixed": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13",
+    "x": "b947c5a9bd571785657e5ffc8cb30bfba93bb67514e7cf6ab6df99d0c55dbe82",
+    "z": "2b767a104e233f7efa4816c7392eb66cc32bbfc063505ad7a7f6b8390b103f94"
+  },
+  "no_unknown_true_Vp_in_training_container": true,
+  "optimizer_source_drops_truth_model_path": true,
+  "all_actual_forward_field_hashes_equal_fixed_initial_priors": true,
+  "requires_grad_only_Vp": true,
+  "initial_q_exact_zero": true,
+  "source_x_m": [
+    8050,
+    8350,
+    8650,
+    8950,
+    9250,
+    9550,
+    9850,
+    10150,
+    10450
+  ],
+  "source_z_m": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "source_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "actual_batch_sizes": [
+    2,
+    2,
+    2,
+    2,
+    1
+  ],
+  "independent_recomputed_mean_objective": 0.017354359904860842,
+  "global_shot_normalizer": 9,
+  "per_shot_data_normalizer": 1127161,
+  "full_global_data_count": 10144449,
+  "objective_source_contract": "Each shot: 0.5 mean_(Nt,Nr)[(window*zero-padded lowpass(predicted-observed)/fixed_observed_RMS(stage,shot))^2]; batch SUM; one global /9. No regularizer. Data AD supplies receiver cotangents.",
+  "data_objective_limit": "Pressure/window payload and data cotangents were intentionally not loaded or recomputed in this lightweight audit. Full-data objective/FD validation remains a separate qualification.",
+  "batches": [
+    {
+      "shot_ids": [
+        0,
+        1
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "cache_sha256": "0b38065ecd6af716e37cf0bbd862e5d7d5142245d4c63c8de6962c577fd509c5",
+      "metadata_sha256": "3629f6ba4cfd1f50bce753c19112801ac675afbf4e631d17e175c821f41581f1",
+      "per_shot_losses": [
+        0.011955311875334699,
+        0.019135388932032642
+      ],
+      "per_shot_fixed_observed_scales": [
+        0.00012511731274492504,
+        0.0001184384170127787
+      ],
+      "P_chain_relative_l2": 0,
+      "coordinate_scale1000_relative_l2": 0,
+      "P_chain_uint64_equal": true,
+      "scale1000_uint64_equal": true,
+      "physical_fields_sha256": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "full_gradient_shape": [
+        555,
+        401
+      ],
+      "source_signature": "33a864b52ace7a2c02dc7272ceec6f9010a7f4ed8bdead36328420594f8e7323",
+      "window_sha256": "22dba33ec7f002f41ff83adced12e7b2d342c2c9cd8439250df06d095dd346ec",
+      "trace_screen_passed": true,
+      "timing": {
+        "forward_s": 70.33684844803065,
+        "data_vjp_and_backward_s": 179.50360003765672,
+        "total_s": 249.84044848568738
+      },
+      "adapter_details": {
+        "checkpointing": true,
+        "checkpoint_segments": 84,
+        "checkpoint_state_tensors": 1260,
+        "saved_history_steps": 0,
+        "saved_history_fields_per_step": 0,
+        "instrumented_native_source_sha256": null,
+        "temporal_autograd": false,
+        "replay_seconds": 71.79137077648193,
+        "adjoint_seconds": 107.60568391345441,
+        "static_material_vjp_seconds": 0.0007497360929846764,
+        "peak_history_steps": 84,
+        "static_material_autograd": true
+      }
+    },
+    {
+      "shot_ids": [
+        2,
+        3
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "cache_sha256": "c5eaaffdbb80dab287fdb98a9f77c3bfe05d487e200e12dfc69af3bd87e8e182",
+      "metadata_sha256": "6975cec7c0180d2def26f87c54791719a6b4fe00167638a207b9c2dc470faf21",
+      "per_shot_losses": [
+        0.02034959358607095,
+        0.0221317365087918
+      ],
+      "per_shot_fixed_observed_scales": [
+        0.00011960649302437987,
+        0.0001281845081428179
+      ],
+      "P_chain_relative_l2": 0,
+      "coordinate_scale1000_relative_l2": 0,
+      "P_chain_uint64_equal": true,
+      "scale1000_uint64_equal": true,
+      "physical_fields_sha256": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "full_gradient_shape": [
+        555,
+        401
+      ],
+      "source_signature": "33a864b52ace7a2c02dc7272ceec6f9010a7f4ed8bdead36328420594f8e7323",
+      "window_sha256": "5c9f3ade7fff2041c84375a1ef3485df3d3dc6497665a2c8c5b4650748d4c3dc",
+      "trace_screen_passed": true,
+      "timing": {
+        "forward_s": 68.54198666475713,
+        "data_vjp_and_backward_s": 179.87884167395532,
+        "total_s": 248.42082833871245
+      },
+      "adapter_details": {
+        "checkpointing": true,
+        "checkpoint_segments": 84,
+        "checkpoint_state_tensors": 1260,
+        "saved_history_steps": 0,
+        "saved_history_fields_per_step": 0,
+        "instrumented_native_source_sha256": null,
+        "temporal_autograd": false,
+        "replay_seconds": 72.21363217290491,
+        "adjoint_seconds": 107.61419108137488,
+        "static_material_vjp_seconds": 0.0006578480824828148,
+        "peak_history_steps": 84,
+        "static_material_autograd": true
+      }
+    },
+    {
+      "shot_ids": [
+        4,
+        5
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "cache_sha256": "e2d00c10c281638d72398209a405c0bdcd74da6b44953d2c1b526c88ab9bf0ee",
+      "metadata_sha256": "0741bec6bf0839702aced9f9dfdae3e4b066c957b72754a1a4cac826f275acd5",
+      "per_shot_losses": [
+        0.021214736156666615,
+        0.014114248625939059
+      ],
+      "per_shot_fixed_observed_scales": [
+        0.00012224048235479296,
+        0.00012031968802605755
+      ],
+      "P_chain_relative_l2": 0,
+      "coordinate_scale1000_relative_l2": 0,
+      "P_chain_uint64_equal": true,
+      "scale1000_uint64_equal": true,
+      "physical_fields_sha256": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "full_gradient_shape": [
+        555,
+        401
+      ],
+      "source_signature": "33a864b52ace7a2c02dc7272ceec6f9010a7f4ed8bdead36328420594f8e7323",
+      "window_sha256": "21205c3035de6a5edb643b68d048246149116e4cc655c80ee5772b2e3fd41e8b",
+      "trace_screen_passed": true,
+      "timing": {
+        "forward_s": 68.09336485527456,
+        "data_vjp_and_backward_s": 179.7777443639934,
+        "total_s": 247.87110921926796
+      },
+      "adapter_details": {
+        "checkpointing": true,
+        "checkpoint_segments": 84,
+        "checkpoint_state_tensors": 1260,
+        "saved_history_steps": 0,
+        "saved_history_fields_per_step": 0,
+        "instrumented_native_source_sha256": null,
+        "temporal_autograd": false,
+        "replay_seconds": 72.10630008764565,
+        "adjoint_seconds": 107.62200153246522,
+        "static_material_vjp_seconds": 0.0009614070877432823,
+        "peak_history_steps": 84,
+        "static_material_autograd": true
+      }
+    },
+    {
+      "shot_ids": [
+        6,
+        7
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "cache_sha256": "e57cd74eda495e9c5c1a2df9852efae07ab2796d60281ae14dd0b987ad94d2ba",
+      "metadata_sha256": "8738960b63d3ee238903c90590fa97006d87a9767bdea6bf9eea583df5082c39",
+      "per_shot_losses": [
+        0.014790897560096812,
+        0.017562918228982496
+      ],
+      "per_shot_fixed_observed_scales": [
+        0.00011233404540871319,
+        0.00012363919902622656
+      ],
+      "P_chain_relative_l2": 0,
+      "coordinate_scale1000_relative_l2": 0,
+      "P_chain_uint64_equal": true,
+      "scale1000_uint64_equal": true,
+      "physical_fields_sha256": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "full_gradient_shape": [
+        555,
+        401
+      ],
+      "source_signature": "33a864b52ace7a2c02dc7272ceec6f9010a7f4ed8bdead36328420594f8e7323",
+      "window_sha256": "73ebc72bb146eda44b5cda319beea397627f4546ba6cb36e6170e35f5f9f3997",
+      "trace_screen_passed": true,
+      "timing": {
+        "forward_s": 69.44121000356972,
+        "data_vjp_and_backward_s": 180.5025354269892,
+        "total_s": 249.94374543055892
+      },
+      "adapter_details": {
+        "checkpointing": true,
+        "checkpoint_segments": 84,
+        "checkpoint_state_tensors": 1260,
+        "saved_history_steps": 0,
+        "saved_history_fields_per_step": 0,
+        "instrumented_native_source_sha256": null,
+        "temporal_autograd": false,
+        "replay_seconds": 72.8518049241975,
+        "adjoint_seconds": 107.59928007237613,
+        "static_material_vjp_seconds": 0.0007177283987402916,
+        "peak_history_steps": 84,
+        "static_material_autograd": true
+      }
+    },
+    {
+      "shot_ids": [
+        8
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "cache_sha256": "536231e45d33617903782551ae2ca4f5f4688ae3f0b881fb09111f14b234a46e",
+      "metadata_sha256": "6f72f931aa904ea08225772e60032c7d26b6405b7803bb50ef91c3850c86fc52",
+      "per_shot_losses": [
+        0.014934407669832466
+      ],
+      "per_shot_fixed_observed_scales": [
+        0.00013988646079768948
+      ],
+      "P_chain_relative_l2": 0,
+      "coordinate_scale1000_relative_l2": 0,
+      "P_chain_uint64_equal": true,
+      "scale1000_uint64_equal": true,
+      "physical_fields_sha256": {
+        "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+        "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+        "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+      },
+      "full_gradient_shape": [
+        555,
+        401
+      ],
+      "source_signature": "33a864b52ace7a2c02dc7272ceec6f9010a7f4ed8bdead36328420594f8e7323",
+      "window_sha256": "3393cb94acca0dc69547cde9504f44c00180bba5fe36773bf2ef574631f5ed2e",
+      "trace_screen_passed": true,
+      "timing": {
+        "forward_s": 36.14202304370701,
+        "data_vjp_and_backward_s": 95.11408919561654,
+        "total_s": 131.25611223932356
+      },
+      "adapter_details": {
+        "checkpointing": true,
+        "checkpoint_segments": 84,
+        "checkpoint_state_tensors": 1260,
+        "saved_history_steps": 0,
+        "saved_history_fields_per_step": 0,
+        "instrumented_native_source_sha256": null,
+        "temporal_autograd": false,
+        "replay_seconds": 39.244354175403714,
+        "adjoint_seconds": 55.83704844955355,
+        "static_material_vjp_seconds": 0.0007443735376000404,
+        "peak_history_steps": 84,
+        "static_material_autograd": true
+      }
+    }
+  ],
+  "aggregate_sum_checks": {
+    "gradient_physical_sum": {
+      "uint64_equal_independent_five_batch_sum": true,
+      "sum_sha256": "46b0574ac0874986152c220a09faf2bcf0f0ded0cb8b72baabd9d4bc709892b1",
+      "global_mean_sha256": "0322d17582707ae6878ba2ad6c3d050a1283e30cc5f88dea08225d1c49cfbb5b",
+      "sum_norm": 0.0001340194502153203,
+      "global_mean_norm": 1.489105002392444e-05
+    },
+    "gradient_coordinate_sum": {
+      "uint64_equal_independent_five_batch_sum": true,
+      "sum_sha256": "7a137700f796e88975723121c4b1ce29e6ec3b84d2094e22ed51f87b4d098a1c",
+      "global_mean_sha256": "53f16aa2b0dbb485df6faa73c9dfede8bc6fe7f2643573f3122bfcfaa7a9fa2f",
+      "sum_norm": 4.140032379043639e-05,
+      "global_mean_norm": 4.600035976715155e-06
+    },
+    "gradient_q_sum": {
+      "uint64_equal_independent_five_batch_sum": true,
+      "sum_sha256": "abab78757233862a77a7c84c785e8d34ff21e0423c287fb4373e4e2fb1318e57",
+      "global_mean_sha256": "d20a66acb1ef7420f957acba2de7a03de6dab558ae21e6a5a0192ff2a1ee51bc",
+      "sum_norm": 0.04140032379043637,
+      "global_mean_norm": 0.004600035976715153
+    }
+  },
+  "aggregate_npz_sha256": "a7db9d1243602bd4cf886964bd92ccb39e42527de531ad233580942b64023c8f",
+  "global_P_chain_relative_l2": 1.429945760277311e-17,
+  "global_scale1000_chain_relative_l2": 1.3296976877335495e-16,
+  "parameter_map": {
+    "sha256": "ba1f21d0205f15b3edf9787e46f2b41c4e0f136ac29467fea78768de5ca7e8de",
+    "shape": [
+      555,
+      401
+    ],
+    "independent_formula_max_abs_error": 0,
+    "water_cells": 29273,
+    "fixed_zero_cells": 72140,
+    "active_cells": 150415,
+    "core_cells": 132370
+  },
+  "material_bulk3D_min_pa": 3645123761.03128,
+  "no_intershot_update_before_complete_gradient": true,
+  "accepted_updates_in_snapshot": 0,
+  "snapshot_status": "Completed gradient; FD qualification/line search may be in progress. An open valid ledger prefix is not a failed or completed inversion.",
+  "complete_gradient_events": [
+    {
+      "event": "iteration_start",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:41:00.996544+00:00",
+      "shot_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "reduction": "mean",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad"
+    },
+    {
+      "event": "evaluation_start",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:41:00.996791+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "phase": "gradient",
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad"
+    },
+    {
+      "event": "shot_batch",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:45:11.711326+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "shot_ids": [
+        0,
+        1
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "metadata": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_0-1.json",
+      "data": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_0-1.npz",
+      "reused_exact_point": false
+    },
+    {
+      "event": "shot_batch",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:49:20.935130+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "shot_ids": [
+        2,
+        3
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "metadata": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_2-3.json",
+      "data": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_2-3.npz",
+      "reused_exact_point": false
+    },
+    {
+      "event": "shot_batch",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:53:29.815583+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "shot_ids": [
+        4,
+        5
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "metadata": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_4-5.json",
+      "data": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_4-5.npz",
+      "reused_exact_point": false
+    },
+    {
+      "event": "shot_batch",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:57:40.589550+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "shot_ids": [
+        6,
+        7
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "metadata": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_6-7.json",
+      "data": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_6-7.npz",
+      "reused_exact_point": false
+    },
+    {
+      "event": "shot_batch",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:59:52.952173+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "shot_ids": [
+        8
+      ],
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "q_array_sha256": "3e6373e7dce12c8b8327f9b31f9c695a9c03222373e864cd8c5edde273e12dcb",
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "metadata": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_8.json",
+      "data": "evaluations/96d313c173ef43da_3e6373e7dce12c8b8327_hybrid/shots_8.npz",
+      "reused_exact_point": false
+    },
+    {
+      "event": "evaluation_complete",
+      "iteration_id": "stage0_accepted0000_attempt0001_a1fee6e227",
+      "utc": "2026-11-07T17:59:52.954494+00:00",
+      "evaluation_id": "stage0_accepted0000_attempt0001_a1fee6e227_gradient",
+      "model_sha256": "1ffbae15e6e2449003c8171dd1af907ff4669b125b4866289314bb2b67ec8e15",
+      "normalizer": 9,
+      "loss": 0.017354359904860842,
+      "objective_id": "96d313c173ef43da780e1896528e1461de4a4d67fc3d155b92429a757cb72aad",
+      "shot_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "ledger_tail_fragment_seen": false,
+  "reviewer_output_directory": "<TEMP>/hybrid-initial9-independent-1zslyx8c",
+  "numeric_arrays_exported": false,
+  "independent_reader_source_sha256": "b456a5f599622c0974cec89bb919b0a21f16a9f283b3e9be5c47ebe1c11f2a0d",
+  "local_small_bundle_verification": {
+    "passed": true,
+    "aggregate_container_sha256": "a7db9d1243602bd4cf886964bd92ccb39e42527de531ad233580942b64023c8f",
+    "all_three_aggregate_arrays_match_remote_uint64_sha": true,
+    "protocol_map_geometry_and_all_five_batch_metadata_match_remote_sha": true,
+    "ledger_prefix_exact_match": true,
+    "pressure_payload_present_or_loaded": false,
+    "numeric_arrays_published": false,
+    "collection_receipt_sha256": "59282626039b1575fdea6037006fa3a924c6c00f2ab01387dff21309e11d7ade"
+  },
+  "ledger_prefix_audit": {
+    "valid_prefix": true,
+    "iteration_closed": false,
+    "explanation": "No coverage/model/normalization error; the derivative qualification and line search are still in progress, so the checker truthfully returns INCOMPLETE.",
+    "actual_checker_result": {
+      "passed": false,
+      "status": "INCOMPLETE",
+      "complete": false,
+      "iterations": 1,
+      "accepted_updates": 0,
+      "shot_count": 9,
+      "iteration_statuses": {
+        "accepted": 0,
+        "converged": 0,
+        "rejected": 0,
+        "failed": 0,
+        "interrupted": 0
+      },
+      "scope": "Orchestration metadata only; not a numerical-gradient or inversion-convergence certificate"
+    },
+    "checker_sha256": "8a8bad44a3a2def9960f887620e4150e7de6c77eef4af41e0fbffbd47f059c6a"
+  },
+  "original_private_report_sha256": "7b8ba5ebace99f002f2eb25cc2bae642c037c7e8a951a7d7cf0175db77157c85",
+  "sanitization": {
+    "scope": "Only ephemeral output-directory prefix replaced; original numbers, solver/source SHA fields and pending-FD scope retained.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_initial9_gradient_audit.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true
+  },
+  "portable_public_reproducer": {
+    "path": "audit_hybrid_actual_gradient.py",
+    "sha256": "b456a5f599622c0974cec89bb919b0a21f16a9f283b3e9be5c47ebe1c11f2a0d",
+    "scope": "This exact portable NumPy-only reader was executed remotely against selective gradient keys; no pressure/window payload, solver, Torch or GPU task."
+  }
+}

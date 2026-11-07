@@ -1,0 +1,4 @@
+# Offline figures: validated with Python 3.9, separately from the wave worker.
+numpy==1.26.4
+matplotlib==3.9.4
+Pillow>=10,<13

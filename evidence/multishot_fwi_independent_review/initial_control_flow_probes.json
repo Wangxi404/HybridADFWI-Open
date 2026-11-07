@@ -1,0 +1,42 @@
+{
+  "scope": "Independent tiny CPU control-flow/cache probes; no production source solver/GPU/native process launched",
+  "source_snapshots": {
+    "native": {
+      "path": "DiffSPECFEM/scripts/invert_vponly_psv.py",
+      "sha256": "a44fa1e526e142ecfc8b6554d3f9f9df7a35ec0fc1f27c8ef9f8f21940261b92"
+    },
+    "hybrid": {
+      "path": "HybridADFWI-Open/scripts/run_multishot_fwi.py",
+      "sha256": "36e6930bc11c641731833075cc0ba298086e5ce8f9da6b348bbd903271ed79d3"
+    }
+  },
+  "native_stale_target_cache": {
+    "rejected_stale_target_cache": false,
+    "cached_loss": 0.5,
+    "current_target_loss": 1.0,
+    "original_target_sha256": "580c5d6145df3656d95b21c2674cd8e76f0e9a49abf0e8ea1cd566c6e5f2d740",
+    "changed_target_sha256": "aff643d03cd63f83f7799f219eb3c1307ea9d66bd50d684fb98f13058577d92c",
+    "scope": "Artificial model-free cache provenance probe through the actual Engine.batch; not a solver numerical result"
+  },
+  "hybrid_checkpoint_interruption": {
+    "resume_failed_with_identifier_collision": false,
+    "exception": "AssertionError",
+    "message": "Probe must finish before any heavy evaluation",
+    "resume_reached_next_gradient": true
+  },
+  "directory": "<TEMP>/independent_multishot_loop_f_k5y446",
+  "interpretation": {
+    "native": "Initial cache provenance bug reproduced. Fresh loss/gradient arithmetic not implicated; mutable targets must be rejected before cached reuse. Final fix qualification pending.",
+    "hybrid": "Attempt-counter+UUID fix independently passed interruption window; next gradient reached without reusing a folder. Full optimizer numerical/resume test pending."
+  },
+  "reproducer_sha256": "e0f4b521cbf889ec084eb27ce551f65bc581011afe27360cfc6897eefe67455e",
+  "original_private_report_sha256": "c0ce902eb14bc844cf2def654db8e1941b502069d0dcd23741c5990634ec844d",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/initial_control_flow_probes.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}

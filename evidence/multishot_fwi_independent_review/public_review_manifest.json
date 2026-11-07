@@ -1,0 +1,97 @@
+{
+  "scope": "Only independent-review evidence and portable reproducers. Actual numerical solver scripts, frozen experiment sources and root-owned actual-plot QA receipt untouched.",
+  "files": [
+    {
+      "path": "design_and_feasibility.json",
+      "bytes": 7429,
+      "sha256": "acc581e92fee3b8b2c4d24fa2a0d7716226ef422273d17c60d4168e00ce02092",
+      "original_private_file_sha256": "1e4caa9b07d84dc24cc91598b5bdbb7eba00617df9e95652d6325d6bda47c57e"
+    },
+    {
+      "path": "foreign_gpu_policy_receipt.json",
+      "bytes": 2365,
+      "sha256": "05d11e7c389e061b299926773bc21b091a7f1c2ba6ed8d194b01df9745282b99",
+      "original_private_file_sha256": "975592005d60de152c9aa7f1d745866e974d7c423481281cb156d9233c1b96d1"
+    },
+    {
+      "path": "hybrid_loop_control_flow_receipt.json",
+      "bytes": 4624,
+      "sha256": "671465d99c5e6836aef1ab66ecf50c95927ce6130d3802887d3fd2bad3ce1df7",
+      "original_private_file_sha256": "35653f8b820aff38ba4a8d4717d65b9a6fe9144feb46feb3a44b2e9c738d12a7"
+    },
+    {
+      "path": "independent_foreign_gpu_policy.py",
+      "bytes": 4969,
+      "sha256": "36500c898320db652ee0459cfe242cd02f617bf440a4d31dbe033edb596ce014",
+      "original_private_file_sha256": "48e5ff26b9ce0c06f67230418305137a58f7445671acdeb68968c8f928f122c1"
+    },
+    {
+      "path": "independent_hybrid_full_loop.py",
+      "bytes": 10339,
+      "sha256": "4b4d7b9d47b4f463e19e83ce5837b982a6b28b12462816ac5fc77bad7efcceb6",
+      "original_private_file_sha256": "99213d483877a049bdf2fec2ca0057ce02c3523521c27894c8116c0fdae89ba4"
+    },
+    {
+      "path": "initial_control_flow_probes.json",
+      "bytes": 2359,
+      "sha256": "6d9bf38d3a3ed508ac186ab4d93d87bc635d2c32a76f210aed45602ea43d2610",
+      "original_private_file_sha256": "c0ce902eb14bc844cf2def654db8e1941b502069d0dcd23741c5990634ec844d"
+    },
+    {
+      "path": "plotter_source_review.json",
+      "bytes": 5988,
+      "sha256": "256d84f8150c9fa567f88adb6500b00d42331c8a2604987d2c055cd6d86eb8c6",
+      "original_private_file_sha256": "d06c74d51246b06e37b11db9b08105d186a7c96ed98866d9da95b59a2d2eae28"
+    },
+    {
+      "path": "profile_helper_source_review.json",
+      "bytes": 2845,
+      "sha256": "4dd181bcb19d6179f992608ba81c5b8060f70062654145472898d2c113601581",
+      "original_private_file_sha256": "a0c94e6dfc7a8fd59c1bcc9c89d9780700721f9fd8e5027468426d8d75a9ddac"
+    },
+    {
+      "path": "remote_plotting_environment_audit.json",
+      "bytes": 15178,
+      "sha256": "489a8b12ed687eed41ba4f5d313ab301222a07225545e2758cc924ac49aa9e85",
+      "original_private_file_sha256": "be187e10c34f5e984eeeb6ab440656cf00792ef4a140389a239216a5f6bad03a"
+    },
+    {
+      "path": "training_input_material_audit.json",
+      "bytes": 2291,
+      "sha256": "b0b8906b5295b5078dae1357048bca1c14a645fb108e65600d5bf62005a69f7b",
+      "original_private_file_sha256": "b4a3004343be37259126db97b7605d3186c85f86eb536c9ce05a7d737803e6dc"
+    },
+    {
+      "path": "foreign_gpu_group_policy_receipt.json",
+      "bytes": 2959,
+      "sha256": "bd32e0bbbf42ba087ff63da9b422237d9fd7c526825375356f2822c596c51ccb",
+      "original_private_file_sha256": "42f991a346ae18ebd19b3bcfeb7175fdb0f8cdeda1671688cba17b62ff621198"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3001,
+      "sha256": "9ecf31d389ab7ec912b0f3b865e8082ec6db96f277697edb9d4fc1bb2d0c7fb5",
+      "original_private_file_sha256": null
+    },
+    {
+      "path": "audit_hybrid_actual_gradient.py",
+      "bytes": 12434,
+      "sha256": "b456a5f599622c0974cec89bb919b0a21f16a9f283b3e9be5c47ebe1c11f2a0d",
+      "original_private_file_sha256": "b456a5f599622c0974cec89bb919b0a21f16a9f283b3e9be5c47ebe1c11f2a0d"
+    },
+    {
+      "path": "hybrid_initial9_gradient_audit.json",
+      "bytes": 23732,
+      "sha256": "4ead903d3f423927688d4b475af9eb033a3890dce3665efefbcf7ded48c331a3",
+      "original_private_file_sha256": "7b8ba5ebace99f002f2eb25cc2bae642c037c7e8a951a7d7cf0175db77157c85"
+    }
+  ],
+  "original_private_archive_manifest_sha256": "21529cac8c204c58747a8e1a330da69ec685e63fc6f71202237caa9ab7093ce9",
+  "original_numeric_values_and_solver_source_hashes_preserved": true,
+  "private_originals_ignored_by_git": true,
+  "root_owned_plotter_QA_excluded": [
+    "plotter_actual_cpu_wave_qa.json"
+  ],
+  "portability_syntax_and_help_checked": true,
+  "new_actual_process_group_policy_test": "foreign_gpu_group_policy_receipt.json"
+}

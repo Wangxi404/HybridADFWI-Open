@@ -4,6 +4,12 @@
 
 HybridADFWI compares native AD with an external discrete adjoint for an already-differentiable solver. The validated scope is **2-D isotropic elastic PSV, float64, first-order Vp/Vs/ρ gradients**. This is a controlled research benchmark; SPECFEM and AxiSEM3D adapters are separate projects.
 
+## 新增：全炮 Vp 反演
+
+每轮固定同一个当前模型，按 **2 + 2 + 2 + 2 + 1** 计算全部 9 炮，累加总梯度后才接受一次更新。线搜索的每个候选模型也使用全部炮。真实 Vs 与密度固定；训练输入中不包含未知真实 Vp。
+
+已提供可断点续跑的 L-BFGS、全炮梯度有限差分资格检查、共享 GPU 资源保护，以及自动离线出图。Marmousi-II 多轮实验按预先声明的频率阶段运行，见[协议与输出](docs/FULL_SHOT_FWI.md)、[图表说明](docs/FULL_SHOT_FIGURES.md)及[独立审查](evidence/multishot_fwi_independent_review/)。
+
 ## 已知真实 Vs：Vp 单参数对照
 
 固定真实 Vs 与既有恒定密度，只模糊 Vp，重新正演、求 VJP 和伴随梯度。**完整物理 Vp 梯度与 AD 的相对误差为 2.76e−11**，实际反演坐标误差为 1.87e−15，均通过原定门槛。
@@ -54,7 +60,7 @@ RTX A5000；两条路径均使用 78×200 / 45 m、2500 步、FD8、float64 和�
 | 目标函数与数据导数 | PyTorch AD | PyTorch AD，显式 `grad(loss, data)` |
 | Vp/Vs/ρ 梯度 | 对传播与材料映射 AD | 离散伴随 + 静态材料映射 VJP |
 
-伴随显式转置原生更新、接收采样、split PML 与自由表面赋值。上游文件保持不变；两边共享保留输入 dtype 的外部 padding 适配器与原生 float32 生成的 FD 常数。只支持一阶模型梯度，源、几何与阻尼固定；不包含优化器或完整反演。见[实验协议](docs/EXPERIMENT.md)。
+伴随显式转置原生更新、接收采样、split PML 与自由表面赋值。上游文件保持不变；两边共享保留输入 dtype 的外部 padding 适配器与原生 float32 生成的 FD 常数。只支持一阶模型梯度，源、几何与阻尼固定。原始匹配基准见[实验协议](docs/EXPERIMENT.md)；新增全炮 Vp 优化器使用上面的独立反演协议。
 
 ## 开始复现
 

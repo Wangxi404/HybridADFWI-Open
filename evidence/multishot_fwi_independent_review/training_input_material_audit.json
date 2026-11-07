@@ -1,0 +1,72 @@
+{
+  "status": "Input design arrays independently checked; actual multi-shot forward/gradient/iteration evidence pending",
+  "training_container_sha256": "44b93283fe33a09f43c86c69c6be514ad9b9d80b84d137565575d1452942647b",
+  "unknown_true_vp_key_absent": true,
+  "training_keys": [
+    "vp_initial",
+    "x",
+    "z",
+    "nx",
+    "nz",
+    "dx",
+    "dz",
+    "ox",
+    "oz",
+    "vs_initial",
+    "rho_initial",
+    "vs_true",
+    "rho_true",
+    "vs_fixed",
+    "rho_fixed"
+  ],
+  "shape": [
+    555,
+    401
+  ],
+  "known_vs_rho_actual_uint64_equal": {
+    "vs": true,
+    "rho": true
+  },
+  "vp_initial_exact_prior_or_crop_uint64_equal": true,
+  "initial_field_sha256": {
+    "vp": "f5183e8e1f9948033dd566b409078bd88ac5469ef9506fb46d7ddef3df2b55f2",
+    "vs": "32b394adcb1e7cf0b6ca20f4d8e9cbdc4e15f2c5a036527db6086725390d71bc",
+    "rho": "a125b6e361e8a953a030ad7131fa8a7f7c89738da951d71ff59be9cd08f8bd13"
+  },
+  "axes": {
+    "x": {
+      "first": 8000.0,
+      "last": 10500.0,
+      "count": 401,
+      "step": 6.25
+    },
+    "z": {
+      "first": 0.0,
+      "last": 3462.5,
+      "count": 555,
+      "step": 6.25
+    }
+  },
+  "water_cells_in_parameter_grid": 29273,
+  "explicit_active_count": null,
+  "initial_materials": {
+    "rho_min": 2450.0,
+    "mu_min": 0.0,
+    "solid_mu_min": 225526292.36820126,
+    "lambda_min": -6783056406.944381,
+    "negative_lambda_count": 1328,
+    "bulk3d_min": 3645123761.03128,
+    "kappa2d_min": 5512500000.0,
+    "finite_positive_energy": true
+  },
+  "scope": "Only material/coordinate/source-input provenance. No optimizer true-Vp reads or solver/GPU calls; no input model arrays copied into audit.",
+  "original_private_report_sha256": "b4a3004343be37259126db97b7605d3186c85f86eb536c9ce05a7d737803e6dc",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/training_input_material_audit.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}

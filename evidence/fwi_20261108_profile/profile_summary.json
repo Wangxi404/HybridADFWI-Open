@@ -1,0 +1,45 @@
+{
+  "hardware": "NVIDIA RTX A5000,24GiB",
+  "dtype": "float64 fields; unchanged upstream FD8 constants",
+  "native_kernel_changed": false,
+  "independent_shots": 9,
+  "source_encoding": false,
+  "loss_only_batch9": {
+    "forward_s": 265.7980103995651,
+    "total_s": 265.905859451741,
+    "peak_allocated_bytes": 3047945728,
+    "peak_reserved_bytes": 5974786048
+  },
+  "hybrid_batch2": {
+    "cold_total_s": 248.0991831626743,
+    "warm_total_s": 247.65311995334923,
+    "warm_forward_s": 68.2842732546851,
+    "warm_reverse_and_data_vjp_s": 179.36884669866413,
+    "warm_peak_allocated_bytes": 12871498752,
+    "peak_reserved_bytes": 18257805312
+  },
+  "batch3": {
+    "measured": false,
+    "reason": "Conservative reserve qualification skipped: 1.5*B2 peak_reserved+512MiB predicts27,923,578,880bytes, above device memory minus2GiB reserve",
+    "predicted_bytes": 27923578880,
+    "device_torch_total_bytes": 25417482240
+  },
+  "production_choice": "B2+B2+B2+B2+B1 with one global division by9",
+  "estimated_gradient_minutes": 18.726874663556615,
+  "estimated_full_trial_minutes": 4.431764324195683,
+  "interpretation": "Functional resource qualification, not a repeated benchmark or comparison with AD; actual production can differ",
+  "raw_telemetry_distributed": false,
+  "foreign_process_details_distributed": false,
+  "numeric_environment": {
+    "python": "3.9.21",
+    "numpy": "2.0.1",
+    "pytorch": "2.6.0+cu118",
+    "cuda_build": "11.8"
+  },
+  "production_visualization_environment": {
+    "python": "3.9.23",
+    "numpy": "1.26.4",
+    "matplotlib": "3.9.4",
+    "separate_from_numeric": true
+  }
+}

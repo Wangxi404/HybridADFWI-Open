@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "Actual supervisor main control flow, actual inert own subprocesses terminated. GPU/process inventory and CPU affinity are mocked; no GPU, seismic solver or foreign process is used.",
+  "source_sha256": "6cd24fb4a670371b8edf9cf4d9f499631cd8dce4b82ebe3afd2298e1572161e3",
+  "directory": "<TEMP>/foreign_gpu_policy_cpu_145egc7k",
+  "scenarios": {
+    "foreign_compute": {
+      "returncode": 75,
+      "status": "paused_foreign_compute",
+      "actual_own_child_pid": 51044,
+      "signals": [
+        {
+          "pid": 51044,
+          "signal": 15
+        }
+      ],
+      "foreign_pid_signalled": false
+    },
+    "reserve": {
+      "returncode": 75,
+      "status": "paused_gpu_reserve_violated",
+      "actual_own_child_pid": 51045,
+      "signals": [
+        {
+          "pid": 51045,
+          "signal": 15
+        }
+      ],
+      "foreign_pid_signalled": false
+    }
+  },
+  "foreign_PID_signal_guard": "Every os.kill in this test asserted membership in the actual Popen child PID set.",
+  "limitations": "Mock GPU inventory tests policy branches only. Actual remote resource telemetry and sampling gaps remain separately reported; no instantaneous or foreign-job-preemption guarantee.",
+  "reproducer_sha256": "48e5ff26b9ce0c06f67230418305137a58f7445671acdeb68968c8f928f122c1",
+  "original_private_report_sha256": "975592005d60de152c9aa7f1d745866e974d7c423481281cb156d9233c1b96d1",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/foreign_gpu_policy_receipt.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  },
+  "portable_public_reproducer": {
+    "path": "independent_foreign_gpu_policy.py",
+    "sha256": "36500c898320db652ee0459cfe242cd02f617bf440a4d31dbe033edb596ce014",
+    "original_reproducer_hash_fields_preserved": true,
+    "scope": "Public script path/CLI handling is relocatable; its SHA may differ from the original private executed reader. The historical numeric solver/source SHA remains unchanged."
+  }
+}

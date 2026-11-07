@@ -1,0 +1,96 @@
+{
+  "status": "Independent pre-run design and feasibility review; full-scale FWI acceptance pending",
+  "reviewer": "marmousi_review, independent source/array reviewer; no production solver or GPU launched",
+  "rule": "For each epoch, all declared independent shots use one actual physical model fingerprint, shot losses and raw gradients reduce with identical weights/normalizer, then at most one accepted update.",
+  "objective_contract": [
+    "Declare objective/filter/window/observed-RMS scales and hash before optimization. Divide Nt*Nr once per-shot and number of shots once for mean; do not average unequal batch means without actual batch-size weights.",
+    "Apply regularization once after the global reduction. A changing frequency stage defines a new objective and resets L-BFGS history.",
+    "Each Armijo trial is a complete all-shot evaluation at one candidate fingerprint; use g_dot_actual_coordinate_step after any projection or cap. Rejecting/aborting a candidate does not update the accepted model."
+  ],
+  "coordinate_and_material_contract": [
+    "Declare q-to-Vp, fixed-water/buffer P, and exact static transpose once; changing q must change actual Vp SHA at noninitial points while Vs/rho SHA remain identical.",
+    "Require finite rho>0, Vs>=0, positive 3-D bulk rho*(Vp^2-4Vs^2/3); allow physically admissible negative lambda explicitly. Enforce actual native CFL/dispersion gates for all evaluated models.",
+    "Training containers omit unknown true Vp. It may only create fixed target data and separate posthoc evaluation; no true-Vp dependent bound, step, line search acceptance, iteration count or stop decision."
+  ],
+  "required_qualification": [
+    "CPU three-source noninitial q test: serial vs batched and uneven final batch, physical and coordinate AD/native gradients, full objective directional checks at multiple h, actual field/target hashes.",
+    "One actual nine-shot epoch with per-source geometry/target/loss/g/model ledger and one accepted update; all edge and central sources receive a finite/late-time quality screen, not only central source.",
+    "Three to five complete epochs using the same source set to measure accepted loss reduction, projected step norm, line-search cost, secants and checkpoint restoration before committing the remaining predeclared budget.",
+    "At a later noninitial accepted model and each new stage, repeat a meaningful full-objective directional or AD reference check without using unknown true Vp to choose directions."
+  ],
+  "predeclared_stopping": [
+    "Maximum accepted epochs and bounded line-search trials; resource/time cap reports explicit incomplete/interrupted status.",
+    "Data-only stage loss change and projected-gradient/actual-update stagnation criteria with scale-aware tolerances; no default absolute gtol unsuitable for tiny raw native SI-unit objectives.",
+    "Finite data/material and quality checks can stop an invalid experiment; posthoc truth error never controls training or stop."
+  ],
+  "scientific_scope": [
+    "More epochs and independent sources improve optimization/illumination opportunities but cannot guarantee recovery of missing bandwidth or every thin layer.",
+    "A finite correct derivative at a fixed point is not reconstruction quality or global optimization convergence.",
+    "These two implementations have different mesh, frequency, acquisition, boundary and compute architectures; extrapolations are within-case planning estimates, not a performance ranking."
+  ],
+  "cost_source_files": {
+    "hybrid": {
+      "path": "HybridADFWI-Open/evidence/gradient-detail-20261107-vponly/hybrid-shot1.json",
+      "sha256": "59f26191845adcd288553bb423a512bcc58df2449c0e0944ec00a2527bb78a51"
+    },
+    "autograd": {
+      "path": "HybridADFWI-Open/evidence/gradient-detail-20261107-vponly/autograd-shot1.json",
+      "sha256": "563aa8ad012419f5db25740db26dc7ecca89d43bd45706f00fa35b9dad663b26"
+    },
+    "native": {
+      "path": "DiffSPECFEM/evidence/psv_marmousi2_20261107-vponly/validation.json",
+      "sha256": "7b7a05de6dc78b9cd3bbe8dab6f6d55861bde35427cc10fde4992f818c0a9d03"
+    }
+  },
+  "generic_skill_executable_audit": {
+    "path": "SeismicDiffSkill/evaluations/fullshot_forward_test/independent_results.json",
+    "status": "PASS for actual generic C++ five-shot CPU exercise, including full-objective FD and real rejected line-search trials",
+    "not_a_Marmousi_numerical_run": true
+  },
+  "cost_extrapolation": {
+    "basis": "Measured central shot, serial baseline. Fresh multi-shot batching profile supersedes these forecasts when qualified.",
+    "per_shot_forward_s": 37.30315896868706,
+    "per_shot_data_vjp_backward_s": 95.71607116889209,
+    "per_shot_total_s": 133.02292624022812,
+    "nine_shot_epoch_minutes_without_trials": 19.953438936034217,
+    "fifty_epochs_hours_without_trials": 16.627865780028515,
+    "hundred_epochs_hours_without_trials": 33.25573156005703,
+    "extra_nine_shot_forward_trial_minutes": 5.595473845303059,
+    "one_shot_gpu_peak_allocated_bytes": 6545423360,
+    "autograd_reference_per_shot_s": 545.2320061810315,
+    "not_included": "Target generation, CPU setup, qualification, trial evaluations, checkpoints, resource queueing and later-model variation."
+  },
+  "pinned_vendor_context": {
+    "source_files": {
+      "HybridADFWI-Open/vendor/ADFWI/examples/DR-FWI/multi-parameters/ISO_elastic/Marmousi2-nowater-vp_vs_rho/01_inversion-vp_vs_rho-baseline.py": {
+        "sha256": "574cae6503818e8ed2fbaeb00ac2f8597672b8f29e8e83f3a0f73e6afdf563a1"
+      },
+      "HybridADFWI-Open/vendor/ADFWI/ADFWI/fwi/elastic_fwi.py": {
+        "sha256": "ef147abc88d9def16d7f8424370c6085058464ce074b50a52d23932fd4798e75"
+      }
+    },
+    "pinned_example_configuration": {
+      "scope": "Water-free 45m grid, joint Vp/Vs/rho, displacement vx/vz, 5Hz source",
+      "shot_count": 40,
+      "receivers": 200,
+      "iterations": 300,
+      "optimizer": "Adam lr10 + StepLR every200 gamma0.75",
+      "loss": "Global correlation with per-trace max normalization and gradient maximum normalization, distinct from new fixed-observed-RMS L2"
+    },
+    "usable_orchestration_pattern": "ElasticFWI.forward zero_grad before all source batches and optimizer.step after the entire batch loop. Each shot batch is at the same model.",
+    "do_not_copy": [
+      "Example bound arrays use true model minima/maxima: incompatible with the current unknown true-Vp training rule.",
+      "Nonzero regularizer is added once per batch in vendor loop; new contract requires applying R once after all source reductions. The referenced example sets zero regularization weights.",
+      "5Hz/300 epochs and 40 sources in a different experiment are not evidence that the present 9-source water/PML experiment recovers every thin layer."
+    ]
+  },
+  "original_private_report_sha256": "1e4caa9b07d84dc24cc91598b5bdbb7eba00617df9e95652d6325d6bda47c57e",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/design_and_feasibility.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}

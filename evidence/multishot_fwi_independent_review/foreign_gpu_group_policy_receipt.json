@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "scope": "Actual supervisor main control flow, actual inert own process sessions terminated. GPU/process inventory and CPU affinity are mocked; no GPU, seismic solver, production worker or foreign process is used.",
+  "source_sha256": "bd941122d1fd0a9b32c8a86c7a0e4ec1be3423c0d889c494bcf9f9091f75c0e4",
+  "directory": "<TEMP>/foreign_gpu_policy_cpu_t5jpv87w",
+  "scenarios": {
+    "foreign_compute": {
+      "returncode": 75,
+      "status": "paused_foreign_compute",
+      "actual_own_child_pid": 53861,
+      "actual_own_child_group": 53861,
+      "parent_group_never_signalled": true,
+      "actual_child_terminated": true,
+      "signals": [
+        {
+          "kind": "process_group",
+          "pid": 53861,
+          "process_group": 53861,
+          "signal": 15
+        }
+      ],
+      "foreign_pid_or_group_signalled": false
+    },
+    "reserve": {
+      "returncode": 75,
+      "status": "paused_gpu_reserve_violated",
+      "actual_own_child_pid": 53862,
+      "actual_own_child_group": 53862,
+      "parent_group_never_signalled": true,
+      "actual_child_terminated": true,
+      "signals": [
+        {
+          "kind": "process_group",
+          "pid": 53862,
+          "process_group": 53862,
+          "signal": 15
+        }
+      ],
+      "foreign_pid_or_group_signalled": false
+    }
+  },
+  "foreign_PID_signal_guard": "Every killpg asserts pgrp equals an actual own Popen child PID with start_new_session=True and differs from parent/foreign groups. Direct kill is also restricted to own child IDs.",
+  "limitations": "Mock GPU inventory tests policy branches only. Actual remote resource telemetry and sampling gaps remain separately reported; no instantaneous or foreign-job-preemption guarantee.",
+  "reproducer_sha256": "36500c898320db652ee0459cfe242cd02f617bf440a4d31dbe033edb596ce014",
+  "supersedes_policy_scope_of": "foreign_gpu_policy_receipt.json",
+  "original_private_report_sha256": "42f991a346ae18ebd19b3bcfeb7175fdb0f8cdeda1671688cba17b62ff621198",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/foreign_gpu_group_policy_receipt.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  },
+  "portable_public_reproducer": {
+    "path": "independent_foreign_gpu_policy.py",
+    "sha256": "36500c898320db652ee0459cfe242cd02f617bf440a4d31dbe033edb596ce014",
+    "original_reproducer_hash_fields_preserved": true,
+    "scope": "Public script path/CLI handling is relocatable; its SHA may differ from the original private executed reader. The historical numeric solver/source SHA remains unchanged."
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "name": "Marmousi-II independent9shot Vp FWI 20261108",
+  "model": "data/prepared/fwi_20261108_training.npz",
+  "grid": {
+    "nx": 401,
+    "nz": 555,
+    "dx": 6.25,
+    "dz": 6.25,
+    "ox": 8000.0,
+    "oz": 0.0
+  },
+  "initial_smoothing_sigma_m": 60.0,
+  "fixed_pml_reference_vmax_m_s": 4700.0,
+  "constrained_coordinates": true,
+  "fixed_buffer_m": 200.0,
+  "parameter_taper_m": 100.0,
+  "fixed_boundary_reference": "initial_model",
+  "known_true_boundary": false,
+  "device": "cuda",
+  "nt": 7001,
+  "dt": 0.0005,
+  "f0": 6.0,
+  "shots": 9,
+  "selected_shots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "receivers": 161,
+  "depth_m": 100.0,
+  "nabc": 96,
+  "free_surface": false,
+  "fd_order": 8,
+  "dtype": "float64",
+  "parameters": [
+    "vp"
+  ],
+  "segments": 84,
+  "threads": 1,
+  "checkpointing": true,
+  "minimum_offset_m": 150.0,
+  "offset_taper_m": 100.0,
+  "mute_reference": "known_seafloor_primary",
+  "known_water_depth_m": 450.0,
+  "mute_velocity_m_s": 1500.0,
+  "seafloor_mute_after_s": 0.25,
+  "time_taper_s": 0.16666666666666666,
+  "end_taper_s": 0.15,
+  "objective": "known_seafloor_primary_muted_pressure_l2",
+  "tolerance": 1e-08,
+  "scope": "Bounded maximum60 accepted epochs (8/12/40); subject to batch resource qualification and data/step convergence. All9 independent shot losses summed then global mean/9, one accepted model update per iteration; unknown true Vp absent from training arrays and optimizer.",
+  "parameter_mode": "vp_only_true_vs_true_rho",
+  "source_model": "data/prepared/marmousi2_detail_full_depth_6p25m_20261107_vponly.npz",
+  "shot_x_indices": [
+    8,
+    56,
+    104,
+    152,
+    200,
+    248,
+    296,
+    344,
+    392
+  ],
+  "velocity_scale_m_s": 1000.0,
+  "filter_transition_hz": 0.5,
+  "stages": [
+    {
+      "cutoff_hz": 3.0,
+      "epochs": 8
+    },
+    {
+      "cutoff_hz": 4.5,
+      "epochs": 12
+    },
+    {
+      "cutoff_hz": null,
+      "epochs": 40
+    }
+  ],
+  "gpu_reserve_bytes": 2147483648,
+  "gradient_batch_size": 2,
+  "history_size": 5,
+  "max_physical_update_m_s": 60.0,
+  "upper_vp_m_s": 6000.0,
+  "bulk_speed_floor_m_s": 100.0,
+  "armijo_c1": 0.0001,
+  "max_backtracks": 6,
+  "trial_shrink": 0.5,
+  "initial_direction_check": {
+    "enabled": true,
+    "physical_perturbation_m_s": 0.1,
+    "scales": [
+      1.0,
+      0.5
+    ],
+    "relative_tolerance": 1e-05
+  }
+}

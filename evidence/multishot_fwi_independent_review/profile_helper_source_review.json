@@ -1,0 +1,39 @@
+{
+  "status": "Static helper checks passed; actual full optimizer/line-search loop not yet present at this source snapshot",
+  "reviewer": "Independent CPU algebra only, no production seismic solver/GPU run",
+  "source_sha256": "09ee735580a4feb4d96fc62748c75a469738a408e28215628edba5c2cbcc3d85",
+  "checks": {
+    "actual_physical_update_max_m_s": 60.0,
+    "bulk_speed_squared_min": 3400085.385168789,
+    "inactive_reference_uint64_equal": true,
+    "actual_coordinate_g_dot_delta": 0.8598486640584426,
+    "uncapped_g_dot_direction": 24.878725922926087
+  },
+  "implementation_findings": [
+    "batch per_shot_losses divides Nt*Nr once; evaluate sums independent-shot losses and raw gradient, leaving final /Nshots to a future optimizer loop",
+    "exact one map: coordinate_vp=vp_initial+1000q then physical=vp_initial+P*(coordinate_vp-vp_initial); H manually chains 1000P, AD obtains coordinate_vp.grad",
+    "training NPZ construction omits vp_true; truth branch only reads source model for fixed observations",
+    "stage lowpass residual before fixed window; fixed observed per-stage/per-shot RMS; no model-dependent scale derivative",
+    "No actual optimizer action exists yet in inspected marmousi_fwi.py; cannot certify epoch/update or resume behavior from this snapshot"
+  ],
+  "remaining_qualification": [
+    "Inspect actual optimizer loop for same actual physical SHA on every independent shot, exactly one global shot normalization and one accepted commit",
+    "Inspect accepted actual delta Armijo and actual s,y; reset history per stage",
+    "At least two directional h and later-point/stage checks; preserve any physical-gradient gate failure without widening tolerance",
+    "Actual nine-source edge and central quality/performance screen; do not infer from a central single-shot pass"
+  ],
+  "other_source_sha256": {
+    "HybridADFWI-Open/scripts/marmousi_fwi.py": "00a77c0689d415b96d7e7b6b78b5b04c888b1a3ab52cab589256a75dcdca1014",
+    "HybridADFWI-Open/tests/test_multishot_fwi.py": "3a29ebd84947cb0b58ecf5a1c71b530e582686ec97671df79ae1d2f6771e9f44",
+    "HybridADFWI-Open/configs/fwi_20261108_vponly.json": "faaf78a3ddda6136b2a7465bcd498fd4b26640add3d44825e4447426da264d14"
+  },
+  "original_private_report_sha256": "a0c94e6dfc7a8fd59c1bcc9c89d9780700721f9fd8e5027468426d8d75a9ddac",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/profile_helper_source_review.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}

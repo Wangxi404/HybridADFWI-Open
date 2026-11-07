@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "scope": "Actual run/evaluate/Armijo/L-BFGS/checkpoint/stage/ledger control flow using a tiny algebraic forward/gradient engine. No production seismic solver or GPU run; this does not replace AD/native derivative qualification.",
+  "source_sha256": "f3a3332fa213237ccd9c2abed3c5efd693fc8a3cbff6ae56c3465d76e91ce12a",
+  "directory": "<TEMP>/hybrid_real_loop_cpu_bnwcg4e3",
+  "uninterrupted_vs_durable_commit_resume_final_Vp_uint64_equal": true,
+  "checks": {
+    "uninterrupted": {
+      "ledger": {
+        "passed": true,
+        "status": "PASS",
+        "complete": true,
+        "iterations": 4,
+        "accepted_updates": 4,
+        "shot_count": 3,
+        "iteration_statuses": {
+          "accepted": 4,
+          "converged": 0,
+          "rejected": 0,
+          "failed": 0,
+          "interrupted": 0
+        },
+        "scope": "Orchestration metadata only; not a numerical-gradient or inversion-convergence certificate"
+      },
+      "state_status": "complete_iteration_cap",
+      "stage_first_history_counts": {
+        "0": 0,
+        "1": 0
+      },
+      "accepted_actual_delta_slopes": [
+        -0.022399064394390603,
+        -0.0048913778196656875,
+        -0.005841555929708308,
+        -0.003043748344790635
+      ],
+      "current_q": "models/q_0004.npy"
+    },
+    "resumed": {
+      "ledger": {
+        "passed": true,
+        "status": "PASS",
+        "complete": true,
+        "iterations": 4,
+        "accepted_updates": 4,
+        "shot_count": 3,
+        "iteration_statuses": {
+          "accepted": 4,
+          "converged": 0,
+          "rejected": 0,
+          "failed": 0,
+          "interrupted": 0
+        },
+        "scope": "Orchestration metadata only; not a numerical-gradient or inversion-convergence certificate"
+      },
+      "state_status": "complete_iteration_cap",
+      "stage_first_history_counts": {
+        "0": 0,
+        "1": 0
+      },
+      "accepted_actual_delta_slopes": [
+        -0.022399064394390603,
+        -0.0048913778196656875,
+        -0.005841555929708308,
+        -0.003043748344790635
+      ],
+      "current_q": "models/q_0004.npy"
+    }
+  },
+  "stage_objectives_distinct_and_history_reset": true,
+  "uneven_batches_reduced_after_all_shots": true,
+  "durable_commit_precedes_old_state_recovery": true,
+  "zero_gradient_no_update": {
+    "status": "converged",
+    "ledger": {
+      "passed": true,
+      "status": "PASS",
+      "complete": true,
+      "iterations": 2,
+      "accepted_updates": 0,
+      "shot_count": 3,
+      "iteration_statuses": {
+        "accepted": 0,
+        "converged": 2,
+        "rejected": 0,
+        "failed": 0,
+        "interrupted": 0
+      },
+      "scope": "Orchestration metadata only; not a numerical-gradient or inversion-convergence certificate"
+    }
+  },
+  "projected_stationarity_no_update": {
+    "status": "converged",
+    "ledger": {
+      "passed": true,
+      "status": "PASS",
+      "complete": true,
+      "iterations": 2,
+      "accepted_updates": 0,
+      "shot_count": 3,
+      "iteration_statuses": {
+        "accepted": 0,
+        "converged": 2,
+        "rejected": 0,
+        "failed": 0,
+        "interrupted": 0
+      },
+      "scope": "Orchestration metadata only; not a numerical-gradient or inversion-convergence certificate"
+    }
+  },
+  "limitation": "The analytic fake forward/gradient supplies known functions solely to exercise actual orchestration; source solver mathematics remains independently audited elsewhere.",
+  "reproducer_sha256": "99213d483877a049bdf2fec2ca0057ce02c3523521c27894c8116c0fdae89ba4",
+  "original_private_report_sha256": "35653f8b820aff38ba4a8d4717d65b9a6fe9144feb46feb3a44b2e9c738d12a7",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/hybrid_loop_control_flow_receipt.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  },
+  "portable_public_reproducer": {
+    "path": "independent_hybrid_full_loop.py",
+    "sha256": "4b4d7b9d47b4f463e19e83ce5837b982a6b28b12462816ac5fc77bad7efcceb6",
+    "original_reproducer_hash_fields_preserved": true,
+    "scope": "Public script path/CLI handling is relocatable; its SHA may differ from the original private executed reader. The historical numeric solver/source SHA remains unchanged."
+  }
+}

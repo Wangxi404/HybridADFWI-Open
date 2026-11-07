@@ -1,0 +1,612 @@
+{
+  "scope": "Actual small CPU three-shot wave qualification; one accepted update. Plot/control qualification only; no Marmousi reconstruction or long-run convergence claim.",
+  "plot_source_sha256": "4faf4b56121959ecf8cbb5fc138c5e3379fd23dd3b135d42bed4a3093f72860d",
+  "figure_provenance_sha256": "27a8fa5b53117c55782eae172166050c3a40929f8c1638d1e0ad581c44138300",
+  "figures": [
+    {
+      "name": "model_recovery",
+      "pdf_sha256": "9435aff9948ac4c44860920dc581a863617bbf63fd90822ee000e76e61846e3e",
+      "rendered_pixel_sha256": "2b950344a403fe4a08b02a5777bec5be92a2412577611c4d5e3cd278edc2076e",
+      "visually_inspected_panels": 6,
+      "identical_pixels_to_prior_visually_inspected_PDF": true,
+      "pdf_glyph_audit": {
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 140,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": {
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 98,
+        "text_trace_count": 140,
+        "stroke_path_count": 132,
+        "filled_region_count": 127,
+        "image_region_count": 12,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      },
+      "alignment_audit": {
+        "schema_version": 1,
+        "applicable": true,
+        "auditable": true,
+        "verdict": "PASS",
+        "backend": "python-matplotlib",
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "comparisons": 7,
+          "exemptions": 0
+        },
+        "tolerances": {
+          "alignment_pt": 1.5,
+          "gutter_pt": 1.5
+        },
+        "layout": {
+          "schema_version": 1,
+          "backend": "python-matplotlib",
+          "figure": {
+            "width_pt": 741.6,
+            "height_pt": 486.8129032258064
+          },
+          "panels": [
+            {
+              "id": "a",
+              "bbox_pt": [
+                51.912000000000006,
+                303.09036556517975,
+                225.78453886010365,
+                432.09257181622434
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 0,
+              "col_stop": 1
+            },
+            {
+              "id": "b",
+              "bbox_pt": [
+                300.5497305699482,
+                303.09036556517975,
+                474.4222694300519,
+                432.0925718162244
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 1,
+              "col_stop": 2
+            },
+            {
+              "id": "c",
+              "bbox_pt": [
+                549.1874611398965,
+                303.09036556517975,
+                723.0600000000001,
+                432.0925718162243
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 2,
+              "col_stop": 3
+            },
+            {
+              "id": "d",
+              "bbox_pt": [
+                51.912000000000006,
+                69.32471850635625,
+                225.78453886010365,
+                198.32692475740083
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 1,
+              "row_stop": 2,
+              "col_start": 0,
+              "col_stop": 1
+            },
+            {
+              "id": "e",
+              "bbox_pt": [
+                300.5497305699482,
+                69.32471850635622,
+                474.4222694300519,
+                198.32692475740086
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 1,
+              "row_stop": 2,
+              "col_start": 1,
+              "col_stop": 2
+            },
+            {
+              "id": "f",
+              "bbox_pt": [
+                549.1874611398965,
+                69.32471850635626,
+                723.0600000000001,
+                198.32692475740083
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 1,
+              "row_stop": 2,
+              "col_start": 2,
+              "col_stop": 3
+            }
+          ],
+          "row_groups": [
+            {
+              "id": "row-1",
+              "panels": [
+                "a",
+                "b",
+                "c"
+              ]
+            },
+            {
+              "id": "row-2",
+              "panels": [
+                "d",
+                "e",
+                "f"
+              ]
+            }
+          ],
+          "column_groups": [
+            {
+              "id": "column-1",
+              "panels": [
+                "a",
+                "d"
+              ]
+            },
+            {
+              "id": "column-2",
+              "panels": [
+                "b",
+                "e"
+              ]
+            },
+            {
+              "id": "column-3",
+              "panels": [
+                "c",
+                "f"
+              ]
+            }
+          ],
+          "boundary_groups": [],
+          "exemptions": []
+        },
+        "findings": []
+      },
+      "visual_review": "Every actual PDF panel and full plate inspected. Complete ticks, distinct derivative/direction/update, correct shared scales, no clipping or overlaps. Final provenance-only revision gives identical rendered pixels."
+    },
+    {
+      "name": "gradient_direction_update",
+      "pdf_sha256": "36275146916bd4c526a62f03ced39ee1b6b931b21c8af1dde6428d11468d6455",
+      "rendered_pixel_sha256": "c7decbadf53ccc38ac88494ed0b4432e32e1c279ea64af17c0942c1b2f384bb0",
+      "visually_inspected_panels": 4,
+      "identical_pixels_to_prior_visually_inspected_PDF": true,
+      "pdf_glyph_audit": {
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 94,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": {
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 66,
+        "text_trace_count": 94,
+        "stroke_path_count": 88,
+        "filled_region_count": 85,
+        "image_region_count": 8,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      },
+      "alignment_audit": {
+        "schema_version": 1,
+        "applicable": true,
+        "auditable": true,
+        "verdict": "PASS",
+        "backend": "python-matplotlib",
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "comparisons": 4,
+          "exemptions": 0
+        },
+        "tolerances": {
+          "alignment_pt": 1.5,
+          "gutter_pt": 1.5
+        },
+        "layout": {
+          "schema_version": 1,
+          "backend": "python-matplotlib",
+          "figure": {
+            "width_pt": 518.4,
+            "height_pt": 443.38064516129026
+          },
+          "panels": [
+            {
+              "id": "a",
+              "bbox_pt": [
+                53.726046511627914,
+                268.5718109527382,
+                235.5539534883721,
+                403.47638709677415
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 0,
+              "col_stop": 1
+            },
+            {
+              "id": "b",
+              "bbox_pt": [
+                319.13404651162784,
+                268.5718109527382,
+                500.96195348837205,
+                403.47638709677415
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 1,
+              "col_stop": 2
+            },
+            {
+              "id": "c",
+              "bbox_pt": [
+                53.726046511627914,
+                55.42258064516133,
+                235.5539534883721,
+                190.32715678919732
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 1,
+              "row_stop": 2,
+              "col_start": 0,
+              "col_stop": 1
+            },
+            {
+              "id": "d",
+              "bbox_pt": [
+                319.13404651162784,
+                55.42258064516133,
+                500.96195348837205,
+                190.32715678919732
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 1,
+              "row_stop": 2,
+              "col_start": 1,
+              "col_stop": 2
+            }
+          ],
+          "row_groups": [
+            {
+              "id": "row-1",
+              "panels": [
+                "a",
+                "b"
+              ]
+            },
+            {
+              "id": "row-2",
+              "panels": [
+                "c",
+                "d"
+              ]
+            }
+          ],
+          "column_groups": [
+            {
+              "id": "column-1",
+              "panels": [
+                "a",
+                "c"
+              ]
+            },
+            {
+              "id": "column-2",
+              "panels": [
+                "b",
+                "d"
+              ]
+            }
+          ],
+          "boundary_groups": [],
+          "exemptions": []
+        },
+        "findings": []
+      },
+      "visual_review": "Every actual PDF panel and full plate inspected. Complete ticks, distinct derivative/direction/update, correct shared scales, no clipping or overlaps. Final provenance-only revision gives identical rendered pixels."
+    },
+    {
+      "name": "data_fit_and_model_error",
+      "pdf_sha256": "f4954bec3e3abcf53cbf1bdf8b5809fb7a5258e3cf9393eda17acab613bc3582",
+      "rendered_pixel_sha256": "7a627b639da88a6f65d2dfc018c692333d0c0530434cefe4e0f170a5eee43864",
+      "visually_inspected_panels": 2,
+      "identical_pixels_to_prior_visually_inspected_PDF": true,
+      "pdf_glyph_audit": {
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 22,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": {
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 22,
+        "text_trace_count": 22,
+        "stroke_path_count": 34,
+        "filled_region_count": 19,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 1,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      },
+      "alignment_audit": {
+        "schema_version": 1,
+        "applicable": true,
+        "auditable": true,
+        "verdict": "PASS",
+        "backend": "python-matplotlib",
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "comparisons": 1,
+          "exemptions": 0
+        },
+        "tolerances": {
+          "alignment_pt": 1.5,
+          "gutter_pt": 1.5
+        },
+        "layout": {
+          "schema_version": 1,
+          "backend": "python-matplotlib",
+          "figure": {
+            "width_pt": 626.4,
+            "height_pt": 216.0
+          },
+          "panels": [
+            {
+              "id": "a",
+              "bbox_pt": [
+                53.244,
+                41.03999999999999,
+                287.8163849372385,
+                151.2
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 0,
+              "col_stop": 1
+            },
+            {
+              "id": "b",
+              "bbox_pt": [
+                379.29961506276146,
+                41.03999999999999,
+                613.872,
+                151.2
+              ],
+              "grid_id": "matplotlib-grid-1",
+              "row_start": 0,
+              "row_stop": 1,
+              "col_start": 1,
+              "col_stop": 2
+            }
+          ],
+          "row_groups": [
+            {
+              "id": "row-1",
+              "panels": [
+                "a",
+                "b"
+              ]
+            }
+          ],
+          "column_groups": [],
+          "boundary_groups": [],
+          "exemptions": []
+        },
+        "findings": []
+      },
+      "visual_review": "Every actual PDF panel and full plate inspected. Complete ticks, distinct derivative/direction/update, correct shared scales, no clipping or overlaps. Final provenance-only revision gives identical rendered pixels."
+    }
+  ],
+  "source_preflight": {
+    "backend": "python",
+    "summary": {
+      "ready": true,
+      "strict": false,
+      "counts": {
+        "PASS": 18,
+        "WARN": 3,
+        "FAIL": 0
+      }
+    },
+    "findings": [
+      {
+        "check_id": "SOURCE-SYNTAX",
+        "level": "PASS",
+        "message": "Python source parses successfully",
+        "evidence": []
+      },
+      {
+        "check_id": "FONT-FAMILY",
+        "level": "PASS",
+        "message": "A publication-safe sans-serif family is configured",
+        "evidence": [
+          "sans-serif"
+        ]
+      },
+      {
+        "check_id": "FONT-SIZE",
+        "level": "PASS",
+        "message": "All detected text sizes are at least 5 pt (minimum 7 pt)",
+        "evidence": []
+      },
+      {
+        "check_id": "FONT-GLYPH-FLOOR",
+        "level": "PASS",
+        "message": "No mathtext superscript/subscript expression detected",
+        "evidence": []
+      },
+      {
+        "check_id": "LEGEND-LABEL-CASE",
+        "level": "PASS",
+        "message": "No auditable literal legend labels detected",
+        "evidence": []
+      },
+      {
+        "check_id": "COLOR-MAP",
+        "level": "PASS",
+        "message": "No rainbow/jet/hsv color mapping detected",
+        "evidence": []
+      },
+      {
+        "check_id": "EDITABLE-TEXT",
+        "level": "PASS",
+        "message": "SVG and PDF editable-text settings are configured",
+        "evidence": []
+      },
+      {
+        "check_id": "EXPORT-VECTOR",
+        "level": "PASS",
+        "message": "Both SVG and PDF exports are present",
+        "evidence": []
+      },
+      {
+        "check_id": "EXPORT-RASTER",
+        "level": "WARN",
+        "message": "PNG preview is present but no TIFF submission raster was found",
+        "evidence": []
+      },
+      {
+        "check_id": "RASTER-DPI",
+        "level": "WARN",
+        "message": "Raster export meets the 300 dpi floor but not the 600 dpi default",
+        "evidence": [
+          "300"
+        ]
+      },
+      {
+        "check_id": "FINAL-WIDTH",
+        "level": "WARN",
+        "message": "Detected width 261.6 mm is not near the common 89/183 mm defaults; verify the target journal",
+        "evidence": []
+      },
+      {
+        "check_id": "DATA-SAMPLING",
+        "level": "PASS",
+        "message": "No high-confidence row-sampling operation detected",
+        "evidence": []
+      },
+      {
+        "check_id": "DATA-EXCLUSION",
+        "level": "PASS",
+        "message": "No high-confidence missing-data exclusion detected",
+        "evidence": []
+      },
+      {
+        "check_id": "DEMO-DATA",
+        "level": "PASS",
+        "message": "No obvious simulated-data generator detected",
+        "evidence": []
+      },
+      {
+        "check_id": "LOG-GUARD",
+        "level": "PASS",
+        "message": "No logarithmic transform or axis detected",
+        "evidence": []
+      },
+      {
+        "check_id": "INTERP-MONOTONIC",
+        "level": "PASS",
+        "message": "No NumPy interpolation requiring an increasing x-grid detected",
+        "evidence": []
+      },
+      {
+        "check_id": "UNCERTAINTY-ENCODING",
+        "level": "PASS",
+        "message": "No stochastic aggregate requiring a variability audit was inferred",
+        "evidence": []
+      },
+      {
+        "check_id": "ROTATION-ANCHOR",
+        "level": "PASS",
+        "message": "No rotated Matplotlib text detected",
+        "evidence": []
+      },
+      {
+        "check_id": "ANNOTATION-WORKAROUND",
+        "level": "PASS",
+        "message": "No high-risk hard-coded label height or opaque white text mask detected",
+        "evidence": []
+      },
+      {
+        "check_id": "PANEL-ALIGNMENT-GATE",
+        "level": "PASS",
+        "message": "Render-time panel-alignment gate is wired into the plotting source",
+        "evidence": [
+          "require_matplotlib_panel_alignment("
+        ]
+      },
+      {
+        "check_id": "BACKEND-EXCLUSIVE",
+        "level": "PASS",
+        "message": "No obvious cross-backend plotting reference found for python",
+        "evidence": []
+      }
+    ]
+  },
+  "export_scope": "Editable PDF/SVG and 300 dpi PNG at report dimensions; journal production dimensions not certified."
+}

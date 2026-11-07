@@ -1,0 +1,65 @@
+{
+  "status": "Updated source review: identified loader/direction issues addressed; actual accepted-data numerical and visual QA pending; no mock figures rendered",
+  "source_sha256": "4261da39e64e349a72b063c9866ec28cb9723ba0840ce217514dbde86e1b4957",
+  "source_path": "HybridADFWI-Open/scripts/plot_multishot_fwi.py",
+  "matching_copy_sha256": "4261da39e64e349a72b063c9866ec28cb9723ba0840ce217514dbde86e1b4957",
+  "confirmed": [
+    "Native input x_native gains declared original_x_origin_m; upward native z rows are reversed exactly and depth=bottom_depth-z_native. All native displayed arrays receive the same row reversal.",
+    "Hybrid derivative input gradient_coordinate_sum has objective-per-m/s coordinate units, P^T chain rule; q-search direction is mapped as 1000*P*dq to physical m/s. Native aggregate gradient is global mean multiplied by Nshots to display the declared sum.",
+    "Actual accepted Vp changes are displayed separately from derivative and optimizer direction. Shared signed linear percentile limits declare saturation; no smoothing/depth gain/illumination is applied.",
+    "True Vp is read only by the offline plotting reader and posthoc RMSE; plotting never calls optimizer or solver.",
+    "Native accepted states are file-hash checked and native truth/training coordinates and fixed priors are checked."
+  ],
+  "findings": [
+    {
+      "id": "hybrid_fallback_direction_provenance",
+      "priority": "Must correct before final direction figure",
+      "detail": "Loop initially saves optimizer_direction.npz before optional steepest-descent fallback; fallback changes direction without updating this source file. Display the accepted trial actual search direction or explicitly label an initial unaccepted attempt.",
+      "resolution": "Addressed in current producer/reader: accepted direction saved with alpha/fallback, explicit hash-bound local training override, q/map/actual Vp/axes verification, and explicit stage labels. Final actual-data source audit remains required."
+    },
+    {
+      "id": "hybrid_model_path_portability",
+      "priority": "Must resolve before local rendering",
+      "detail": "Executed protocol config.model is a remote absolute path, while loader opens it directly. Supply explicit local training input override/copy with an independently verifiable training hash.",
+      "resolution": "Addressed in current producer/reader: accepted direction saved with alpha/fallback, explicit hash-bound local training override, q/map/actual Vp/axes verification, and explicit stage labels. Final actual-data source audit remains required."
+    },
+    {
+      "id": "hybrid_checkpoint_binding",
+      "priority": "Required for final source-fidelity audit",
+      "detail": "Verify q checkpoint SHA, realize Vp=vp0+P*1000q, compare accepted Vp and composite field fingerprint; verify map/geometry hashes recorded in protocol and truth/training x,z axes. Current loader only compares initial and fixed prior arrays.",
+      "resolution": "Addressed in current producer/reader: accepted direction saved with alpha/fallback, explicit hash-bound local training override, q/map/actual Vp/axes verification, and explicit stage labels. Final actual-data source audit remains required."
+    },
+    {
+      "id": "gradient_stage_comparison",
+      "priority": "Required interpretation",
+      "detail": "Initial/latest derivatives may come from different filter/RMS objectives; native stages also change source frequency and SEM mesh. Explicitly label stages and identify Hybrid constrained coordinate P^Tg. A common color scale is not evidence of same-objective gradient decay.",
+      "resolution": "Addressed in current producer/reader: accepted direction saved with alpha/fallback, explicit hash-bound local training override, q/map/actual Vp/axes verification, and explicit stage labels. Final actual-data source audit remains required."
+    }
+  ],
+  "final_scope": [
+    "Do not claim covariance, uncertainty, full thin-layer recovery or convergence from epoch caps.",
+    "Report the Native boxed reflecting five-shot ROI separately from the Hybrid nine-shot PML experiment; these are not a matched performance comparison.",
+    "Recheck against actual accepted full arrays/commits before any scientific figure acceptance."
+  ],
+  "initial_review_source_sha256": "d647422e061ec6a869ef4894d277be92ec9d20be5b50b961a69c479a4de79093",
+  "remaining_final_evidence_checks": [
+    "Recompute actual aggregate raw physical/coordinate gradients from every hash-verified gradient_proof batch NPZ, apply one global shot normalizer, compare stored arrays.",
+    "Check accepted-stage actual model/target/source hashes, per-shot coverage, all-shot Armijo candidate loss and actual physical change.",
+    "Label last derivative as the anchor used for the last accepted update, not the derivative at the final updated model.",
+    "Verify exact coordinate axes and accepted trajectory source hashes and perform final glyph/collision/visual QA with real accepted outputs."
+  ],
+  "normal_loop_control_flow_receipts": {
+    "hybrid": "hybrid_loop_control_flow_receipt.json",
+    "native": "native_loop_control_flow_receipt.json",
+    "scope": "Tiny analytic-engine control flow passed, including zero/projection stationarity, stage history reset and interrupted commit recovery; not a wave-solver numerical pass."
+  },
+  "original_private_report_sha256": "d06c74d51246b06e37b11db9b08105d186a7c96ed98866d9da95b59a2d2eae28",
+  "sanitization": {
+    "scope": "Public path identifiers only; all original numeric values, solver/source SHA values, outcomes and limitations preserved.",
+    "private_archive_relative_path": ".cache/private-review/multishot_fwi_independent_review/plotter_source_review.json",
+    "home_and_host_identity_removed": true,
+    "temporary_paths_use_logical_TEMP_identifier": true,
+    "environment_paths_keep_environment_name_and_site_packages_relative_file": true,
+    "placeholders_are_not_literal_executable_paths": true
+  }
+}
