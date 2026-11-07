@@ -1,0 +1,151 @@
+{
+  "reviewer_only": true,
+  "native_solver_runs": 0,
+  "model_arrays_included": false,
+  "status": "Discrete derivative audit passed; reject as a geological-detail illustration because late initial-model receiver amplitudes grow strongly. Cause not established.",
+  "pressure_bitwise_equal": true,
+  "objective_independent": 274.593835639414,
+  "objective_reported": [
+    274.59383563941407,
+    274.59383563941407
+  ],
+  "pressure_cot_relative_l2": 1.6904738670585095e-16,
+  "pressure_source_sha256": "74707f8671c9190cb562377d735191ef097d817c0ec621d56ac3450466eee193",
+  "pressure_cot_source_sha256": "7d17ca39cc0c5c359a0a51e5e8904afbcfc8357cfe527b8906083ec7f3ce4ec2",
+  "observed_pressure_source_sha256": "a3e4758856ca3c5b9cb185c1e03d68c01edbd2fd520f76e5c78e623cc72433b7",
+  "window_source_sha256": "cea3f05e32390c109d1bc602a758fe5648590dba6fae3a656bbf92efdd7d49b2",
+  "same_pml": true,
+  "same_window_and_scale": true,
+  "source_model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "source_script_sha256": "a36c4e8871cf3456294e61b3b7f8bb3f20df4b7bffdea5fbd537c1e04629873a",
+  "private_evaluation_model_equals_prepared_initial": {
+    "autograd": {
+      "vp": true,
+      "vs": true,
+      "rho": true
+    },
+    "hybrid": {
+      "vp": true,
+      "vs": true,
+      "rho": true
+    }
+  },
+  "kernels": {
+    "vp": {
+      "physical_relative_l2": 4.837517001173064e-09,
+      "coordinate_relative_l2": 1.5514400064241605e-09,
+      "AD_Pt_map_exact": true,
+      "hybrid_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 213.90165095429478,
+      "coordinate_l2": 0.02582111049098624,
+      "physical_max_xz_m": [
+        8012.5,
+        456.25
+      ],
+      "P_at_physical_max": 0.0,
+      "active_squared_norm_fraction_deeper_than_1000m": 0.001533955269324827,
+      "active_squared_norm_fraction_deeper_than_2000m": 1.49623646350021e-07
+    },
+    "vs": {
+      "physical_relative_l2": 6.986986007319315e-10,
+      "coordinate_relative_l2": 3.9759530364984135e-10,
+      "AD_Pt_map_exact": true,
+      "hybrid_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 3951.661190920435,
+      "coordinate_l2": 0.011753326236102153,
+      "physical_max_xz_m": [
+        8006.25,
+        456.25
+      ],
+      "P_at_physical_max": 0.0,
+      "active_squared_norm_fraction_deeper_than_1000m": 0.0035527234579576378,
+      "active_squared_norm_fraction_deeper_than_2000m": 9.948916470118065e-07
+    },
+    "rho": {
+      "physical_relative_l2": 9.388522200070415e-10,
+      "coordinate_relative_l2": 6.286288326259109e-10,
+      "AD_Pt_map_exact": true,
+      "hybrid_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 709.9445189506339,
+      "coordinate_l2": 0.0021625138240595884,
+      "physical_max_xz_m": [
+        8000.0,
+        456.25
+      ],
+      "P_at_physical_max": 0.0,
+      "active_squared_norm_fraction_deeper_than_1000m": 0.012035639782098019,
+      "active_squared_norm_fraction_deeper_than_2000m": 4.2352632768103096e-05
+    }
+  },
+  "trace_time_bands": [
+    {
+      "t_s": [
+        0,
+        1
+      ],
+      "pred_max_abs": 0.7192383153115858,
+      "obs_max_abs": 0.7192383153115858,
+      "pred_rms_over_fixed_obs_scale": 13.588794476976824,
+      "obs_rms_over_fixed_obs_scale": 13.590586279048969
+    },
+    {
+      "t_s": [
+        1,
+        2
+      ],
+      "pred_max_abs": 0.03352155044205282,
+      "obs_max_abs": 0.03241353568696791,
+      "pred_rms_over_fixed_obs_scale": 1.3566351026958785,
+      "obs_rms_over_fixed_obs_scale": 1.9426482864784635
+    },
+    {
+      "t_s": [
+        2,
+        3
+      ],
+      "pred_max_abs": 0.07029062700520151,
+      "obs_max_abs": 0.014337330721763181,
+      "pred_rms_over_fixed_obs_scale": 1.7384801357324404,
+      "obs_rms_over_fixed_obs_scale": 1.33911837602916
+    },
+    {
+      "t_s": [
+        3,
+        3.501
+      ],
+      "pred_max_abs": 11.913184485879043,
+      "obs_max_abs": 0.004254916193458965,
+      "pred_rms_over_fixed_obs_scale": 217.46084044649052,
+      "obs_rms_over_fixed_obs_scale": 0.4528449609518253
+    }
+  ],
+  "source_gradient_zero_canonicalized_sha256": {
+    "autograd": {
+      "vp": "177848f3405757572d20a6d1800756ab0bd826a0fa520545c0fa3421f196a8eb",
+      "vs": "11bd4a0e26825617555b80f9524522860092b6cc0c645ae701f462351bba2dd2",
+      "rho": "09b4b0f52595637037db8b28a30dfb311aeb7164e74b1975b101581ec16c3af1",
+      "coordinate_vp": "c07703a2bcf7c075d199df51b1fb17a50156943970c7986190cb5df6c5ad9178",
+      "coordinate_vs": "69d2ab2cb13488137d3521eb231613ba5d36f1889ddcc1239061c1ff9707bc79",
+      "coordinate_rho": "cf3698fb9fd6ede25428658a14dd7a4502f34fd9092d708049b7289ea723ad60"
+    },
+    "hybrid": {
+      "vp": "7fd98032c21c2b54ad1a7169bae87ec5c8ae649c4f0b3b176794e8b59857a8d8",
+      "vs": "769d534ec81ecdb569f5de84413f400406a0950ad4b0a7670cde93000fd02c09",
+      "rho": "b0bdf34f4bc45f18a3dabae3db331d56ac28bee301984883e34face64f6c6b2a",
+      "coordinate_vp": "4e9f56aeeff681cf4dd9ee51e680c6ad54c93ec1f3fed97a237cdad63953f9e7",
+      "coordinate_vs": "a43e97248aa724c9c7dc38f79d6b2402f019c8f746ba4c6ef806023c49232023",
+      "coordinate_rho": "90b65af66cb69ea00da397a422284497f5d07e97bec03d904e4769794de11bbe"
+    }
+  },
+  "numeric_agreement_passed": true,
+  "strict_float64_bitpattern_comparison": {
+    "actual_float64_uint64_view_equal": true,
+    "autograd_array_sha256": "74707f8671c9190cb562377d735191ef097d817c0ec621d56ac3450466eee193",
+    "hybrid_array_sha256": "74707f8671c9190cb562377d735191ef097d817c0ec621d56ac3450466eee193",
+    "autograd_negative_zero_count": 2326,
+    "hybrid_negative_zero_count": 2326
+  }
+}

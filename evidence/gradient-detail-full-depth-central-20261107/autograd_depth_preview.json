@@ -1,0 +1,53 @@
+{
+  "timing": {
+    "forward_s": 59.56307758484036,
+    "objective_and_source_s": 0.00521151814609766,
+    "backward_s": 437.2917562285438,
+    "total_s": 496.8600453315303
+  },
+  "peak_allocated_gib": 4.6574602127075195,
+  "depth": {
+    "vp": {
+      "physical": {
+        "water_fraction": 0.5303210021721584,
+        "deeper_than_1000m_fraction": 3.589684581164838e-11,
+        "deeper_than_2000m_fraction": 4.9285640918441596e-14,
+        "max_absolute": 76.11603088109108
+      },
+      "active": {
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.0015339552696597742,
+        "deeper_than_2000m_fraction": 1.496236463474087e-07,
+        "max_absolute": 0.0008072975159216833
+      }
+    },
+    "vs": {
+      "physical": {
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 4.637386625169733e-14,
+        "deeper_than_2000m_fraction": 6.905909041384485e-17,
+        "max_absolute": 2351.1571914372576
+      },
+      "active": {
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.003552723458107151,
+        "deeper_than_2000m_fraction": 9.948916468350855e-07,
+        "max_absolute": 0.0026683813975589494
+      }
+    },
+    "rho": {
+      "physical": {
+        "water_fraction": 0.3959256605624905,
+        "deeper_than_1000m_fraction": 3.2153168181514314e-13,
+        "deeper_than_2000m_fraction": 5.2506344597851394e-15,
+        "max_absolute": 308.96657335487373
+      },
+      "active": {
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.012035639778986387,
+        "deeper_than_2000m_fraction": 4.235263274973109e-05,
+        "max_absolute": 0.0004728165460482938
+      }
+    }
+  }
+}

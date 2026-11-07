@@ -1,0 +1,122 @@
+{
+  "scope": "Accepted declared-coordinate gradient demonstration only; auxiliary full-physical strict gate failed",
+  "original_summary_passed": false,
+  "coordinate_max_relative_l2": 7.816570601424159e-13,
+  "unchanged_tolerance": 1e-08,
+  "gradient_spatial_sampling": "Full555x401 float64; no gradient processing",
+  "receiver_proof_sampling": "Exact time::8, receiver::16 nodes; full objective count retained",
+  "full_receiver_archive_included": false,
+  "input_model_arrays_included": false,
+  "files": [
+    {
+      "path": "array_conventions.json",
+      "bytes": 989,
+      "sha256": "d840f615156c0e8bbbb4cf3c3b717fad6c49bbe4a7736340cfbe54dc4ceb8b94"
+    },
+    {
+      "path": "autograd-shot1.json",
+      "bytes": 4546,
+      "sha256": "a36b4d5bc206b55d0b37cee56e606336e9cea2a481ade9c242b33d757cd971fe"
+    },
+    {
+      "path": "autograd-shot1.log",
+      "bytes": 390,
+      "sha256": "d0b9e47c09bf704a623a52bcd9894ecf3853a5a64c6986c7604024aae876a4fd"
+    },
+    {
+      "path": "autograd-shot1.resources.json",
+      "bytes": 246688,
+      "sha256": "55065687282547ddef3cb79b718391f3c2fb1ec7268dd040d70704ed5ff547db"
+    },
+    {
+      "path": "executed_gradient_detail.py",
+      "bytes": 28383,
+      "sha256": "4253d88ae81cb0ce0a3c1c035c6fb33b3d014b05287fc686c0e99bc54d84397f"
+    },
+    {
+      "path": "hybrid-shot1.json",
+      "bytes": 5021,
+      "sha256": "d7e48afa573b2ca4d10f513984e128ab4a809b62cd412653dfd91dbef8b59af4"
+    },
+    {
+      "path": "hybrid-shot1.log",
+      "bytes": 380,
+      "sha256": "41ac12cff4aa8d4535c910865793a5b7663c49959b1068ff9bf3b1de46bcc2d8"
+    },
+    {
+      "path": "hybrid-shot1.resources.json",
+      "bytes": 95042,
+      "sha256": "2aac79126208d2d02a689bc40a64342314c3b7fdb6722572b42b23dce96af708"
+    },
+    {
+      "path": "independent_audit.json",
+      "bytes": 25298,
+      "sha256": "f5b76c97e722a9fdc531b705a3967fc5749935f484b9271db7fb18d90b775015"
+    },
+    {
+      "path": "local_canonical_receipt.json",
+      "bytes": 1906,
+      "sha256": "833eae87706efc4f14577fa86383235841f2206c0d4aeeb7378c2b1c2c704894"
+    },
+    {
+      "path": "observations.log",
+      "bytes": 42,
+      "sha256": "4315c00a7277f84150647d9dabeff7243129fcb4adc419733ac592f15d2a9806"
+    },
+    {
+      "path": "observations.resources.json",
+      "bytes": 28075,
+      "sha256": "29ba4c7003fe906abc2b7521fa431843dc002240339dadc4a4ebf0f8d9a56f61"
+    },
+    {
+      "path": "physical_gradient_discrepancy_audit.json",
+      "bytes": 16357,
+      "sha256": "cf3ed58333b75325fd799aeac50c603408061a4044786c903e9fbbfb2add2606"
+    },
+    {
+      "path": "physical_quality.json",
+      "bytes": 2374,
+      "sha256": "0864260db6cd895d18c97ce217ca76c7a4321a2be7e10c46ee4e315e016a1c36"
+    },
+    {
+      "path": "pressure_data_sampled.npz",
+      "bytes": 198017,
+      "sha256": "cec2525de5059f1433b05bbbee4f290beb88b75b43e52fada7a9b6bb379af4aa"
+    },
+    {
+      "path": "pressure_proof.json",
+      "bytes": 3859,
+      "sha256": "064d31507e79b413d3bc7301f5c3bd068a73f3d5842aec0f0ecae7977f5c067a"
+    },
+    {
+      "path": "pressure_proof_receipt.json",
+      "bytes": 2381,
+      "sha256": "d60e8a77e10f7952d526e83bc605811b5a97390fecf78f2fc7aa97c605edabda"
+    },
+    {
+      "path": "pressure_sample_receipt.json",
+      "bytes": 4471,
+      "sha256": "f7f61e01f6bb4d0a00927c3c072ea6bde0ef3bc0ae89a575f9651f7790b622ce"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 1730,
+      "sha256": "033844f95546d77075b0db601523ed89bf2267a31f3d201162ac28b2fc854273"
+    },
+    {
+      "path": "raw_kernels.npz",
+      "bytes": 16761139,
+      "sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf"
+    },
+    {
+      "path": "scoped_acceptance.json",
+      "bytes": 2893,
+      "sha256": "a5f3586d8699e6a87663437fb5e3502c25d8f9d30637d1042a111c663e535e14"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3687,
+      "sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4"
+    }
+  ]
+}

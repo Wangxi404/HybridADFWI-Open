@@ -1,0 +1,10 @@
+{
+  "pressure_cotangent_relative_l2": 1.8145025211851318e-16,
+  "pressure_cotangent_max_abs": 5.551115123125783e-17,
+  "evaluation_field_equal_prepared_initial": {
+    "vp": true,
+    "vs": true,
+    "rho": true
+  },
+  "input_model_arrays_in_public_bundle": false
+}

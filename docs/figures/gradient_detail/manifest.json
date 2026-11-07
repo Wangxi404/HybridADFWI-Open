@@ -1,0 +1,135 @@
+{
+  "status": "scoped-coordinate presentation QA passed at report size; full-physical numerical gate remains failed; see qa/visual_qa.json",
+  "model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "gradient_bundle_sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+  "summary_sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+  "plotter_sha256": "0becf609a98c5ce1091b8c729b54942904e8a4876a0148a035d08f7a05d5a4e9",
+  "config": {
+    "name": "Marmousi-II reflection-focused pressure candidate with absorbing top and 600m PML",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 96,
+    "free_surface": false,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_reference": "known_seafloor_primary",
+    "known_water_depth_m": 450.0,
+    "mute_velocity_m_s": 1500.0,
+    "seafloor_mute_after_s": 0.25,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "known_seafloor_primary_muted_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Separate illustration: horizontal ROI x8-10.5km,z0-3.4625km, absorbing top (no ocean-surface ghost), unknown solid central coordinates. Fixed known-water arrival gate excludes primary data, not every shallow-model sensitivity. No claim of recovered model or globally validated physical accuracy. Run Hybrid diagnostic first, then matching AD before acceptance.",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-reflection-candidate-20261107/observations.npz"
+  },
+  "gradient_scales": {
+    "vp": {
+      "display": "linear symmetric percentile over full-weight coordinates; same scale for AD and Hybrid",
+      "percentile": 99.0,
+      "absolute_limit": 1.0094483294853585e-06,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_active": [
+        0.008802313599042648,
+        0.008802313599042648
+      ],
+      "relative_l2": 7.816570601425126e-13
+    },
+    "vs": {
+      "display": "linear symmetric percentile over full-weight coordinates; same scale for AD and Hybrid",
+      "percentile": 99.0,
+      "absolute_limit": 4.97994189501776e-07,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_active": [
+        0.008802313599042648,
+        0.008802313599042648
+      ],
+      "relative_l2": 3.112837707882704e-13
+    },
+    "vp_physical": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 1.0092274797276884e-06,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.008784345442699558
+    },
+    "vp_constrained": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 1.0092274797276884e-06,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.008802313599042648
+    },
+    "vs_physical": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 4.977709182722689e-07,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.005958077778526656
+    },
+    "vs_constrained": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 4.977709182722689e-07,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.008802313599042648
+    },
+    "rho_physical": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 5.436858543874397e-07,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.009062928264923277
+    },
+    "rho_constrained": {
+      "display": "linear symmetric percentile over full-weight coordinates",
+      "percentile": 99.0,
+      "absolute_limit": 5.436858543874397e-07,
+      "gradient_values_modified": false,
+      "saturated_fraction_of_displayed": 0.008802313599042648
+    }
+  },
+  "coordinates": "physical arrays and diagonal static-map P^T derivatives preserved separately",
+  "acceptance_scope": "declared constrained-coordinate gradients only; original full-physical numerical gate failed",
+  "scoped_acceptance_sha256": "a5f3586d8699e6a87663437fb5e3502c25d8f9d30637d1042a111c663e535e14",
+  "fixed_fraction": 0.3241445934712768,
+  "fully_active_fraction": 0.5947743254476422,
+  "source_inputs_distributed": false,
+  "gradient_postprocessing": "none; only declared image saturation",
+  "numerical_accuracy_scope": "Uniform-medium FD8 dispersion analysis and exact discrete AD/Hybrid comparison; not a continuum or interface-convergence study",
+  "model_display": "local source inputs, no model texture inserted into derivative panels"
+}

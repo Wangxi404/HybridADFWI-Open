@@ -1,0 +1,256 @@
+{
+  "source": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI-Open/scripts/plot_gradient_detail.py",
+  "backend": "python",
+  "summary": {
+    "ready": true,
+    "strict": false,
+    "counts": {
+      "PASS": 18,
+      "WARN": 3,
+      "FAIL": 0
+    }
+  },
+  "findings": [
+    {
+      "check_id": "SOURCE-SYNTAX",
+      "level": "PASS",
+      "message": "Python source parses successfully",
+      "evidence": []
+    },
+    {
+      "check_id": "FONT-FAMILY",
+      "level": "PASS",
+      "message": "A publication-safe sans-serif family is configured",
+      "evidence": [
+        "sans-serif"
+      ]
+    },
+    {
+      "check_id": "FONT-SIZE",
+      "level": "PASS",
+      "message": "All detected text sizes are at least 5 pt (minimum 7 pt)",
+      "evidence": []
+    },
+    {
+      "check_id": "FONT-GLYPH-FLOOR",
+      "level": "PASS",
+      "message": "No mathtext superscript/subscript expression detected",
+      "evidence": []
+    },
+    {
+      "check_id": "LEGEND-LABEL-CASE",
+      "level": "PASS",
+      "message": "No auditable literal legend labels detected",
+      "evidence": []
+    },
+    {
+      "check_id": "COLOR-MAP",
+      "level": "PASS",
+      "message": "No rainbow/jet/hsv color mapping detected",
+      "evidence": []
+    },
+    {
+      "check_id": "EDITABLE-TEXT",
+      "level": "PASS",
+      "message": "SVG and PDF editable-text settings are configured",
+      "evidence": []
+    },
+    {
+      "check_id": "EXPORT-VECTOR",
+      "level": "PASS",
+      "message": "Both SVG and PDF exports are present",
+      "evidence": []
+    },
+    {
+      "check_id": "EXPORT-RASTER",
+      "level": "WARN",
+      "message": "PNG preview is present but no TIFF submission raster was found",
+      "evidence": []
+    },
+    {
+      "check_id": "RASTER-DPI",
+      "level": "WARN",
+      "message": "Raster export meets the 300 dpi floor but not the 600 dpi default",
+      "evidence": [
+        "300"
+      ]
+    },
+    {
+      "check_id": "FINAL-WIDTH",
+      "level": "WARN",
+      "message": "Detected width 299.7 mm is not near the common 89/183 mm defaults; verify the target journal",
+      "evidence": []
+    },
+    {
+      "check_id": "DATA-SAMPLING",
+      "level": "PASS",
+      "message": "No high-confidence row-sampling operation detected",
+      "evidence": []
+    },
+    {
+      "check_id": "DATA-EXCLUSION",
+      "level": "PASS",
+      "message": "No high-confidence missing-data exclusion detected",
+      "evidence": []
+    },
+    {
+      "check_id": "DEMO-DATA",
+      "level": "PASS",
+      "message": "No obvious simulated-data generator detected",
+      "evidence": []
+    },
+    {
+      "check_id": "LOG-GUARD",
+      "level": "PASS",
+      "message": "No logarithmic transform or axis detected",
+      "evidence": []
+    },
+    {
+      "check_id": "INTERP-MONOTONIC",
+      "level": "PASS",
+      "message": "No NumPy interpolation requiring an increasing x-grid detected",
+      "evidence": []
+    },
+    {
+      "check_id": "UNCERTAINTY-ENCODING",
+      "level": "PASS",
+      "message": "No stochastic aggregate requiring a variability audit was inferred",
+      "evidence": []
+    },
+    {
+      "check_id": "ROTATION-ANCHOR",
+      "level": "PASS",
+      "message": "No rotated Matplotlib text detected",
+      "evidence": []
+    },
+    {
+      "check_id": "ANNOTATION-WORKAROUND",
+      "level": "PASS",
+      "message": "No high-risk hard-coded label height or opaque white text mask detected",
+      "evidence": []
+    },
+    {
+      "check_id": "PANEL-ALIGNMENT-GATE",
+      "level": "PASS",
+      "message": "Render-time panel-alignment gate is wired into the plotting source",
+      "evidence": [
+        "require_matplotlib_panel_alignment("
+      ]
+    },
+    {
+      "check_id": "BACKEND-EXCLUSIVE",
+      "level": "PASS",
+      "message": "No obvious cross-backend plotting reference found for python",
+      "evidence": []
+    }
+  ],
+  "source_sha256": "0becf609a98c5ce1091b8c729b54942904e8a4876a0148a035d08f7a05d5a4e9",
+  "scope": "SOURCE PREFLIGHT ONLY: no scientific figure rendered, no solver executed, no numerical acceptance changed",
+  "reviewed_utc": "2026-11-07T06:35:03.924927+00:00",
+  "warning_disposition": {
+    "EXPORT-RASTER": "PNG is a report preview; no TIFF submission claim.",
+    "RASTER-DPI": "300 dpi preview is accepted for the report. No 600 dpi production claim.",
+    "FINAL-WIDTH": "Report/README size is intentional. Later PDF glyph/collision/alignment checks must use the actual export dimensions; no 183mm submission-size certification."
+  },
+  "acceptance_guard_tests": {
+    "passed": true,
+    "count": 10,
+    "tests": [
+      {
+        "name": "failed original summary rejected without explicit constrained scope",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Only plot a checked AD/Hybrid pair as a verified demonstration"
+      },
+      {
+        "name": "valid hash-bound scope reaches data boundary only",
+        "passed": true,
+        "outcome": "reached_data_boundary",
+        "reason": "Reached actual data boundary; no arrays or plot were loaded"
+      },
+      {
+        "name": "summary mutation rejected",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Scoped acceptance does not bind the current numerical evidence"
+      },
+      {
+        "name": "raw kernel mutation rejected",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Scoped acceptance does not bind the current numerical evidence"
+      },
+      {
+        "name": "coordinate pass flag required",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Independent constrained-coordinate/quality acceptance is incomplete"
+      },
+      {
+        "name": "physical quality flag required",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Independent constrained-coordinate/quality acceptance is incomplete"
+      },
+      {
+        "name": "predeclared parameterization flag required",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Independent constrained-coordinate/quality acceptance is incomplete"
+      },
+      {
+        "name": "failed all-physical status cannot be relabeled accepted",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Use full acceptance for an all-physical pass; never rewrite the original failed gate"
+      },
+      {
+        "name": "coordinate tolerance remains original1e-8",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Coordinate gradients exceed the original numerical tolerance"
+      },
+      {
+        "name": "rejected forward quality blocks plotting",
+        "passed": true,
+        "outcome": "rejected",
+        "reason": "Numerical AD agreement does not override a rejected forward-quality case"
+      }
+    ],
+    "fixture_scope": "Temporary non-scientific files exercise the actual CLI guard path only; np.load is intercepted before any scientific arrays, model, plot, or propagation. This is not numerical validation."
+  },
+  "manual_source_review": {
+    "canonical_arrays": "gradient_{autograd|hybrid}_{coordinate_}{vp|vs|rho} are preferred; legacy aliases are fallback only.",
+    "no_stride_preview": "Scientific panels load raw_kernels.npz; kernel_preview and stride slicing are absent from this source.",
+    "physical_and_coordinate_separate": "The first figure uses saved coordinate gradients. The diagnostic figure retains full physical g separately from actual P^Tg; no physical derivative is cosmetically multiplied by a display mask.",
+    "static_map_mask": "Fixed coordinates are gray on the coordinate plots; mask comes from the saved parameterization. All physical samples are drawn on the full-physical diagnostic row.",
+    "display_limits": "Linear symmetric percentile; all AD/Hybrid coordinate fields share the same per-parameter scale from full-weight coordinates. Saturated fractions are recorded; source arrays remain unchanged.",
+    "scope_disclosure": "With --constrained-scope, figure contract, both suptitles and manifest explicitly retain full-physical strict-gate failure. Density is labeled sensitivity, not reconstruction.",
+    "original_numerical_status": "summary.json is read only; actual current summary.passed is false and its hash is unchanged.",
+    "hash_binding": "Scoped acceptance binds exact summary.json and raw_kernels.npz; acceptance max-coordinate error must remain within the original config tolerance.",
+    "independent_acceptance_boundary": "This preflight checks guard mechanics. The independent scoped_acceptance.json and full raw bundle must still arrive and be independently checked before claiming a publishable verified coordinate result.",
+    "render_alignment": "Both exports call strict require_matplotlib_panel_alignment with1.5pt physical tolerance after final colorbar/layout drawing."
+  },
+  "pending_actual_data_checks": [
+    "Receive and inspect full555x401 raw_kernels.npz and exact local prepared model grid, not stride2 preview.",
+    "Verify actual scoped_acceptance.json binds received raw/summary hashes and independent coordinate/quality evidence.",
+    "Verify actual P^T gradients and shapes/finite fields, then final PDF glyph>=5pt, collision and alignment audits plus all14 panels."
+  ],
+  "actual_summary_preserved": {
+    "path": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI-Open/evidence/gradient-detail-reflection-candidate-20261107/summary.json",
+    "sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+    "passed": false,
+    "unchanged": true,
+    "physical_relative_l2": {
+      "vp": 3.4229929871571396e-08,
+      "vs": 3.095655307700943e-07,
+      "rho": 3.387846291354229e-08
+    },
+    "coordinate_relative_l2": {
+      "vp": 7.816570601425109e-13,
+      "vs": 3.1128377078826973e-13,
+      "rho": 5.954243213830936e-14
+    }
+  },
+  "rendered_qa_status": "NOT YET RUN: no final figure supplied"
+}

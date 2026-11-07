@@ -1,0 +1,683 @@
+{
+  "reviewer_only": true,
+  "native_solver_runs": 0,
+  "model_arrays_included": false,
+  "status": "Accepted only for the declared constrained-coordinate derivative at original 1e-8 tolerance; original full-physical gate failed and remains false. Canonical local raw-file source identity verified.",
+  "config": {
+    "name": "Marmousi-II reflection-focused pressure candidate with absorbing top and 600m PML",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 96,
+    "free_surface": false,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_reference": "known_seafloor_primary",
+    "known_water_depth_m": 450.0,
+    "mute_velocity_m_s": 1500.0,
+    "seafloor_mute_after_s": 0.25,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "known_seafloor_primary_muted_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Separate illustration: horizontal ROI x8-10.5km,z0-3.4625km, absorbing top (no ocean-surface ghost), unknown solid central coordinates. Fixed known-water arrival gate excludes primary data, not every shallow-model sensitivity. No claim of recovered model or globally validated physical accuracy. Run Hybrid diagnostic first, then matching AD before acceptance.",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-reflection-candidate-20261107/observations.npz"
+  },
+  "objective_independent": 0.3727100131527948,
+  "objective_reported": 0.3727100131527949,
+  "pressure_cot_relative_l2": 1.7821107113459906e-16,
+  "geometry_window_max_abs_error": 2.1094237467877974e-15,
+  "geometry_parameter_mask_max_abs_error": 0.0,
+  "fixed_observation_RMS_independent": 0.0009734336304707895,
+  "fixed_observation_RMS_saved": 0.0009734336304707893,
+  "private_H_evaluation_model_equals_prepared_initial": {
+    "vp": true,
+    "vs": true,
+    "rho": true
+  },
+  "fixed_pml_profile_H": {
+    "reference_vmax_m_s": 4700.0,
+    "bcx_sha256": "09b9e6854e3f81d3d62161442e694fb62be46af1712e405edf5bf1f0bd48b50b",
+    "bcz_sha256": "4f15a94958ae6fb0461e0e1626c2587f1148c3f5640e6aee99fba0cef95e5060",
+    "fixed_for_truth_initial_and_model_derivatives": true
+  },
+  "source_script_sha256_H": "4253d88ae81cb0ce0a3c1c035c6fb33b3d014b05287fc686c0e99bc54d84397f",
+  "source_model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "source_observations_npz_sha256": "057895c642ce09fa2375be25ed983a30cdf5f118d138df8ccd57ac14e3c08f65",
+  "source_pressure_array_sha256": "e064144e930736232654b0dac18b368fa486482a5d004c9c7b4054491db303ba",
+  "source_pressure_cot_array_sha256": "229b38104291b7310ed8f9106b5731bf95a9978cf9c1b1a953ad831c4acaa715",
+  "source_observed_pressure_array_sha256": "b680b5cc10d96a581ee93289890332c10c75147700d1dbd8f05f0a4078754a79",
+  "source_window_array_sha256": "2027d0ca436d800608d916bf03c3e54d0e55e7d900f3538b98fa7502948211bf",
+  "source_H_gradient_zero_canonicalized_sha256": {
+    "vp": "90172573718341fe87c12efc3e24e823ce2807617e62ec7ae0b285968e007be6",
+    "vs": "6962b62e081f50c4c78cce1b0dc6c24facdf78d2a80f7376b74b01831a86c406",
+    "rho": "f3ebea90ce6ce779244e79e0e1cd7dce24bd42b90eb57fcb8fb8544a05e0ddbd",
+    "coordinate_vp": "0460ea933988fc3948f5816a328b96105bf350c2f4560fc51e56218c7da44e4b",
+    "coordinate_vs": "059635b4546c011b321baecc7d77ed1daa564303cc6aee632e324bd28f3d702d",
+    "coordinate_rho": "18592181cb94e767bc98b27b922c1f24c3d194d673751fe4bdb41c1b8ea2904b"
+  },
+  "kernels": {
+    "vp": {
+      "H_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 0.00015647531915186818,
+      "coordinate_l2": 7.451117445142812e-05,
+      "physical_peak_xz_m": [
+        9250.0,
+        100.0
+      ],
+      "physical_squared_norm_in_fixed_water_fraction": 0.7618253632955293,
+      "coordinate_squared_norm_fraction_depth_ge1000m": 0.1452842917298196,
+      "coordinate_squared_norm_fraction_depth_ge2000m": 0.007990113161769065
+    },
+    "vs": {
+      "H_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 3.6307221818911746e-05,
+      "coordinate_l2": 3.5945754647159895e-05,
+      "physical_peak_xz_m": [
+        9462.5,
+        625.0
+      ],
+      "physical_squared_norm_in_fixed_water_fraction": 0.0,
+      "coordinate_squared_norm_fraction_depth_ge1000m": 0.12467661910148195,
+      "coordinate_squared_norm_fraction_depth_ge2000m": 0.008333065308438817
+    },
+    "rho": {
+      "H_Pt_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 7.118070688239513e-05,
+      "coordinate_l2": 4.4540025651989136e-05,
+      "physical_peak_xz_m": [
+        9250.0,
+        100.0
+      ],
+      "physical_squared_norm_in_fixed_water_fraction": 0.5810337684314767,
+      "coordinate_squared_norm_fraction_depth_ge1000m": 0.2417716169750869,
+      "coordinate_squared_norm_fraction_depth_ge2000m": 0.022802607050006127
+    }
+  },
+  "trace_time_bands": [
+    {
+      "t_s": [
+        0,
+        1
+      ],
+      "pred_max_abs": 0.7185150859587023,
+      "obs_max_abs": 0.7185150859587023,
+      "pred_rms": 0.027339710123818604,
+      "obs_rms": 0.027336767053109393
+    },
+    {
+      "t_s": [
+        1,
+        2
+      ],
+      "pred_max_abs": 0.04811627253182222,
+      "obs_max_abs": 0.0481455730791919,
+      "pred_rms": 0.003575011842456333,
+      "obs_rms": 0.004066803784224366
+    },
+    {
+      "t_s": [
+        2,
+        3
+      ],
+      "pred_max_abs": 0.002710027630812927,
+      "obs_max_abs": 0.006341650271014214,
+      "pred_rms": 0.0005643555707691722,
+      "obs_rms": 0.0011470208837016322
+    },
+    {
+      "t_s": [
+        3,
+        3.501
+      ],
+      "pred_max_abs": 0.0007932706175941596,
+      "obs_max_abs": 0.0018180673924606786,
+      "pred_rms": 0.000110095688621923,
+      "obs_rms": 0.0004425004081562758
+    }
+  ],
+  "temporal_spectrum": {
+    "observed": {
+      "f50_hz": 6.856163405227823,
+      "f90_hz": 9.712898157406084,
+      "f95_hz": 10.569918583059561,
+      "squared_spectral_norm_fraction_above_15Hz": 0.00035470802307407246
+    },
+    "residual": {
+      "f50_hz": 7.713183830881301,
+      "f90_hz": 10.569918583059561,
+      "f95_hz": 11.141265533495213,
+      "squared_spectral_norm_fraction_above_15Hz": 0.0008945295257265522
+    },
+    "windowed_residual": {
+      "f50_hz": 7.427510355663475,
+      "f90_hz": 10.284245107841736,
+      "f95_hz": 10.855592058277388,
+      "squared_spectral_norm_fraction_above_15Hz": 0.0005368433010822541
+    },
+    "pressure_cotangent": {
+      "f50_hz": 7.427510355663475,
+      "f90_hz": 10.284245107841736,
+      "f95_hz": 11.141265533495213,
+      "squared_spectral_norm_fraction_above_15Hz": 0.0008829764418640355
+    }
+  },
+  "definitions": {
+    "squared_gradient_norm": "sum(g^2) per family in its own SI units, not mechanical energy or cross-parameter strength",
+    "spectrum": "Temporal mean removal per trace, Hann, unpadded rFFT, summed power over receivers/shots",
+    "parameter_map": "m(theta)=m_initial+P*(theta-m_initial), explicit known water and fixed initial boundary buffer; physical g and P^Tg distinct",
+    "window": "Fixed known-water raypath primary-arrival reference; not an assertion of complete reflection/conversion/multiple separation."
+  },
+  "AD_H_comparison": {
+    "native_solver_runs": 0,
+    "model_arrays_included": false,
+    "pressure_numeric_equal": true,
+    "pressure_actual_uint64_equal": true,
+    "pressure_AD_sha256": "e064144e930736232654b0dac18b368fa486482a5d004c9c7b4054491db303ba",
+    "pressure_H_sha256": "e064144e930736232654b0dac18b368fa486482a5d004c9c7b4054491db303ba",
+    "loss_exact_equal": true,
+    "losses": [
+      0.3727100131527949,
+      0.3727100131527949
+    ],
+    "same_PML_profile": true,
+    "same_window_and_scale": true,
+    "same_model_hash": true,
+    "same_observations_hash": true,
+    "same_script_hash": true,
+    "private_AD_evaluation_model_equals_prepared_initial": {
+      "vp": true,
+      "vs": true,
+      "rho": true
+    },
+    "kernels": {
+      "vp": {
+        "physical_relative_l2": 3.4229929871571396e-08,
+        "coordinate_relative_l2": 7.816570601425109e-13,
+        "AD_chain_exact_numeric": true,
+        "H_chain_exact_numeric": true,
+        "coordinate_error_equals_P_times_physical_error_max_abs": 9.977580569276878e-23,
+        "AD_inactive_coordinate_exact_zero": true,
+        "H_inactive_coordinate_exact_zero": true,
+        "regions": {
+          "water": {
+            "cells": 29273,
+            "AD_l2": 0.0001365757391938044,
+            "H_l2": 0.00013657573919609162,
+            "error_l2": 3.681685943185957e-12,
+            "relative_l2_to_regional_AD": 2.6957100616248928e-08,
+            "AD_linf": 0.0001155070270020733,
+            "H_linf": 0.00011550702700385703,
+            "error_linf": 2.0743729496847067e-12,
+            "fraction_of_total_squared_error": 0.47248689564035545
+          },
+          "P0_solid": {
+            "cells": 42867,
+            "AD_l2": 1.46145185211037e-05,
+            "H_l2": 1.4614518487080473e-05,
+            "error_l2": 3.890169116424324e-12,
+            "relative_l2_to_regional_AD": 2.6618523975366214e-07,
+            "AD_linf": 1.281236528352675e-06,
+            "H_linf": 1.281236528352595e-06,
+            "error_linf": 2.308785346563066e-12,
+            "fraction_of_total_squared_error": 0.527513104205148
+          },
+          "transition": {
+            "cells": 18045,
+            "AD_l2": 1.0320762381371623e-05,
+            "H_l2": 1.0320762381368332e-05,
+            "error_l2": 3.9399527896799545e-17,
+            "relative_l2_to_regional_AD": 3.817501696184131e-12,
+            "AD_linf": 5.079135109616461e-07,
+            "H_linf": 5.079135109616468e-07,
+            "error_linf": 3.567702773835113e-18,
+            "fraction_of_total_squared_error": 5.4110098569330256e-11
+          },
+          "core": {
+            "cells": 132370,
+            "AD_l2": 7.423941459883801e-05,
+            "H_l2": 7.423941459883805e-05,
+            "error_l2": 5.366478716948361e-17,
+            "relative_l2_to_regional_AD": 7.228611305661288e-13,
+            "AD_linf": 2.1926461359854192e-06,
+            "H_linf": 2.192646135985155e-06,
+            "error_linf": 3.127539290380333e-18,
+            "fraction_of_total_squared_error": 1.0038645356452323e-10
+          },
+          "all_active": {
+            "cells": 150415,
+            "AD_l2": 7.495337761642833e-05,
+            "H_l2": 7.495337761642791e-05,
+            "error_l2": 6.657501168183644e-17,
+            "relative_l2_to_regional_AD": 8.882189675631706e-13,
+            "AD_linf": 2.1926461359854192e-06,
+            "H_linf": 2.192646135985155e-06,
+            "error_linf": 3.567702773835113e-18,
+            "fraction_of_total_squared_error": 1.5449655213385352e-10
+          },
+          "all": {
+            "cells": 222555,
+            "AD_l2": 0.0001564753191530497,
+            "H_l2": 0.00015647531915186818,
+            "error_l2": 5.356139201240643e-12,
+            "relative_l2_to_regional_AD": 3.4229929871571396e-08,
+            "AD_linf": 0.0001155070270020733,
+            "H_linf": 0.00011550702700385703,
+            "error_linf": 2.308785346563066e-12,
+            "fraction_of_total_squared_error": 1.0
+          }
+        },
+        "top5_error_nodes": [
+          {
+            "xz_m": [
+              8000.0,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": 1.24751591471739e-07,
+            "H": 1.2474928268639243e-07,
+            "difference": -2.308785346563066e-12
+          },
+          {
+            "xz_m": [
+              8006.25,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": -9.140737942289356e-08,
+            "H": -9.140510958583718e-08,
+            "difference": 2.269837056380125e-12
+          },
+          {
+            "xz_m": [
+              8012.5,
+              450.0
+            ],
+            "P": 0.0,
+            "AD": -8.726348607644895e-08,
+            "H": -8.726556044939864e-08,
+            "difference": -2.0743729496847067e-12
+          },
+          {
+            "xz_m": [
+              10500.0,
+              450.0
+            ],
+            "P": 0.0,
+            "AD": 8.549680438245748e-08,
+            "H": 8.54983898381944e-08,
+            "difference": 1.585455736911127e-12
+          },
+          {
+            "xz_m": [
+              8000.0,
+              450.0
+            ],
+            "P": 0.0,
+            "AD": 9.004817806806951e-08,
+            "H": 9.00496923730198e-08,
+            "difference": 1.5143049502835244e-12
+          }
+        ]
+      },
+      "vs": {
+        "physical_relative_l2": 3.095655307700943e-07,
+        "coordinate_relative_l2": 3.1128377078826973e-13,
+        "AD_chain_exact_numeric": true,
+        "H_chain_exact_numeric": true,
+        "coordinate_error_equals_P_times_physical_error_max_abs": 2.271617923932819e-23,
+        "AD_inactive_coordinate_exact_zero": true,
+        "H_inactive_coordinate_exact_zero": true,
+        "regions": {
+          "water": {
+            "cells": 29273,
+            "AD_l2": 0.0,
+            "H_l2": 0.0,
+            "error_l2": 0.0,
+            "relative_l2_to_regional_AD": null,
+            "AD_linf": 0.0,
+            "H_linf": 0.0,
+            "error_linf": 0.0,
+            "fraction_of_total_squared_error": 0.0
+          },
+          "P0_solid": {
+            "cells": 42867,
+            "AD_l2": 4.513101509113805e-06,
+            "H_l2": 4.513101447818409e-06,
+            "error_l2": 1.1239464395508911e-11,
+            "relative_l2_to_regional_AD": 2.4904080647891073e-06,
+            "AD_linf": 5.054232478453487e-07,
+            "H_linf": 5.054232478452893e-07,
+            "error_linf": 5.661611194261547e-12,
+            "fraction_of_total_squared_error": 0.9999999999984436
+          },
+          "transition": {
+            "cells": 18045,
+            "AD_l2": 3.2083440368800998e-06,
+            "H_l2": 3.2083440368802383e-06,
+            "error_l2": 9.687694215643123e-18,
+            "relative_l2_to_regional_AD": 3.0195309805564863e-12,
+            "AD_linf": 1.6589841295966862e-07,
+            "H_linf": 1.6589841295966798e-07,
+            "error_linf": 9.28533398647925e-19,
+            "fraction_of_total_squared_error": 7.429329368617342e-13
+          },
+          "core": {
+            "cells": 132370,
+            "AD_l2": 3.588248597951892e-05,
+            "H_l2": 3.5882485979518956e-05,
+            "error_l2": 1.0134689000962555e-17,
+            "relative_l2_to_regional_AD": 2.8244110529987395e-13,
+            "AD_linf": 9.74175930211426e-07,
+            "H_linf": 9.74175930211408e-07,
+            "error_linf": 3.9632539253130704e-19,
+            "fraction_of_total_squared_error": 8.13073151855224e-13
+          },
+          "all_active": {
+            "cells": 150415,
+            "AD_l2": 3.602563353404568e-05,
+            "H_l2": 3.602563353404573e-05,
+            "error_l2": 1.402010486273325e-17,
+            "relative_l2_to_regional_AD": 3.8917025149561034e-13,
+            "AD_linf": 9.74175930211426e-07,
+            "H_linf": 9.74175930211408e-07,
+            "error_linf": 9.28533398647925e-19,
+            "fraction_of_total_squared_error": 1.5560060887169583e-12
+          },
+          "all": {
+            "cells": 222555,
+            "AD_l2": 3.6307221826530916e-05,
+            "H_l2": 3.6307221818911746e-05,
+            "error_l2": 1.1239464395517596e-11,
+            "relative_l2_to_regional_AD": 3.095655307700943e-07,
+            "AD_linf": 9.74175930211426e-07,
+            "H_linf": 9.74175930211408e-07,
+            "error_linf": 5.661611194261547e-12,
+            "fraction_of_total_squared_error": 1.0
+          }
+        },
+        "top5_error_nodes": [
+          {
+            "xz_m": [
+              8006.25,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": 9.165322442490001e-09,
+            "H": 9.15966083129574e-09,
+            "difference": -5.661611194261547e-12
+          },
+          {
+            "xz_m": [
+              8000.0,
+              462.5
+            ],
+            "P": 0.0,
+            "AD": -2.1854667171471136e-08,
+            "H": -2.184999123644935e-08,
+            "difference": 4.675935021784851e-12
+          },
+          {
+            "xz_m": [
+              8006.25,
+              462.5
+            ],
+            "P": 0.0,
+            "AD": 8.213365963069383e-09,
+            "H": 8.20930118523887e-09,
+            "difference": -4.0647778305127496e-12
+          },
+          {
+            "xz_m": [
+              8012.5,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": 1.2217486436745231e-08,
+            "H": 1.222083744443363e-08,
+            "difference": 3.3510076883984334e-12
+          },
+          {
+            "xz_m": [
+              10493.75,
+              462.5
+            ],
+            "P": 0.0,
+            "AD": -8.247371050958925e-09,
+            "H": -8.250429109044431e-09,
+            "difference": -3.058058085506426e-12
+          }
+        ]
+      },
+      "rho": {
+        "physical_relative_l2": 3.387846291354229e-08,
+        "coordinate_relative_l2": 5.954243213830936e-14,
+        "AD_chain_exact_numeric": true,
+        "H_chain_exact_numeric": true,
+        "coordinate_error_equals_P_times_physical_error_max_abs": 4.836207466787975e-23,
+        "AD_inactive_coordinate_exact_zero": true,
+        "H_inactive_coordinate_exact_zero": true,
+        "regions": {
+          "water": {
+            "cells": 29273,
+            "AD_l2": 5.42579003089814e-05,
+            "H_l2": 5.425790030981367e-05,
+            "error_l2": 2.103953395851202e-12,
+            "relative_l2_to_regional_AD": 3.8776904079771974e-08,
+            "AD_linf": 3.5261618883648586e-05,
+            "H_linf": 3.526161888419228e-05,
+            "error_linf": 1.2381714856757342e-12,
+            "fraction_of_total_squared_error": 0.7612025637057162
+          },
+          "P0_solid": {
+            "cells": 42867,
+            "AD_l2": 1.0125016935784969e-05,
+            "H_l2": 1.0125016934435363e-05,
+            "error_l2": 1.1784219530173552e-12,
+            "relative_l2_to_regional_AD": 1.1638715870710738e-07,
+            "AD_linf": 7.444339159295133e-07,
+            "H_linf": 7.444339159295123e-07,
+            "error_linf": 5.828451058218043e-13,
+            "fraction_of_total_squared_error": 0.23879743629245026
+          },
+          "transition": {
+            "cells": 18045,
+            "AD_l2": 7.759180803947346e-06,
+            "H_l2": 7.759180803947683e-06,
+            "error_l2": 2.205447515956304e-18,
+            "relative_l2_to_regional_AD": 2.8423716004069933e-13,
+            "AD_linf": 3.6061488300576033e-07,
+            "H_linf": 3.6061488300576075e-07,
+            "error_linf": 1.9187943233270072e-19,
+            "fraction_of_total_squared_error": 8.364143308993653e-13
+          },
+          "core": {
+            "cells": 132370,
+            "AD_l2": 4.42724793926976e-05,
+            "H_l2": 4.427247939269759e-05,
+            "error_l2": 2.4082291405816232e-18,
+            "relative_l2_to_regional_AD": 5.4395623954569885e-14,
+            "AD_linf": 1.3452300252916447e-06,
+            "H_linf": 1.3452300252916426e-06,
+            "error_linf": 9.919219033490887e-20,
+            "fraction_of_total_squared_error": 9.97294962835303e-13
+          },
+          "all_active": {
+            "cells": 150415,
+            "AD_l2": 4.494727264612592e-05,
+            "H_l2": 4.494727264612596e-05,
+            "error_l2": 3.265511650443822e-18,
+            "relative_l2_to_regional_AD": 7.265205335490544e-14,
+            "AD_linf": 1.3452300252916447e-06,
+            "H_linf": 1.3452300252916426e-06,
+            "error_linf": 1.9187943233270072e-19,
+            "fraction_of_total_squared_error": 1.8337092937346677e-12
+          },
+          "all": {
+            "cells": 222555,
+            "AD_l2": 7.118070688195265e-05,
+            "H_l2": 7.118070688239513e-05,
+            "error_l2": 2.411492938259957e-12,
+            "relative_l2_to_regional_AD": 3.387846291354229e-08,
+            "AD_linf": 3.5261618883648586e-05,
+            "H_linf": 3.526161888419228e-05,
+            "error_linf": 1.2381714856757342e-12,
+            "fraction_of_total_squared_error": 1.0
+          }
+        },
+        "top5_error_nodes": [
+          {
+            "xz_m": [
+              8012.5,
+              443.75
+            ],
+            "P": 0.0,
+            "AD": -4.1689775223734054e-08,
+            "H": -4.169101339521973e-08,
+            "difference": -1.2381714856757342e-12
+          },
+          {
+            "xz_m": [
+              8000.0,
+              443.75
+            ],
+            "P": 0.0,
+            "AD": 5.347849583264656e-08,
+            "H": 5.347944125181384e-08,
+            "difference": 9.454191672772255e-13
+          },
+          {
+            "xz_m": [
+              10487.5,
+              443.75
+            ],
+            "P": 0.0,
+            "AD": 1.2370776490471454e-07,
+            "H": 1.2370710967343832e-07,
+            "difference": -6.552312762254569e-13
+          },
+          {
+            "xz_m": [
+              8000.0,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": 7.26863155735867e-08,
+            "H": 7.268573272848088e-08,
+            "difference": -5.828451058218043e-13
+          },
+          {
+            "xz_m": [
+              10500.0,
+              456.25
+            ],
+            "P": 0.0,
+            "AD": 1.0197252147496543e-07,
+            "H": 1.019720071713439e-07,
+            "difference": -5.143036215259242e-13
+          }
+        ]
+      }
+    },
+    "source_AD_gradient_zero_canonicalized_sha256": {
+      "vp": "16f2e9d8c656af58600d4ef0bd82bb29158589405bc3ba145e43b7e7df40a646",
+      "vs": "b291d1bfe21716ea14bb9519deed81fbcccace09f5f5a54fb0a8caf4b8a9218a",
+      "rho": "7faf8dacc3780679fde5d2cf744ebfdbcbcd6ab7cd2dfad6564cdd8130b35595",
+      "coordinate_vp": "92ec104a167f434febf0c2f6e220ff2c4787e9a134f5bee77934212c84866554",
+      "coordinate_vs": "32d95b68ba6172502124c8d12ad810658527ffe691a47dec91005990299eae77",
+      "coordinate_rho": "c5d89181a9ebf675e6ab59d41866fc088507919ae1210cd6ccf4c754ff4c352b"
+    }
+  },
+  "coordinate_gradient_passed": true,
+  "original_all_physical_gate_passed": false,
+  "physical_quality_screen_passed": true,
+  "parameterization_fixed_before_comparison": true,
+  "full_gradient_discrepancy_cause": "Unresolved. Localization and small absolute differences do not establish roundoff or eliminate an implementation issue.",
+  "scope_limits": [
+    "Valid only for actual declared map m(theta)=m_initial+P(theta-m_initial), one central shot, this objective and finite 3.5s record.",
+    "Original summary.passed=false and original 1e-8 all-physical threshold must remain unchanged.",
+    "Full physical g is an auxiliary diagnostic whose original strict comparison failed, including the frozen P=0 water/buffer region.",
+    "Absorbing top, no ocean-surface ghost, 96-cell/600m PML, fixed known-water primary-arrival data weights.",
+    "No continuum grid-convergence proof, universal stability guarantee, recovered density or fully recovered thin-layer model."
+  ],
+  "local_canonical_raw_sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+  "local_canonical_raw_bytes": 16761139,
+  "local_canonical_source_value_identity": {
+    "autograd": {
+      "gradient_autograd_vp": true,
+      "gradient_autograd_coordinate_vp": true,
+      "gradient_autograd_vs": true,
+      "gradient_autograd_coordinate_vs": true,
+      "gradient_autograd_rho": true,
+      "gradient_autograd_coordinate_rho": true
+    },
+    "hybrid": {
+      "gradient_hybrid_vp": true,
+      "gradient_hybrid_coordinate_vp": true,
+      "gradient_hybrid_vs": true,
+      "gradient_hybrid_coordinate_vs": true,
+      "gradient_hybrid_rho": true,
+      "gradient_hybrid_coordinate_rho": true
+    }
+  },
+  "local_recomputed_gradient_agreement": {
+    "vp": {
+      "physical_relative_l2": 3.422992987157075e-08,
+      "coordinate_relative_l2": 7.816570601424159e-13
+    },
+    "vs": {
+      "physical_relative_l2": 3.095655307700798e-07,
+      "coordinate_relative_l2": 3.1128377078826534e-13
+    },
+    "rho": {
+      "physical_relative_l2": 3.387846291354088e-08,
+      "coordinate_relative_l2": 5.954243213830916e-14
+    }
+  },
+  "local_geometry_parameter_mask": {
+    "shape": [
+      555,
+      401
+    ],
+    "zero_cells": 72140,
+    "transition_cells": 18045,
+    "unit_cells": 132370
+  },
+  "public_raw_contains_input_model_arrays": false
+}

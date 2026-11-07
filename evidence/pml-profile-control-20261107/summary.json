@@ -1,0 +1,110 @@
+{
+  "status": "ok",
+  "created_utc": "2026-11-07T05:31:32.085225+00:00",
+  "scope": "single-factor initial PML profile control; same old true-model observations/RMS/grid/frequency/acquisition/loss/parameters; no AD rerun",
+  "reference_protocol_sha256": "2fbd293b1aab7e4f52c40985e4d97ae7fba70cecf2013c05c05cbea6e609a26a",
+  "model_sha256": "f68effb1e917ef6356d50b403b2993b1c2155362c1ab669ac4fa3a5c4a83982d",
+  "observations_sha256": "c0656d2614232825342154968a5fbb8f2d7f6dde28facd090fb3babd0ce10b1b",
+  "reference_kernels_sha256": "02a10262114a88e2657543bd40d9ebf827d7c962e6258054b1496f271716fb44",
+  "script_sha256": "165f0b62f7a032af99093de6aaa64a65a44f8dca216b020908998ea1702fb326",
+  "loss": 0.6040008818494508,
+  "cold_functional_elapsed_s": 85.30752753932029,
+  "adapter_details": {
+    "checkpointing": true,
+    "checkpoint_segments": 50,
+    "checkpoint_state_tensors": 750,
+    "saved_history_steps": 0,
+    "saved_history_fields_per_step": 0,
+    "instrumented_native_source_sha256": null,
+    "temporal_autograd": false,
+    "replay_seconds": 22.712147408165038,
+    "adjoint_seconds": 40.400740397162735,
+    "static_material_vjp_seconds": 0.003814544528722763,
+    "peak_history_steps": 50,
+    "static_material_autograd": true
+  },
+  "cuda_peak_allocated_bytes": 2035084288,
+  "kernels": {
+    "vp": {
+      "old_variable_profile": {
+        "total_squared_norm": 0.0004060847267047141,
+        "water_fraction_total": 0.8906879119292604,
+        "solid_fraction_total": 0.10931208807073974,
+        "lateral_200m_fraction_of_solid": 0.8676431502034835,
+        "central_deep_fraction_of_solid": 1.7537051833456042e-06,
+        "top_0p1_percent_cells_fraction_total": 0.9362706071739154,
+        "absolute_max_index_zx": [
+          10,
+          198
+        ]
+      },
+      "matched_fixed_profile": {
+        "total_squared_norm": 0.0001464727236122348,
+        "water_fraction_total": 0.8380964437251818,
+        "solid_fraction_total": 0.16190355627481806,
+        "lateral_200m_fraction_of_solid": 0.8899885775336133,
+        "central_deep_fraction_of_solid": 2.679784186973611e-06,
+        "top_0p1_percent_cells_fraction_total": 0.9248582940145715,
+        "absolute_max_index_zx": [
+          10,
+          198
+        ]
+      },
+      "relative_l2_change_from_old": 0.5024620520401331
+    },
+    "vs": {
+      "old_variable_profile": {
+        "total_squared_norm": 0.0022775751623350456,
+        "water_fraction_total": 0.0,
+        "solid_fraction_total": 1.0,
+        "lateral_200m_fraction_of_solid": 0.8965247394910498,
+        "central_deep_fraction_of_solid": 2.463659584262896e-07,
+        "top_0p1_percent_cells_fraction_total": 0.8929749141613389,
+        "absolute_max_index_zx": [
+          11,
+          199
+        ]
+      },
+      "matched_fixed_profile": {
+        "total_squared_norm": 0.0008472334021026992,
+        "water_fraction_total": 0.0,
+        "solid_fraction_total": 0.9999999999999998,
+        "lateral_200m_fraction_of_solid": 0.8774740686833049,
+        "central_deep_fraction_of_solid": 3.562226183862474e-07,
+        "top_0p1_percent_cells_fraction_total": 0.8717503632074887,
+        "absolute_max_index_zx": [
+          11,
+          199
+        ]
+      },
+      "relative_l2_change_from_old": 0.47915535046312063
+    },
+    "rho": {
+      "old_variable_profile": {
+        "total_squared_norm": 0.00014703987784310838,
+        "water_fraction_total": 0.6349322854331898,
+        "solid_fraction_total": 0.36506771456681,
+        "lateral_200m_fraction_of_solid": 0.8695840650730904,
+        "central_deep_fraction_of_solid": 1.7171848314046594e-06,
+        "top_0p1_percent_cells_fraction_total": 0.8077136479397133,
+        "absolute_max_index_zx": [
+          10,
+          199
+        ]
+      },
+      "matched_fixed_profile": {
+        "total_squared_norm": 5.848864504692688e-05,
+        "water_fraction_total": 0.6416851493046591,
+        "solid_fraction_total": 0.3583148506953406,
+        "lateral_200m_fraction_of_solid": 0.8282521842192997,
+        "central_deep_fraction_of_solid": 2.26620908469303e-06,
+        "top_0p1_percent_cells_fraction_total": 0.7790852932835531,
+        "absolute_max_index_zx": [
+          9,
+          196
+        ]
+      },
+      "relative_l2_change_from_old": 0.4989490592110396
+    }
+  }
+}

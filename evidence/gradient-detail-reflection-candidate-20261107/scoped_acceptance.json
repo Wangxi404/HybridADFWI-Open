@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-07T06:46:37.832509+00:00",
+  "coordinate_gradient_passed": true,
+  "original_all_physical_gate_passed": false,
+  "physical_quality_screen_passed": true,
+  "parameterization_fixed_before_comparison": true,
+  "tolerance": 1e-08,
+  "max_coordinate_relative_l2": 7.816570601424159e-13,
+  "max_full_physical_relative_l2": 3.095655307700798e-07,
+  "summary_sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+  "raw_kernels_sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+  "physical_quality_sha256": "0864260db6cd895d18c97ce217ca76c7a4321a2be7e10c46ee4e315e016a1c36",
+  "scope": {
+    "quantity": "Actual dense inversion-coordinate derivative P^T g for m(theta)=m_initial+P*(theta-m_initial).",
+    "parameterization": "Fixed known water and 200m initial-valued lateral/bottom buffers, 100m raised-cosine transitions; P fixed before the AD/Hybrid comparison.",
+    "case": "One selected central shot, pressure objective, 6Hz, 6.25m grid, recorded t=0..3.5s, absorbing top, 96-cell/600m PML, fixed known-450m-water primary-arrival gate.",
+    "accepted_claim": "AD and Hybrid agree for this declared constrained-coordinate derivative at the unchanged 1e-8 tolerance.",
+    "full_physical_status": "Original full-physical threshold failed; full physical g remains auxiliary diagnostic evidence. Discrepancy cause unresolved.",
+    "physical_quality_limit": "Observed receiver trace screen passed for this configuration and time interval; no general stability proof, continuum grid-convergence or recovered-model claim.",
+    "density_limit": "True and initial density are the same constant; rho derivatives are objective sensitivities."
+  },
+  "evidence": {
+    "independent_audit": "independent_audit.json",
+    "independent_audit_sha256": "f5b76c97e722a9fdc531b705a3967fc5749935f484b9271db7fb18d90b775015",
+    "canonical_receipt": "local_canonical_receipt.json",
+    "canonical_receipt_sha256": "833eae87706efc4f14577fa86383235841f2206c0d4aeeb7378c2b1c2c704894",
+    "pressure_actual_float64_uint64_identical": true,
+    "pressure_array_sha256_AD": "e064144e930736232654b0dac18b368fa486482a5d004c9c7b4054491db303ba",
+    "pressure_array_sha256_H": "e064144e930736232654b0dac18b368fa486482a5d004c9c7b4054491db303ba",
+    "loss_AD_H_exact": true,
+    "fixed_model_observations_window_PML_script_identical": true,
+    "actual_evaluation_models_equal_prepared_initial": true,
+    "independent_geometry_window_max_absolute_error": 2.1094237467877974e-15,
+    "independent_pressure_cotangent_relative_l2": 1.7821107113459906e-16,
+    "public_gradient_arrays_exact_source_values": true
+  },
+  "publication_rule": "Explicit constrained-scope opt-in only. Keep summary.passed=false, disclose the failed full-physical gate in figure titles/reports, and verify these artifact hashes before plotting."
+}

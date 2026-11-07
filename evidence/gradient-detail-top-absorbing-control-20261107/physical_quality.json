@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-11-07",
+  "usable_for_geological_detail": false,
+  "trace_stability_screen_passed": false,
+  "interpretation_gate": "REJECT: absorbing-top alone retains late initial-model amplification",
+  "numeric_kernel_comparison": "not_run; native no-gradient truth/initial traces only",
+  "control_change": "free_surface=False; all other original 3.5s candidate settings retained, including 32-cell/200m PML",
+  "late_interval_s": [3.0, 3.5],
+  "truth_pressure_max_abs": 0.0017985176911714568,
+  "truth_pressure_rms": 0.0004518842553590677,
+  "initial_pressure_max_abs": 8.119059280911742,
+  "initial_pressure_rms": 0.4142995593644997,
+  "cause_established": false,
+  "scope": "Finite receiver traces are not sufficient to accept this configuration. No late-time muting or image processing repairs are applied."
+}

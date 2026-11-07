@@ -1,0 +1,475 @@
+{
+  "status": "PASS for scoped figure presentation at report/README export size; ORIGINAL ALL-PHYSICAL NUMERICAL GATE REMAINS FAILED",
+  "reviewed_utc": "2026-11-07T06:49:55.983343+00:00",
+  "workflow": "nature-figure Python source preflight, final PDF glyph/collision audits, render-time geometry and independent final-PDF title anchors, actual whole-figure and14 individual final-PDF panel inspections",
+  "plotting_source_modified": false,
+  "native_or_hybrid_simulation_rerun": false,
+  "numerical_acceptance_scope": {
+    "accepted_quantity": "Predeclared actual dense inversion-coordinate P^Tg only at unchanged1e-8 tolerance",
+    "original_summary_passed": false,
+    "full_physical_gate_passed": false,
+    "cause_of_full_physical_discrepancy": "Unresolved; this visual review does not repair or explain it.",
+    "not_claimed": [
+      "Recovered Marmousi model or thin-layer recovery",
+      "Continuum/interface-convergence validation",
+      "General stability proof",
+      "Validation of every full physical coefficient gradient"
+    ]
+  },
+  "data_integrity": {
+    "raw_shape": [
+      555,
+      401
+    ],
+    "canonical_arrays": {
+      "gradient_autograd_vp": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_autograd_coordinate_vp": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_vp": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_coordinate_vp": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_autograd_vs": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_autograd_coordinate_vs": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_vs": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_coordinate_vs": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_autograd_rho": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_autograd_coordinate_rho": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_rho": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      },
+      "gradient_hybrid_coordinate_rho": {
+        "shape": [
+          555,
+          401
+        ],
+        "dtype": "float64"
+      }
+    },
+    "errors": {
+      "vp": {
+        "autograd_PT_chain_linf": 0.0,
+        "hybrid_PT_chain_linf": 0.0,
+        "relative_l2": 3.4229929871571535e-08,
+        "coordinate_relative_l2": 7.816570601425126e-13
+      },
+      "vs": {
+        "autograd_PT_chain_linf": 0.0,
+        "hybrid_PT_chain_linf": 0.0,
+        "relative_l2": 3.0956553077009623e-07,
+        "coordinate_relative_l2": 3.112837707882704e-13
+      },
+      "rho": {
+        "autograd_PT_chain_linf": 0.0,
+        "hybrid_PT_chain_linf": 0.0,
+        "relative_l2": 3.387846291354239e-08,
+        "coordinate_relative_l2": 5.954243213830941e-14
+      }
+    },
+    "raw_sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+    "summary_sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+    "summary_passed": false,
+    "scoped_acceptance_sha256": "a5f3586d8699e6a87663437fb5e3502c25d8f9d30637d1042a111c663e535e14",
+    "model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+    "fixed_fraction": 0.3241445934712768,
+    "active_coordinate_chain_is_exact": true
+  },
+  "source_sha256": "0becf609a98c5ce1091b8c729b54942904e8a4876a0148a035d08f7a05d5a4e9",
+  "manifest_sha256_at_review": "301e68cb663263076f977faa060b3b26939d0b78a1627b9aaf4471e8daf0d2f4",
+  "figure_contract_sha256": "4822c27a67aebb6d23d4d736f3a68f014a486f15a3240c160f71052c04769c8e",
+  "figures": {
+    "models_and_active_gradients": {
+      "presentation_passed": true,
+      "files": {
+        "png": {
+          "sha256": "db48459d244e6de1b4d544124a25ad45db3ac145ac8623856f42329e4cf4acf7",
+          "bytes": 856398
+        },
+        "pdf": {
+          "sha256": "e46596a1c539663a3775d1263db9e6d8de8f3fcf28304c505e6a5116da84153a",
+          "bytes": 408659
+        },
+        "svg": {
+          "sha256": "4b34d577d3ee7fac729620909e3171002cdbafdeb97d12ad2d06c8a707afe85c",
+          "bytes": 1037923
+        }
+      },
+      "glyph_audit": {
+        "pdf": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI-Open/docs/figures/gradient_detail/models_and_active_gradients.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 162,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": {
+        "verdict": "PASS",
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        }
+      },
+      "alignment_audit": {
+        "verdict": "PASS",
+        "tolerance_pt": 1.5,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "comparisons": 8,
+          "exemptions": 0
+        }
+      },
+      "final_pdf_measurements": {
+        "physical_mm": [
+          299.71999138726125,
+          256.5400043063694
+        ],
+        "suptitle_runs": [
+          {
+            "text": "Marmousi-II marine-pressure gradients · Verified declared-coordinate derivatives; full-physical 1e−8 gate NOT met",
+            "bbox_pt": [
+              109.11250305175781,
+              5.42095947265625,
+              740.5606079101562,
+              18.22564697265625
+            ],
+            "size_pt": 11.0
+          },
+          {
+            "text": "6 Hz · 6.25 m grid · σ = 60 m · 1 shot(s) · fixed water/buffer",
+            "bbox_pt": [
+              260.45623779296875,
+              17.73345947265625,
+              589.0626220703125,
+              30.53814697265625
+            ],
+            "size_pt": 11.0
+          }
+        ],
+        "panel_title_row_y_spread_pt": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "panel_title_column_x_spread_pt": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0
+        }
+      },
+      "whole_figure_review": "Viewed actual final PNG plus final PDF geometry. Main scope text is complete, inside the page, high contrast and visually dominant; no title clipping, overlapping panels, truncated axes or colorbar labels.",
+      "panel_review": [
+        {
+          "id": "a",
+          "passed": true,
+          "observation": "True Vp input: water and dipping/faulted structure visible, axes and km/s colorbar intact; input model is kept separate from derivative evidence."
+        },
+        {
+          "id": "b",
+          "passed": true,
+          "observation": "Actual sigma60m initial Vp input: smooth structure and fixed water visible; same model color limits as panel a."
+        },
+        {
+          "id": "c",
+          "passed": true,
+          "observation": "Native AD Vp coordinate derivative: actual saved P^Tg, gray fixed coordinates, readable symmetric objective/[m/s] colorbar. Curved sensitivity bands are visible, not a recovered layered model."
+        },
+        {
+          "id": "d",
+          "passed": true,
+          "observation": "Hybrid Vp coordinate derivative: matches c visually on the shared numerical color scale; no title or colorbar clipping."
+        },
+        {
+          "id": "e",
+          "passed": true,
+          "observation": "True Vs input: zero-Vs water visible and solid layering intact; depth and original-x axes align with the row."
+        },
+        {
+          "id": "f",
+          "passed": true,
+          "observation": "Actual sigma60m initial Vs input: water remains zero, solid field is smooth; model scale matches e."
+        },
+        {
+          "id": "g",
+          "passed": true,
+          "observation": "Native AD Vs coordinate derivative: shallow oscillatory and weaker deep response visible; gray water/buffer corresponds to the declared static parameterization."
+        },
+        {
+          "id": "h",
+          "passed": true,
+          "observation": "Hybrid Vs coordinate derivative: same geometry and color scale as g; genuine derivative bands remain distinguishable from model input texture."
+        }
+      ]
+    },
+    "physical_and_active_gradients": {
+      "presentation_passed": true,
+      "files": {
+        "png": {
+          "sha256": "b0b01ed400104953ab9af2e1b0763e3f968688b44f3966f6801bde1b0a51a430",
+          "bytes": 1261394
+        },
+        "pdf": {
+          "sha256": "5c25a0748649938999cfd3d7f1ffd84042e318518a58c8fb6cecc5016d8c4c2d",
+          "bytes": 562876
+        },
+        "svg": {
+          "sha256": "b1bef29ac5905268c466a9625641219eae6728b9385f68b97e4fc83f466c2df8",
+          "bytes": 1385781
+        }
+      },
+      "glyph_audit": {
+        "pdf": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI-Open/docs/figures/gradient_detail/physical_and_active_gradients.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 122,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": {
+        "verdict": "PASS",
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        }
+      },
+      "alignment_audit": {
+        "verdict": "PASS",
+        "tolerance_pt": 1.5,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "comparisons": 7,
+          "exemptions": 0
+        }
+      },
+      "final_pdf_measurements": {
+        "physical_mm": [
+          261.6199913872613,
+          248.9199913872613
+        ],
+        "suptitle_runs": [
+          {
+            "text": "Diagnostic full physical g (strict gate failed) and verified declared-coordinate Pᵀg",
+            "bbox_pt": [
+              168.7531280517578,
+              5.36749267578125,
+              572.7301025390625,
+              17.00811767578125
+            ],
+            "size_pt": 10.0
+          },
+          {
+            "text": "Gray = fixed coordinates; density truth is constant, so its derivative is not a density image",
+            "bbox_pt": [
+              143.5890655517578,
+              16.55810546875,
+              597.6526489257812,
+              28.19873046875
+            ],
+            "size_pt": 10.0
+          }
+        ],
+        "panel_title_row_y_spread_pt": {
+          "0": 0.0,
+          "1": 0.0
+        },
+        "panel_title_column_x_spread_pt": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0
+        }
+      },
+      "whole_figure_review": "Viewed actual final PNG plus final PDF geometry. Main scope text is complete, inside the page, high contrast and visually dominant; no title clipping, overlapping panels, truncated axes or colorbar labels.",
+      "panel_review": [
+        {
+          "id": "a",
+          "passed": true,
+          "observation": "Full physical Vp diagnostic: all raw samples shown, including water/source-area sensitivity; the figure title explicitly states strict-gate failure."
+        },
+        {
+          "id": "b",
+          "passed": true,
+          "observation": "Full physical Vs diagnostic: water derivative is near zero/white and solid response is retained without an active-coordinate display mask."
+        },
+        {
+          "id": "c",
+          "passed": true,
+          "observation": "Full physical density diagnostic: objective/[kg/m^3] unit readable; density-truth-constant warning prevents a density-reconstruction interpretation."
+        },
+        {
+          "id": "d",
+          "passed": true,
+          "observation": "Actual Vp P^Tg: gray water/lateral/bottom fixed coordinates are distinct from true zero derivative white; source data are the stored coordinate derivative."
+        },
+        {
+          "id": "e",
+          "passed": true,
+          "observation": "Actual Vs P^Tg: high-frequency shallow response and weaker depth response remain visible, with complete labels and colorbar."
+        },
+        {
+          "id": "f",
+          "passed": true,
+          "observation": "Actual density P^Tg: saved coordinate sensitivity is displayed with its own correct density unit and the fixed-coordinate boundary is legible."
+        }
+      ]
+    }
+  },
+  "display_integrity": {
+    "raw_grid_shape": [
+      555,
+      401
+    ],
+    "uses_stride2_preview": false,
+    "all12_canonical_physical_and_coordinate_fields_finite": true,
+    "stored_coordinate_gradients_equal_P_times_physical_exactly": true,
+    "gradient_modification": "None. No smoothing, sharpening, illumination/depth gain, or inserted model texture. Linear symmetric display saturation is explicitly manifested.",
+    "coordinate_mask": "Gray denotes predeclared fixed coordinates, not deleted observations or a posthoc physical-gradient cleaning mask.",
+    "density": "True/initial rho are the same constant; the figure states density derivatives are sensitivities, not a density image.",
+    "gradient_scales_and_saturation": {
+      "vp": {
+        "display": "linear symmetric percentile over full-weight coordinates; same scale for AD and Hybrid",
+        "percentile": 99.0,
+        "absolute_limit": 1.0094483294853585e-06,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_active": [
+          0.008802313599042648,
+          0.008802313599042648
+        ],
+        "relative_l2": 7.816570601425126e-13
+      },
+      "vs": {
+        "display": "linear symmetric percentile over full-weight coordinates; same scale for AD and Hybrid",
+        "percentile": 99.0,
+        "absolute_limit": 4.97994189501776e-07,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_active": [
+          0.008802313599042648,
+          0.008802313599042648
+        ],
+        "relative_l2": 3.112837707882704e-13
+      },
+      "vp_physical": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 1.0092274797276884e-06,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.008784345442699558
+      },
+      "vp_constrained": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 1.0092274797276884e-06,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.008802313599042648
+      },
+      "vs_physical": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 4.977709182722689e-07,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.005958077778526656
+      },
+      "vs_constrained": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 4.977709182722689e-07,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.008802313599042648
+      },
+      "rho_physical": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 5.436858543874397e-07,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.009062928264923277
+      },
+      "rho_constrained": {
+        "display": "linear symmetric percentile over full-weight coordinates",
+        "percentile": 99.0,
+        "absolute_limit": 5.436858543874397e-07,
+        "gradient_values_modified": false,
+        "saturated_fraction_of_displayed": 0.008802313599042648
+      }
+    }
+  },
+  "accepted_source_warnings": [
+    "Report dimensions are299.72mm and261.62mm wide; this is not certification for a183mm journal production figure. Rescaling requires renewed glyph/collision checks.",
+    "300dpi PNG is a preview, with editable PDF/SVG exports; no600dpi/TIFF submission claim."
+  ],
+  "blocking_findings": [],
+  "qa_only_panel_crops": "/private/tmp/gradient-detail-20261107/hybrid-panels; not scientific delivery artifacts",
+  "summary_preservation": {
+    "path": "/Users/sid/seismo/ADInversion/hybridAD/HybridADFWI-Open/evidence/gradient-detail-reflection-candidate-20261107/summary.json",
+    "sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+    "passed": false
+  }
+}

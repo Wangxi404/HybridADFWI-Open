@@ -1,0 +1,34 @@
+{
+  "physical_derivative": "gradient_{autograd|hybrid}_{vp|vs|rho}",
+  "constrained_coordinate_derivative": "gradient_{autograd|hybrid}_coordinate_{vp|vs|rho}",
+  "parameter_map": "m=m_initial+active_mask*(theta-m_initial)",
+  "numeric_transform_during_collection": "none; redundant aliases only removed",
+  "array_keys": [
+    "gradient_autograd_vp",
+    "gradient_hybrid_vp",
+    "gradient_autograd_vs",
+    "gradient_hybrid_vs",
+    "gradient_autograd_rho",
+    "gradient_hybrid_rho",
+    "gradient_autograd_coordinate_vp",
+    "gradient_hybrid_coordinate_vp",
+    "gradient_autograd_coordinate_vs",
+    "gradient_hybrid_coordinate_vs",
+    "gradient_autograd_coordinate_rho",
+    "gradient_hybrid_coordinate_rho",
+    "x_m",
+    "z_m",
+    "source_x_m",
+    "source_z_m",
+    "receiver_x_m",
+    "receiver_z_m",
+    "active_mask",
+    "selected_shot_ids"
+  ],
+  "not_distributed": [
+    "kernel_preview",
+    "evaluation_model_*",
+    "prepared model arrays",
+    "source SEG-Y"
+  ]
+}

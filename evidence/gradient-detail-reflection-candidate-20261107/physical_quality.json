@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-11-07",
+  "usable_for_geological_detail": true,
+  "accepted_scope": "Only the actual explicitly constrained theta-coordinate derivatives, after the hash-bound independent scoped audit",
+  "requires_hash_bound_scoped_audit": true,
+  "scoped_audit_file": "scoped_acceptance.json",
+  "interpretation_gate": "SCOPED COORDINATE DEMONSTRATOR; ORIGINAL FULL-PHYSICAL 1e-8 GATE FAILED",
+  "original_summary_passed": false,
+  "full_physical_agreement_passed": false,
+  "full_physical_tolerance": 1e-8,
+  "full_physical_relative_l2": {
+    "vp": 3.4229929871571396e-8,
+    "vs": 3.095655307700943e-7,
+    "rho": 3.387846291354229e-8
+  },
+  "actual_coordinate_agreement_passed": true,
+  "actual_coordinate_tolerance": 1e-8,
+  "actual_coordinate_relative_l2": {
+    "vp": 7.816570601425109e-13,
+    "vs": 3.1128377078826973e-13,
+    "rho": 5.954243213830936e-14
+  },
+  "parameterization": "m(theta)=m_initial+P(theta-m_initial), P=0 in known water and fixed initial-valued lateral/bottom buffers, raised-cosine transition; actual coordinate derivative is P^T g_physical",
+  "no_true_boundary_structure_inserted_into_initial": true,
+  "receiver_pressure_uint64_identical": true,
+  "trace_stability_screen_passed": true,
+  "trace_screen_scope": "Native absorbing top with 96-cell/600m PML, the selected central shot, and the recorded 3.5s window; truth and initial receiver amplitudes decay at late time. This is not a general stability proof.",
+  "fixed_data_objective": "Pressure L2 with a known-450m-water-depth primary-arrival gate, +0.25s delay and 1/f0 raised-cosine fade; no unknown target layers used in weights",
+  "geological_response_visually_reviewed": true,
+  "shown_quantity_is_recovered_model": false,
+  "physical_accuracy_independently_validated": false,
+  "auxiliary_gradient_discrepancy": "Discrepancy is concentrated in the frozen P=0 domain; the cause is unresolved. Active-coordinate agreement does not repair or erase the failed full-physical test.",
+  "publication_rule": "Every main figure and report must identify the constrained-coordinate scope and disclose the failed full-physical gate. Full physical arrays remain available as diagnostics. Do not rewrite summary.passed or relax its threshold.",
+  "excluded_from_public_data_bundle": ["kernel_preview", "input SEG-Y", "prepared/evaluation model arrays"]
+}

@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "config": {
+    "name": "Marmousi-II marine-pressure detail shallow numerical pilot",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_pilot_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 161,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 1801,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 43,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.1,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Shallow 0-1km, 0.9s numerical pilot only; not the full-depth gradient illustration",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-pilot-20261107/observations.npz"
+  },
+  "shots": [
+    {
+      "shot_id": 1,
+      "pressure_bitwise_equal": true,
+      "kernels": {
+        "vp": {
+          "relative_l2": 1.3952370506428657e-15,
+          "cosine": 0.9999999999999998
+        },
+        "vs": {
+          "relative_l2": 1.4869334103007884e-15,
+          "cosine": 1.0000000000000002
+        },
+        "rho": {
+          "relative_l2": 9.973452887130525e-16,
+          "cosine": 1.0
+        }
+      }
+    }
+  ],
+  "mean_kernel_agreement": {
+    "vp": {
+      "relative_l2": 1.3952370506428657e-15,
+      "cosine": 0.9999999999999998
+    },
+    "vs": {
+      "relative_l2": 1.4869334103007884e-15,
+      "cosine": 1.0000000000000002
+    },
+    "rho": {
+      "relative_l2": 9.973452887130525e-16,
+      "cosine": 1.0
+    },
+    "coordinate_vp": {
+      "relative_l2": 1.0619036358332893e-15,
+      "cosine": 0.9999999999999999
+    },
+    "coordinate_vs": {
+      "relative_l2": 1.486933410424832e-15,
+      "cosine": 1.0
+    },
+    "coordinate_rho": {
+      "relative_l2": 9.069402229267273e-16,
+      "cosine": 1.0000000000000002
+    }
+  },
+  "mean_loss": {
+    "autograd": 0.32657187903108165,
+    "hybrid": 0.32657187903108165
+  },
+  "shot_aggregation": "Arithmetic mean of each selected shot's separately fixed-RMS normalized scalar objective and its raw derivative, identically for AD and Hybrid",
+  "gradient_processing": "none; fixed data weights belong to objective; constrained-coordinate derivatives are actual P^T chain-rule VJPs, saved separately from full physical derivatives; no model-gradient preconditioning",
+  "limitation": "Changed grid, marine pressure acquisition, frequency, loss and sigma60m initial model form a separate illustrative experiment, not a continuation or improvement score for the old performance benchmark."
+}

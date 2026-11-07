@@ -1,0 +1,14 @@
+{
+  "claim": "AD and Hybrid agree for the predeclared constrained inversion coordinates; the original full-physical gradient gate failed and remains failed.",
+  "backend": "python",
+  "archetype": "image plate + quant",
+  "comparison": "Different grid/acquisition/starting model from the old performance benchmark; no performance improvement score.",
+  "panels": [
+    "true input",
+    "actual Gaussian initial input",
+    "AD active-coordinate derivative",
+    "Hybrid active-coordinate derivative"
+  ],
+  "integrity": "No derivative smoothing, illumination division, sharpening or inserted model texture. Only explicitly manifested display saturation.",
+  "export": "Editable PDF/SVG and 300 dpi PNG; >5pt text; measured alignment and rendered collision QA."
+}

@@ -1,0 +1,602 @@
+{
+  "name": "Marmousi-II horizontal ROI; not the full original model",
+  "experiment": "Marmousi-II marine-pressure detail shallow numerical pilot",
+  "grid": {
+    "nx": 401,
+    "nz": 161,
+    "dx": 6.25,
+    "dz": 6.25,
+    "ox": 8000.0,
+    "oz": 0.0
+  },
+  "x_extent_m": [
+    8000.0,
+    10500.0
+  ],
+  "z_extent_m": [
+    0.0,
+    1000.0
+  ],
+  "sources": {
+    "vp_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/vp_marmousi-ii.segy.gz",
+      "sha256": "2c7a0c4170c95a15620c2146573711c61a4cef8dc27338ef6c211a81ffa68920",
+      "bytes": 1766045
+    },
+    "vs_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/vs_marmousi-ii.segy.gz",
+      "sha256": "c88bec68fc4bd7c6e624737a20ecd3241c90e10512103e28e61b344fb5baed7d",
+      "bytes": 1768606
+    },
+    "density_marmousi-ii.segy.gz": {
+      "url": "https://www.agl.uh.edu/downloads/density_marmousi-ii.segy.gz",
+      "sha256": "9832e20ce1f79470fa8c100e79d66566cf8c1c162baa4289f37e7ee0b96f1e67",
+      "bytes": 1732687
+    }
+  },
+  "source_shapes_xz": {
+    "vp": [
+      13601,
+      2801
+    ],
+    "vs": [
+      13601,
+      2801
+    ],
+    "rho": [
+      13601,
+      2801
+    ]
+  },
+  "resampling": "bilinear from source SEG-Y; SI x1000, arrays z,x",
+  "dtype": "float64",
+  "initial_smoothing_sigma_m": 60.0,
+  "initial_model": "normalized Gaussian within solid; true water restored; a closer starting model than old sigma150m benchmark",
+  "density": "constant2450kg/m3, same control convention as old benchmark",
+  "water_cells": 29273,
+  "dispersion": {
+    "definition": "sin(omega_num*dt/2)=c*dt/h*sqrt(S(kx*h)^2+S(kz*h)^2), S(q)=sum_j a_j sin((j+1/2)q)",
+    "fd_coefficients_upstream_float32": [
+      1.1962883472442627,
+      -0.07975222915410995,
+      0.009570217691361904,
+      -0.0006975323194637895
+    ],
+    "dt_s": 0.0005,
+    "spacing_m": 6.25,
+    "cfl_max_vp_dt_over_dx": 0.18832000732421875,
+    "scope": "Homogeneous elastic eigenmodes on axis/diagonal/intermediate angles; excludes material staggering, sharp interfaces, PML and accumulated propagation error. Pressure data are P-dominated; Vs kernels still arise through conversions/coupling.",
+    "rows": [
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 8.090666135152182,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000007843627077,
+        "relative_phase_velocity_error": 7.843627076731252e-07
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 8.090666135152182,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.000004814311806,
+        "relative_phase_velocity_error": 4.814311806100591e-06
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 8.090666135152182,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000113653454115,
+        "relative_phase_velocity_error": 1.1365345411462613e-05
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 8.090666135152182,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000138778368126,
+        "relative_phase_velocity_error": 1.3877836812614674e-05
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 4.045333067576091,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9975172482355096,
+        "relative_phase_velocity_error": -0.0024827517644904207
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 4.045333067576091,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9982062890103104,
+        "relative_phase_velocity_error": -0.001793710989689612
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 4.045333067576091,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9993795558078009,
+        "relative_phase_velocity_error": -0.0006204441921990878
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 4.045333067576091,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9998594684537229,
+        "relative_phase_velocity_error": -0.00014053154627713393
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 3.236266454060872,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9883573670841806,
+        "relative_phase_velocity_error": -0.011642632915819351
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 3.236266454060872,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9913953959826635,
+        "relative_phase_velocity_error": -0.008604604017336537
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 3.236266454060872,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9967498001465412,
+        "relative_phase_velocity_error": -0.0032501998534587573
+      },
+      {
+        "speed_label": "minimum_positive_vs",
+        "speed_m_s": 303.3999800682068,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 3.236266454060872,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9990459401381238,
+        "relative_phase_velocity_error": -0.0009540598618762441
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 9.05829906463623,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000089880008343,
+        "relative_phase_velocity_error": 8.988000834264653e-06
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 9.05829906463623,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000106673035856,
+        "relative_phase_velocity_error": 1.0667303585565335e-05
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 9.05829906463623,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000133894168313,
+        "relative_phase_velocity_error": 1.3389416831266487e-05
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 9.05829906463623,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000144293282638,
+        "relative_phase_velocity_error": 1.4429328263787511e-05
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 4.529149532318115,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.998929950204086,
+        "relative_phase_velocity_error": -0.0010700497959139632
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 4.529149532318115,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9992410460182938,
+        "relative_phase_velocity_error": -0.000758953981706223
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 4.529149532318115,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.9997641555201677,
+        "relative_phase_velocity_error": -0.00023584447983227008
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 4.529149532318115,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 0.999974451685883,
+        "relative_phase_velocity_error": -2.554831411705205e-05
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 3.623319625854492,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9946067879467907,
+        "relative_phase_velocity_error": -0.005393212053209306
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 3.623319625854492,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.996064356131524,
+        "relative_phase_velocity_error": -0.003935643868476002
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 3.623319625854492,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9985842770394684,
+        "relative_phase_velocity_error": -0.0014157229605316068
+      },
+      {
+        "speed_label": "vs_p05_positive",
+        "speed_m_s": 339.68621492385864,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 3.623319625854492,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 0.9996367978124034,
+        "relative_phase_velocity_error": -0.0003632021875965563
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 40.0,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.000014825122152,
+        "relative_phase_velocity_error": 1.4825122151895798e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 40.0,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148253644547,
+        "relative_phase_velocity_error": 1.4825364454740253e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 40.0,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148258439396,
+        "relative_phase_velocity_error": 1.4825843939636485e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 40.0,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148260811197,
+        "relative_phase_velocity_error": 1.482608111968986e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 20.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592307006742,
+        "relative_phase_velocity_error": 5.923070067415104e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 20.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592348484023,
+        "relative_phase_velocity_error": 5.923484840231197e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 20.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592418652228,
+        "relative_phase_velocity_error": 5.9241865222769974e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 20.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592447331118,
+        "relative_phase_velocity_error": 5.9244733111807335e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 16.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000924959796744,
+        "relative_phase_velocity_error": 9.249597967442291e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 16.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925164290335,
+        "relative_phase_velocity_error": 9.251642903351787e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 16.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925498436164,
+        "relative_phase_velocity_error": 9.254984361639629e-05
+      },
+      {
+        "speed_label": "water_vp",
+        "speed_m_s": 1500.0,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 16.0,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925627978519,
+        "relative_phase_velocity_error": 9.256279785185839e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 62.77333577473958,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148262551696,
+        "relative_phase_velocity_error": 1.4826255169575475e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 62.77333577473958,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.000014826348704,
+        "relative_phase_velocity_error": 1.4826348704088943e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 62.77333577473958,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148265356334,
+        "relative_phase_velocity_error": 1.4826535633449822e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 6.0,
+        "frequency_multiple": 1.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 62.77333577473958,
+        "ricker_amplitude_relative_to_spectral_peak": 1.0,
+        "numerical_phase_velocity_over_physical": 1.0000148266290279,
+        "relative_phase_velocity_error": 1.4826629027853144e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 31.38666788736979,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592458168849,
+        "relative_phase_velocity_error": 5.924581688487862e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 31.38666788736979,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592462785842,
+        "relative_phase_velocity_error": 5.9246278584224044e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 31.38666788736979,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592471665375,
+        "relative_phase_velocity_error": 5.9247166537490514e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 12.0,
+        "frequency_multiple": 2.0,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 31.38666788736979,
+        "ricker_amplitude_relative_to_spectral_peak": 0.19914827347145578,
+        "numerical_phase_velocity_over_physical": 1.0000592475927779,
+        "relative_phase_velocity_error": 5.924759277786684e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 0.0,
+        "points_per_wavelength": 25.109334309895836,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925662089477,
+        "relative_phase_velocity_error": 9.256620894770862e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 15.0,
+        "points_per_wavelength": 25.109334309895836,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925673189935,
+        "relative_phase_velocity_error": 9.256731899354165e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 30.0,
+        "points_per_wavelength": 25.109334309895836,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.00009256932941,
+        "relative_phase_velocity_error": 9.256932941004159e-05
+      },
+      {
+        "speed_label": "maximum_vp",
+        "speed_m_s": 2354.0000915527344,
+        "frequency_hz": 15.0,
+        "frequency_multiple": 2.5,
+        "angle_degrees": 45.0,
+        "points_per_wavelength": 25.109334309895836,
+        "ricker_amplitude_relative_to_spectral_peak": 0.03279698999488365,
+        "numerical_phase_velocity_over_physical": 1.0000925702296555,
+        "relative_phase_velocity_error": 9.257022965547534e-05
+      }
+    ]
+  },
+  "script_sha256": "ed2b889ce3c7ee105d28630c9502643fd1023278fa8f287edc823d14d85f46f0",
+  "prepared_sha256": "0006883eaf715180658dd45cc8c970b175a39c370a279c8737c512b82a6c2495"
+}

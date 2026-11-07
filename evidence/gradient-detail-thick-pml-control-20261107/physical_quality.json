@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-11-07",
+  "usable_for_geological_detail": false,
+  "trace_stability_screen_passed": true,
+  "interpretation_gate": "TRACE-CONTROL ONLY: proceed to a new matched-gradient candidate, not yet a geological-detail result",
+  "numeric_kernel_comparison": "not_run; native no-gradient truth/initial traces only",
+  "control_change": "From the absorbing-top control, increase only nabc from32 to96, physical PML thickness200m to600m",
+  "late_interval_s": [3.0, 3.5],
+  "truth_pressure_max_abs": 0.0018180673924606786,
+  "truth_pressure_rms": 0.0004425004081562758,
+  "initial_pressure_max_abs": 0.0007932706175944636,
+  "initial_pressure_rms": 0.00011009568836115143,
+  "cumulative_normal_stress_energy_hotspot": "source index(z,x)=(16,200) for both models, rather than the lateral water-solid corner",
+  "scope": "The measured 3.5s receiver trace amplification is absent with this native parameter choice. This is not an eigenvalue proof, a convergence test, or a general guarantee of physical accuracy."
+}

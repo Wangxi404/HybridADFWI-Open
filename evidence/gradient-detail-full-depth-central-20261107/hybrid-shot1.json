@@ -1,0 +1,109 @@
+{
+  "status": "ok",
+  "method": "hybrid",
+  "shot_id": 1,
+  "loss": 274.59383563941407,
+  "kernel_l2": {
+    "vp": 213.90165095429737,
+    "vs": 3951.66119092048,
+    "rho": 709.9445189506436
+  },
+  "created_utc": "2026-11-07T05:52:27.003203+00:00",
+  "timing": {
+    "forward_s": 63.359888684004545,
+    "objective_and_source_s": 0.006700111553072929,
+    "backward_s": 183.91470469720662,
+    "total_s": 247.28129349276423
+  },
+  "cuda_peak_allocated_bytes": 4145783296,
+  "cuda_peak_reserved_bytes": 4406116352,
+  "rss_before_bytes": 776138752,
+  "config": {
+    "name": "Marmousi-II marine-pressure gradient detail horizontal ROI, full benchmark depth",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Horizontal ROI x8-10.5km, z0-3.4625km; not the original full 17km Marmousi-II extent; run shots sequentially and compare both derivatives for every displayed shot",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-full-depth-central-20261107/observations.npz"
+  },
+  "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+  "pytorch": "2.6.0+cu118",
+  "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+  "model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "observations_sha256": "b033c0975ba116e9d02e2a9f10b2b480c0ebc19cc9391440612e785501b57067",
+  "script_sha256": "a36c4e8871cf3456294e61b3b7f8bb3f20df4b7bffdea5fbd537c1e04629873a",
+  "gradient_processing": "none; raw derivative of explicit fixed-window pressure objective",
+  "parameterization": "m(theta)=m_initial+P*(theta-m_initial), diagonal P=0 in known water and fixed lateral/bottom buffer, raised-cosine transition; fixed buffer values come only from initial model. True observations use original true MII without this map. AD differentiates P map; Hybrid applies its exact P^T VJP. Full physical and constrained-coordinate derivatives saved separately.",
+  "pml_profile": {
+    "reference_vmax_m_s": 4700.0,
+    "bcx_sha256": "2b1fa0d51618a8f386a9ae3b44135b663d4ad0433282832e5907f046c4fc5e55",
+    "bcz_sha256": "8662060f7d725fe179ad1e704168b5a037fda1cb3f7ee397701d96e7360ed6ea",
+    "fixed_for_truth_initial_and_model_derivatives": true
+  },
+  "window": {
+    "formula": "raised_cosine((abs(offset)-min_offset)/offset_width) * raised_cosine((t-1.5/f0-abs(offset)/1500-direct_mute_after)/time_width) * raised_cosine((t_last-t)/end_width), each ramp clamped [0,1]",
+    "sha256": "cea3f05e32390c109d1bc602a758fe5648590dba6fae3a656bbf92efdd7d49b2",
+    "positive_fraction": 0.6510516243908367,
+    "scale_windowed_observed_rms": 0.0023259456006994943,
+    "parameters_are_fixed_before_derivative": true
+  },
+  "data_objective": "0.5*mean((fixed_window*(pressure-p_observed)/fixed_windowed_observation_RMS)^2)",
+  "performance_scope": "Cold functional detail experiment; not a warmed repeated benchmark; timing not comparable to old benchmark",
+  "adapter_details": {
+    "checkpointing": true,
+    "checkpoint_segments": 84,
+    "checkpoint_state_tensors": 1260,
+    "saved_history_steps": 0,
+    "saved_history_fields_per_step": 0,
+    "instrumented_native_source_sha256": null,
+    "temporal_autograd": false,
+    "replay_seconds": 66.94136249739677,
+    "adjoint_seconds": 116.96158139500767,
+    "static_material_vjp_seconds": 0.0033883322030305862,
+    "peak_history_steps": 84,
+    "static_material_autograd": true
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "status": "ok",
+  "method": "hybrid",
+  "shot_id": 1,
+  "loss": 0.32657187903108165,
+  "kernel_l2": {
+    "vp": 0.0021811608139215423,
+    "vs": 0.00015580042914149184,
+    "rho": 0.0011645430949881143
+  },
+  "created_utc": "2026-11-07T05:36:27.732200+00:00",
+  "timing": {
+    "forward_s": 16.69368994794786,
+    "objective_and_source_s": 0.0056531960144639015,
+    "backward_s": 46.312812430784106,
+    "total_s": 63.01215557474643
+  },
+  "cuda_peak_allocated_bytes": 757665280,
+  "cuda_peak_reserved_bytes": 1061158912,
+  "rss_before_bytes": 743563264,
+  "config": {
+    "name": "Marmousi-II marine-pressure detail shallow numerical pilot",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_pilot_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 161,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 1801,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 43,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.1,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Shallow 0-1km, 0.9s numerical pilot only; not the full-depth gradient illustration",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-pilot-20261107/observations.npz"
+  },
+  "python": "3.9.21 (main, Dec 11 2024, 16:24:11) \n[GCC 11.2.0]",
+  "pytorch": "2.6.0+cu118",
+  "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+  "model_sha256": "0006883eaf715180658dd45cc8c970b175a39c370a279c8737c512b82a6c2495",
+  "observations_sha256": "72025fe8ed9c62f4d995160ab3e0389bbd1e4dc02c51c51d598cbcba3b848fbe",
+  "script_sha256": "a21b629026cc7226f37b735bca248de8b7d67a0c0d95fd5431cec6730de0e5c5",
+  "gradient_processing": "none; raw derivative of explicit fixed-window pressure objective",
+  "parameterization": "m(theta)=m_initial+P*(theta-m_initial), diagonal P=0 in known water and fixed lateral/bottom buffer, raised-cosine transition; fixed buffer values come only from initial model. True observations use original true MII without this map. AD differentiates P map; Hybrid applies its exact P^T VJP. Full physical and constrained-coordinate derivatives saved separately.",
+  "pml_profile": {
+    "reference_vmax_m_s": 4700.0,
+    "bcx_sha256": "9ada88e3e094df88ece2b5642b370dcef101917f57af94f4b494a18ce9a33ba6",
+    "bcz_sha256": "26cbdc187004320e09edd57ffebfeb2e91cd024c19b89e773bd3f962c4ab238c",
+    "fixed_for_truth_initial_and_model_derivatives": true
+  },
+  "window": {
+    "formula": "raised_cosine((abs(offset)-min_offset)/offset_width) * raised_cosine((t-1.5/f0-abs(offset)/1500-direct_mute_after)/time_width) * raised_cosine((t_last-t)/end_width), each ramp clamped [0,1]",
+    "sha256": "207056467268871283dbbcf1849b79bed74172e5281571c66ae7704da2a225c0",
+    "positive_fraction": 0.09616465662623594,
+    "scale_windowed_observed_rms": 0.0001777414848101212,
+    "parameters_are_fixed_before_derivative": true
+  },
+  "data_objective": "0.5*mean((fixed_window*(pressure-p_observed)/fixed_windowed_observation_RMS)^2)",
+  "performance_scope": "Cold functional detail experiment; not a warmed repeated benchmark; timing not comparable to old benchmark",
+  "adapter_details": {
+    "checkpointing": true,
+    "checkpoint_segments": 43,
+    "checkpoint_state_tensors": 645,
+    "saved_history_steps": 0,
+    "saved_history_fields_per_step": 0,
+    "instrumented_native_source_sha256": null,
+    "temporal_autograd": false,
+    "replay_seconds": 16.539961533620954,
+    "adjoint_seconds": 29.76363061275333,
+    "static_material_vjp_seconds": 0.0031737852841615677,
+    "peak_history_steps": 42,
+    "static_material_autograd": true
+  }
+}

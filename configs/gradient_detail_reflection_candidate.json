@@ -1,0 +1,20 @@
+{
+  "name": "Marmousi-II reflection-focused pressure candidate with absorbing top and 600m PML",
+  "model": "data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+  "grid": {"nx": 401, "nz": 555, "dx": 6.25, "dz": 6.25, "ox": 8000.0, "oz": 0.0},
+  "initial_smoothing_sigma_m": 60.0,
+  "fixed_pml_reference_vmax_m_s": 4700.0,
+  "constrained_coordinates": true, "fixed_buffer_m": 200.0, "parameter_taper_m": 100.0,
+  "fixed_boundary_reference": "initial_model", "known_true_boundary": false,
+  "device": "cuda", "nt": 7001, "dt": 0.0005, "f0": 6.0,
+  "shots": 3, "selected_shots": [1], "receivers": 161,
+  "depth_m": 100.0, "nabc": 96, "free_surface": false,
+  "fd_order": 8, "dtype": "float64", "parameters": ["vp", "vs", "rho"],
+  "segments": 84, "threads": 1, "checkpointing": true,
+  "minimum_offset_m": 150.0, "offset_taper_m": 100.0,
+  "mute_reference": "known_seafloor_primary", "known_water_depth_m": 450.0,
+  "mute_velocity_m_s": 1500.0, "seafloor_mute_after_s": 0.25,
+  "time_taper_s": 0.16666666666666666, "end_taper_s": 0.15,
+  "objective": "known_seafloor_primary_muted_pressure_l2", "tolerance": 1e-8,
+  "scope": "Separate illustration: horizontal ROI x8-10.5km,z0-3.4625km, absorbing top (no ocean-surface ghost), unknown solid central coordinates. Fixed known-water arrival gate excludes primary data, not every shallow-model sensitivity. No claim of recovered model or globally validated physical accuracy. Run Hybrid diagnostic first, then matching AD before acceptance."
+}

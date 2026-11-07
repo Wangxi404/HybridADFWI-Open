@@ -1,0 +1,3 @@
+FORWARD_START hybrid 1
+FORWARD_DONE hybrid 1 16.69368994794786
+{"method": "hybrid", "shot": 1, "loss": 0.32657187903108165, "timing": {"forward_s": 16.69368994794786, "objective_and_source_s": 0.0056531960144639015, "backward_s": 46.312812430784106, "total_s": 63.01215557474643}, "kernel_l2": {"vp": 0.0021811608139215423, "vs": 0.00015580042914149184, "rho": 0.0011645430949881143}}

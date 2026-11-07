@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-11-07",
+  "case": "gradient-detail-full-depth-central-20261107",
+  "usable_for_geological_detail": false,
+  "interpretation_gate": "REJECT_FOR_GEOLOGICAL_DETAIL: late receiver-trace amplification in the initial-model solve",
+  "numeric_adjoint_agreement_passed": true,
+  "numeric_agreement_tolerance": 1e-8,
+  "pressure_bitwise_equal": true,
+  "physical_kernel_relative_l2_ad_hybrid": {
+    "vp": 4.837517001173064e-9,
+    "vs": 6.986986007319315e-10,
+    "rho": 9.388522200070415e-10
+  },
+  "active_kernel_relative_l2_ad_hybrid": {
+    "vp": 1.5514400064241605e-9,
+    "vs": 3.9759530364984135e-10,
+    "rho": 6.286288326259109e-10
+  },
+  "objective_value": 274.59383563941407,
+  "late_growth_evidence": {
+    "early_interval_s": [0.0, 1.0],
+    "early_pressure_max_abs_prediction": 0.7192383153115858,
+    "early_pressure_max_abs_observation": 0.7192383153115858,
+    "late_interval_s": [3.0, 3.5],
+    "late_pressure_max_abs_prediction": 11.913184485879043,
+    "late_pressure_max_abs_observation": 0.004254916193458965,
+    "late_prediction_rms_over_fixed_weighted_observation_rms": 217.46084044649052,
+    "late_observation_rms_over_fixed_weighted_observation_rms": 0.4528449609518253,
+    "physical_gradient_max_locations_x_z_m": {
+      "vp": [8012.5, 456.25],
+      "vs": [8006.25, 456.25],
+      "rho": [8000.0, 456.25]
+    },
+    "location_description": "Left physical boundary, first solid row at the water-solid interface; these locations are outside the active coordinate region"
+  },
+  "active_gradient_energy_fraction_deeper_than_2km": {
+    "vp": 1.496236463474087e-7,
+    "vs": 9.948916468350855e-7,
+    "rho": 4.235263274973109e-5
+  },
+  "cause_established": false,
+  "next_single_factor_control": "Unmodified native free_surface=False, same model/grid/source/time/PML reference, truth and initial no-gradient traces",
+  "evidence_policy": "Keep every raw full-physical and active-coordinate kernel plus the numerical PASS. Do not hide amplification with late-time objective muting, image saturation, smoothing or preconditioning. This is a negative stability case, not a successful deep-gradient illustration.",
+  "physical_accuracy_independently_validated": false,
+  "scope_of_uniform_dispersion_analysis": "Uniform-medium FD8 plane-wave checks do not establish heterogeneous water-solid/interface/free-surface stability"
+}

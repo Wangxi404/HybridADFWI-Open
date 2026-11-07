@@ -1,0 +1,300 @@
+{
+  "reviewer_only": true,
+  "native_solver_runs": 0,
+  "model_arrays_included": false,
+  "source_npz_sha256": "c94dac87a8a76c01186d6fc398e9ba3644274db617e9c9db2c990539b57c8e93",
+  "gradient_definition": "raw g_m and diagonal-map coordinate derivative g_theta=P^T g_m retained separately; norm fractions are sum(g^2) within one physical parameter family",
+  "kernels": {
+    "vp": {
+      "physical_AD_hybrid_relative_l2": 1.3952370506428657e-15,
+      "coordinate_AD_hybrid_relative_l2": 1.0619036358332877e-15,
+      "AD_map_exact": true,
+      "hybrid_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 0.002181160813921535,
+      "coordinate_l2": 0.0005727319401472996,
+      "physical_water_squared_norm_fraction": 0.9310510854070725,
+      "physical_inactive_squared_norm_fraction": 0.9310510854070725,
+      "coordinate_squared_norm_over_physical": 0.06894891457952657,
+      "physical_peak_xz_m": [
+        9250.0,
+        100.0
+      ],
+      "coordinate_peak_xz_m": [
+        9243.75,
+        456.25
+      ]
+    },
+    "vs": {
+      "physical_AD_hybrid_relative_l2": 1.486933410300785e-15,
+      "coordinate_AD_hybrid_relative_l2": 1.4869334104248299e-15,
+      "AD_map_exact": true,
+      "hybrid_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 0.00015580042914149168,
+      "coordinate_l2": 0.00015580042912162424,
+      "physical_water_squared_norm_fraction": 0.0,
+      "physical_inactive_squared_norm_fraction": 1.3278842709240712e-18,
+      "coordinate_squared_norm_over_physical": 0.9999999997449648,
+      "physical_peak_xz_m": [
+        9093.75,
+        475.0
+      ],
+      "coordinate_peak_xz_m": [
+        9093.75,
+        475.0
+      ]
+    },
+    "rho": {
+      "physical_AD_hybrid_relative_l2": 9.973452887130523e-16,
+      "coordinate_AD_hybrid_relative_l2": 9.069402229267257e-16,
+      "AD_map_exact": true,
+      "hybrid_map_exact": true,
+      "inactive_coordinate_exact_zero": true,
+      "physical_l2": 0.0011645430949881101,
+      "coordinate_l2": 0.0003115265064520675,
+      "physical_water_squared_norm_fraction": 0.928438591404137,
+      "physical_inactive_squared_norm_fraction": 0.928438591404137,
+      "coordinate_squared_norm_over_physical": 0.07156140857134134,
+      "physical_peak_xz_m": [
+        9250.0,
+        100.0
+      ],
+      "coordinate_peak_xz_m": [
+        9243.75,
+        456.25
+      ]
+    }
+  },
+  "grid": {
+    "shape": [
+      161,
+      401
+    ],
+    "x_minmax_m": [
+      8000.0,
+      10500.0
+    ],
+    "z_minmax_m": [
+      0.0,
+      1000.0
+    ],
+    "active_x_minmax_m": [
+      8206.25,
+      10293.75
+    ],
+    "active_z_minmax_m": [
+      456.25,
+      793.75
+    ],
+    "known_water_max_depth_m": 450.0,
+    "mask_values": {
+      "zero": 46136,
+      "transition": 6225,
+      "one": 12200
+    },
+    "mask_sha256": "6e57ab30a310c457cdfe91ae673b8a64488d563b55d44e177a171e1de189f25b"
+  },
+  "same_loss": true,
+  "loss": 0.32657187903108165,
+  "same_pml_profile": true,
+  "same_window_and_fixed_scale": true,
+  "same_model_hash": true,
+  "same_executed_script_hash": true,
+  "executed_script_hash_matches": true,
+  "data_vjp_status": "Independent NumPy objective, cotangent, fixed RMS, geometry/time window and public-coordinate parameter map checked; no solver runs.",
+  "data_vjp": {
+    "independent_objective": 0.32657187903108165,
+    "reported_objective": 0.32657187903108165,
+    "pressure_cot_relative_l2": 1.8887493432560535e-16,
+    "pressure_cot_absolute_linf": 8.326672684688674e-17,
+    "independent_geometry_window_absolute_linf": 1.1102230246251565e-15,
+    "fixed_observed_scale_check": 0.00017774148481012123,
+    "scale_saved": 0.0001777414848101212,
+    "shape": [
+      1,
+      1801,
+      161
+    ],
+    "finite": true,
+    "data_source_sha256": "27c2354a5dd61a155be719ae9259caa044d96b547765f44717f92e1ae15a8354"
+  },
+  "geometry_parameter_mask_max_error": 0.0,
+  "temporal_spectrum": {
+    "definition": "Subtract temporal mean per trace, Hann across recorded times, unpadded rFFT power summed over shots and receivers. Windowed residual and cotangent are distinct already time/offset-weighted signals. Finite 0.9005s record has coarse 1.1105Hz bins; not a dispersion convergence test.",
+    "results": {
+      "observed": {
+        "f50_hz": 6.662965019433649,
+        "f90_hz": 9.994447529150474,
+        "f95_hz": 11.10494169905608,
+        "power_above_12Hz": 0.025146103271414255,
+        "power_above_15Hz": 0.0004399776245668681
+      },
+      "predicted": {
+        "f50_hz": 6.662965019433649,
+        "f90_hz": 9.994447529150474,
+        "f95_hz": 11.10494169905608,
+        "power_above_12Hz": 0.025139234175429633,
+        "power_above_15Hz": 0.00043986589210112816
+      },
+      "residual": {
+        "f50_hz": 5.55247084952804,
+        "f90_hz": 11.10494169905608,
+        "f95_hz": 12.21543586896169,
+        "power_above_12Hz": 0.05970085521602709,
+        "power_above_15Hz": 0.001850899957763063
+      },
+      "windowed_residual": {
+        "f50_hz": 7.773459189339257,
+        "f90_hz": 12.21543586896169,
+        "f95_hz": 13.325930038867298,
+        "power_above_12Hz": 0.14309317387977466,
+        "power_above_15Hz": 0.013808628768942047
+      },
+      "adjoint_pressure_source": {
+        "f50_hz": 7.773459189339257,
+        "f90_hz": 13.325930038867298,
+        "f95_hz": 14.436424208772905,
+        "power_above_12Hz": 0.1776091760524028,
+        "power_above_15Hz": 0.02585063133014419
+      }
+    }
+  },
+  "actual_private_source_identity": {
+    "native_solver_runs": 0,
+    "model_arrays_included": false,
+    "pressure_bitwise_equal": true,
+    "pressure_source_array_sha256": "510d0a8202c814ed5adb3670504067d70767d95dcc086b1af89e2fd43a7e5c4b",
+    "pressure_cot_source_array_sha256": "033eec7667e400a545ee1aca42be8c6feaba419993f255da2d74e5674e1c32aa",
+    "private_evaluation_model_equals_prepared_initial": {
+      "autograd": {
+        "vp": true,
+        "vs": true,
+        "rho": true
+      },
+      "hybrid": {
+        "vp": true,
+        "vs": true,
+        "rho": true
+      }
+    },
+    "source_gradient_sha256": {
+      "autograd": {
+        "vp": "e0e9f817596a122a57c663dfe5dd9c0e0ca2e0dc3d50265613e13c155a21a63f",
+        "vs": "209933038162214eef57851186b44ddfee3afdd1fefee2338e8b01691fee91a6",
+        "rho": "f8247cb3e3b5cfb656aabfaf990583bf8e2eef0754da4553b4ba281f5b37950f",
+        "coordinate_vp": "a3a9b6fb828ae2c43987da1481128692b9c9e3b06fad28d4d8a9eb66e211604b",
+        "coordinate_vs": "96889be61722024d914f0036e4145a2ea87b9d1baaeb0bdf686ab9f2bae93669",
+        "coordinate_rho": "a14097f05183f0b1914ea17af0ff9f245d23bb8f6dc165f6e40ca38af3b00dc6"
+      },
+      "hybrid": {
+        "vp": "0b5da168080c6a9a0ba51d2c6cd106eb0ee7b876b805356e4f83ecebb25674a5",
+        "vs": "11cc43fc4f8e531a8db3971543a93c0d8f4b92175f879985a0789b11749dabae",
+        "rho": "181ecd11dcf650855e550347c7c42e8092b2f0eccb6c6efa9c1ccd506726e716",
+        "coordinate_vp": "18567c79817a3c49aaed4e91b19e316fa151abebbfb4cd1f42f8b11b39b5b0bf",
+        "coordinate_vs": "e78c064c9fcb4e2623a45c022d3ab1c12c7658c4edacf2a9711c4ac55dfd5f3e",
+        "coordinate_rho": "239b22a6c5f0fe47b47ecc944929aff17c209f56bc75e74abd5394b72c0c21bd"
+      }
+    },
+    "public_pressure_matches_actual_private": true,
+    "public_pressure_cot_matches_actual_private": true,
+    "zero_canonicalized_comparison": {
+      "autograd": {
+        "vp": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 0,
+          "public_negative_zeros": 0
+        },
+        "vs": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 15056,
+          "public_negative_zeros": 0
+        },
+        "rho": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 0,
+          "public_negative_zeros": 0
+        },
+        "coordinate_vp": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 22994,
+          "public_negative_zeros": 0
+        },
+        "coordinate_vs": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 23615,
+          "public_negative_zeros": 0
+        },
+        "coordinate_rho": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 23083,
+          "public_negative_zeros": 0
+        }
+      },
+      "hybrid": {
+        "vp": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 0,
+          "public_negative_zeros": 0
+        },
+        "vs": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 15056,
+          "public_negative_zeros": 0
+        },
+        "rho": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 0,
+          "public_negative_zeros": 0
+        },
+        "coordinate_vp": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 22994,
+          "public_negative_zeros": 0
+        },
+        "coordinate_vs": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 23615,
+          "public_negative_zeros": 0
+        },
+        "coordinate_rho": {
+          "same_values_after_zero_canonicalization": true,
+          "private_negative_zeros": 23083,
+          "public_negative_zeros": 0
+        }
+      }
+    },
+    "signed_zero_note": "Public one-shot aggregate initializes +0 and adds g/1; nonzero values are unchanged, while some -0 bit patterns become +0. Zero-canonicalized hashes independently verify all values. Raw byte hashes are retained and may differ at signed zero only.",
+    "public_gradient_raw_byte_hash_matches_private": {
+      "autograd": {
+        "vp": true,
+        "vs": false,
+        "rho": true,
+        "coordinate_vp": false,
+        "coordinate_vs": false,
+        "coordinate_rho": false
+      },
+      "hybrid": {
+        "vp": true,
+        "vs": false,
+        "rho": true,
+        "coordinate_vp": false,
+        "coordinate_vs": false,
+        "coordinate_rho": false
+      }
+    }
+  },
+  "status": "numerical review passed for shallow one-shot pilot; full-depth and visual review are separate",
+  "limitations": [
+    "Pilot 0-1km, nt1801 and one selected independent shot only.",
+    "Agreement with AD verifies the discrete derivative; no continuum grid-convergence or inversion-recovery claim.",
+    "Raw physical and P^T coordinate gradients retain distinct meanings; most raw Vp/rho squared norm is in fixed known water."
+  ],
+  "strict_float64_bitpattern_comparison": {
+    "actual_float64_uint64_view_equal": true,
+    "autograd_array_sha256": "510d0a8202c814ed5adb3670504067d70767d95dcc086b1af89e2fd43a7e5c4b",
+    "hybrid_array_sha256": "510d0a8202c814ed5adb3670504067d70767d95dcc086b1af89e2fd43a7e5c4b",
+    "autograd_negative_zero_count": 2326,
+    "hybrid_negative_zero_count": 2326
+  }
+}

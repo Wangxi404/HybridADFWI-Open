@@ -1,0 +1,469 @@
+{
+  "created_utc": "2026-11-07T05:30:18.013246+00:00",
+  "review_scope": "read-only baseline diagnostics, not a new solver run or correctness acceptance",
+  "native_solver_runs": 0,
+  "model_arrays_included": false,
+  "gradient_coordinates": "raw Euclidean discrete derivative with respect to physical SI grid parameters, no smoothing or illumination correction",
+  "squared_gradient_definition": "sum(g**2) per parameter family separately; not mechanical energy and not cross-parameter amplitude comparison",
+  "solid_mask": "original depth >=495 m; water samples are 0..450 m",
+  "central_deep_roi": "5500 <= original x <=13455 m and 900 <= depth <=3200 m",
+  "side_mask": "solid and (x<=5200 m or x>=13755 m)",
+  "source_radius_definition": "minimum Euclidean distance to any physical source, inclusive radius, intersected with solid mask",
+  "top_cell_definition": "sort solid g**2 descending; take ceil(n_solid*pct/100) cells",
+  "effective_cell_definition": "(sum(g**2)**2 / sum(g**4)) / n_solid *100",
+  "temporal_spectrum_definition": "per trace subtract temporal mean, multiply Hann window, rFFT with no padding, sum squared magnitudes across all receivers/components/shots; cumulative power quantiles",
+  "interpretation_limits": [
+    "Concentration is coordinate/parameterization dependent; masks and display changes are not new raw gradients.",
+    "Small displayed gradient values do not establish absence of physical structures; bandwidth/illumination and objective affect sensitivity.",
+    "New pilot correctness must be checked in its exact fixed PML/geometry/active map; these diagnostics are not its acceptance."
+  ],
+  "repository": "HybridADFWI-Open",
+  "sources": [
+    {
+      "path": "evidence/marmousi2-fd8-f64-20261106/hybrid-0.kernels.npz",
+      "role": "raw baseline hybrid gradient",
+      "bytes": 342559,
+      "sha256": "02a10262114a88e2657543bd40d9ebf827d7c962e6258054b1496f271716fb44"
+    },
+    {
+      "path": "evidence/marmousi2-fd8-f64-20261106/autograd-0.kernels.npz",
+      "role": "same baseline native AD gradient reference",
+      "bytes": 342569,
+      "sha256": "9a460d62453a3d640a1575d07542a9a0c20ad5225d0c695bec4a8550e4fac5ee"
+    },
+    {
+      "path": "evidence/marmousi2-fd8-f64-20261106/protocol.json",
+      "role": "actual nine-shot protocol",
+      "bytes": 787,
+      "sha256": "2fbd293b1aab7e4f52c40985e4d97ae7fba70cecf2013c05c05cbea6e609a26a"
+    },
+    {
+      "path": "evidence/marmousi2-fd8-f64-20261106/code_provenance.json",
+      "role": "archived execution provenance",
+      "bytes": 785,
+      "sha256": "08ac0c8b3348e72bf832dde8855d5d4250acd530378d94f40d653bd6fccbb7fd"
+    },
+    {
+      "path": "data/prepared/marmousi2_paper.npz",
+      "role": "private prepared input used for coordinate masks and aggregate sampling only; no arrays copied",
+      "bytes": 221190,
+      "sha256": "f68effb1e917ef6356d50b403b2993b1c2155362c1ab669ac4fa3a5c4a83982d"
+    },
+    {
+      "path": ".cache/visualization/native_smoke.npz",
+      "role": "actual separate CPU smoke observation/residual capture",
+      "bytes": 2928981,
+      "sha256": "ee9b844d521d9f9696f2f68dbf523d14227802d896691d4e3b57523589c6eb14"
+    },
+    {
+      "path": "scripts/visualize.py",
+      "role": "inspected gallery source and display definitions",
+      "bytes": 30402,
+      "sha256": "85911de071b53e56fb3853e502337ad79fa591f86764407fb413fee8a288a692"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "role": "inspected benchmark objective and actual source settings",
+      "bytes": 21190,
+      "sha256": "846a476db7f4b2a04238e8bd0dd914f942cbdc66ab05a5782c85f2ea2708d7e1"
+    },
+    {
+      "path": "src/hybridadfwi/experiment.py",
+      "role": "inspected source geometry / model / objective builder",
+      "bytes": 3619,
+      "sha256": "3fc5eb330733a24f0f8eee2b14972767eafe08caefd46eca4ab7a328264e7695"
+    },
+    {
+      "path": "src/hybridadfwi/adjoint.py",
+      "role": "inspected static replicate-padding VJP",
+      "bytes": 24911,
+      "sha256": "cddea5de7d8a1d4239590ca946ae0d299432b44def7f22bda86ab5d7da5fd556"
+    },
+    {
+      "path": "vendor/ADFWI/ADFWI/propagator/elastic_propagator.py",
+      "role": "official pinned PML construction source",
+      "bytes": 6455,
+      "sha256": "295977cd19375fb48000fe050c73409b30a6465a8a8ec18b7d2326ea87f03843"
+    },
+    {
+      "path": "data/prepared/marmousi2_smoke.npz",
+      "role": "private actual smoke prepared input used for aggregate sampling only; no arrays copied",
+      "bytes": 62427,
+      "sha256": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c"
+    }
+  ],
+  "benchmark": {
+    "configuration": {
+      "model": "/home/xiwang/HybridADFWI/data/prepared/marmousi2_paper.npz",
+      "observations": "/home/xiwang/HybridADFWI/runs/marmousi2-fd8-f64-20261106/observations.npz",
+      "preset": "paper",
+      "device": "cuda",
+      "nt": 2500,
+      "dt": 0.003,
+      "f0": 5.0,
+      "shots": 9,
+      "receivers": 100,
+      "depth_m": 540.0,
+      "nabc": 20,
+      "free_surface": true,
+      "fd_order": 8,
+      "dtype": "float64",
+      "parameters": [
+        "vp",
+        "vs",
+        "rho"
+      ],
+      "repeats": 3,
+      "segments": 50,
+      "threads": 1,
+      "objective": "l2",
+      "tolerance": 1e-08,
+      "resource_audit": "per-worker NVIDIA process audit, sampled every 3 seconds",
+      "order": "alternating AB/BA across repetitions; fresh process per arm",
+      "timing_scope": "forward + data objective/VJP + reverse including checkpoint replay; no optimizer"
+    },
+    "scope": "gallery gradients: actual archived repeat0, 9 independent shot batch, not the smoke capture",
+    "source_type": "isotropic moment tensor diag(1,0,1) in solid",
+    "source_original_xy_m": [
+      [
+        6170.0,
+        540.0
+      ],
+      [
+        7025.0,
+        540.0
+      ],
+      [
+        7835.0,
+        540.0
+      ],
+      [
+        8645.0,
+        540.0
+      ],
+      [
+        9500.0,
+        540.0
+      ],
+      [
+        10310.0,
+        540.0
+      ],
+      [
+        11120.0,
+        540.0
+      ],
+      [
+        11930.0,
+        540.0
+      ],
+      [
+        12785.0,
+        540.0
+      ]
+    ],
+    "coordinate_grid": {
+      "shape": [
+        78,
+        200
+      ],
+      "dx_m": 45,
+      "dz_m": 45,
+      "x_first_last_m": [
+        5000.0,
+        13955.0
+      ],
+      "depth_first_last_m": [
+        0.0,
+        3465.0
+      ]
+    },
+    "active_map_baseline": "full physical Vp/Vs/rho grid, water Vp/rho active; replicated material padding participates in the static map",
+    "gradient_statistics": {
+      "vp": {
+        "array_shape_depth_x": [
+          78,
+          200
+        ],
+        "all_l2": 0.020151544027808742,
+        "solid_l2": 0.0066625797863686395,
+        "water_fraction_of_all_squared_gradient_pct": 89.06879119292604,
+        "peak_all": {
+          "x_m": 13910.0,
+          "depth_m": 450.0,
+          "value": 0.01377626023522665,
+          "absolute_value": 0.01377626023522665
+        },
+        "peak_solid": {
+          "x_m": 13865.0,
+          "depth_m": 495.0,
+          "value": 0.003523626056835622,
+          "absolute_value": 0.003523626056835622
+        },
+        "solid_squared_gradient_fraction_pct": {
+          "near_any_source_100m": 0.3492430909857908,
+          "near_any_source_200m": 0.3527997758593558,
+          "near_any_source_400m": 0.365745587974388,
+          "near_any_source_600m": 0.5192552193906168,
+          "near_any_source_800m": 1.1819241953327015,
+          "depth_le1000m": 99.99983449662548,
+          "depth_ge2000m": 3.6120770431220388e-06,
+          "bottom_last200m": 6.767387728744756e-08,
+          "sides_each200m": 86.76431502034835,
+          "central_deep_roi": 0.0001753705183345604
+        },
+        "top_solid_cells_squared_gradient_fraction_pct": {
+          "0.1": {
+            "selected_cells": 14,
+            "fraction_pct": 95.49204374981775
+          },
+          "1": {
+            "selected_cells": 134,
+            "fraction_pct": 99.99736851728053
+          },
+          "5": {
+            "selected_cells": 670,
+            "fraction_pct": 99.99963826802626
+          }
+        },
+        "effective_solid_cell_fraction_pct": 0.04857014182191388,
+        "solid_p995_abs_over_solid_absmax": 0.0109663773025159,
+        "central_deep_roi_absmax_over_all_absmax": 4.7901359747527375e-05,
+        "zero_solid_fraction_pct": 0.0
+      },
+      "vs": {
+        "array_shape_depth_x": [
+          78,
+          200
+        ],
+        "all_l2": 0.04772394747226014,
+        "solid_l2": 0.04772394747226014,
+        "water_fraction_of_all_squared_gradient_pct": 0.0,
+        "peak_all": {
+          "x_m": 13955.0,
+          "depth_m": 495.0,
+          "value": 0.02523647482322787,
+          "absolute_value": 0.02523647482322787
+        },
+        "peak_solid": {
+          "x_m": 13955.0,
+          "depth_m": 495.0,
+          "value": 0.02523647482322787,
+          "absolute_value": 0.02523647482322787
+        },
+        "solid_squared_gradient_fraction_pct": {
+          "near_any_source_100m": 0.03134186533698267,
+          "near_any_source_200m": 0.06631447982281277,
+          "near_any_source_400m": 0.110001858562444,
+          "near_any_source_600m": 0.3220508828727781,
+          "near_any_source_800m": 1.0193795495860434,
+          "depth_le1000m": 99.99963188185261,
+          "depth_ge2000m": 1.5602353325508926e-07,
+          "bottom_last200m": 2.877504188731423e-10,
+          "sides_each200m": 89.65247394910499,
+          "central_deep_roi": 2.4636595842628962e-05
+        },
+        "top_solid_cells_squared_gradient_fraction_pct": {
+          "0.1": {
+            "selected_cells": 14,
+            "fraction_pct": 86.89872633576148
+          },
+          "1": {
+            "selected_cells": 134,
+            "fraction_pct": 99.98248403776134
+          },
+          "5": {
+            "selected_cells": 670,
+            "fraction_pct": 99.99998590725343
+          }
+        },
+        "effective_solid_cell_fraction_pct": 0.06436273862814847,
+        "solid_p995_abs_over_solid_absmax": 0.018713069541631554,
+        "central_deep_roi_absmax_over_all_absmax": 0.00027146504615912104,
+        "zero_solid_fraction_pct": 0.0
+      },
+      "rho": {
+        "array_shape_depth_x": [
+          78,
+          200
+        ],
+        "all_l2": 0.012126000075998202,
+        "solid_l2": 0.007326630341048093,
+        "water_fraction_of_all_squared_gradient_pct": 63.493228543318985,
+        "peak_all": {
+          "x_m": 13955.0,
+          "depth_m": 450.0,
+          "value": -0.004709962083356517,
+          "absolute_value": 0.004709962083356517
+        },
+        "peak_solid": {
+          "x_m": 13820.0,
+          "depth_m": 495.0,
+          "value": 0.0034548643968257678,
+          "absolute_value": 0.0034548643968257678
+        },
+        "solid_squared_gradient_fraction_pct": {
+          "near_any_source_100m": 0.05140464660413209,
+          "near_any_source_200m": 0.07039543764694987,
+          "near_any_source_400m": 0.10244719502760523,
+          "near_any_source_600m": 0.38277838451240204,
+          "near_any_source_800m": 1.2204347204152008,
+          "depth_le1000m": 99.997876420717,
+          "depth_ge2000m": 3.2523338178826404e-06,
+          "bottom_last200m": 8.341931405851827e-08,
+          "sides_each200m": 86.95840650730904,
+          "central_deep_roi": 0.00017171848314046596
+        },
+        "top_solid_cells_squared_gradient_fraction_pct": {
+          "0.1": {
+            "selected_cells": 14,
+            "fraction_pct": 89.47537457025207
+          },
+          "1": {
+            "selected_cells": 134,
+            "fraction_pct": 99.9769337528444
+          },
+          "5": {
+            "selected_cells": 670,
+            "fraction_pct": 99.9999023066639
+          }
+        },
+        "effective_solid_cell_fraction_pct": 0.07096880359762694,
+        "solid_p995_abs_over_solid_absmax": 0.020428836924055737,
+        "central_deep_roi_absmax_over_all_absmax": 0.00036369904257233947,
+        "zero_solid_fraction_pct": 0.0
+      }
+    },
+    "raw_hybrid_vs_native_ad_relative_l2": {
+      "vp": 5.0105835715588405e-12,
+      "vs": 3.5763302750372653e-12,
+      "rho": 3.568904131691152e-12
+    },
+    "temporal_spectrum_benchmark": "not computed: full 9-shot receiver observations/predictions are not present in the local public raw-kernel bundle; no smoke-to-benchmark spectrum substitution"
+  },
+  "model_gradient_roi_correlations": {
+    "vp": {
+      "definition": "Pearson correlation of descent -g and true-minus-initial within stated central deep ROI; diagnostic only, not an acceptance target",
+      "correlation": 0.03301145613947484
+    },
+    "vs": {
+      "definition": "Pearson correlation of descent -g and true-minus-initial within stated central deep ROI; diagnostic only, not an acceptance target",
+      "correlation": -0.0030946037587427306
+    },
+    "rho": {
+      "definition": "Pearson correlation of descent -g and true-minus-initial within stated central deep ROI; diagnostic only, not an acceptance target",
+      "correlation": null
+    }
+  },
+  "fixed_numerical_setting_findings": {
+    "PML_generation": "upstream ElasticPropagator.boundary_condition computes bcx/bcz from detached current model vp maximum at construction",
+    "true_max_vp_m_s": 4699.999809265137,
+    "initial_max_vp_m_s": 4351.191073724727,
+    "relative_true_vs_initial_max_vp_difference": 0.08016396651637292,
+    "interpretation": "baseline AD/Hybrid comparison shares the same initial operator, but a new truth/initial/finite-difference experiment should fix one reference damping profile explicitly; replicated material padding can accumulate coefficient sensitivity onto physical edge cells, a candidate mechanism requiring ablation rather than a proven bug"
+  },
+  "sampling_diagnostics": {
+    "true": {
+      "45m_grid": {
+        "S_min_points_per_wavelength_at_f0_5Hz": 1.4085043801201715,
+        "P_min_points_per_wavelength_at_f0_5Hz": 6.833555433485243,
+        "S_solid_below_2_points_per_wavelength_pct": 8.708955223880597,
+        "S_solid_below_4_points_per_wavelength_pct": 28.388059701492534,
+        "scope": "arithmetic at dominant 5Hz only; not a measured native-stencil dispersion error or spatial convergence result; significant higher frequencies have fewer points/wavelength"
+      },
+      "90m_grid": {
+        "S_min_points_per_wavelength_at_f0_5Hz": 0.7067332002851698,
+        "P_min_points_per_wavelength_at_f0_5Hz": 3.419999016655816,
+        "S_solid_below_2_points_per_wavelength_pct": 28.052805280528055,
+        "S_solid_below_4_points_per_wavelength_pct": 69.33693369336935,
+        "scope": "actual 39x101 smoke prepared model, mask Vs>0, dominant 5Hz arithmetic only; not measured native-stencil dispersion or spatial convergence"
+      }
+    },
+    "initial": {
+      "45m_grid": {
+        "S_min_points_per_wavelength_at_f0_5Hz": 1.7283834392702182,
+        "P_min_points_per_wavelength_at_f0_5Hz": 7.246489297723719,
+        "S_solid_below_2_points_per_wavelength_pct": 5.425373134328358,
+        "S_solid_below_4_points_per_wavelength_pct": 28.223880597014926,
+        "scope": "arithmetic at dominant 5Hz only; not a measured native-stencil dispersion error or spatial convergence result; significant higher frequencies have fewer points/wavelength"
+      },
+      "90m_grid": {
+        "S_min_points_per_wavelength_at_f0_5Hz": 0.858224307594025,
+        "P_min_points_per_wavelength_at_f0_5Hz": 3.616535525118907,
+        "S_solid_below_2_points_per_wavelength_pct": 27.662766276627664,
+        "S_solid_below_4_points_per_wavelength_pct": 72.18721872187218,
+        "scope": "actual 39x101 smoke prepared model, mask Vs>0, dominant 5Hz arithmetic only; not measured native-stencil dispersion or spatial convergence"
+      }
+    }
+  },
+  "smoke_gallery_temporal_spectrum": {
+    "scope": "separate 39x101/90m CPU illustration, 1 shot, 640*4ms, not the 78x200 nine-shot benchmark",
+    "capture_metadata": {
+      "capture_version": 1,
+      "config": {
+        "device": "cpu",
+        "nt": 640,
+        "dt": 0.004,
+        "f0": 5.0,
+        "shots": 1,
+        "receivers": 25,
+        "depth_m": 540.0,
+        "nabc": 10,
+        "free_surface": true,
+        "fd_order": 8,
+        "dtype": "float64",
+        "parameters": [
+          "vp",
+          "vs",
+          "rho"
+        ],
+        "checkpointing": false,
+        "segments": 1,
+        "threads": 1,
+        "objective": "l2"
+      },
+      "model": "data/prepared/marmousi2_smoke.npz",
+      "model_sha256": "d9ee083c1288651c5182719c5056564d148c03a8540f4b05d2fb3c7cc3a14d1c",
+      "upstream_commit": "559f581149343b1ed3dd2168caae595690bd601d",
+      "instrumented_native_source_sha256": "7346475dccdb5857d11b695fd5ec5e0e8965d5d682c4e4b3266b979f8c6e39b1",
+      "native_receiver_bitwise_equal": true,
+      "observed_rms": 4.639096356774814e-08,
+      "objective": 0.1828757795915786,
+      "sample_definition": "v_z before velocity update at native loop index i; t=i*dt",
+      "field_crop": "remove top 4 ghost rows and left/right 10-cell PML; retain physical 39x101 grid",
+      "source_definition": "torch.autograd.grad(0.5*mean(((pred-obs)/observed_RMS)**2), pred)",
+      "velocity_location": "native staggered-grid component; no collocation interpolation",
+      "source_amplitude": "pinned native Ricker moment-source convention; no absolute calibration",
+      "runtime": {
+        "python": "3.9.25",
+        "torch": "2.7.0",
+        "numpy": "2.0.2"
+      }
+    },
+    "target_vz": {
+      "peak_hz": 7.03125,
+      "f50_hz": 5.859375,
+      "f90_hz": 7.421875,
+      "f95_hz": 7.8125,
+      "energy_ge2Hz_pct": 98.45679428555309,
+      "energy_ge5Hz_pct": 74.82105950372184,
+      "fft_bin_spacing_hz": 0.390625,
+      "fft_time_samples": 640
+    },
+    "residual_vz": {
+      "peak_hz": 7.03125,
+      "f50_hz": 7.03125,
+      "f90_hz": 8.203125,
+      "f95_hz": 8.59375,
+      "energy_ge2Hz_pct": 99.30756510128917,
+      "energy_ge5Hz_pct": 87.37021880438861,
+      "fft_bin_spacing_hz": 0.390625,
+      "fft_time_samples": 640
+    }
+  },
+  "findings": [
+    "Water and solid side-edge sensitivities dominate the current full raw gradient; more shots alone are not established as a remedy.",
+    "A new fixed-water/fixed-damping/explicit active-ROI experiment changes the model coordinates and must retain both full physical g and P-transpose-g distinctly.",
+    "The local smoke trace spectrum and physical sampling checks do not certify the full benchmark continuum accuracy; all new pilot claims need their own scopes."
+  ]
+}

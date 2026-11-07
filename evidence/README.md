@@ -1,5 +1,28 @@
 # Experiment evidence
 
+## Gradient-detail experiments, 2026-11-07
+
+These are separate functional experiments, not replacements for the archived
+time/memory benchmarks. See the [figure and parameter report](../docs/GRADIENT_DETAIL.md).
+
+| Bundle | What it establishes |
+|---|---|
+| `gradient_detail_baseline_audit.json` | Why the old gradient display is dominated by water and edges |
+| `pml-profile-control-20261107` | Single-factor fixed-profile control on the old nine-shot case |
+| `gradient-detail-models-20261107` | Source checksums, ROI/preparation rules and bounded FD8 dispersion analysis; no input arrays |
+| `gradient-detail-pilot-20261107` | Shallow pressure/VJP/static-coordinate numerical pilot |
+| `gradient-detail-full-depth-central-20261107` | AD/Hybrid numerical agreement, **rejected** late-time forward-quality case |
+| `gradient-detail-top-absorbing-control-20261107` | Unmuted trace control; 200 m PML still amplifies late arrivals |
+| `gradient-detail-thick-pml-control-20261107` | Unmuted 600 m PML trace control over the declared 3.5 s record |
+| `gradient-detail-reflection-candidate-20261107` | Verified declared-coordinate derivatives and quality screen; auxiliary full-physical gate failed, original `summary.passed=false` retained |
+
+Public arrays contain derivatives, geometry and model-free receiver evidence.
+Worker files containing evaluated model inputs are excluded. Each bundle keeps
+its executed source/version and declared scope; passing a discrete derivative
+check does not override a rejected forward-quality screen.
+
+## Original benchmarks
+
 `local-smoke-20261106` and `local-composite-20261106` validate the real, coarsened Marmousi-II startup case on CPU. The composite target includes a time-difference term. They are not the formal GPU performance comparison.
 
 The Marmousi-II JSON sidecars record source URLs/checksums, units, crop, resampling and initialization. Raw data and complete local run outputs are ignored by Git. Formal GPU bundles include raw kernels for each repetition, exact run protocol, individual timings/memory, runtime versions, hashes and process-audit samples. The original run folders retain full traces and observations.

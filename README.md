@@ -4,6 +4,16 @@
 
 HybridADFWI compares native AD with an external discrete adjoint for an already-differentiable solver. The validated scope is **2-D isotropic elastic PSV, float64, first-order Vp/Vs/ρ gradients**. This is a controlled research benchmark; SPECFEM and AxiSEM3D adapters are separate projects.
 
+## 新增：Marmousi-II 层状梯度演示
+
+这组独立示例使用 **6.25 m 网格、6 Hz、水层压力数据**，在完整深度的水平 ROI 上显示真实模型、平滑初始模型及两种方法的实际梯度。吸收边界和固定数据窗经过单独检查；AD 与 Hybrid 使用完全相同的正演和目标函数。图中灰色区域是声明的固定参数，完整物理梯度另图展示。
+
+当前验证范围是**预先声明的反演坐标梯度 Pᵀg**；辅助完整物理梯度未达到原定严格门槛，原始失败结果保留，见报告中的逐项误差。此例不声明完整物理 VJP 全部通过。
+
+[![True/initial models and matched geological-detail gradients](docs/figures/gradient_detail/models_and_active_gradients.png)](docs/GRADIENT_DETAIL.md)
+
+[参数选择、失败控制与数值验证](docs/GRADIENT_DETAIL.md)。梯度显示局部敏感度，尚不是反演重建；下列原始性能基准及其可视化配置保留。
+
 ![Native Marmousi-II wavefield animation](docs/figures/wavefield.gif)
 
 真实 Marmousi-II 模型上的原生 `v_z` 波场，固定色标；星号与接收器位置见[静帧与几何](docs/figures/wavefields.png)。此动画来自新运行的 **39×101 / 90 m / 单炮 / CPU** 可视化示例，完整 GPU 对比使用下表所列另一配置。

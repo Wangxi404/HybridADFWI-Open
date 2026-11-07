@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-11-07T06:46:37.823382+00:00",
+  "verification_location": "local final canonical artifact",
+  "native_solver_runs": 0,
+  "raw_kernels_bytes": 16761139,
+  "raw_kernels_sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+  "summary_sha256": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+  "physical_quality_sha256": "0864260db6cd895d18c97ce217ca76c7a4321a2be7e10c46ee4e315e016a1c36",
+  "public_source_gradient_values_match_actual_private_workers": {
+    "autograd": {
+      "gradient_autograd_vp": true,
+      "gradient_autograd_coordinate_vp": true,
+      "gradient_autograd_vs": true,
+      "gradient_autograd_coordinate_vs": true,
+      "gradient_autograd_rho": true,
+      "gradient_autograd_coordinate_rho": true
+    },
+    "hybrid": {
+      "gradient_hybrid_vp": true,
+      "gradient_hybrid_coordinate_vp": true,
+      "gradient_hybrid_vs": true,
+      "gradient_hybrid_coordinate_vs": true,
+      "gradient_hybrid_rho": true,
+      "gradient_hybrid_coordinate_rho": true
+    }
+  },
+  "signed_zero_policy": "Single-shot aggregation can convert -0 to +0; canonical-zero hashes prove all numerical values unchanged. Actual AD/H pressure was separately compared as uint64 and had identical SHA.",
+  "complete_arrays": {
+    "count": 20,
+    "gradient_count": 12,
+    "each_gradient_shape": [
+      555,
+      401
+    ],
+    "gradient_dtype": "float64"
+  },
+  "actual_model_map_chain_verified": true,
+  "no_input_model_arrays": true,
+  "metrics": {
+    "vp": {
+      "physical_relative_l2": 3.422992987157075e-08,
+      "coordinate_relative_l2": 7.816570601424159e-13
+    },
+    "vs": {
+      "physical_relative_l2": 3.095655307700798e-07,
+      "coordinate_relative_l2": 3.1128377078826534e-13
+    },
+    "rho": {
+      "physical_relative_l2": 3.387846291354088e-08,
+      "coordinate_relative_l2": 5.954243213830916e-14
+    }
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "source_run": "runs/gradient-detail-full-depth-central-20261107",
+  "gradient_processing": "none; full physical and actual constrained-coordinate derivatives reported separately",
+  "config": {
+    "name": "Marmousi-II marine-pressure gradient detail horizontal ROI, full benchmark depth",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Horizontal ROI x8-10.5km, z0-3.4625km; not the original full 17km Marmousi-II extent; run shots sequentially and compare both derivatives for every displayed shot",
+    "observations": "/home/xiwang/HybridADFWI-Open/runs/gradient-detail-full-depth-central-20261107/observations.npz"
+  },
+  "depth_energy": {
+    "vp": {
+      "full_physical": {
+        "l2": 213.90165172676865,
+        "max_absolute": 76.11603088109108,
+        "water_fraction": 0.5303210021721584,
+        "deeper_than_1000m_fraction": 3.589684581164838e-11,
+        "deeper_than_2000m_fraction": 4.9285640918441596e-14,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 3799.784526703189,
+            "fraction_of_total": 0.08304828981030075
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 41954.132026392035,
+            "fraction_of_total": 0.9169517089145164
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 5.6702188863852014e-05,
+            "fraction_of_total": 1.2392860122858813e-09
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 1.6370480928575035e-06,
+            "fraction_of_total": 3.577940893585038e-11
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 3.118185917645622e-09,
+            "fraction_of_total": 6.81512348795509e-14
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 1.271647748039229e-10,
+            "fraction_of_total": 2.7793199844257258e-15
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 1.6943652765768909e-10,
+            "fraction_of_total": 3.703213630793849e-15
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 1.9584098022621314e-09,
+            "fraction_of_total": 4.2803107303222014e-14
+          }
+        ]
+      },
+      "active_coordinate": {
+        "l2": 0.025821110491225735,
+        "max_absolute": 0.0008072975159216833,
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.0015339552696597742,
+        "deeper_than_2000m_fraction": 1.496236463474087e-07,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 0.0,
+            "fraction_of_total": 0.0
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 0.0006579217361458503,
+            "fraction_of_total": 0.9867892337279558
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 7.785277245387519e-06,
+            "fraction_of_total": 0.011676811002384291
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 1.0197259114210578e-06,
+            "fraction_of_total": 0.0015294441503611563
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 2.9079388927801123e-09,
+            "fraction_of_total": 4.361495652270229e-06
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 6.238513078878323e-11,
+            "fraction_of_total": 9.356884265248635e-08
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 2.023858375661954e-11,
+            "fraction_of_total": 3.0355003429323335e-08
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 1.7134821329035608e-11,
+            "fraction_of_total": 2.5699800265599e-08
+          }
+        ]
+      }
+    },
+    "vs": {
+      "full_physical": {
+        "l2": 3951.661192325359,
+        "max_absolute": 2351.1571914372576,
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 4.637386625169733e-14,
+        "deeper_than_2000m_fraction": 6.905909041384485e-17,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 0.0,
+            "fraction_of_total": 0.0
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 15615626.178923054,
+            "fraction_of_total": 0.9999999999995375
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 6.500015652917435e-06,
+            "fraction_of_total": 4.1625072081244635e-13
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 7.208483485380903e-07,
+            "fraction_of_total": 4.616198801625455e-14
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 2.23021037996652e-09,
+            "fraction_of_total": 1.4281914502895053e-16
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 8.517935635628736e-11,
+            "fraction_of_total": 5.4547512459806096e-18
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 2.3089813692398846e-10,
+            "fraction_of_total": 1.4786351458357322e-17
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 7.623234468792728e-10,
+            "fraction_of_total": 4.8817987709506927e-17
+          }
+        ]
+      },
+      "active_coordinate": {
+        "l2": 0.011753326237150396,
+        "max_absolute": 0.0026683813975589494,
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.003552723458107151,
+        "deeper_than_2000m_fraction": 9.948916468350855e-07,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 0.0,
+            "fraction_of_total": 0.0
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 0.00013559579995412965,
+            "fraction_of_total": 0.9815776371862919
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 2.054102056798819e-06,
+            "fraction_of_total": 0.014869639355600709
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 4.885243218989187e-07,
+            "fraction_of_total": 0.003536426273968612
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 2.1138690542018446e-09,
+            "fraction_of_total": 1.5302292491703943e-05
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 3.4497713530042514e-11,
+            "fraction_of_total": 2.4972885698969916e-07
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 6.753471787716775e-11,
+            "fraction_of_total": 4.888836440681674e-07
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 3.5402574861867825e-11,
+            "fraction_of_total": 2.562791457772191e-07
+          }
+        ]
+      }
+    },
+    "rho": {
+      "full_physical": {
+        "l2": 709.944519036751,
+        "max_absolute": 308.96657335487373,
+        "water_fraction": 0.3959256605624905,
+        "deeper_than_1000m_fraction": 3.2153168181514314e-13,
+        "deeper_than_2000m_fraction": 5.2506344597851394e-15,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 102013.43112444236,
+            "fraction_of_total": 0.20239907974928703
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 402007.78896909405,
+            "fraction_of_total": 0.7976009202174063
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 1.662514411283574e-05,
+            "fraction_of_total": 3.2985008268494556e-11
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 1.5842309892068847e-07,
+            "fraction_of_total": 3.143183116099987e-13
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 9.892604651300841e-10,
+            "fraction_of_total": 1.9627357453591893e-15
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 1.2919667152502524e-10,
+            "fraction_of_total": 2.563318097931388e-16
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 3.0828928076110023e-10,
+            "fraction_of_total": 6.11659327941827e-16
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 2.2089452344880905e-09,
+            "fraction_of_total": 4.382643322050173e-15
+          }
+        ]
+      },
+      "active_coordinate": {
+        "l2": 0.002162513824528627,
+        "max_absolute": 0.0004728165460482938,
+        "water_fraction": 0.0,
+        "deeper_than_1000m_fraction": 0.012035639778986387,
+        "deeper_than_2000m_fraction": 4.235263274973109e-05,
+        "depth_bins": [
+          {
+            "depth_interval_m": [
+              0.0,
+              450.0
+            ],
+            "squared_norm": 0.0,
+            "fraction_of_total": 0.0
+          },
+          {
+            "depth_interval_m": [
+              450.0,
+              750.0
+            ],
+            "squared_norm": 4.3711787522933484e-06,
+            "fraction_of_total": 0.9347183778756388
+          },
+          {
+            "depth_interval_m": [
+              750.0,
+              1000.0
+            ],
+            "squared_norm": 2.490030282726054e-07,
+            "fraction_of_total": 0.05324598234537537
+          },
+          {
+            "depth_interval_m": [
+              1000.0,
+              1500.0
+            ],
+            "squared_norm": 5.525548067746002e-08,
+            "fraction_of_total": 0.01181564886598992
+          },
+          {
+            "depth_interval_m": [
+              1500.0,
+              2000.0
+            ],
+            "squared_norm": 8.307193852047744e-10,
+            "fraction_of_total": 0.00017763828024673395
+          },
+          {
+            "depth_interval_m": [
+              2000.0,
+              2500.0
+            ],
+            "squared_norm": 6.484835365813404e-11,
+            "fraction_of_total": 1.386695703245607e-05
+          },
+          {
+            "depth_interval_m": [
+              2500.0,
+              3000.0
+            ],
+            "squared_norm": 7.025506324508499e-11,
+            "fraction_of_total": 1.5023109892164221e-05
+          },
+          {
+            "depth_interval_m": [
+              3000.0,
+              3462.5
+            ],
+            "squared_norm": 6.29572319095927e-11,
+            "fraction_of_total": 1.34625658251108e-05
+          }
+        ]
+      }
+    }
+  },
+  "data_checks": [
+    {
+      "shot_id": 1,
+      "pressure_cotangent_relative_l2": 1.6904738670585095e-16,
+      "pressure_cotangent_max_abs": 1.1102230246251565e-16,
+      "objective_recomputed_numpy": 274.593835639414,
+      "evaluation_model_equal_prepared_initial": {
+        "vp": true,
+        "vs": true,
+        "rho": true
+      }
+    }
+  ],
+  "model_arrays_in_public_bundle": false,
+  "observation_pml_profile": {
+    "reference_vmax_m_s": 4700.0,
+    "bcx_sha256": "2b1fa0d51618a8f386a9ae3b44135b663d4ad0433282832e5907f046c4fc5e55",
+    "bcz_sha256": "8662060f7d725fe179ad1e704168b5a037fda1cb3f7ee397701d96e7360ed6ea"
+  }
+}

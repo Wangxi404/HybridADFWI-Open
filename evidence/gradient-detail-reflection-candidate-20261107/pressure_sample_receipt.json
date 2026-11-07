@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-11-07T06:54:48.836240+00:00",
+  "reviewer_only": true,
+  "native_solver_runs": 0,
+  "new_SSH_connections": 0,
+  "model_arrays_included": false,
+  "passed": true,
+  "scope": "CPU verification of exact index/geometry selection, known fixed-window samples, and sampled cotangent formula using the FULL objective normalization.",
+  "source_files": {
+    "pressure_data_sampled.npz": {
+      "bytes": 198017,
+      "sha256": "cec2525de5059f1433b05bbbee4f290beb88b75b43e52fada7a9b6bb379af4aa"
+    },
+    "pressure_proof.json": {
+      "sha256": "064d31507e79b413d3bc7301f5c3bd068a73f3d5842aec0f0ecae7977f5c067a"
+    },
+    "pressure_proof_receipt.json": {
+      "sha256": "d60e8a77e10f7952d526e83bc605811b5a97390fecf78f2fc7aa97c605edabda"
+    },
+    "raw_kernels.npz": {
+      "sha256": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf"
+    }
+  },
+  "shape_and_axes": {
+    "full_shape": [
+      1,
+      7001,
+      161
+    ],
+    "sample_shape": [
+      1,
+      876,
+      11
+    ],
+    "full_objective_element_count": 1127161,
+    "sample_element_count": 9636,
+    "time_stride": 8,
+    "receiver_stride": 16,
+    "time_indices_exact": true,
+    "receiver_indices_exact": true,
+    "selected_shot_ids_exact": true,
+    "time_first_last_s": [
+      0.0,
+      3.5
+    ],
+    "sampled_receiver_x_first_last_m": [
+      8031.25,
+      10468.75
+    ],
+    "source_xz_m": [
+      9250.0,
+      100.0
+    ],
+    "full_geometry_matches_canonical_model_axes_and_survey_builder": true
+  },
+  "cotangent": {
+    "formula": "(sampled_pressure-sampled_observation)*sampled_fixed_window^2/(fixed_FULL_observation_RMS^2*FULL_N)",
+    "full_N_used": 1127161,
+    "fixed_FULL_observed_RMS_used": 0.0009734336304707893,
+    "informative": true,
+    "expected_sample_cotangent_l2": 0.0782358657695007,
+    "relative_l2_error": 1.8578150986210076e-16,
+    "absolute_linf_error": 1.734723475976807e-18,
+    "relative_error_if_wrong_sample_N_used": 115.97395184723943,
+    "full_N_over_sample_N": 116.97395184723952,
+    "sample_N_not_used_for_objective_normalization": true
+  },
+  "known_window": {
+    "formula": "raised_cosine(offset ramp) * raised_cosine((time-t0-hypot(offset,2*known_water_depth-source_z-receiver_z)/water_speed-seafloor_delay)/time_taper) * raised_cosine(full_record_end taper)",
+    "known_water_depth_m": 450.0,
+    "source_delay_s": 0.25,
+    "seafloor_delay_s": 0.25,
+    "full_record_end_s": 3.5,
+    "max_absolute_error": 1.1102230246251565e-16,
+    "relative_l2_error": 1.0396489034934258e-17,
+    "unknown_target_structure_used": false
+  },
+  "full_source_array_hashes_match_prior_independent_full_audit": {
+    "predicted_pressure": true,
+    "observed_pressure": true,
+    "window": true,
+    "adjoint_source_pressure": true
+  },
+  "full_AD_H_uint64_identity_already_independently_verified": true,
+  "standalone_no_gradient_control_comparison": {
+    "reported_prediction_uint64_equal": false,
+    "reported_absolute_linf_difference": 1.2306636711667562e-08,
+    "reported_relative_l2_difference": 5.5453018215060396e-09,
+    "reported_observed_truth_uint64_equal": true,
+    "cause": "Unresolved; this receipt does not identify the difference as machine roundoff.",
+    "comparison_not_recomputed_from_full_control_arrays_in_this_local_sample_check": true
+  },
+  "limitations": [
+    "The full objective and full observed RMS cannot be reconstructed from this sample; the frozen full normalization is used.",
+    "Full-array hashes match the previous independent full-source audit; selection membership for pressure values was not separately reread from the undownloaded full archive in this local CPU receipt.",
+    "This sample receipt does not replace the original failed all-physical gradient gate or expand the accepted constrained-coordinate scope."
+  ],
+  "frozen_six_files_sha256_before": {
+    "raw_kernels.npz": "eee7e200e7312b772a9821feaed463b42f0d3a18f3d7956c9c7fc5fcfef81fbf",
+    "summary.json": "cba3a0cdf6b7befc8824e65f4233684460f8d275d5a243d4bded09324f5b4ac4",
+    "physical_quality.json": "0864260db6cd895d18c97ce217ca76c7a4321a2be7e10c46ee4e315e016a1c36",
+    "scoped_acceptance.json": "a5f3586d8699e6a87663437fb5e3502c25d8f9d30637d1042a111c663e535e14",
+    "local_canonical_receipt.json": "833eae87706efc4f14577fa86383235841f2206c0d4aeeb7378c2b1c2c704894",
+    "independent_audit.json": "f5b76c97e722a9fdc531b705a3967fc5749935f484b9271db7fb18d90b775015"
+  },
+  "frozen_six_files_unchanged": true
+}

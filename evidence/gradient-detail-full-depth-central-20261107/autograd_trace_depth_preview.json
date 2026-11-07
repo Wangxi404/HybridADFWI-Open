@@ -1,0 +1,80 @@
+{
+  "loss": 274.59383563941407,
+  "kernel_maxima": {
+    "vp": {
+      "physical_xz_m": [
+        8012.5,
+        456.25
+      ],
+      "active_xz_m": [
+        8237.5,
+        456.25
+      ],
+      "P_at_physical_max": 0.0
+    },
+    "vs": {
+      "physical_xz_m": [
+        8006.25,
+        456.25
+      ],
+      "active_xz_m": [
+        8250.0,
+        462.5
+      ],
+      "P_at_physical_max": 0.0
+    },
+    "rho": {
+      "physical_xz_m": [
+        8000.0,
+        456.25
+      ],
+      "active_xz_m": [
+        8256.25,
+        456.25
+      ],
+      "P_at_physical_max": 0.0
+    }
+  },
+  "trace_time_bands": [
+    {
+      "t_s": [
+        0,
+        1
+      ],
+      "pred_max": 0.7192383153115858,
+      "obs_max": 0.7192383153115858,
+      "pred_rms_over_global_weighted_obs_rms": 13.588794476976824,
+      "obs_rms_over_global_weighted_obs_rms": 13.590586279048969
+    },
+    {
+      "t_s": [
+        1,
+        2
+      ],
+      "pred_max": 0.03352155044205282,
+      "obs_max": 0.03241353568696791,
+      "pred_rms_over_global_weighted_obs_rms": 1.3566351026958785,
+      "obs_rms_over_global_weighted_obs_rms": 1.9426482864784635
+    },
+    {
+      "t_s": [
+        2,
+        3
+      ],
+      "pred_max": 0.07029062700520151,
+      "obs_max": 0.014337330721763181,
+      "pred_rms_over_global_weighted_obs_rms": 1.7384801357324404,
+      "obs_rms_over_global_weighted_obs_rms": 1.33911837602916
+    },
+    {
+      "t_s": [
+        3,
+        3.501
+      ],
+      "pred_max": 11.913184485879043,
+      "obs_max": 0.004254916193458965,
+      "pred_rms_over_global_weighted_obs_rms": 217.46084044649052,
+      "obs_rms_over_global_weighted_obs_rms": 0.4528449609518253
+    }
+  ]
+}

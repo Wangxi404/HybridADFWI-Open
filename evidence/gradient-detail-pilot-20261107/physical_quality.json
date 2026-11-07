@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "assessment_date": "2026-11-07",
+  "usable_for_geological_detail": false,
+  "usable_for_shallow_numerical_validation": true,
+  "interpretation_gate": "Shallow0-1km/0.9s adjoint-and-parameterization pilot only; no full-depth Marmousi detail claim",
+  "numeric_adjoint_agreement_passed": true,
+  "numeric_agreement_tolerance": 1e-8,
+  "maximum_physical_kernel_relative_l2_ad_hybrid": 1.4869334103007884e-15,
+  "maximum_active_kernel_relative_l2_ad_hybrid": 1.486933410424832e-15,
+  "pressure_bitwise_equal": true,
+  "full_depth_or_long_time_stability_tested": false,
+  "physical_accuracy_independently_validated": false
+}

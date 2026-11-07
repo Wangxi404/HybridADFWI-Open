@@ -1,0 +1,207 @@
+{
+  "status": "ok",
+  "created_utc": "2026-11-07T05:54:38.873227+00:00",
+  "source_config": {
+    "name": "Marmousi-II marine-pressure gradient detail horizontal ROI, full benchmark depth",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": true,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Horizontal ROI x8-10.5km, z0-3.4625km; not the original full 17km Marmousi-II extent; run shots sequentially and compare both derivatives for every displayed shot"
+  },
+  "control_config": {
+    "name": "Marmousi-II marine-pressure gradient detail horizontal ROI, full benchmark depth",
+    "model": "/home/xiwang/HybridADFWI-Open/data/prepared/marmousi2_detail_full_depth_6p25m.npz",
+    "grid": {
+      "nx": 401,
+      "nz": 555,
+      "dx": 6.25,
+      "dz": 6.25,
+      "ox": 8000.0,
+      "oz": 0.0
+    },
+    "initial_smoothing_sigma_m": 60.0,
+    "fixed_pml_reference_vmax_m_s": 4700.0,
+    "constrained_coordinates": true,
+    "fixed_buffer_m": 200.0,
+    "parameter_taper_m": 100.0,
+    "fixed_boundary_reference": "initial_model",
+    "known_true_boundary": false,
+    "device": "cuda",
+    "nt": 7001,
+    "dt": 0.0005,
+    "f0": 6.0,
+    "shots": 3,
+    "selected_shots": [
+      1
+    ],
+    "receivers": 161,
+    "depth_m": 100.0,
+    "nabc": 32,
+    "free_surface": false,
+    "fd_order": 8,
+    "dtype": "float64",
+    "parameters": [
+      "vp",
+      "vs",
+      "rho"
+    ],
+    "segments": 84,
+    "threads": 1,
+    "checkpointing": true,
+    "minimum_offset_m": 150.0,
+    "offset_taper_m": 100.0,
+    "mute_velocity_m_s": 1500.0,
+    "direct_mute_after_s": 0.16666666666666666,
+    "time_taper_s": 0.16666666666666666,
+    "end_taper_s": 0.15,
+    "objective": "fixed_windowed_pressure_l2",
+    "tolerance": 1e-08,
+    "scope": "Horizontal ROI x8-10.5km, z0-3.4625km; not the original full 17km Marmousi-II extent; run shots sequentially and compare both derivatives for every displayed shot"
+  },
+  "scope": "native no-gradient truth/initial pressure traces; no model-gradient or AD agreement claim",
+  "script_sha256": "676ff0bf5803c57338fcc78fe79e847a2044243cc5d2bf40c7c5f7bae315dddc",
+  "model_sha256": "94895d72f6b0f0aa34d5cc78f2c9d06a3b2d55be1fb312562a486a64ad6d58cc",
+  "traces": {
+    "truth_shot1": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "all_finite": true,
+      "cold_forward_seconds": 55.85853633470833,
+      "max_abs": 0.7185139352628171,
+      "rms": 0.014764993932180507,
+      "time_bands": [
+        {
+          "time_interval_s": [
+            0,
+            1
+          ],
+          "max_abs": 0.7185139352628171,
+          "rms": 0.02729155993934364
+        },
+        {
+          "time_interval_s": [
+            1,
+            2
+          ],
+          "max_abs": 0.048410809812836145,
+          "rms": 0.004094371210159246
+        },
+        {
+          "time_interval_s": [
+            2,
+            3
+          ],
+          "max_abs": 0.00627758398092598,
+          "rms": 0.001196386879055081
+        },
+        {
+          "time_interval_s": [
+            3,
+            3.5005010000000003
+          ],
+          "max_abs": 0.0017985176911714568,
+          "rms": 0.0004518842553590677
+        }
+      ],
+      "cumulative_normal_stress_energy_max_index_zx": [
+        73,
+        0
+      ]
+    },
+    "initial_shot1": {
+      "shape": [
+        1,
+        7001,
+        161
+      ],
+      "all_finite": true,
+      "cold_forward_seconds": 52.577560901641846,
+      "max_abs": 8.119059280911742,
+      "rms": 0.1573521163639218,
+      "time_bands": [
+        {
+          "time_interval_s": [
+            0,
+            1
+          ],
+          "max_abs": 0.7185139352628174,
+          "rms": 0.027294575237896457
+        },
+        {
+          "time_interval_s": [
+            1,
+            2
+          ],
+          "max_abs": 0.048381509260446105,
+          "rms": 0.003594390904195335
+        },
+        {
+          "time_interval_s": [
+            2,
+            3
+          ],
+          "max_abs": 0.04045584728101635,
+          "rms": 0.0023434351573642623
+        },
+        {
+          "time_interval_s": [
+            3,
+            3.5005010000000003
+          ],
+          "max_abs": 8.119059280911742,
+          "rms": 0.4142995593644997
+        }
+      ],
+      "cumulative_normal_stress_energy_max_index_zx": [
+        72,
+        0
+      ]
+    }
+  }
+}

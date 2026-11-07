@@ -1,0 +1,7 @@
+{
+  "default_plotter_refuses_failed_all_physical_summary": true,
+  "original_summary_passed": false,
+  "all_physical_tolerance_unchanged": 1e-08,
+  "test_detail_coordinates": "1 passed; direct coordinate finite difference and exact fixed-coordinate map",
+  "scope": "No original failure is rewritten as a pass; explicit scoped rendering requires independent hash-bound acceptance."
+}
